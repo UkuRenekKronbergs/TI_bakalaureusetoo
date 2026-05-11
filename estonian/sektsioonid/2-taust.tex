@@ -18,7 +18,7 @@ Eesti keel on inglise keelega võrreldes vähese ressursiga keel: kuigi tegu pol
 
 Lisaks üldotstarbelistele LLM-idele on Eestis arendatud spetsiaalseid eesti keele mudeleid. EstBERT~\cite{tanvir_estbert_2021} on BERT-arhitektuuril põhinev mudel, mis on eelkoolitatud eestikeelsel korpusel ning sobib selliste klassifitseerimisülesannete jaoks nagu sentiment- ja teemaanalüüs. EstBERT-i kasutamine teksti genereerimist nõudvate ülesannete jaoks on aga piiratud, kuna mudel on arhitektuurselt enkooder-tüüpi. Eestikeelseid generatiivseid mudeleid on hakatud aktiivselt arendama hiljutiste avatud lähtekoodiga mudelite (näiteks Llama-2 ja Llama-3) baasil -- nii on TartuNLP koostanud Llammas-mudeli, mille treenimine ja hindamine on dokumenteeritud Kuulmetsa jt töödes~\cite{kuulmets_llammas_2024, kuulmets_finnougri_2025} -- kuid nende ulatus jääb tippkommertsmudelitele alla.
 
-Praktilises rakenduses tähendab see, et eestikeelse akadeemilise teksti analüüsiks on otstarbekam kasutada tippkvaliteediga mitmekeelseid mudeleid (Claude 4.7 Opus, GPT-5) kui spetsialiseeritud avatud mudeleid, kui prioriteediks on kvaliteet ja mitte kohaliku andmetöötluse nõue.
+Praktilises rakenduses tähendab see, et eestikeelse akadeemilise teksti analüüsiks on otstarbekam kasutada tippkvaliteediga mitmekeelseid mudeleid (Claude 4.7 Opus, GPT-5) kui spetsialiseeritud avatud mudeleid, kui prioriteediks on kvaliteet, mitte kohaliku andmetöötluse nõue.
 
 \subsection{Akadeemilise teksti kvaliteediomadused} \label{taust:akadeemiline}
 
@@ -63,4 +63,4 @@ Eestikeelse akadeemilise teksti automaatset tagasisidestamist on uuritud vähem.
 
 Promptimise mõju kvaliteedile on samuti uuritud. Schulhoff jt~\cite{schulhoff_prompt_report_2024} on viinud läbi süstemaatilise prompti tehnikate kataloogimise ning näitavad, et struktureeritud promptid annavad tüüpiliselt suuremat täpsust spetsiifilistel ülesannetel. Käesolev töö rakendab seda eestikeelse akadeemilise teksti analüüsile.
 
-Käesoleva töö \textbf{teaduslik panus} on seega: (1) struktureeritud LLM-prompti disain eestikeelse informaatika teksti tagasisidestamiseks neljas kategoorias, (2) käsitsi märgendatud testkogu, mis võimaldab edasiste süsteemide võrdlemist, ja (3) empiiriline võrdlus üldise ja struktureeritud prompti vahel.
+Käesoleva töö \textbf{teaduslik panus} on seega: (1) struktureeritud LLM-prompti disain eestikeelse informaatika teksti tagasisidestamiseks neljas kategoorias, (2) käsitsi märgendatud testkogu, mis võimaldab edasiste süsteemide võrdlemist, ja (3) pilootkatse-tasemel võrdlus üldise ja struktureeritud prompti vahel koos täismahulise hindamise kavandiga.

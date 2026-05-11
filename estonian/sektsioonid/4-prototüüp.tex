@@ -34,7 +34,7 @@ Prototüübi realiseerimisel valiti tehnoloogiad järgmiste põhimõtete alusel:
                 row{1} = {font=\bfseries, bg = colorCellHighlight},
             }
     Komponent & Tehnoloogia & Põhjendus \\
-    Backend & Python 3.12 + FastAPI & Anthropic SDK on Pythonis küps; FastAPI annab automaatselt OpenAPI dokumentatsiooni ja valideerimisrakendused. \\
+    Backend & Python 3.12 + FastAPI & Anthropic SDK on Pythonis küps; FastAPI annab automaatselt OpenAPI dokumentatsiooni ja sisendi valideerimise. \\
     Frontend & React 18 + TypeScript + Tailwind CSS & TÜ tudengite seas levinud kombinatsioon; Tailwind võimaldab kiire stiili ilma eraldi CSS-failideta. \\
     LLM-i API & Anthropic Messages API & Claude 4.7 Opuse tugi, struktureeritud väljundi tugi (\texttt{tools} või prefill-tehnika). \\
     Skeemi\-valideerimine & Pydantic + JSON Schema & Backendis valideerib mudeli vastust enne kasutajale saatmist; vea korral palutakse mudelilt parandus. \\
@@ -83,7 +83,7 @@ def kysi_tagasiside(prompt: str, mudel: str = "claude-opus-4-7") -> Vastus:
     json_tekst = ekstraktee_tasakaalustatud_json(toores)
     return Vastus.model_validate_json(json_tekst)
 \end{minted}
-\caption{LLM-i kutsumise lihtsustatud Pythoni-kood koos JSON-prefilliga. Tegelikus prototüübis lisanduvad logimise, kordusküsimise (\emph{ingl. retry}) ja vea käsitlemise abstraktsioonid ning eraldi pakkujakihid Anthropici ja OpenAI jaoks.}
+\caption{LLM-i kutsumise lihtsustatud Pythoni-kood koos JSON-prefilliga. Tegelikus prototüübis lisanduvad logimise, kordusküsimise (\emph{ingl. retry}) ja vea käsitlemise abstraktsioonid ning eraldi pakkujakihid Anthropici, OpenAI ja demo-režiimi salvestatud vastuste jaoks.}
 \label{fig:kood-llm}
 \end{figure}
 
@@ -110,6 +110,6 @@ Süsteemi disainimisel on otseselt arvestatud sellega, et see ei muutuks tudengi
 
 \textbf{Selge teavitus kasutajaliidesest.} Igas vastuses on tagasiside paneeli päises pidevalt nähtav teade: \emph{See süsteem annab soovituslikku tagasisidet sinu enda kirjutatud tekstile. See ei kirjuta lõputööd sinu eest. Kontrolli iga soovitust ja sõnasta vajadusel ümber.}
 
-\textbf{Privaatsus.} Demo-režiimis (vaikevalik) ei lahku kasutaja sisestatud tekst kohaliku masinata: backend tagastab salvestatud näidisvastuse. Kui kasutaja valib mudeliks Claude'i või GPT, saadetakse tekst LLM-i API-le ainult pärast seda, kui ta on kinnitanud konkreetses dialoogiaknas, et ta on sellest teadlik. Kohalik backend ei salvesta sisestatud teksti kettal; logitakse ainult anonüümne sündmus (näitajaid: prompti tüüp, peatüki tüüp, leidude arv kategooriate kaupa) hindamise jaoks.
+\textbf{Privaatsus.} Demo-režiimis (vaikevalik) ei lahku kasutaja sisestatud tekst kohalikust masinast: backend tagastab salvestatud näidisvastuse. Kui kasutaja valib mudeliks Claude'i või GPT, saadetakse tekst LLM-i API-le ainult pärast seda, kui ta on kinnitanud konkreetses dialoogiaknas, et ta on sellest teadlik. Kohalik backend ei salvesta sisestatud teksti kettal; logitakse ainult anonüümne sündmus (näitajaid: prompti tüüp, peatüki tüüp, leidude arv kategooriate kaupa) hindamise jaoks.
 
 Need meetmed ei ole täiuslikud – kasutaja võib endiselt prompti ümber sõnastada või luua ise ümber\-kirjutamise palve. Süsteemi roll on aga selgelt määratletud just tagasisidena, mitte loomise vahendina; vastutus konkreetse kasutusviisi eest jääb kasutajale.
