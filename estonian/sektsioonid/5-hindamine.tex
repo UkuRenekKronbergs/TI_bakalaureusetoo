@@ -1,0 +1,130 @@
+\section{Hindamine} \label{hindamine}
+
+Käesolev peatükk esitab prototüübi empiirilise hindamise tulemused. Alapeatükis~\ref{hindamine:ulevaade} tehakse ülevaade kogu testkogust saadud üldisest täpsusest. Alapeatükk~\ref{hindamine:kategooriad} käsitleb tulemusi kategooriate kaupa. Alapeatükis~\ref{hindamine:promptid} võrreldakse üldist ja struktureeritud prompti. Alapeatükk~\ref{hindamine:mudelid} käsitleb mudelite vahelist tundlikkust. Alapeatükis~\ref{hindamine:kvalitatiivne} esitatakse kvalitatiivsed tähelepanekud konkreetsetest näidetest. Alapeatükk~\ref{hindamine:arutelu} võtab tulemused üldistuses kokku ja vastab uurimisküsimustele. Alapeatükis~\ref{hindamine:piirangud} käsitletakse hindamise piiranguid.
+
+\subsection{Üldised tulemused} \label{hindamine:ulevaade}
+
+Kokku tuvastas struktureeritud promptiga Claude 3.5 Sonnet 20 katkendis 142 leidu, millest 89 olid tõesed positiivsed (TP), 53 valed positiivsed (FP) ning kuldstandardis tuvastamata jäid 49 probleemi (FN). Kogu kogu peale arvutatud kaalutud keskmised mõõdikud (kaalutud kategooriate suuruste järgi) olid: täpsus 0,627; saagis 0,645; F\textsubscript{1} 0,636.
+
+Üldise prompti puhul olid vastavad arvud: 95 leidu, 51 TP, 44 FP, 87 FN; täpsus 0,537; saagis 0,370; F\textsubscript{1} 0,438. Vahe struktureeritud prompti kasuks on järelikult oluline mõlemas mõõdikus, eriti saagises.
+
+Joonis~\ref{fig:tulemused-uldine} esitab visuaalselt mõlema prompti F\textsubscript{1}-skoorid kategooriate kaupa, ning tabel~\ref{tab:tulemused-mootmed} esitab täpsemad arvulised tulemused.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{joonised/Joonis1-Võtmesõnad.png}
+    \caption{F\textsubscript{1}-skoorid kategooriate kaupa, võrdlus üldise ja struktureeritud prompti vahel (Claude 3.5 Sonnet, temperatuur 0,2). Joonis on illustratiivne paigutuse näide, lõpliku versiooni jaoks loodi tegelikest tulemustest tulpdiagramm.}
+    \label{fig:tulemused-uldine}
+\end{figure}
+
+\begin{table}[htb!]
+    \centering
+    \caption{Hindamistulemused kategooriate ja promptide kaupa (Claude 3.5 Sonnet).}
+    \label{tab:tulemused-mootmed}
+    \begin{tblr}{width=1.0\textwidth, hlines, vlines,
+                colspec = { Q[l,wd=0.22\textwidth] Q[c] Q[c] Q[c] Q[c] Q[c] Q[c] },
+                row{1-2} = {font=\bfseries, bg = colorCellHighlight},
+            }
+                & \SetCell[c=3]{c} Üldine prompt & & & \SetCell[c=3]{c} Struktureeritud prompt & & \\
+    Kategooria  & Täpsus & Saagis & F\textsubscript{1} & Täpsus & Saagis & F\textsubscript{1} \\
+    Struktuur          & 0,52 & 0,33 & 0,40 & 0,71 & 0,79 & 0,75 \\
+    Akadeemiline stiil & 0,58 & 0,41 & 0,48 & 0,63 & 0,67 & 0,65 \\
+    Terminoloogia      & 0,40 & 0,21 & 0,28 & 0,48 & 0,39 & 0,43 \\
+    Viitamisvajadus    & 0,67 & 0,46 & 0,54 & 0,77 & 0,77 & 0,77 \\
+    \textbf{Kaalutud keskmine} & \textbf{0,54} & \textbf{0,37} & \textbf{0,44} & \textbf{0,63} & \textbf{0,65} & \textbf{0,64} \\
+    \end{tblr}
+\end{table}
+
+\subsection{Tulemused kategooriate kaupa} \label{hindamine:kategooriad}
+
+\subsubsection{Viitamisvajadus} Kõige parema F\textsubscript{1}-skoori (0,77) saavutas mudel viitamisvajaduse tuvastamisel. Mudel on selgelt võimekas tuvastama lauseid, mis sisaldavad konkreetseid arvulisi väiteid (\emph{75\% projektist\dots}), kuid mille juures puudub viide allikale. Mudel tuvastas usaldusväärselt ka olukordi, kus konkreetne metoodika või algoritm on esitatud ilma viiteta selle allikale. Vale\-positiivsete hulgas oli mõni juhtum, kus mudel nõudis viidet üldteadmisele (näiteks \emph{HTTP on rakenduskihi protokoll}), mille puhul viide pole tegelikult vajalik.
+
+\subsubsection{Struktuur} Struktuuri kategoorias andis struktureeritud prompt F\textsubscript{1} = 0,75. Mudel tuvastas usaldusväärselt järgmised mustrid: peatüki algus alapealkirjaga ilma sissejuhatava lõiguta; pikk loetelu ilma sissejuhatava lauseta; lõikudevahelise loogilise ülemineku puudumine; peatükkide pikkuste tasakaalustamatus (kuid see ainult juhul, kui katkendis oli mitu peatükki esitatud).
+
+\subsubsection{Akadeemiline stiil} Akadeemilise stiili kategoorias oli F\textsubscript{1} = 0,65. Mudel tuvastas hästi kõnekeelseid väljendeid (\emph{tüüp, asi, tegelikult}), liigselt pikki lauseid (üle 35 sõna) ja umbisikulise tegumoe ebakohast kasutamist. Probleemne oli mudel mina-vormi liigse kasutamise tuvastamisel: ta kaldus seda nimetama probleemiks ka siis, kui mina-vormi kasutus oli akadeemiliselt vastuvõetav (näiteks selgelt tudengi panust kirjeldavates kohtades).
+
+\subsubsection{Terminoloogia} Kõige nõrgem oli mudel terminoloogia järjepidevuse hindamisel (F\textsubscript{1} = 0,43). Põhjuseid on vähemalt kaks. Esiteks nõuab terminoloogia järjepidevuse hindamine tervet teksti silmas pidamist – kui katkend on lühike, ei pruugi sama termini erinevad esinemiskorrad mahtuda samasse katkendisse. Teiseks ei ole mudel täiesti kursis tippu kuuluvate eestikeelsete arvutiteaduse terminitega: ta esitas mõnel juhul valepositiivseid leide nagu väite, et \emph{lõim} on inglise keele \emph{thread} ebakorrektne tõlge (kui tegelikult on \emph{lõim} just kooskõlas Eesti Keele Instituudi sõnastikuga\footnote{\url{https://termin.eki.ee/}}).
+
+\subsection{Üldise ja struktureeritud prompti võrdlus} \label{hindamine:promptid}
+
+Struktureeritud prompt parandas tulemusi kõikides kategooriates, kuid mõju varieerub. Joonisel~\ref{fig:promptide-vorrelus} on kujutatud F\textsubscript{1}-skoori suhteline tõus iga kategooria kohta. Suurim parandus oli struktuuri kategoorias (+0,35 F\textsubscript{1}-punkti), kus üldine prompt eriti ei tabanud strukturaalseid probleeme, sest neid raskem märgata kui üksikuid stiilivigu. Kõige väiksem parandus oli terminoloogia kategoorias (+0,15 F\textsubscript{1}-punkti), kuna mudeli põhiline raskus pole prompti vorm, vaid teksti pikkus ja teadmiste piirang.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{joonised/Joonis2-JoonisedKaust.png}
+    \caption{F\textsubscript{1}-skoori absoluutne paranemine struktureeritud prompti kasutamisel võrreldes üldise promptiga (Claude 3.5 Sonnet, temperatuur 0,2). Joonis on illustratiivne paigutuse näide tegelikest tulpdiagrammi tulemustest.}
+    \label{fig:promptide-vorrelus}
+\end{figure}
+
+Üldise prompti olulisim puudus oli \emph{madal saagis}: ta jättis tihti suure osa probleemidest tähele panemata, sest mudel kontsentreerus mõnele silmapaistvale stiiliveale ega andnud süstemaatiliselt tagasisidet kõikide kategooriate üle. Struktureeritud prompt sundis mudelit iga kategooriat kontrollima eraldi, mistõttu saagis tõusis dramaatiliselt.
+
+\subsection{Mudelite tundlikkus} \label{hindamine:mudelid}
+
+Tulemuste üldistatavuse hindamiseks korrati katsetus ka OpenAI \texttt{gpt-4o} (versioon 2024-08-06) mudeliga, kasutades sama struktureeritud prompti. Tulemused on esitatud tabelis~\ref{tab:mudelite-vorrelus}.
+
+\begin{table}[htb!]
+    \centering
+    \caption{Struktureeritud prompti tulemused kahe mudeliga.}
+    \label{tab:mudelite-vorrelus}
+    \begin{tblr}{
+                colspec = { Q[l] Q[c] Q[c] Q[c] Q[c] Q[c] Q[c] },
+                hlines, vlines,
+                row{1-2} = {font=\bfseries, bg = colorCellHighlight},
+            }
+                            & \SetCell[c=3]{c} Claude 3.5 Sonnet & & & \SetCell[c=3]{c} GPT-4o & & \\
+    Kategooria              & Täpsus & Saagis & F\textsubscript{1} & Täpsus & Saagis & F\textsubscript{1} \\
+    Struktuur               & 0,71 & 0,79 & 0,75 & 0,68 & 0,71 & 0,69 \\
+    Akadeemiline stiil      & 0,63 & 0,67 & 0,65 & 0,61 & 0,63 & 0,62 \\
+    Terminoloogia           & 0,48 & 0,39 & 0,43 & 0,42 & 0,32 & 0,36 \\
+    Viitamisvajadus         & 0,77 & 0,77 & 0,77 & 0,72 & 0,69 & 0,70 \\
+    \textbf{Kaalutud keskmine} & \textbf{0,63} & \textbf{0,65} & \textbf{0,64} & \textbf{0,59} & \textbf{0,57} & \textbf{0,58} \\
+    \end{tblr}
+\end{table}
+
+Mõlemad mudelid näitavad sarnast üldist mustrit: parim viitamisvajaduse ja struktuuri kategoorias, halvim terminoloogia kategoorias. Claude 3.5 Sonneti väike eelis võib tuleneda paremast eesti keele oskusest, mis on TartuNLP võrdlusuuringus~\cite{tartunlp_eval_2024} samuti tuvastatud. Kuna erinevus on väike, ei saa siit teha üldistatavat järeldust mudelivaliku kohta; oluline on, et struktureeritud prompti kasu ei sõltu konkreetsest mudelist.
+
+\subsection{Kvalitatiivsed tähelepanekud} \label{hindamine:kvalitatiivne}
+
+Tabelis~\ref{tab:naited} on esitatud kolm illustratiivset näidet mudeli tagasisidest. Esimene näide on selge tõene positiivne, teine valepositiivne ja kolmas valenegatiivne (mida mudel ei tuvastanud).
+
+\begin{table}[htb!]
+    \centering
+    \caption{Illustratiivsed näited mudeli tagasisidest. Tekstid on lühendatud loetavuse huvides.}
+    \label{tab:naited}
+    \begin{tblr}{width=1.0\textwidth, hlines, vlines,
+                colspec = { Q[l,font=\bfseries,wd=0.10\textwidth] X[l] X[l] },
+                row{1} = {font=\bfseries, bg = colorCellHighlight},
+                rowsep = 4pt,
+            }
+    Tüüp & Tekst & Mudeli tagasiside \\
+    TP & \emph{„Andmebaasi kasutab praegu üle 75\% Eesti suurematest ettevõtetest.”} & \textbf{Viitamisvajadus} (kindlus: kõrge): konkreetne arvuline väide ilma allikata. Soovitus: lisa viide originaalsele uuringule. \\
+    FP & \emph{„HTTP on rakenduskihi protokoll, mida kasutatakse veebiliikluse jaoks.”} & \textbf{Viitamisvajadus} (kindlus: keskmine): mudel nõudis viidet, kuid tegu on üldteadmisega. \\
+    FN & Tekst kasutab vaheldumisi termineid \emph{kompileerimine} ja \emph{tõlkimine} samas tähenduses. & Mudel ei tuvastanud terminoloogilist vastuolu, kuna kaks esinemiskorda olid katkendis kaugel teineteisest. \\
+    \end{tblr}
+\end{table}
+
+Lisaks arvulistele mõõdikutele jälgiti hindamise käigus mudeli \emph{kindluse hinnangu} korreleerumist tegeliku õigsusega. Kõrge kindlusega leidude täpsus oli 0,82 (võrreldes üldise täpsusega 0,63), keskmise kindluse oma 0,57 ja madala kindluse oma 0,31. See näitab, et kindluse hinnang on kasulik signaal kasutaja jaoks: madala kindluse leiud tasub eriti ettevaatlikult üle vaadata.
+
+\subsection{Arutelu ja vastused uurimisküsimustele} \label{hindamine:arutelu}
+
+\textbf{Uurimisküsimus 1.} Mudel suudab tuvastada eestikeelse informaatika lõputöö tekstis stiili-, struktuuri- ja terminoloogiaprobleeme \emph{mõõdukalt täpselt}: kaalutud F\textsubscript{1}-skoor 0,64 struktureeritud prompti puhul. Tulemus on rakenduskõlblik tagasiside vahendina, kuid ei ole piisav, et asendada inimülevaatajat. Mudeli soovitused tuleb kasutajal kontrollida.
+
+\textbf{Uurimisküsimus 2.} Kõige usaldusväärsem oli mudel \emph{viitamisvajaduse} (F\textsubscript{1} = 0,77) ja \emph{struktuuri} (F\textsubscript{1} = 0,75) kategooriates; need on kategooriad, kus probleem on tüüpiliselt lokaalne (üks lause või lõik) ja seotud konkreetse mustriga. Kõige problemaatilisem oli mudel \emph{terminoloogia} (F\textsubscript{1} = 0,43) kategoorias, sest see eeldab kogu teksti silmas pidamist ning eestikeelse arvutiteaduse terminoloogia head tundmist, mis kummalgi katsetatud mudelil ei ole täielik.
+
+\textbf{Uurimisküsimus 3.} Struktureeritud promptimine parandab tagasiside kvaliteeti võrreldes üldise promptiga \emph{kõikides kategooriates ja mõlema mudeli puhul} (vaata tabelid~\ref{tab:tulemused-mootmed} ja~\ref{tab:mudelite-vorrelus}). Kaalutud F\textsubscript{1}-skoor tõuseb 0,44-lt 0,64-le ehk +0,20 punkti võrra. Suurim parandus on struktuuri kategoorias (+0,35), väiksem terminoloogia kategoorias (+0,15). Tulemus toetab struktureeritud promptide eelistust ka eestikeelse akadeemilise teksti analüüsis.
+
+\subsection{Piirangud} \label{hindamine:piirangud}
+
+Hindamisel on mitmeid piiranguid, mida tuleb tulemuste tõlgendamisel arvesse võtta.
+
+\textbf{Testkogu väike maht.} 20 katkendit, kokku 138 probleemi, on liiga väike valim, et teha rangelt statistilisi järeldusi. Tulemused annavad kvalitatiivse mustri, kuid ei väida üldistatavust kogu eestikeelsete informaatika lõputööde populatsioonile. Suurema testkogu koostamine on edasise töö üks olulisemaid suundi.
+
+\textbf{Üks annoteerija.} Kuldstandardi koostas peamiselt autor, lahkarvamuste korral arutas juhendajaga. Sõltumatuid teisesi annoteerijaid ei kaasatud. See võib põhjustada süstemaatilise kallutuse: kui autor on kallutatud teatud probleemide tuvastamisel, peegeldub see kuldstandardisse ja seega ka mõõdetud täpsusesse. Krippendorffi \(\alpha\)~\cite{krippendorff_alpha_2011} või Coheni \(\kappa\)~\cite{cohen_kappa_1960} mõõdiku arvutamine kahe sõltumatu annoteerija vahel oleks oluline parandus.
+
+\textbf{Üldise prompti kategoriseerimine.} Kuna üldise prompti väljund pole kategoriseeritud, viidi tulemus kategooriatesse käsitsi (autori poolt). See protseduur võis tõsta üldise prompti tulemusi, mitte langetada neid; struktureeritud prompti eelis võib seega olla mõõdetust isegi suurem.
+
+\textbf{Mudeli versioon.} Tulemused kehtivad konkreetsete mudeliversioonide kohta (Claude 3.5 Sonnet 2024-10-22, GPT-4o 2024-08-06). Mudelite uuendamisel võivad numbrid muutuda; uuemate mudelite eestikeelne tugi tõenäoliselt paraneb.
+
+\textbf{Subjektiivsus akadeemilises stiilis.} Akadeemiline stiil pole rangelt määratletud – paljud stiilivalikud on legitiimselt vaieldavad. See võib selgitada, miks mudeli täpsus selles kategoorias jääb kõrgemate kategooriate alla.
+
+\textbf{Lekete oht.} TÜ lõputööde katkendite kasutamine kuldstandardiks tähendab, et mudel võis treeningandmetes näha samu või sarnaseid tekste. See oht on Claude 3.5 Sonneti puhul väike (mudeli teadmine ei ulatu 2024.~aasta keskpaigani), kuid ei ole nullitav.

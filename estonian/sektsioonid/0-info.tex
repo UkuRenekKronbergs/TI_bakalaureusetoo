@@ -4,35 +4,23 @@
 % Eesti keeles info.
 \begin{info}
 \begin{abstract}
-Siia kirjutage oma lõputöö lühikokkuvõte. See võib lühidalt teemasse sisse juhatada, kuid peaks enamikus katma ära Teie lõputöö sisu. Seda lugedes peaks olema üheselt selge, millest Teie lõputöös lugeda võib. Kirjutage eesmärgi, meetodi, tulemuste ja järelduste kohta. Bakalaureusetöö korral võiksid nii eesti kui inglise keeles olevad lühikokkuvõtted mahtuda ühele leheküljele. Magistritöö või vajaduse korral võib eesti ja inglise keeles olevad osad kirjutada eraldi lehekülgedele. Mõelge oma tööd kirjeldavad võtmesõnad ning leidke CERCS kood(id).
+Eestikeelse informaatika lõputöö kirjutamine on tudengile keeleliselt ja struktuurselt nõudlik ülesanne, sest valdkonna terminoloogia on inglise keeles välja kujunenud ning akadeemilise stiili reegleid kohaldatakse eesti keeles erinevalt. Käesoleva bakalaureusetöö eesmärk on luua ja hinnata suurel keelemudelil põhinev prototüüp, mis annab eestikeelsele informaatika lõputöö tekstile automaatset tagasisidet neljas kategoorias: struktuur, akadeemiline stiil, terminoloogia järjepidevus ja viitamisvajadus. Töös käsitletakse suurte keelemudelite võimekust eestikeelse tehnilise teksti analüüsimisel ning struktureeritud promptimise mõju tagasiside kvaliteedile. Prototüüp on realiseeritud veebirakendusena, mis võtab sisendiks tudengi kirjutatud peatüki, suunab selle valitud keelemudelile struktureeritud viibaga ning kuvab kasutajale kategoriseeritud tagasiside. Süsteemi hindamiseks koostati 20 tekstikatkendist koosnev testkogu, milles probleemid märgendati käsitsi koos juhendajaga. Mudeli väljundit võrreldi kuldstandardiga täpsuse, saagise ja F\textsubscript{1}-skoori abil. Tulemused näitavad, et struktureeritud promptimine annab kõikides kategooriates üldisest viibast täpsemat tagasisidet, kusjuures mudel on kõige usaldusväärsem viitamisvajaduse ja struktuuri tuvastamisel ning kõige problemaatilisem terminoloogia järjepidevuse hindamisel. Töös rõhutatakse, et süsteem on tudengi enda kirjutatud teksti tagasisidevahend, mitte juhendaja ega tekstigeneraator.
 \end{abstract}
-
-% Visuaalne kokkuvõte pole kõigil õppekavadel nõutud
-\begin{visualAbstract}
-\includegraphics[width=\textwidth]{joonised/Joonis0-VisuaalneKokkuvõte.png}
-\end{visualAbstract}
 
 \keywords{}
 
-\cercs{KOOD Koodi nimi}
+\cercs{P175 Informaatika, süsteemiteooria}
 % Koodid leiate: https://www.etis.ee/Portal/Classifiers/Index/26
-% Nt: P170 Arvutiteadus, arvutusmeetodid, süsteemid, juhtimine (automaatjuhtimisteooria)
-% Nt: P175 Informaatika, süsteemiteooria
 \end{info}
 
 
 % Inglise keeles info.
-\begin{otherInfo}{english}{Thesis Title in English}
+\begin{otherInfo}{english}{Using Large Language Models for Quality Control of Estonian Technical Computer Science Texts}
 \begin{abstract}
-Write here the abstract of your work. The abstract could provide a brief introduction to the topic but should, in the majority, cover Your thesis work. When reading the abstract, it should become clear what can be read about in the rest of Your thesis. Write about the purpose of the thesis, method(s), results, and findings of Your work. For a bachelor’s thesis, both the Estonian and English abstracts should fit into a single page. For a master’s thesis or when necessary, the Estonian and English sections of this page could be on separate pages. Come up with good keywords for Your work and find your CERCS code(s).
+Writing a computer science thesis in Estonian is linguistically and structurally demanding for a student because the field's terminology has evolved in English and academic style conventions are applied differently in Estonian. The aim of this bachelor's thesis is to design and evaluate a prototype based on a large language model (LLM) that provides automatic feedback on Estonian-language computer science thesis texts in four categories: structure, academic style, terminological consistency, and the need for citation. The thesis examines the capability of large language models to analyse Estonian technical text and the effect of structured prompting on the quality of the resulting feedback. The prototype is implemented as a web application that takes a student-written chapter as input, sends it to the chosen language model with a structured prompt, and presents categorised feedback to the user. To evaluate the system, a test set of 20 text excerpts was created, with issues annotated manually together with the supervisor. The model's output was compared against this gold standard using precision, recall, and F\textsubscript{1}-score. The results indicate that structured prompting yields more accurate feedback than a generic prompt across all categories, that the model is most reliable when detecting the need for citation and structural problems, and least reliable when assessing terminological consistency. The thesis emphasises that the system is a feedback tool for text the student has written themselves; it neither replaces the supervisor nor generates the thesis on the student's behalf.
 \end{abstract}
 
-% Visuaalne kokkuvõte pole kõigil õppekavadel nõutud
-\begin{visualAbstract}
-\includegraphics[width=\textwidth]{joonised/Joonis0-VisuaalneKokkuvõte-eng.png}
-\end{visualAbstract}
+\keywords{Large language models, Estonian language, academic text, feedback, quality control, prompting}
 
-\keywords{Layout, formatting, template}
-
-\cercs{CODE Code name in English}
+\cercs{P175 Informatics, systems theory}
 \end{otherInfo}

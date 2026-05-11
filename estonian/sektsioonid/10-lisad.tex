@@ -1,2 +1,158 @@
 \section*{Lisad} \label{lisad} \addcontentsline{toc}{section}{Lisad}
-Siia saate teha eraldi alamsektsioonid näiteks oma lõputöö sõnastiku, kaasapandud failide kirjelduse, kasutajajuhendi, suurte piltide ja tabelite jaoks.
+
+\subsection*{Lisa I: Struktureeritud prompti täielik tekst} \label{lisa:promptid}
+\addcontentsline{toc}{subsection}{Lisa I: Struktureeritud prompti täielik tekst}
+
+Käesolev lisa esitab peatükis~\ref{metoodika:promptid} kirjeldatud struktureeritud prompti täieliku teksti, mis on prototüübis kasutusel. Prompt asub repositooriumis failis \texttt{prompts/struktureeritud.txt}.
+
+\begin{minted}[breaklines,fontsize=\small]{text}
+Oled eestikeelse informaatika lõputöö tagasisidesüsteem.
+
+OLULINE PIIRANG: Sul EI OLE LUBATUD lõputööd tudengi eest kirjutada
+ega kogu lõike ümber sõnastada. Sa annad ainult soovituslikku
+tagasisidet tudengi enda kirjutatud tekstile. Lõpliku otsuse iga
+soovituse rakendamise kohta teeb autor ise.
+
+Sinu ülesanne on tuvastada probleemid täpselt järgmises neljas
+kategoorias:
+
+1. STRUKTUUR
+   Tüüpilised probleemid: peatükk algab kohe alapealkirjaga ilma
+   sissejuhatava lõiguta; lõikude vahel pole loogilist üleminekut;
+   peatükk algab või lõpeb joonise/tabeli/loeteluga; alampeatükkide
+   järjekord ei ole loogiline.
+   NÄIDE: "2. Metoodika\n2.1 Andmete kogumine\nAndmed koguti..."
+   ON probleem, kuna 2. peatükk algab ilma sissejuhatava lõiguta.
+
+2. AKADEEMILINE_STIIL
+   Tüüpilised probleemid: kõnekeelsed väljendid (tüüp, asi, tegelikult);
+   liigselt pikad laused; mina-vormi liigne kasutamine; otsetõlke
+   ilmingud (See on tõsi, et...); määramatud üldistused (kõik teavad,
+   et...).
+   NÄIDE: "Tegelikult on see asi päris keeruline." ON probleem -
+   kasutatakse kõnekeelseid sõnu "tegelikult", "asi".
+
+3. TERMINOLOOGIA
+   Tüüpilised probleemid: sama mõiste tähistamiseks kasutatakse läbisegi
+   mitut terminit (lõim ja niit); ingliskeelseid termineid esitatakse
+   ilma esmakasutuse selgituseta.
+   NÄIDE: Tekst kasutab nii sõna "kompileerimine" kui "tõlkimine"
+   sama tähenduses - vali üks ja kasuta läbivalt.
+
+4. VIITAMISVAJADUS
+   Tüüpilised probleemid: konkreetsed arvulised väited ilma viiteta;
+   teiste autorite mõtted refereeritud ilma viiteta; konkreetne
+   metoodika või algoritm esitatud kui üldteadmine.
+   NÄIDE: "Üle 75% arendajatest kasutab seda raamistikku." VAJAB
+   viidet originaaluuringule.
+   VASTUNÄIDE: "HTTP on rakenduskihi protokoll." EI VAJA viidet
+   (üldteadmine).
+
+VASTA JSON-formaadis järgmise skeemi järgi (ja ainult selles kujul):
+{
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR" | "AKADEEMILINE_STIIL" |
+                    "TERMINOLOOGIA" | "VIITAMISVAJADUS",
+      "tsitaat": "tekstis täpne probleemne kohaviit (kuni 200 tähemärki)",
+      "probleem": "lühike kirjeldus, mis selles kohaviites on valesti",
+      "põhjendus": "miks see on probleem - vasta enne soovitust",
+      "soovitus": "konkreetne soovitus, KUID MITTE valmis ümbersõnastus
+                   (kuni 200 tähemärki)",
+      "kindlus": "kõrge" | "keskmine" | "madal"
+    }
+  ]
+}
+
+REEGLID:
+- Kui konkreetses kategoorias probleeme ei leita, jäta selle
+  kategooria kanded vahele.
+- Ära leia probleeme, mida tegelikult pole - parem vähem õigeid
+  kui palju valesid.
+- Iga leid peab olema põhjendatud konkreetse tsitaadi kaudu.
+- Kindlus "kõrge" tähendab, et oled täiesti veendunud; "madal" et
+  see on subjektiivne hinnang ja võiks olla teisiti.
+
+Peatüki tüüp: {peatüki_tüüp}
+Peatüki tekst:
+"""
+{tekst}
+"""
+
+Vasta ainult JSON-iga, ilma lisaselgituseta.
+\end{minted}
+
+\subsection*{Lisa II: Testkogu kirjeldus} \label{lisa:testkogu}
+\addcontentsline{toc}{subsection}{Lisa II: Testkogu kirjeldus}
+
+Testkogu koosneb 20 tekstikatkendist, mis on valitud Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024. Tabelis~\ref{tab:testkogu-detail} on esitatud katkendite jaotus peatüki tüübi järgi ning iga katkendi anonüümne tunnus, sõnade arv ja kuldstandardi probleemide arv.
+
+\begin{table}[htb!]
+    \centering
+    \caption{Testkogu detailne kirjeldus.}
+    \label{tab:testkogu-detail}
+    \begin{tblr}{
+                colspec = { Q[c] Q[l,wd=0.30\textwidth] Q[c] Q[c] },
+                hlines, vlines,
+                row{1} = {font=\bfseries, bg = colorCellHighlight},
+            }
+    Tunnus & Peatüki tüüp & Sõnu & Probleeme \\
+    K01 & Sissejuhatus            & 312 & 8 \\
+    K02 & Sissejuhatus            & 274 & 6 \\
+    K03 & Sissejuhatus            & 298 & 9 \\
+    K04 & Sissejuhatus            & 263 & 5 \\
+    K05 & Taust ja seotud tööd    & 354 & 11 \\
+    K06 & Taust ja seotud tööd    & 287 & 7 \\
+    K07 & Taust ja seotud tööd    & 333 & 8 \\
+    K08 & Taust ja seotud tööd    & 309 & 9 \\
+    K09 & Taust ja seotud tööd    & 278 & 6 \\
+    K10 & Metoodika               & 281 & 5 \\
+    K11 & Metoodika               & 322 & 8 \\
+    K12 & Metoodika               & 304 & 7 \\
+    K13 & Metoodika               & 285 & 6 \\
+    K14 & Tulemused               & 246 & 4 \\
+    K15 & Tulemused               & 289 & 7 \\
+    K16 & Tulemused               & 271 & 5 \\
+    K17 & Tulemused               & 278 & 8 \\
+    K18 & Kokkuvõte               & 234 & 4 \\
+    K19 & Kokkuvõte               & 251 & 5 \\
+    K20 & Kokkuvõte               & 245 & 4 \\
+    \textbf{Kokku} &              & \textbf{5774} & \textbf{138} \\
+    \end{tblr}
+\end{table}
+
+Katkendid on anonüümitud (autorite ja konkreetsete tööde nimed eemaldatud), kuna eesmärk on hinnata mudeli oskust mitte tuvastada konkreetseid autoreid. Originaaltöödest valiti välja peamine sisuline tekst ilma joonisteta, valemiteta ja koodinäideteta, sest mudel ei käsitle praegusel hetkel pildilist sisu. Detailsed katkendid ja nendega seotud kuldstandardi märgendused on esitatud kaasapandud arhiivis (vt lisa~\ref{lisa:arhiiv}).
+
+\subsection*{Lisa III: Kaasapandud failide kirjeldus} \label{lisa:arhiiv}
+\addcontentsline{toc}{subsection}{Lisa III: Kaasapandud failide kirjeldus}
+
+Lõputöö juurde kuulub eraldi arhiivifail \texttt{kronbergs-bakalaureusetoo-2026.zip}, mille sisu on järgnev:
+
+\begin{itemize}
+    \item \texttt{prototuup/} – prototüübi täielik lähtekood:
+    \begin{itemize}
+        \item \texttt{backend/} – Python 3.12 + FastAPI backend.
+        \item \texttt{frontend/} – React 18 + TypeScript frontend.
+        \item \texttt{prompts/} – nii üldine kui ka struktureeritud prompt eraldi failides.
+        \item \texttt{docker-compose.yml} – kogu süsteemi käivitamiseks.
+        \item \texttt{README.md} – paigaldus- ja käivitusjuhend.
+    \end{itemize}
+    \item \texttt{testkogu/} – 20 anonüümitud tekstikatkendit ja kuldstandardi märgendused JSON-formaadis.
+    \item \texttt{tulemused/} – mudeli väljundid kõikide katkendite ja mõlema prompti puhul, koos analüüsi tabelitega CSV-formaadis.
+    \item \texttt{joonised/} – kõik töös kasutatud joonised originaalformaadis (SVG, PNG).
+\end{itemize}
+
+\subsection*{Lisa IV: Prototüübi kasutusjuhend} \label{lisa:juhend}
+\addcontentsline{toc}{subsection}{Lisa IV: Prototüübi kasutusjuhend}
+
+Prototüübi käivitamiseks on vaja Dockerit (versioon 24 või uuem) ning kehtivat Anthropic API võtit. Käivitamise sammud on järgmised:
+
+\begin{enumerate}
+    \item Avada arhiivi kaust \texttt{prototuup/}.
+    \item Kopeerida fail \texttt{.env.example} failiks \texttt{.env} ja sisestada Anthropic API võti reale \texttt{ANTHROPIC\_API\_KEY=...}.
+    \item Käivitada käsk \texttt{docker compose up} kaustas \texttt{prototuup/}. See käivitab nii backend (port 8000) kui ka frontend (port 5173).
+    \item Avada brauseris aadress \url{http://localhost:5173}.
+    \item Sisestada lõputöö peatüki tekst sisendalale, valida peatüki tüüp ja prompti tüüp ning vajutada \emph{Analüüsi}.
+\end{enumerate}
+
+\textbf{Oluline}: prototüübi käivitamise hetkel saadetakse sisestatud tekst Anthropici API-le. Kui tekst sisaldab tundlikku informatsiooni, mille edastamine kolmandale poolele ei ole sobiv, tuleks kasutamisest hoiduda. Süsteem kuvab enne esimest päringut vastava hoiatuse, mille kasutaja peab kinnitama.

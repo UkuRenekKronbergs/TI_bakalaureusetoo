@@ -1,0 +1,198 @@
+\section{Metoodika} \label{metoodika}
+
+Käesolev peatükk kirjeldab, kuidas töö eesmärki realiseeritakse. Alapeatükis~\ref{metoodika:protsess} esitatakse uurimisprotsess tervikuna. Alapeatükk~\ref{metoodika:kategooriad} määratleb tagasisidekategooriad operatsionaalselt. Alapeatükis~\ref{metoodika:mudel} põhjendatakse mudeli valikut. Alapeatükk~\ref{metoodika:promptid} esitab kahe võrreldava prompti disaini. Alapeatükis~\ref{metoodika:hindamine} kirjeldatakse hindamismetoodikat ja kuldstandardi koostamise protsessi.
+
+\subsection{Uurimisprotsess} \label{metoodika:protsess}
+
+Uurimine järgib disain\-teaduse (\emph{ingl. design science research}) põhimõtet~\cite{hevner_design_2004}: identifitseeritakse probleem, projekteeritakse artefakt (käesoleval juhul prototüüp), rakendatakse seda ning hinnatakse rangelt. Hindamise põhjal saab teha järeldusi nii artefakti kui ka selle aluseks olevate disainivalikute kohta.
+
+Töö protsess koosnes järgmistest etappidest:
+\begin{enumerate}
+    \item Tagasisidekategooriate operatsionaalne määratlemine kirjanduse ja TÜ juhendi põhjal.
+    \item Üldise ja struktureeritud prompti disain.
+    \item Prototüübi realiseerimine veebirakendusena, mis kutsub välja LLM-i API-d.
+    \item Testkogu koostamine: 20 eestikeelset informaatika lõputöö katkendit erinevatest peatüki tüüpidest.
+    \item Käsitsi märgendamine: autori ja juhendaja koostöös tuvastati katkendites probleemid kuldstandardiks.
+    \item Mudeli väljundi võrdlemine kuldstandardiga, näitajad arvutati iga kategooria kohta eraldi.
+    \item Üldise ja struktureeritud prompti võrdlus.
+\end{enumerate}
+
+\subsection{Tagasisidekategooriate operatsionaalne määratlus} \label{metoodika:kategooriad}
+
+Töös käsitletakse nelja tagasisidekategooriat. Iga kategooria kohta on tabelis~\ref{tab:kategooriad} esitatud määratlus, näide tüüpilisest probleemist ning probleemi puudumise näide. Need määratlused olid aluseks nii prompti koostamisele kui ka kuldstandardi märgendamisele.
+
+\begin{table}[htb!]
+    \centering
+    \caption{Tagasisidekategooriate operatsionaalsed määratlused.}
+    \label{tab:kategooriad}
+    \begin{tblr}{width=1.0\textwidth, hlines, vlines,
+                colspec = { Q[l,font=\bfseries,wd=0.18\textwidth] X[l] X[l] },
+                row{1} = {font=\bfseries, bg = colorCellHighlight},
+            }
+    Kategooria & Tüüpiline probleem & Probleemi puudumise tunnus \\
+    Struktuur & Peatükk algab kohe alampealkirjaga ilma sissejuhatava lõiguta; lõikude vahel ei ole loogilist üleminekut. & Iga peatükk algab sissejuhatava lõiguga; alampeatükid on omavahel sujuvalt seotud. \\
+    Akadeemiline stiil & Kõnekeel (\emph{tüüp, asi}); liiga pikad laused; mina-vormi liigne kasutamine; otsetõlke ilmingud. & Kasutatakse neutraalset akadeemilist stiili; lauseehitus on selge. \\
+    Terminoloogia & Sama mõiste tähistamiseks kasutatakse läbisegi mitut eri terminit (\emph{lõim} ja \emph{niit}); ingliskeelseid termineid esitatakse ilma esmakasutuse selgituseta. & Terminid on järjepidevad; ingliskeelsed terminid esitatakse esmakasutusel ka eestikeelselt. \\
+    Viitamisvajadus & Konkreetsed arvulised või faktilised väited on esitatud ilma viiteta; metoodika kirjeldus on esitatud kui üldteadmine. & Iga väide, mis pole autori enda originaalne mõte, on viidatud. \\
+    \end{tblr}
+\end{table}
+
+Kategooriad on disainitud nii, et nad on \emph{vastastikku eristatavad} – ühte sõnastust ei tohiks korraga liigitada kahte kategooriasse. Seda eristatavust kontrolliti märgendamise käigus.
+
+\subsection{Mudeli valik} \label{metoodika:mudel}
+
+Töös kasutatakse Anthropici \texttt{claude-3-5-sonnet} mudelit (versioon 2024-10-22). Valiku tegemise kriteeriumid olid:
+\begin{itemize}
+    \item \textbf{Eesti keele tugi}: TartuNLP võrdlusuuringu~\cite{tartunlp_eval_2024} põhjal kuulub Claude 3.5 Sonnet eesti keele kvaliteedi poolest tippmudelite hulka.
+    \item \textbf{Pikk konteksti aken}: 200\,000 tokenit~\cite{anthropic_claude_2024} võimaldab analüüsida kogu lõputöö peatükki korraga ilma sisendi tükeldamiseta.
+    \item \textbf{Struktureeritud väljundi tugi}: mudel järgib usaldusväärselt JSON-skeemi kohaseid väljundinõudeid.
+    \item \textbf{Hind ja kättesaadavus}: API-ligipääs on tudengieelarve piires.
+\end{itemize}
+
+Tulemuste üldistatavuse parandamiseks tehakse osa katsetustest ka OpenAI \texttt{gpt-4o} mudeliga (versioon 2024-08-06), et hinnata, kuivõrd süsteemi tulemused sõltuvad konkreetsest mudelivalikust. Mõlema mudeli puhul kasutatakse temperatuuri väärtust 0,2 – madal temperatuur toob kaasa stabiilsemad tulemused, kuid säilitab teatud loovuse, mis on keele- ja stiilihinnangute andmiseks vajalik.
+
+\subsection{Promptide disain} \label{metoodika:promptid}
+
+Töös võrreldakse kahte prompti varianti: \emph{üldist} ja \emph{struktureeritud}.
+
+\subsubsection{Üldine prompt}
+
+Üldine prompt on lühike ning ei suuna mudelit konkreetsetele kategooriatele:
+
+\begin{minted}[breaklines,fontsize=\small]{text}
+Oled eestikeelse informaatika lõputöö juhendaja abiline. Anna sisestatud
+peatükile tagasisidet selle kvaliteedi kohta. Ole konstruktiivne ja
+konkreetne. Tagasiside peab olema eesti keeles.
+
+Peatüki tüüp: {peatüki_tüüp}
+Peatüki tekst:
+"""
+{tekst}
+"""
+\end{minted}
+
+\subsubsection{Struktureeritud prompt}
+
+Struktureeritud prompt on oluliselt mahukam ja sisaldab nelja olulist erinevust üldisest promptist: (1) süsteemi rolli ja eesmärgi täpne määratlus, (2) iga tagasisidekategooria kohta vähehetk-näited, (3) väljundskeemi nõue (JSON), ja (4) mõtteahel-element, mille käigus mudel peab iga tuvastatud probleemi jaoks põhjendama, miks see probleem on. Prompti täielik tekst on esitatud lisas~\ref{lisa:promptid}.
+
+Prompti võtmeosad on järgmised:
+
+\begin{minted}[breaklines,fontsize=\small]{text}
+Oled eestikeelse informaatika lõputöö tagasisidesüsteem.
+SUL EI OLE LUBATUD lõputööd tudengi eest kirjutada ega ümber sõnastada.
+Sa annad ainult soovituslikku tagasisidet tudengi enda kirjutatud
+tekstile. Lõpliku otsuse iga soovituse rakendamise kohta teeb autor.
+
+Sinu ülesanne on tuvastada probleemid täpselt neljas kategoorias:
+1. STRUKTUUR
+2. AKADEEMILINE_STIIL
+3. TERMINOLOOGIA
+4. VIITAMISVAJADUS
+
+[Iga kategooria kohta järgnevalt määratlus, näited ja vastunäited]
+
+Vasta JSON-formaadis järgmise skeemi järgi:
+{
+  "leiud": [
+    {
+      "kategooria": "...",
+      "tsitaat": "tekstis täpne probleemne kohaviit",
+      "probleem": "lühike kirjeldus",
+      "põhjendus": "miks see on probleem",
+      "soovitus": "konkreetne parandusettepanek",
+      "kindlus": "kõrge | keskmine | madal"
+    }
+  ]
+}
+
+Kui konkreetses kategoorias probleeme ei leita, jäta selle kategooria
+kanded vahele. Ära leia probleeme, mida tegelikult pole.
+\end{minted}
+
+\textbf{Põhjendatud disainivalikud}:
+\begin{itemize}
+    \item \textbf{Eetiline meelespea}. Prompti algusesse on paigutatud selge piirang, et mudel ei tohi tudengi eest kirjutada. See on kooskõlas TÜ generatiivse tehisaru juhendiga~\cite{ut_genAI_2024} ning vähendab tõenäosust, et mudel pakub tudengile valmis ümbersõnastusi.
+    \item \textbf{Tsitaadi nõue}. Iga probleemi puhul peab mudel viitama konkreetsele tekstilõigule. See raskendab \emph{halutsineerimist} ja teeb tagasiside auditeeritavaks.
+    \item \textbf{Kindluse hinnang}. Iga leiu kohta nõutav kindlushinnang võimaldab kasutajaliideses madala kindlusega leide visuaalselt eristada ning hindamise käigus uurida, kas kindlus korreleerub leiu tegeliku õigsusega.
+    \item \textbf{Põhjenduse nõue}. Mõtteahel-elemendiks olev \emph{põhjenduse} väli sunnib mudelit oma järelduse kontrollima ning aitab kasutajal otsustada, kas soovituse vastu võtta.
+\end{itemize}
+
+\subsection{Hindamismetoodika} \label{metoodika:hindamine}
+
+\subsubsection{Testkogu}
+
+Testkogu koosneb 20 eestikeelse informaatika lõputöö katkendist, kus iga katkendi pikkus on 200--400 sõna. Katkendid on valitud nii, et katavad erinevaid peatüki tüüpe (vt tabel~\ref{tab:testkogu}). Allikad on TÜ arvutiteaduse instituudi avalikult kättesaadavad bakalaureuse- ja magistritööd aastatest 2020--2024 ning katkendid on valitud nii, et need sisaldavad nii probleeme kui ka korrektseid lõike. Katkendid on esitatud lisas~\ref{lisa:testkogu}.
+
+\begin{table}[htb!]
+    \centering
+    \caption{Testkogu katkendite jaotus peatüki tüübi järgi.}
+    \label{tab:testkogu}
+    \begin{tblr}{
+                colspec = { Q[l] Q[c] Q[c] },
+                hlines, vlines,
+                row{1} = {font=\bfseries, bg = colorCellHighlight},
+            }
+    Peatüki tüüp & Katkendite arv & Keskmine pikkus (sõnu) \\
+    Sissejuhatus & 4 & 287 \\
+    Taust ja seotud tööd & 5 & 312 \\
+    Metoodika & 4 & 298 \\
+    Tulemused & 4 & 271 \\
+    Kokkuvõte & 3 & 243 \\
+    \textbf{Kokku} & \textbf{20} & \textbf{289} \\
+    \end{tblr}
+\end{table}
+
+\subsubsection{Käsitsi märgendamine}
+
+Iga katkendi puhul märgendati probleemid kahes etapis. Esiteks märgistas autor iseseisvalt iga tuvastatud probleemi: probleemse tekstilõigu, kategooria ning lühikese põhjenduse. Teiseks vaadati märgendused üle koos juhendajaga ning lahkarvamuste korral lepiti kokku ühises lahenduses. Lõpptulemus moodustab kuldstandardi, mille vastu mudeli väljundit hinnatakse. Märgendamise tulemusena leiti 20 katkendis kokku 138 probleemi, jaotus kategooriate kaupa on esitatud tabelis~\ref{tab:kuldstandard}.
+
+\begin{table}[htb!]
+    \centering
+    \caption{Kuldstandardi probleemide jaotus kategooriate kaupa.}
+    \label{tab:kuldstandard}
+    \begin{tblr}{
+                colspec = { Q[l] Q[c] },
+                hlines, vlines,
+                row{1} = {font=\bfseries, bg = colorCellHighlight},
+            }
+    Kategooria & Probleemide arv \\
+    Struktuur & 24 \\
+    Akadeemiline stiil & 51 \\
+    Terminoloogia & 28 \\
+    Viitamisvajadus & 35 \\
+    \textbf{Kokku} & \textbf{138} \\
+    \end{tblr}
+\end{table}
+
+\subsubsection{Mõõdikud}
+
+Mudeli väljundi võrdlemiseks kuldstandardiga kasutatakse standardseid info\-otsingu mõõdikuid. Iga kategooria \(c\) puhul:
+
+\begin{itemize}
+    \item \textbf{Tõene positiivne} (TP\(_c\)): mudel tuvastas probleemi, mis on ka kuldstandardis.
+    \item \textbf{Vale positiivne} (FP\(_c\)): mudel tuvastas probleemi, mis ei ole kuldstandardis.
+    \item \textbf{Vale negatiivne} (FN\(_c\)): kuldstandardis on probleem, mida mudel ei tuvastanud.
+\end{itemize}
+
+Sellest järeldatakse järgmised mõõdikud:
+
+\begin{equation}
+    \text{Täpsus}_c = \frac{\text{TP}_c}{\text{TP}_c + \text{FP}_c}
+    \label{eq:tapsus}
+\end{equation}
+
+\begin{equation}
+    \text{Saagis}_c = \frac{\text{TP}_c}{\text{TP}_c + \text{FN}_c}
+    \label{eq:saagis}
+\end{equation}
+
+\begin{equation}
+    F_{1,c} = \frac{2 \cdot \text{Täpsus}_c \cdot \text{Saagis}_c}{\text{Täpsus}_c + \text{Saagis}_c}
+    \label{eq:f1}
+\end{equation}
+
+\textbf{Kattuvuse defineerimine.} Kuna mudel ja autor võivad sama probleemi kirjeldada erinevate sõnadega, ei ole võimalik nõuda eksaktset stringivastet. Kattuvust hinnatakse järgmise reegli järgi: mudeli leid loetakse tõeseks positiivseks, kui (1) tema osutatud tekstilõik kattub kuldstandardi probleemse lõiguga vähemalt 50\% ulatuses sõnatasemel ning (2) kategooria on sama. Kui kategooria erineb, loetakse leid mudeli vaates valepositiivseks ja kuldstandardi vaates valenegatiivseks.
+
+\subsubsection{Promptide võrdlus}
+
+Üldist ja struktureeritud prompti võrreldakse, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Kuna üldine prompt ei nõua kategoriseeritud väljundit, viiakse selle väljund kategooriatesse käsitsi: ühe annoteerija (autor) poolt vastavalt eelpool toodud kategooriate määratlustele. See protseduur on omakorda subjektiivsuseallikas, mida arutatakse peatükis~\ref{hindamine:piirangud}.
