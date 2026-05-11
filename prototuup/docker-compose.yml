@@ -5,6 +5,9 @@ services:
     ports:
       - "8000:8000"
     environment:
+      # Vaikimisi töötab demo-režiim, mis ei vaja API võtmeid. Allolevad
+      # muutujad on vajalikud ainult juhul, kui kasutaja valib frontendis
+      # mudeliks claude-* või gpt-* ja soovib päris LLM-i kasutada.
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       LOG_LEVEL: ${LOG_LEVEL:-INFO}

@@ -12,6 +12,14 @@
 *.cb2
 .*.lb
 
+## Environment files with local secrets:
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
+
 ## Intermediate documents:
 *.dvi
 *.xdv

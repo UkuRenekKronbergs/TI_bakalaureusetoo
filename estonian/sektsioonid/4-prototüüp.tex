@@ -6,11 +6,13 @@ Käesolev peatükk kirjeldab loodud prototüüpi. Alapeatükis~\ref{prototuup:no
 
 Funktsionaalsed nõuded olid järgmised. Süsteem peab võimaldama kasutajal (1) sisestada eestikeelse teksti vabavormiliselt, (2) valida peatüki tüübi (sissejuhatus, taust, metoodika, tulemused, kokkuvõte), (3) saada struktureeritud tagasisidet neljas eelmainitud kategoorias, (4) näha iga leiu juures konkreetset probleemset tekstilõiku, soovitust ja kindlushinnangut, (5) valida üldise ja struktureeritud prompti vahel võrdluseks ning (6) eksportida tagasiside tekstifailina.
 
-Mittefunktsionaalsed nõuded olid järgmised. Süsteem peab (1) töötama ühel tüüpilisel arendaja töömasinal ilma erilise riistvara nõudeta, (2) olema kasutatav tavalise veebibrauseri kaudu, (3) vastama tüüpilisele päringule alla 30 sekundi, (4) hoidma kasutaja teksti kogu töö vältel \emph{ainult} mälus ja mitte kettal püsivalt, ning (5) edastama teksti välimise LLM-i API-ga ainult juhul, kui kasutaja on selle valiku teadlikult kinnitanud.
+Mittefunktsionaalsed nõuded olid järgmised. Süsteem peab (1) töötama ühel tüüpilisel arendaja töömasinal ilma erilise riistvara nõudeta, (2) olema kasutatav tavalise veebibrauseri kaudu, (3) vastama tüüpilisele päringule alla 30 sekundi, (4) hoidma kasutaja teksti kogu töö vältel \emph{ainult} mälus ja mitte kettal püsivalt, (5) edastama teksti välimise LLM-i API-ga ainult juhul, kui kasutaja on selle valiku teadlikult kinnitanud, ning (6) võimaldama proovikäivitust ka ilma välise LLM-i API juurdepääsuta (näiteks olukorras, kus hindajal pole API võtit), et töö praktiline tulemus oleks reprodutseeritav minimaalsete eeldustega.
 
 \subsection{Süsteemi arhitektuur} \label{prototuup:arhitektuur}
 
 Prototüüp järgib lihtsat klient-server arhitektuuri. Arhitektuur on kujutatud joonisel~\ref{fig:arhitektuur}. Süsteem koosneb kolmest komponendist: brauseripoolne kasutajaliides (\textbf{frontend}), kohalik teenus (\textbf{backend}) ja välimine LLM-i API. Backend hoiab promptide malle ja vastutab nende sidumise eest sisestatud tekstiga ning JSON-vastuse järeltöötluse eest. Backend on kavandatud kihilisena nii, et LLM-i pakkuja vahetamine (näiteks Anthropic Claude'ilt OpenAI GPT-le) nõuab muutusi ainult \texttt{providers/} kaustas.
+
+Lisaks reaalsetele LLM-pakkujatele on backendis sama liidese taga ka \emph{demo-pakkuja}, mis tagastab iga peatüki tüübi jaoks varem genereeritud salvestatud näidisvastuse (vt fail \texttt{prototuup/backend/demo\_andmed.py}). Demo-pakkuja on vaikevalik, mis võimaldab süsteemi proovida ja töö praktilist tulemust reprodutseerida ilma Anthropici või OpenAI API võtmeta; päris LLM-i kasutamiseks valib kasutaja kasutajaliideses mudeli \texttt{claude-opus-4-7} või \texttt{gpt-5}, mille kasutamine eeldab vastava võtme seadistamist keskkonnamuutujasse.
 
 \begin{figure}[ht]
     \centering
@@ -108,6 +110,6 @@ Süsteemi disainimisel on otseselt arvestatud sellega, et see ei muutuks tudengi
 
 \textbf{Selge teavitus kasutajaliidesest.} Igas vastuses on tagasiside paneeli päises pidevalt nähtav teade: \emph{See süsteem annab soovituslikku tagasisidet sinu enda kirjutatud tekstile. See ei kirjuta lõputööd sinu eest. Kontrolli iga soovitust ja sõnasta vajadusel ümber.}
 
-\textbf{Privaatsus.} Kasutaja sisestatud tekst saadetakse LLM-i API-le ainult pärast seda, kui kasutaja on kinnitanud konkreetses dialoogiaknas, et ta on sellest teadlik. Kohalik backend ei salvesta sisestatud teksti kettal; logitakse ainult anonüümne sündmus (näitajaid: prompti tüüp, peatüki tüüp, leidude arv kategooriate kaupa) hindamise jaoks.
+\textbf{Privaatsus.} Demo-režiimis (vaikevalik) ei lahku kasutaja sisestatud tekst kohaliku masinata: backend tagastab salvestatud näidisvastuse. Kui kasutaja valib mudeliks Claude'i või GPT, saadetakse tekst LLM-i API-le ainult pärast seda, kui ta on kinnitanud konkreetses dialoogiaknas, et ta on sellest teadlik. Kohalik backend ei salvesta sisestatud teksti kettal; logitakse ainult anonüümne sündmus (näitajaid: prompti tüüp, peatüki tüüp, leidude arv kategooriate kaupa) hindamise jaoks.
 
 Need meetmed ei ole täiuslikud – kasutaja võib endiselt prompti ümber sõnastada või luua ise ümber\-kirjutamise palve. Süsteemi roll on aga selgelt määratletud just tagasisidena, mitte loomise vahendina; vastutus konkreetse kasutusviisi eest jääb kasutajale.

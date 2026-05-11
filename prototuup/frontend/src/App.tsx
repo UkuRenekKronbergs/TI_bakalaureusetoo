@@ -5,6 +5,7 @@ import KonfPaneel from "./components/KonfPaneel";
 import PrivaatsusDialoog from "./components/PrivaatsusDialoog";
 import TagasisidePaneel from "./components/TagasisidePaneel";
 import TekstSisend from "./components/TekstSisend";
+import { NAIDIS_TEKSTID } from "./data/naidisTekstid";
 import type {
   AnalyysiPaaring,
   AnalyysiVastus,
@@ -20,7 +21,7 @@ export default function App() {
   const [tekst, setTekst] = useState("");
   const [peatykiTyyp, setPeatykiTyyp] = useState<PeatykiTyyp>("sissejuhatus");
   const [promptiTyyp, setPromptiTyyp] = useState<PromptiTyyp>("struktureeritud");
-  const [mudel, setMudel] = useState<Mudel>("claude-opus-4-7");
+  const [mudel, setMudel] = useState<Mudel>("demo");
 
   const [vastus, setVastus] = useState<AnalyysiVastus | null>(null);
   const [laadimine, setLaadimine] = useState(false);
@@ -29,6 +30,7 @@ export default function App() {
   const [dialoogAvatud, setDialoogAvatud] = useState(false);
 
   const tekstiKehtivus = tekst.trim().length >= 50;
+  const onDemoRezhiim = mudel === "demo";
 
   const kaivitaAnalyys = useCallback(async () => {
     setLaadimine(true);
@@ -58,6 +60,10 @@ export default function App() {
 
   const onAnalyysiklikk = () => {
     if (!tekstiKehtivus || laadimine) return;
+    if (onDemoRezhiim) {
+      void kaivitaAnalyys();
+      return;
+    }
     const kinnitatud = localStorage.getItem(PRIVAATSUS_VOTEM) === "1";
     if (!kinnitatud) {
       setDialoogAvatud(true);
@@ -70,6 +76,12 @@ export default function App() {
     localStorage.setItem(PRIVAATSUS_VOTEM, "1");
     setDialoogAvatud(false);
     void kaivitaAnalyys();
+  };
+
+  const laeNaidistekst = () => {
+    setTekst(NAIDIS_TEKSTID[peatykiTyyp]);
+    setVastus(null);
+    setViga(null);
   };
 
   const ekspordi = () => {
@@ -102,6 +114,15 @@ export default function App() {
       <main className="flex-1">
         <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <section className="space-y-4">
+            {onDemoRezhiim && (
+              <div className="rounded border border-sky-300 bg-sky-50 p-3 text-xs text-sky-900">
+                <strong>Demo-režiim:</strong> päringut välisteenusesse ei tehta.
+                Süsteem kuvab salvestatud näidisvastuse valitud peatüki tüübi
+                kohta — analüüsi tulemus ei sõltu sisestatud tekstist. Päris LLM-i
+                kasutamiseks vali mudeliks Claude või GPT (eeldab API võtit).
+              </div>
+            )}
+
             <KonfPaneel
               peatykiTyyp={peatykiTyyp}
               promptiTyyp={promptiTyyp}
@@ -118,7 +139,7 @@ export default function App() {
               disabled={laadimine}
             />
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <button
                 type="button"
                 onClick={onAnalyysiklikk}
@@ -126,6 +147,14 @@ export default function App() {
                 className="px-4 py-2 text-sm font-medium text-white bg-emerald-700 hover:bg-emerald-800 disabled:bg-gray-300 disabled:cursor-not-allowed rounded"
               >
                 Analüüsi
+              </button>
+              <button
+                type="button"
+                onClick={laeNaidistekst}
+                disabled={laadimine}
+                className="px-4 py-2 text-sm font-medium text-emerald-700 border border-emerald-700 hover:bg-emerald-50 disabled:text-gray-400 disabled:border-gray-300 disabled:cursor-not-allowed rounded"
+              >
+                Lae näidistekst
               </button>
               <button
                 type="button"

@@ -31,6 +31,7 @@ class PromptiTyyp(str, Enum):
 
 
 class Mudel(str, Enum):
+    DEMO = "demo"
     CLAUDE_OPUS_4_7 = "claude-opus-4-7"
     GPT_5 = "gpt-5"
 
@@ -57,7 +58,7 @@ class AnalyysiPaaring(BaseModel):
     tekst: str = Field(..., min_length=50, max_length=20_000)
     peatuki_tyyp: PeatykiTyyp
     prompti_tyyp: PromptiTyyp = PromptiTyyp.STRUKTUREERITUD
-    mudel: Mudel = Mudel.CLAUDE_OPUS_4_7
+    mudel: Mudel = Mudel.DEMO
 
 
 class AnalyysiMeta(BaseModel):
