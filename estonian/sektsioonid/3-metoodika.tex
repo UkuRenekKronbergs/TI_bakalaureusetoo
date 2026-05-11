@@ -43,7 +43,7 @@ Kategooriad on disainitud nii, et nad on \emph{vastastikku eristatavad} – üht
 
 Töös kasutatakse Anthropici \texttt{claude-opus-4-7} mudelit. Valiku tegemise kriteeriumid olid:
 \begin{itemize}
-    \item \textbf{Eesti keele tugi}: TartuNLP võrdlusuuringu~\cite{tartunlp_eval_2024} põhjal kuuluvad tipptasemel Claude'i ja GPT mudelid eesti keele kvaliteedi poolest tippmudelite hulka.
+    \item \textbf{Eesti keele tugi}: TartuNLP-i avaliku eesti keele LLM-võrdlusplatvormi (baromeeter)~\cite{tartunlp_baromeeter_2025} põhjal kuuluvad tipptasemel Claude'i ja GPT mudelid eesti keele kvaliteedi poolest tippmudelite hulka.
     \item \textbf{Pikk konteksti aken}: 1\,000\,000 tokenit~\cite{anthropic_models_2026} võimaldab analüüsida kogu lõputöö peatükki korraga ilma sisendi tükeldamiseta.
     \item \textbf{Struktureeritud väljundi tugi}: mudel järgib usaldusväärselt JSON-skeemi kohaseid väljundinõudeid.
     \item \textbf{Hind ja kättesaadavus}: API-ligipääs on tudengieelarve piires.
@@ -73,7 +73,7 @@ ${tekst}
 
 \subsubsection{Struktureeritud prompt}
 
-Struktureeritud prompt on oluliselt mahukam ja sisaldab nelja olulist erinevust üldisest promptist: (1) süsteemi rolli ja eesmärgi täpne määratlus, (2) iga tagasisidekategooria kohta vähehetk-näited, (3) väljundskeemi nõue (JSON), ja (4) mõtteahel-element, mille käigus mudel peab iga tuvastatud probleemi jaoks põhjendama, miks see probleem on. Prompti täielik tekst on esitatud lisas~\ref{lisa:promptid}.
+Struktureeritud prompt on oluliselt mahukam ja sisaldab nelja olulist erinevust üldisest promptist: (1) süsteemi rolli ja eesmärgi täpne määratlus, (2) iga tagasisidekategooria kohta vähehetk-näited, (3) väljundskeemi nõue (JSON), ja (4) mõtteahel-element, mille käigus mudel peab iga tuvastatud probleemi jaoks põhjendama, miks see probleem on. Prompti täielik tekst on esitatud lisas~II.
 
 Prompti võtmeosad on järgmised:
 
@@ -121,7 +121,7 @@ kanded vahele. Ära leia probleeme, mida tegelikult pole.
 
 \subsubsection{Testkogu}
 
-Testkogu koosneb 20 eestikeelse informaatika lõputöö katkendist, kus iga katkendi pikkus on 200--400 sõna. Katkendid on valitud nii, et katavad erinevaid peatüki tüüpe (vt tabel~\ref{tab:testkogu}). Allikad on TÜ arvutiteaduse instituudi avalikult kättesaadavad bakalaureuse- ja magistritööd aastatest 2020--2024 ning katkendid on valitud nii, et need sisaldavad nii probleeme kui ka korrektseid lõike. Katkendid on esitatud lisas~\ref{lisa:testkogu}.
+Testkogu koosneb 20 eestikeelse informaatika lõputöö katkendist, kus iga katkendi pikkus on 200--400 sõna. Katkendid on valitud nii, et katavad erinevaid peatüki tüüpe (vt tabel~\ref{tab:testkogu}). Allikad on TÜ arvutiteaduse instituudi avalikult kättesaadavad bakalaureuse- ja magistritööd aastatest 2020--2024 ning katkendid on valitud nii, et need sisaldavad nii probleeme kui ka korrektseid lõike. Katkendid on esitatud lisas~I.
 
 \begin{table}[htb!]
     \centering
