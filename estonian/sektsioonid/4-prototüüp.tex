@@ -37,7 +37,7 @@ Prototüübi realiseerimisel valiti tehnoloogiad järgmiste põhimõtete alusel:
     Backend & Python 3.12 + FastAPI & Anthropic SDK on Pythonis küps; FastAPI annab automaatselt OpenAPI dokumentatsiooni ja sisendi valideerimise. \\
     Frontend & React 18 + TypeScript + Tailwind CSS & TÜ tudengite seas levinud kombinatsioon; Tailwind võimaldab kiire stiili ilma eraldi CSS-failideta. \\
     LLM-i API & Anthropic Messages API & Claude 4.7 Opuse tugi, struktureeritud väljundi tugi (\texttt{tools} või prefill-tehnika). \\
-    Skeemi\-valideerimine & Pydantic + JSON Schema & Backendis valideerib mudeli vastust enne kasutajale saatmist; vea korral palutakse mudelilt parandus. \\
+    Skeemi valideerimine & Pydantic + JSON Schema & Backend valideerib mudeli vastust enne kasutajale saatmist; vea korral palutakse mudelilt parandus. \\
     Pakendamine & Docker Compose & Lihtsustab käitamist; ühes \texttt{docker compose up} käivitub kogu süsteem. \\
     \end{tblr}
 \end{table}

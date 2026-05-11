@@ -1,45 +1,39 @@
 \section*{Lisad} \label{lisad} \addcontentsline{toc}{section}{Lisad}
 
-\subsection*{Lisa I: Testkogu kirjeldus} \label{lisa:testkogu}
-\addcontentsline{toc}{subsection}{Lisa I: Testkogu kirjeldus}
+\subsection*{Lisa I: Kavandatud testkogu disain} \label{lisa:testkogu}
+\addcontentsline{toc}{subsection}{Lisa I: Kavandatud testkogu disain}
 
-Testkogu koosneb 20 tekstikatkendist, mis on valitud Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024. Tabelis~\ref{tab:testkogu-detail} on esitatud katkendite jaotus peatüki tüübi järgi ning iga katkendi anonüümne tunnus, sõnade arv ja kuldstandardi probleemide arv. Pilootkatses on kasutatud orienteeruvalt 3--5 katkendit peatüki tüübi kohta; täismahuline hindamine on kavandatud kogu testkogu peale (vt alapeatükk~\ref{hindamine:edasine}).
+Käesolev lisa kirjeldab \emph{kavandatud} testkogu disaini täismahulise hindamise jaoks. Testkogu koostamine ja annoteerimine kuulub töö jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}) ning käesoleva töö esitamise hetkel ei ole testkogu konkreetsed katkendid veel anonüümitud ega lõplikult valitud. Käesolevas lisas esitatakse testkogu \emph{kvoot} (jaotus peatüki tüübi järgi ja sihtpikkused), mis on aluseks jätkutöö annoteerimisetapile.
+
+Testkogu kavandatakse koosnema 20 tekstikatkendist, mis valitakse Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024. Pilootuuringus on kasutatud orienteeruvalt 3--5 esialgset, autori käsitsi koostatud katkendit peatüki tüübi kohta prompti disaini iteratsiooni jaoks; need pilootkatkendid \emph{ei moodusta} lõplikku testkogu, vaid teenivad ajutise prompti iteratsioonimaterjalina, mis täismahulise hindamise hetkeks asendatakse anonüümitud ja kuldstandardi-annoteeritud testkoguga.
 
 \begin{table}[htb!]
     \centering
-    \caption{Testkogu detailne kirjeldus.}
+    \caption{Kavandatud testkogu kvoot peatüki tüübi järgi.}
     \label{tab:testkogu-detail}
     \begin{tblr}{
-                colspec = { Q[c] Q[l,wd=0.30\textwidth] Q[c] Q[c] },
+                colspec = { Q[l] Q[c] Q[c] },
                 hlines, vlines,
                 row{1} = {font=\bfseries, bg = colorCellHighlight},
             }
-    Tunnus & Peatüki tüüp & Sõnu & Probleeme \\
-    K01 & Sissejuhatus            & 312 & 8 \\
-    K02 & Sissejuhatus            & 274 & 6 \\
-    K03 & Sissejuhatus            & 298 & 9 \\
-    K04 & Sissejuhatus            & 263 & 5 \\
-    K05 & Taust ja seotud tööd    & 354 & 11 \\
-    K06 & Taust ja seotud tööd    & 287 & 7 \\
-    K07 & Taust ja seotud tööd    & 333 & 8 \\
-    K08 & Taust ja seotud tööd    & 309 & 9 \\
-    K09 & Taust ja seotud tööd    & 278 & 6 \\
-    K10 & Metoodika               & 281 & 5 \\
-    K11 & Metoodika               & 322 & 8 \\
-    K12 & Metoodika               & 304 & 7 \\
-    K13 & Metoodika               & 285 & 6 \\
-    K14 & Tulemused               & 246 & 4 \\
-    K15 & Tulemused               & 289 & 7 \\
-    K16 & Tulemused               & 271 & 5 \\
-    K17 & Tulemused               & 278 & 8 \\
-    K18 & Kokkuvõte               & 234 & 4 \\
-    K19 & Kokkuvõte               & 251 & 5 \\
-    K20 & Kokkuvõte               & 245 & 4 \\
-    \textbf{Kokku} &              & \textbf{5774} & \textbf{138} \\
+    Peatüki tüüp & Katkendite arv & Sihtpikkus (sõnu) \\
+    Sissejuhatus              & 4 & 250--320 \\
+    Taust ja seotud tööd      & 5 & 280--360 \\
+    Metoodika                 & 4 & 270--330 \\
+    Tulemused                 & 4 & 240--290 \\
+    Kokkuvõte                 & 3 & 230--260 \\
+    \textbf{Kokku}            & \textbf{20} & --- \\
     \end{tblr}
 \end{table}
 
-Katkendid on anonüümitud (autorite ja konkreetsete tööde nimed eemaldatud), kuna eesmärk on hinnata mudeli oskust mitte tuvastada konkreetseid autoreid. Originaaltöödest valiti välja peamine sisuline tekst ilma joonisteta, valemiteta ja koodinäideteta, sest mudel ei käsitle praegusel hetkel pildilist sisu. Detailsed katkendid ja nende kuldstandardi märgendused koondatakse koos täismahulise hindamise tulemustega töö lõppversioonile lisatavasse arhiivi (vt lisa~III).
+\textbf{Katkendite valikuprintsiibid täismahulise hindamise jaoks:}
+\begin{itemize}
+    \item Iga katkend on iseseisev tervik, milles teema- ja stiilihinnang on lokaalselt teostatav (üks kuni kaks lõiku).
+    \item Katkendid sisaldavad nii probleeme kui ka korrektseid lõike, mis välistab kuldstandardi kallutuse ainult probleemide tuvastamise poole.
+    \item Originaaltöödest valitakse välja peamine sisuline tekst ilma joonisteta, valemiteta ja koodinäideteta, sest mudel ei käsitle praegusel hetkel pildilist sisu.
+    \item Katkendid anonüümitakse enne kuldstandardi annoteerimist (autorite ja konkreetsete tööde nimed eemaldatakse), kuna eesmärk on hinnata mudeli oskust tagasisidet anda, mitte autorit tuvastada.
+    \item Iga katkendi puhul hoitakse eraldi metaandmeid: peatüki tüüp, ligikaudne sõnade arv, kuldstandardi probleemide arv ja jaotus kategooriate kaupa. Need andmed lisatakse repositooriumisse koos täismahulise hindamise tulemustega.
+\end{itemize}
 
 \subsection*{Lisa II: Struktureeritud prompti täielik tekst} \label{lisa:promptid}
 \addcontentsline{toc}{subsection}{Lisa II: Struktureeritud prompti täielik tekst}
@@ -116,12 +110,11 @@ Töö juurde kuulub lähtekoodi repositoorium, mis sisaldab käesoleva töö esi
         \item \texttt{README.md} -- paigaldus- ja käivitusjuhend (demo-režiim vaikimisi, päris LLM-mudelite kasutamine valikuline).
     \end{itemize}
     \item \texttt{estonian/} -- lõputöö \LaTeX-allikkood ja kõik joonised originaalformaadis.
-    \item \texttt{estonian/joonised/\_loo\_joonised.py} -- skript pilootkatse joonised taastootmiseks. Täismahulise hindamise järel saab samasse skripti uued numbrid sisestada.
 \end{itemize}
 
-\textbf{Käesoleva töö esitamise hetkel veel mitte kättesaadav:}
+\textbf{Jätkukavasse kuuluvad:}
 \begin{itemize}
-    \item \texttt{testkogu/} -- 20 anonüümitud tekstikatkendi tekstifailid ja kuldstandardi märgendused JSON-formaadis. Testkogu kirjeldus tabelina on lisas~I; tegelikud tekstifailid lisatakse repositooriumi täismahulise hindamise käigus.
+    \item \texttt{testkogu/} -- 20 anonüümitud tekstikatkendi tekstifailid ja kuldstandardi märgendused JSON-formaadis. Testkogu disain on esitatud lisas~I; konkreetsed tekstifailid valmistatakse ette ja annoteeritakse jätkukava sammude raames.
     \item \texttt{tulemused/} -- mudeli väljundid kõikide katkendite ja mõlema prompti puhul ning täismahulise hindamise tabelid CSV-formaadis. Need genereeritakse täismahulise hindamise käigus (vt alapeatükk~\ref{hindamine:edasine}).
 \end{itemize}
 

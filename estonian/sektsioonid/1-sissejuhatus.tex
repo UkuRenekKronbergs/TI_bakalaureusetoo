@@ -6,25 +6,40 @@ Suurte keelemudelite (\emph{ingl. large language model}, edaspidi LLM) viimaste 
 
 Akadeemilises kontekstis on LLM-ide kasutamine samas eetiliselt tundlik teema. Tartu Ülikooli generatiivse tehisaru kasutamise juhend~\cite{ut_genAI_2024} eristab selgelt teksti \emph{loomist} (mis ei ole lõputöös tudengi enda panusena lubatud) ja teksti \emph{tagasisidestamist} (mis on lubatud, kui tudeng saadud soovitusi ise kriitiliselt hindab ja rakendab). Käesolevas töös käsitletav süsteem kuulub üheselt teise kategooriasse: see ei kirjuta lõputööd tudengi eest ega asenda juhendajat, vaid annab tudengi enda kirjutatud tekstile soovituslikku tagasisidet. See eristus on teema akadeemilise vastuvõetavuse jaoks kriitilise tähtsusega ning seda tuleb selgelt rõhutada nii süsteemi kasutajaliideses kui ka tagasiside tekstis endas.
 
-\subsection*{Töö eesmärk ja uurimisküsimused}
+\subsection*{Töö eesmärk ja ulatus}
 
-Käesoleva bakalaureusetöö \textbf{eesmärk} on luua LLM-il põhinev prototüüp, mis annab eestikeelsele informaatika lõputöö tekstile automaatset tagasisidet struktuuri, akadeemilise stiili, terminoloogia järjepidevuse ja viitamisvajaduse kohta, ning kavandada selle hindamine. Käesoleva töö raames esitatakse pilootkatse esialgsed tähelepanekud ning täismahulise empiirilise hindamise kava (vt peatükk~\ref{hindamine:edasine}).
+Käesoleva bakalaureusetöö \textbf{eesmärk} on \emph{kavandada ja realiseerida} LLM-il põhinev prototüüp, mis annab eestikeelsele informaatika lõputöö tekstile automaatset tagasisidet struktuuri, akadeemilise stiili, terminoloogia järjepidevuse ja viitamisvajaduse kohta, ning \emph{pilootida} selle väljundi kvaliteeti väikese valimi peal eesmärgiga iteratiivselt täpsustada prompti disaini.
 
-Eesmärgi saavutamiseks vastatakse järgmistele \textbf{uurimisküsimustele}:
+\textbf{Töö ulatus} jaguneb selgelt kaheks osaks. Käesoleva töö raames \emph{viiakse lõpule}:
 \begin{enumerate}
-    \item Kui täpselt suudab suur keelemudel tuvastada eestikeelse informaatika lõputöö tekstis stiili-, struktuuri- ja terminoloogiaprobleeme?
-    \item Millistes tagasisidekategooriates on mudeli väljund kõige usaldusväärsem ning millistes kõige problemaatilisem?
-    \item Kas struktureeritud promptimine parandab tagasiside kvaliteeti võrreldes üldise promptiga?
+    \item tagasisidekategooriate operatsionaalne määratlus;
+    \item kahe promptimisstrateegia (üldine ja struktureeritud) disain;
+    \item veebipõhise prototüübi realiseerimine, sealhulgas demo-režiim, mis võimaldab süsteemi proovida ilma välise LLM-i API juurdepääsuta;
+    \item kvalitatiivne pilootuuring väikese tekstivalimi peal nii prompti disaini iteratsiooniks kui ka mudeli väljundi tüüpiliste mustrite tuvastamiseks;
+    \item 20-katkendilise käsitsi annoteeritava testkogu \emph{kavandamine} koos kuldstandardi koostamise protseduuri ja hindamismõõdikute valikuga.
 \end{enumerate}
+
+\textbf{Töö ulatusest on teadlikult välja jäetud}: testkogu täielik annoteerimine kuldstandardiks, prototüübi täismahuline käivitamine kõikide testkatkendite vastu ning täpsuse, saagise ja F\textsubscript{1}-skoori arvutamine. Nende sammude jätkukava on esitatud peatükis~\ref{hindamine:edasine}. Selline ulatusepiirang teeb käesoleva töö hinnatavaks ja avaldatavaks praeguses vormis ning hoiab eraldi viimase, mahukaima ja sõltumatu teise annoteerija aega nõudva sammu, mille tulemused saavad olla aluseks edasisele tööle (näiteks magistriõppes või avaldatavas artiklis).
+
+\subsection*{Uurimisküsimused}
+
+Töö kavandi tasemel käsitletakse järgmisi \textbf{uurimisküsimusi}, millele käesolev töö annab pilootuuringu raames \emph{esialgse, kvalitatiivse vastuse}; täismahuliste kvantitatiivsete vastuste saamine on peatükis~\ref{hindamine:edasine} kirjeldatud jätkukava ülesanne:
+\begin{enumerate}
+    \item Millise iseloomuga tagasisidet annab tippkvaliteediga LLM eestikeelse informaatika lõputöö tekstile, kui sellele antakse struktureeritud kategoorianõuetega prompt?
+    \item Millistes tagasisidekategooriates näib mudeli väljund pilootuuringus kõige usaldusväärsem ning millistes kõige problemaatilisem, ning miks?
+    \item Kas struktureeritud promptimine annab pilootuuringus üldisest promptist süsteemsemat ja kasutuskõlblikumat tagasisidet?
+\end{enumerate}
+
+Pilootuuringu tähelepanekud, mis nendele küsimustele esialgse vastuse annavad, on esitatud peatükis~\ref{hindamine}.
 
 \subsection*{Praktiline panus ja piirangud}
 
-Töö praktiline tulemus on lokaalselt käivitatav veebiprototüüp, kus kasutaja saab valida lõputöö peatüki tüübi (sissejuhatus, taust, metoodika, tulemused vms), sisestada enda kirjutatud teksti ning saada struktureeritud tagasisidet neljas eelnimetatud kategoorias. Süsteemi hindamiseks on koostatud 20 käsitsi märgendatud eestikeelsest tekstikatkendist koosnev testkogu (vt lisa~I); käesoleva töö raames on selle testkogu vastu läbi viidud pilootkatse väikese valimi peal prompti disaini iteratsiooniks, ning kavandatud kogu testkogu vastu läbiviidav täismahuline empiiriline hindamine on töö järgmine ja olulisim samm.
+Töö praktiline tulemus on lokaalselt käivitatav veebiprototüüp, kus kasutaja saab valida lõputöö peatüki tüübi (sissejuhatus, taust, metoodika, tulemused, kokkuvõte), sisestada enda kirjutatud teksti ning saada struktureeritud tagasisidet neljas eelnimetatud kategoorias. Prototüüp on kavandatud nii, et seda saab proovida \emph{demo-režiimis} salvestatud näidisvastustega ilma välise LLM-i API juurdepääsuta, mis muudab töö praktilise tulemuse reprodutseeritavaks minimaalsete eeldustega.
 
-\textbf{Töö ei käsitle} LLM-i kasutamist lõputöö \emph{loomiseks}. Süsteem on mõeldud tudengi enda kirjutatud tekstile tagasiside saamiseks ega püüa asendada juhendaja sisulist tagasisidet. Mudeli soovitused on kasutaja jaoks vaid lähtepunkt – iga soovituse vastuvõtmine, ümbersõnastamine või tagasilükkamine on tudengi enda otsustada.
+\textbf{Töö ei käsitle} LLM-i kasutamist lõputöö \emph{loomiseks}. Süsteem on mõeldud tudengi enda kirjutatud tekstile tagasiside saamiseks ega püüa asendada juhendaja sisulist tagasisidet. Mudeli soovitused on kasutaja jaoks vaid lähtepunkt -- iga soovituse vastuvõtmine, ümbersõnastamine või tagasilükkamine on tudengi enda otsustada.
 
 \subsection*{Töö ülesehitus}
 
-Peatükis~\ref{taust} esitatakse ülevaade suurte keelemudelite arhitektuurist, eestikeelsest LLM-tugist ja akadeemilise teksti automaatsest tagasisidestamisest, samuti kirjeldatakse seotud töid. Peatükk~\ref{metoodika} määratleb tagasisidekategooriad ja kirjeldab promptide kavandamise põhimõtteid ning hindamismetoodikat. Peatükis~\ref{prototuup} kirjeldatakse prototüübi arhitektuuri, tehnoloogilist lahendust ja kasutajaliidese disaini. Peatükk~\ref{hindamine} esitab pilootkatse esialgsed tähelepanekud koos aruteluga, töö piirangud ning täismahulise empiirilise hindamise kava. Peatükis~\ref{kokkuvõte} antakse kokkuvõte töö panusest ning visandatakse võimalused edasiseks uurimiseks.
+Peatükis~\ref{taust} esitatakse ülevaade suurte keelemudelite arhitektuurist, eestikeelsest LLM-tugist ja akadeemilise teksti automaatsest tagasisidestamisest, samuti kirjeldatakse seotud töid. Peatükk~\ref{metoodika} määratleb tagasisidekategooriad ning kirjeldab prompti disaini põhimõtteid ja kavandatud hindamismetoodikat. Peatükis~\ref{prototuup} kirjeldatakse prototüübi arhitektuuri, tehnoloogilist lahendust ja kasutajaliidese disaini. Peatükk~\ref{hindamine} esitab pilootuuringu kvalitatiivsed tähelepanekud, mis on kogutud prompti disaini iteratsiooni käigus, koos aruteluga ning täismahulise hindamise jätkukava. Peatükis~\ref{kokkuvõte} antakse kokkuvõte töö panusest ning visandatakse võimalused edasiseks uurimiseks.
 
 Töö koostamisel kasutati teksti loetavuse parandamiseks generatiivset tehisaru, kuid kõik sisulised mõtted, valikud ja järeldused on autori enda omad. Mudeli ettepanekud kontrolliti üle ning vajadusel ümber sõnastati.
