@@ -16,13 +16,16 @@ class OpenAIProvider(LLMProvider):
 
     def kysi(self, prompt: str, *, max_tokens: int = 4096, temperature: float = 0.2) -> str:
         try:
-            vastus = self._klient.chat.completions.create(
-                model=self._mudel,
-                max_completion_tokens=max_tokens,
-                temperature=temperature,
-                response_format={"type": "json_object"},
-                messages=[{"role": "user", "content": prompt}],
-            )
+            paring = {
+                "model": self._mudel,
+                "max_completion_tokens": max_tokens,
+                "response_format": {"type": "json_object"},
+                "messages": [{"role": "user", "content": prompt}],
+            }
+            if not self._mudel.startswith("gpt-5"):
+                paring["temperature"] = temperature
+
+            vastus = self._klient.chat.completions.create(**paring)
         except OpenAIError as e:
             raise ProviderError(f"OpenAI API viga: {e}") from e
 

@@ -10,7 +10,7 @@ Mittefunktsionaalsed nõuded olid järgmised. Süsteem peab (1) töötama ühel 
 
 \subsection{Süsteemi arhitektuur} \label{prototuup:arhitektuur}
 
-Prototüüp järgib lihtsat klient-server arhitektuuri. Arhitektuur on kujutatud joonisel~\ref{fig:arhitektuur}. Süsteem koosneb kolmest komponendist: brauseripoolne kasutajaliides (\textbf{frontend}), kohalik teenus (\textbf{backend}) ja välimine LLM-i API. Backend hoiab promptide malle ja vastutab nende sidumise eest sisestatud tekstiga ning JSON-vastuse järeltöötluse eest. Backend on kavandatud kihiline nii, et LLM-i pakkuja vahetamine (näiteks Anthropic Claude'ilt OpenAI GPT-le) nõuab muutusi ainult \texttt{providers/} kaustas.
+Prototüüp järgib lihtsat klient-server arhitektuuri. Arhitektuur on kujutatud joonisel~\ref{fig:arhitektuur}. Süsteem koosneb kolmest komponendist: brauseripoolne kasutajaliides (\textbf{frontend}), kohalik teenus (\textbf{backend}) ja välimine LLM-i API. Backend hoiab promptide malle ja vastutab nende sidumise eest sisestatud tekstiga ning JSON-vastuse järeltöötluse eest. Backend on kavandatud kihilisena nii, et LLM-i pakkuja vahetamine (näiteks Anthropic Claude'ilt OpenAI GPT-le) nõuab muutusi ainult \texttt{providers/} kaustas.
 
 \begin{figure}[ht]
     \centering
@@ -21,7 +21,7 @@ Prototüüp järgib lihtsat klient-server arhitektuuri. Arhitektuur on kujutatud
 
 \subsection{Tehnoloogiavalik} \label{prototuup:tehnoloogiad}
 
-Prototüübi realiseerimisel valiti tehnoloogiad järgmiste põhimõtete alusel: tuntud ja levinud tehnoloogiad (et reprodutseeritavus oleks lihtne), minimaalne ülaltvedu (\emph{ingl. overhead}) ja kiire arendustsükkel.
+Prototüübi realiseerimisel valiti tehnoloogiad järgmiste põhimõtete alusel: tuntud ja levinud tehnoloogiad (et reprodutseeritavus oleks lihtne), minimaalne lisakulu (\emph{ingl. overhead}) ja kiire arendustsükkel.
 
 \begin{table}[htb!]
     \centering
@@ -32,19 +32,19 @@ Prototüübi realiseerimisel valiti tehnoloogiad järgmiste põhimõtete alusel:
                 row{1} = {font=\bfseries, bg = colorCellHighlight},
             }
     Komponent & Tehnoloogia & Põhjendus \\
-    Backend & Python 3.12 + FastAPI & Anthropic SDK on Pythonis küps; FastAPI annab automaatselt OpenAPI dokumentatsiooni ja valiidimisrakendused. \\
+    Backend & Python 3.12 + FastAPI & Anthropic SDK on Pythonis küps; FastAPI annab automaatselt OpenAPI dokumentatsiooni ja valideerimisrakendused. \\
     Frontend & React 18 + TypeScript + Tailwind CSS & TÜ tudengite seas levinud kombinatsioon; Tailwind võimaldab kiire stiili ilma eraldi CSS-failideta. \\
-    LLM-i API & Anthropic Messages API & Claude 3.5 Sonneti tugi, struktureeritud väljundi tugi (\texttt{tools} või JSON-mode). \\
-    Skeemivalideerimine & Pydantic + JSON Schema & Backendis valideerib mudeli vastust enne kasutajale saatmist; vea korral palutakse mudelilt parandus. \\
+    LLM-i API & Anthropic Messages API & Claude 4.7 Opuse tugi, struktureeritud väljundi tugi (\texttt{tools} või prefill-tehnika). \\
+    Skeemi\-valideerimine & Pydantic + JSON Schema & Backendis valideerib mudeli vastust enne kasutajale saatmist; vea korral palutakse mudelilt parandus. \\
     Pakendamine & Docker Compose & Lihtsustab käitamist; ühes \texttt{docker compose up} käivitub kogu süsteem. \\
     \end{tblr}
 \end{table}
 
 \subsection{Promptide implementatsioon ja vastuse järeltöötlus} \label{prototuup:promptid}
 
-Promptid on hoitud eraldi failidena \texttt{prompts/yldine.txt} ja \texttt{prompts/struktureeritud.txt}, mis võimaldab neid muuta ilma koodi puudutamata. Sisenditeks olevad muutujad \texttt{\{peatüki\_tüüp\}} ja \texttt{\{tekst\}} asendatakse Pythoni \texttt{string.Template}'iga, vältides Jinja2-tüüpi malliga kaasnevaid külgmõjusid.
+Promptid on hoitud eraldi failidena \texttt{prototuup/backend/prompts/yldine.txt} ja \texttt{prototuup/backend/prompts/struktureeritud.txt}, mis võimaldab neid muuta ilma koodi puudutamata. Sisenditeks olevad muutujad \texttt{\$\{peatuki\_tyyp\}} ja \texttt{\$\{tekst\}} asendatakse Pythoni \texttt{string.Template}'iga, vältides Jinja2-tüüpi malliga kaasnevaid külgmõjusid.
 
-LLM-i päring on tehtud sünkroonse kutsega Anthropici SDK kaudu (vt joonis~\ref{fig:kood-llm}), kasutades parameetrit \texttt{response\_format} JSON-väljundi nõudmiseks. Vastus dekodeeritakse \texttt{json.loads}'iga ja seejärel valideeritakse Pydantic-mudeli vastu. Kui valideerimine ebaõnnestub (mudel andis vigane skeem), tehakse mudelile järelpäring, mis sisaldab esialgset vastust ja konkreetset veatekst kommentaariga \emph{Palun paranda vastus järgmise skeemi järgi}. Praktikas piisas peaaegu kõikidel juhtudel ühest järelpäringust.
+LLM-i päring on tehtud sünkroonse kutsega Anthropici SDK kaudu (vt joonis~\ref{fig:kood-llm}). Anthropicil kasutatakse \emph{prefill}-tehnikat: assistant'i sõnumi algusesse pannakse avav looksulg \texttt{\{}, mis sunnib mudelit kohe JSON-vastusele üle minema, vältides selgituslikku sissejuhatust. OpenAI puhul kasutatakse \texttt{response\_format=\{"type": "json\_object"\}} parameetrit. Mudeli vastus läbib JSON-i ekstraktimise (mis lõikab välja esimese tasakaalustatud JSON-objekti, kasutades sulgudearvestust ning stringidest möödumist) ning seejärel valideeritakse Pydantic-mudeli vastu. Kui valideerimine ebaõnnestub, tehakse mudelile järelpäring, mis sisaldab esialgset vastust ja konkreetset veateadet kommentaariga \emph{Palun paranda vastus järgmise skeemi järgi}. Praktikas piisas peaaegu kõikidel juhtudel ühest järelpäringust.
 
 \begin{figure}[ht]
 \begin{minted}[breaklines,fontsize=\footnotesize]{python}
@@ -66,18 +66,22 @@ class Leid(BaseModel):
 class Vastus(BaseModel):
     leiud: list[Leid]
 
-def kysi_tagasiside(prompt: str, mudel: str = "claude-3-5-sonnet-20241022") -> Vastus:
+def kysi_tagasiside(prompt: str, mudel: str = "claude-opus-4-7") -> Vastus:
     klient = Anthropic()
     sonum = klient.messages.create(
         model=mudel,
         max_tokens=4096,
         temperature=0.2,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "user", "content": prompt},
+            {"role": "assistant", "content": "{"},  # prefill
+        ],
     )
-    tekst = sonum.content[0].text
-    return Vastus.model_validate_json(tekst)
+    toores = "{" + sonum.content[0].text
+    json_tekst = ekstraktee_tasakaalustatud_json(toores)
+    return Vastus.model_validate_json(json_tekst)
 \end{minted}
-\caption{LLM-i kutsumise lihtsustatud Pythoni-kood. Tegelikus prototüübis lisanduvad logimise, tulekule (\emph{ingl. retry}) ja vea käsitlemise abstraktsioonid.}
+\caption{LLM-i kutsumise lihtsustatud Pythoni-kood koos JSON-prefilliga. Tegelikus prototüübis lisanduvad logimise, kordusküsimise (\emph{ingl. retry}) ja vea käsitlemise abstraktsioonid ning eraldi pakkujakihid Anthropici ja OpenAI jaoks.}
 \label{fig:kood-llm}
 \end{figure}
 
@@ -87,8 +91,8 @@ Kasutajaliides koosneb kahest peamisest paneelist (vt joonis~\ref{fig:kasutajali
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{joonised/Joonis6-AcrobatReaderKuva.png}
-    \caption{Prototüübi kasutajaliidese mall. Vasakul: tekstisisend ja konfiguratsioon. Paremal: kategoriseeritud tagasiside, kus iga leid on kuvatud eraldi kaardina koos probleemse tsitaadi, kirjelduse, põhjenduse, soovituse ja kindlushinnanguga. Joonisel kasutatud kuva on illustratiivne paigutuse näide.}
+    \includegraphics[width=\textwidth]{joonised/Joonis-Kasutajaliides.png}
+    \caption{Prototüübi kasutajaliidese kuvatõmmis. Vasakul: tekstisisend ja konfiguratsioon (peatüki tüüp, prompti tüüp, mudel). Paremal: kategoriseeritud tagasiside, kus iga leid on kuvatud eraldi kaardina koos probleemse tsitaadi, kirjelduse, põhjenduse, soovituse ja kindlushinnanguga (kõrge — roheline, keskmine — kollane).}
     \label{fig:kasutajaliides}
 \end{figure}
 
@@ -96,13 +100,13 @@ Kasutajaliidese disainivalikutest on olulisemad järgmised. \emph{Probleemse tsi
 
 \subsection{Eetilised piirangud} \label{prototuup:eetika}
 
-Süsteemi disainimisel on otseselt arvestatud sellega, et see ei muutuks tudengi jaoks teksti \emph{loomise} vahendiks. Selle tagamiseks rakendati neli täpsustatud meetmed.
+Süsteemi disainimisel on otseselt arvestatud sellega, et see ei muutuks tudengi jaoks teksti \emph{loomise} vahendiks. Selle tagamiseks rakendati neli eraldi meedet.
 
 \textbf{Promptisisene piirang.} Süsteemi prompti algusesse on paigutatud selge nõue: \emph{Sul ei ole lubatud lõputööd tudengi eest kirjutada ega ümber sõnastada.} See vähendab oluliselt tõenäosust, et mudel pakub välja valmis ümbersõnastusi.
 
 \textbf{Soovitus, mitte ümbersõnastus.} Tagasiside skeemis on \texttt{soovitus}-väli mõeldud lühikese juhise andmiseks (näiteks \emph{lisa enne alampealkirja sissejuhatav lõik, kus kirjeldad alampeatükkide loogilist järjekorda}), mitte tervete tekstilõikude valmis ümberkirjutamiseks. Backend lõikab \texttt{soovitus}-välja sisaldava teksti pikkuse 200 tähemärgini, mis muudab valmis ümberkirjutamise tehniliselt ebamugavaks.
 
-\textbf{Selge teavitus kasutajaliidesest.} Igas vastuses on tagasiside paneeli päises pidevalt nähtav teade: \emph{See süsteem annab soovituslikku tagasisidet sinu enda kirjutatud tekstile. See ei kirjuta lõputööd sinu eest. Kontrolli iga soovitus üle ja sõnasta vajadusel ümber.}
+\textbf{Selge teavitus kasutajaliidesest.} Igas vastuses on tagasiside paneeli päises pidevalt nähtav teade: \emph{See süsteem annab soovituslikku tagasisidet sinu enda kirjutatud tekstile. See ei kirjuta lõputööd sinu eest. Kontrolli iga soovitust ja sõnasta vajadusel ümber.}
 
 \textbf{Privaatsus.} Kasutaja sisestatud tekst saadetakse LLM-i API-le ainult pärast seda, kui kasutaja on kinnitanud konkreetses dialoogiaknas, et ta on sellest teadlik. Kohalik backend ei salvesta sisestatud teksti kettal; logitakse ainult anonüümne sündmus (näitajaid: prompti tüüp, peatüki tüüp, leidude arv kategooriate kaupa) hindamise jaoks.
 

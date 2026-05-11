@@ -121,7 +121,7 @@ Promptid asuvad eraldi failides ja neid saab muuta ilma koodi puutumata:
 - [backend/prompts/yldine.txt](backend/prompts/yldine.txt)
 - [backend/prompts/struktureeritud.txt](backend/prompts/struktureeritud.txt)
 
-Mõlemas failis on muutujad `${peatüki_tüüp}` ja `${tekst}`, mis asendatakse päringu käigus.
+Mõlemas failis on muutujad `${peatuki_tyyp}` ja `${tekst}`, mis asendatakse päringu käigus.
 
 ## Testid
 

@@ -41,15 +41,15 @@ Kategooriad on disainitud nii, et nad on \emph{vastastikku eristatavad} – üht
 
 \subsection{Mudeli valik} \label{metoodika:mudel}
 
-Töös kasutatakse Anthropici \texttt{claude-3-5-sonnet} mudelit (versioon 2024-10-22). Valiku tegemise kriteeriumid olid:
+Töös kasutatakse Anthropici \texttt{claude-opus-4-7} mudelit. Valiku tegemise kriteeriumid olid:
 \begin{itemize}
-    \item \textbf{Eesti keele tugi}: TartuNLP võrdlusuuringu~\cite{tartunlp_eval_2024} põhjal kuulub Claude 3.5 Sonnet eesti keele kvaliteedi poolest tippmudelite hulka.
-    \item \textbf{Pikk konteksti aken}: 200\,000 tokenit~\cite{anthropic_claude_2024} võimaldab analüüsida kogu lõputöö peatükki korraga ilma sisendi tükeldamiseta.
+    \item \textbf{Eesti keele tugi}: TartuNLP võrdlusuuringu~\cite{tartunlp_eval_2024} põhjal kuuluvad tipptasemel Claude'i ja GPT mudelid eesti keele kvaliteedi poolest tippmudelite hulka.
+    \item \textbf{Pikk konteksti aken}: 1\,000\,000 tokenit~\cite{anthropic_models_2026} võimaldab analüüsida kogu lõputöö peatükki korraga ilma sisendi tükeldamiseta.
     \item \textbf{Struktureeritud väljundi tugi}: mudel järgib usaldusväärselt JSON-skeemi kohaseid väljundinõudeid.
     \item \textbf{Hind ja kättesaadavus}: API-ligipääs on tudengieelarve piires.
 \end{itemize}
 
-Tulemuste üldistatavuse parandamiseks tehakse osa katsetustest ka OpenAI \texttt{gpt-4o} mudeliga (versioon 2024-08-06), et hinnata, kuivõrd süsteemi tulemused sõltuvad konkreetsest mudelivalikust. Mõlema mudeli puhul kasutatakse temperatuuri väärtust 0,2 – madal temperatuur toob kaasa stabiilsemad tulemused, kuid säilitab teatud loovuse, mis on keele- ja stiilihinnangute andmiseks vajalik.
+Tulemuste üldistatavuse parandamiseks tehti osa katsetustest ka OpenAI \texttt{gpt-5} mudeliga, et hinnata, kuivõrd süsteemi tulemused sõltuvad konkreetsest mudelivalikust. Claude'i puhul kasutatakse temperatuuri väärtust 0,2 – madal temperatuur toob kaasa stabiilsemad tulemused, kuid säilitab teatud loovuse, mis on keele- ja stiilihinnangute andmiseks vajalik. GPT-5 puhul kasutatakse mudeli vaikimisi parameetreid, kuna uuemate OpenAI mudelite Chat Completions API ei toeta enam temperatuuri muutmist kõikidel variantidel~\cite{openai_gpt5_2026}.
 
 \subsection{Promptide disain} \label{metoodika:promptid}
 
@@ -64,10 +64,10 @@ Oled eestikeelse informaatika lõputöö juhendaja abiline. Anna sisestatud
 peatükile tagasisidet selle kvaliteedi kohta. Ole konstruktiivne ja
 konkreetne. Tagasiside peab olema eesti keeles.
 
-Peatüki tüüp: {peatüki_tüüp}
+Peatüki tüüp: ${peatuki_tyyp}
 Peatüki tekst:
 """
-{tekst}
+${tekst}
 """
 \end{minted}
 
@@ -195,4 +195,4 @@ Sellest järeldatakse järgmised mõõdikud:
 
 \subsubsection{Promptide võrdlus}
 
-Üldist ja struktureeritud prompti võrreldakse, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Kuna üldine prompt ei nõua kategoriseeritud väljundit, viiakse selle väljund kategooriatesse käsitsi: ühe annoteerija (autor) poolt vastavalt eelpool toodud kategooriate määratlustele. See protseduur on omakorda subjektiivsuseallikas, mida arutatakse peatükis~\ref{hindamine:piirangud}.
+Üldist ja struktureeritud prompti võrreldakse, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Kuna üldine prompt ei nõua kategoriseeritud väljundit, viiakse selle väljund kategooriatesse käsitsi: ühe annoteerija (autor) poolt vastavalt eelpool toodud kategooriate määratlustele. See protseduur on omakorda subjektiivsuse allikas, mida arutatakse peatükis~\ref{hindamine:piirangud}.
