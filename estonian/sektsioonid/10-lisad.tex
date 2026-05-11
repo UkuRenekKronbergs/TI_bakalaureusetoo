@@ -98,7 +98,7 @@ Vasta ainult JSON-iga, ilma lisaselgituseta.
 \subsection*{Lisa III: Lähtekood ja andmestik} \label{lisa:arhiiv}
 \addcontentsline{toc}{subsection}{Lisa III: Lähtekood ja andmestik}
 
-Töö juurde kuulub lähtekoodi repositoorium, mis sisaldab käesoleva töö esitamise hetkel järgmist:
+Töö juurde kuulub avalik lähtekoodi repositoorium aadressil \url{https://github.com/UkuRenekKronbergs/TI_bakalaureusetoo}, mis sisaldab käesoleva töö esitamise hetkel järgmist:
 
 \begin{itemize}
     \item \texttt{prototuup/} -- prototüübi täielik lähtekood:
@@ -124,7 +124,7 @@ Töö juurde kuulub lähtekoodi repositoorium, mis sisaldab käesoleva töö esi
 Prototüübi käivitamiseks on vaja Dockerit (versioon 24 või uuem). API võtit \emph{ei ole vaja}, kui kasutatakse vaikimisi demo-režiimi. Käivitamise sammud on järgmised:
 
 \begin{enumerate}
-    \item Avada kaust \texttt{prototuup/}.
+    \item Kloonida repositoorium käsuga \texttt{git clone https://github.com/UkuRenekKronbergs/TI\_bakalaureusetoo.git} ja siseneda kausta \texttt{prototuup/}.
     \item Käivitada käsk \texttt{docker compose up -{}-build} kaustas \texttt{prototuup/}. See ehitab ja käivitab nii backend (port 8000) kui ka frontend (port 5173).
     \item Avada brauseris aadress \url{http://localhost:5173}.
     \item Valida mudeliks \emph{Demo (salvestatud vastused)} (vaikevalik), valida peatüki tüüp ja prompti tüüp. Soovi korral vajutada nuppu \emph{Lae näidistekst}, mis paigutab tekstikasti valitud peatüki tüübi näidisteksti. Vajutada \emph{Analüüsi}.
@@ -132,12 +132,12 @@ Prototüübi käivitamiseks on vaja Dockerit (versioon 24 või uuem). API võtit
 
 Demo-režiimis tagastab backend salvestatud näidisvastuse ilma võrgupäringuta -- sisestatud tekst ei lahku kohalikust masinast.
 
-\textbf{Päris LLM-mudelite kasutamine (valikuline).} Kui soovitakse kasutada Claude 4.7 Opust või GPT-5, tuleb:
+\textbf{Päris LLM-mudelite kasutamine (valikuline).} Kui soovitakse kasutada Claude 4.7 Opust või GPT-5.5, tuleb:
 
 \begin{enumerate}
     \item Kopeerida fail \texttt{.env.example} failiks \texttt{.env} ning sisestada vastav API võti (\texttt{ANTHROPIC\_API\_KEY=\dots} ja/või \texttt{OPENAI\_API\_KEY=\dots}).
     \item Käivitada süsteem uuesti käsuga \texttt{docker compose up -{}-build}.
-    \item Kasutajaliideses valida mudeliks vastavalt \emph{Claude 4.7 Opus} või \emph{GPT-5}.
+    \item Kasutajaliideses valida mudeliks vastavalt \emph{Claude 4.7 Opus} või \emph{GPT-5.5}.
 \end{enumerate}
 
 \textbf{Oluline}: päris LLM-mudeli valikul saadetakse sisestatud tekst Anthropici või OpenAI serveritesse. Kui tekst sisaldab tundlikku informatsiooni, mille edastamine kolmandale poolele ei ole sobiv, tuleks kasutada demo-režiimi või kasutamisest hoiduda. Süsteem kuvab enne esimest LLM-päringut vastava hoiatuse, mille kasutaja peab kinnitama.

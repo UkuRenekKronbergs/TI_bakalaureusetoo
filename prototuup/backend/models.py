@@ -33,7 +33,7 @@ class PromptiTyyp(str, Enum):
 class Mudel(str, Enum):
     DEMO = "demo"
     CLAUDE_OPUS_4_7 = "claude-opus-4-7"
-    GPT_5 = "gpt-5"
+    GPT_5_5 = "gpt-5.5"
 
 
 class Leid(BaseModel):

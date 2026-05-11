@@ -1,6 +1,6 @@
 \section{Prototüüp} \label{prototuup}
 
-Käesolev peatükk kirjeldab loodud prototüüpi. Alapeatükis~\ref{prototuup:nouded} esitatakse süsteemile seatud funktsionaalsed ja mittefunktsionaalsed nõuded. Alapeatükk~\ref{prototuup:arhitektuur} kirjeldab süsteemi arhitektuuri. Alapeatükis~\ref{prototuup:tehnoloogiad} põhjendatakse tehnoloogiavalikut. Alapeatükk~\ref{prototuup:liides} kirjeldab kasutajaliidest ning tagasiside esitamise põhimõtteid. Alapeatükis~\ref{prototuup:eetika} käsitletakse süsteemi eetilisi piiranguid ja nende tehnilist realiseerimist.
+Käesolev peatükk kirjeldab loodud prototüüpi. Alapeatükis~\ref{prototuup:nouded} esitatakse süsteemile seatud funktsionaalsed ja mittefunktsionaalsed nõuded. Alapeatükk~\ref{prototuup:arhitektuur} kirjeldab süsteemi arhitektuuri. Alapeatükis~\ref{prototuup:tehnoloogiad} põhjendatakse tehnoloogiavalikut. Alapeatükk~\ref{prototuup:liides} kirjeldab kasutajaliidest ning tagasiside esitamise põhimõtteid. Alapeatükis~\ref{prototuup:eetika} käsitletakse süsteemi eetilisi piiranguid ja nende tehnilist realiseerimist. Prototüübi täielik lähtekood on avalikult kättesaadav repositooriumis \url{https://github.com/UkuRenekKronbergs/TI_bakalaureusetoo}; käivitusjuhend on esitatud lisas~\ref{lisa:juhend}.
 
 \subsection{Nõuded} \label{prototuup:nouded}
 
@@ -12,7 +12,7 @@ Mittefunktsionaalsed nõuded olid järgmised. Süsteem peab (1) töötama ühel 
 
 Prototüüp järgib lihtsat klient-server arhitektuuri. Arhitektuur on kujutatud joonisel~\ref{fig:arhitektuur}. Süsteem koosneb kolmest komponendist: brauseripoolne kasutajaliides (\textbf{frontend}), kohalik teenus (\textbf{backend}) ja välimine LLM-i API. Backend hoiab promptide malle ja vastutab nende sidumise eest sisestatud tekstiga ning JSON-vastuse järeltöötluse eest. Backend on kavandatud kihiliselt nii, et LLM-i pakkuja vahetamine (näiteks Anthropic Claude'ilt OpenAI GPT-le) nõuab muutusi ainult \texttt{providers/} kaustas.
 
-Lisaks reaalsetele LLM-pakkujatele on backendis sama liidese taga ka \emph{demo-pakkuja}, mis tagastab iga peatüki tüübi jaoks varem genereeritud salvestatud näidisvastuse (vt fail \texttt{prototuup/backend/demo\_andmed.py}). Demo-pakkuja on vaikevalik, mis võimaldab süsteemi proovida ja töö praktilist tulemust reprodutseerida ilma Anthropici või OpenAI API võtmeta; päris LLM-i kasutamiseks valib kasutaja kasutajaliideses mudeli \texttt{claude-opus-4-7} või \texttt{gpt-5}, mille kasutamine eeldab vastava võtme seadistamist keskkonnamuutujasse.
+Lisaks reaalsetele LLM-pakkujatele on backendis sama liidese taga ka \emph{demo-pakkuja}, mis tagastab iga peatüki tüübi jaoks varem genereeritud salvestatud näidisvastuse (vt fail \texttt{prototuup/backend/demo\_andmed.py}). Demo-pakkuja on vaikevalik, mis võimaldab süsteemi proovida ja töö praktilist tulemust reprodutseerida ilma Anthropici või OpenAI API võtmeta; päris LLM-i kasutamiseks valib kasutaja kasutajaliideses mudeli \texttt{claude-opus-4-7} või \texttt{gpt-5.5}, mille kasutamine eeldab vastava võtme seadistamist keskkonnamuutujasse.
 
 \begin{figure}[ht]
     \centering

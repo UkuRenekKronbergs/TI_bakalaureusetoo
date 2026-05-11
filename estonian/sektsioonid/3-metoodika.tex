@@ -14,7 +14,7 @@ Töö protsess on kavandatud koosnema järgmistest etappidest:
     \item Testkogu disain: 20 eestikeelset informaatika lõputöö katkendit erinevatest peatüki tüüpidest, koos kuldstandardi koostamise protseduuriga.
     \item Pilootuuring väikese tekstivalimi peal: prototüübi väljundi kvalitatiivne analüüs prompti disaini iteratsiooniks.
     \item Testkogu täielik annoteerimine kuldstandardiks, sealhulgas teise sõltumatu annoteerija kaasamine ja inter-annoteerija kokkuleppe arvutamine.
-    \item Prototüübi täismahuline käivitamine kogu testkogu vastu mõlema prompti versiooniga ja mõlema mudeliga (Claude 4.7 Opus, GPT-5); mudeli väljundi võrdlemine kuldstandardiga ja näitajate (täpsus, saagis, F\textsubscript{1}) arvutamine iga kategooria kohta eraldi.
+    \item Prototüübi täismahuline käivitamine kogu testkogu vastu mõlema prompti versiooniga ja mõlema mudeliga (Claude 4.7 Opus, GPT-5.5); mudeli väljundi võrdlemine kuldstandardiga ja näitajate (täpsus, saagis, F\textsubscript{1}) arvutamine iga kategooria kohta eraldi.
     \item Üldise ja struktureeritud prompti tulemuste kvantitatiivne võrdlus.
 \end{enumerate}
 
@@ -59,7 +59,7 @@ Töös kasutatakse esmase mudelina Anthropici \texttt{claude-opus-4-7} mudelit. 
     \item \textbf{Hind ja kättesaadavus}: API-ligipääs on tudengieelarve piires.
 \end{itemize}
 
-Tulemuste üldistatavuse kontrollimiseks on kavandatud paralleelselt katsetada ka OpenAI \texttt{gpt-5} mudelit, mille tugi on prototüübis realiseeritud. Käesoleva töö pilootuuringus käivitati üksikud katsekatkendid mõlema mudeliga, et veenduda, kas struktureeritud prompti kasu üldistub mudelite vahel; täismahuline mudelivahelise tundlikkuse analüüs jääb jätkukavasse. Claude'i puhul kasutatakse temperatuuri väärtust 0,2 -- madal temperatuur toob kaasa stabiilsemad tulemused, kuid säilitab teatud loovuse, mis on keele- ja stiilihinnangute andmiseks vajalik. GPT-5 puhul kasutatakse mudeli vaikimisi parameetreid, kuna uuemate OpenAI mudelite Chat Completions API ei toeta enam temperatuuri muutmist kõikidel variantidel~\cite{openai_gpt5_2026}.
+Tulemuste üldistatavuse kontrollimiseks on kavandatud paralleelselt katsetada ka OpenAI \texttt{gpt-5.5} mudelit, mille tugi on prototüübis realiseeritud. Käesoleva töö pilootuuringus käivitati üksikud katsekatkendid mõlema mudeliga, et veenduda, kas struktureeritud prompti kasu üldistub mudelite vahel; täismahuline mudelivahelise tundlikkuse analüüs jääb jätkukavasse. Claude'i puhul kasutatakse temperatuuri väärtust 0,2 -- madal temperatuur toob kaasa stabiilsemad tulemused, kuid säilitab teatud loovuse, mis on keele- ja stiilihinnangute andmiseks vajalik. GPT-5.5 puhul kasutatakse mudeli vaikimisi parameetreid, kuna uuemate OpenAI mudelite Chat Completions API ei toeta enam temperatuuri muutmist kõikidel variantidel~\cite{openai_gpt5_2026}.
 
 \subsection{Promptide disain} \label{metoodika:promptid}
 

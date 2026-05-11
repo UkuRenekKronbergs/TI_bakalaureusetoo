@@ -6,7 +6,7 @@ from .base import LLMProvider, ProviderError
 
 
 class OpenAIProvider(LLMProvider):
-    def __init__(self, mudel: str = "gpt-5", api_key: str | None = None) -> None:
+    def __init__(self, mudel: str = "gpt-5.5", api_key: str | None = None) -> None:
         self._mudel = mudel
         self._klient = OpenAI(api_key=api_key or os.environ.get("OPENAI_API_KEY"))
 

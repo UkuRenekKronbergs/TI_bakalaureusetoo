@@ -23,7 +23,7 @@ class FakeClient:
 
 
 def test_gpt5_paring_ei_saada_temperature_parameetrit():
-    pakkuja = OpenAIProvider(mudel="gpt-5", api_key="test")
+    pakkuja = OpenAIProvider(mudel="gpt-5.5", api_key="test")
     klient = FakeClient()
     pakkuja._klient = klient
 

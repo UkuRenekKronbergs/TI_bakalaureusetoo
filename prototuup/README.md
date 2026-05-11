@@ -10,7 +10,7 @@ Süsteem käivitub vaikimisi **demo-režiimis**: backend tagastab iga peatüki t
 
 - Demo-režiimis EI sõltu vastus tegelikult sisestatud tekstist — kuvatakse alati valitud peatüki tüübi salvestatud leiud.
 - Frontendi all on nupp **„Lae näidistekst”**, mis paigutab tekstikasti tahtlikult vigase näidisteksti, millele salvestatud leiud vastavad.
-- Päris LLM-päringuid tehakse ainult juhul, kui kasutaja valib mudeliks **Claude 4.7 Opus** või **GPT-5** ja vastav API võti on seadistatud.
+- Päris LLM-päringuid tehakse ainult juhul, kui kasutaja valib mudeliks **Claude 4.7 Opus** või **GPT-5.5** ja vastav API võti on seadistatud.
 
 ## Arhitektuur
 
@@ -114,7 +114,7 @@ Päringukeha:
 Mudeli väärtused:
 - `demo` — vaikimisi, salvestatud näidisvastus, võrku ei kasuta;
 - `claude-opus-4-7` — Anthropic Claude (vajab `ANTHROPIC_API_KEY`);
-- `gpt-5` — OpenAI GPT (vajab `OPENAI_API_KEY`).
+- `gpt-5.5` — OpenAI GPT (vajab `OPENAI_API_KEY`).
 
 Vastusekeha:
 ```json
