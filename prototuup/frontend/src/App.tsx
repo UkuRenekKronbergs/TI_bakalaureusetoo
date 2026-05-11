@@ -20,7 +20,7 @@ export default function App() {
   const [tekst, setTekst] = useState("");
   const [peatykiTyyp, setPeatykiTyyp] = useState<PeatykiTyyp>("sissejuhatus");
   const [promptiTyyp, setPromptiTyyp] = useState<PromptiTyyp>("struktureeritud");
-  const [mudel, setMudel] = useState<Mudel>("claude-3-5-sonnet-20241022");
+  const [mudel, setMudel] = useState<Mudel>("claude-opus-4-7");
 
   const [vastus, setVastus] = useState<AnalyysiVastus | null>(null);
   const [laadimine, setLaadimine] = useState(false);

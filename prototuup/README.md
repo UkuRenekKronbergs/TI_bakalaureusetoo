@@ -87,7 +87,7 @@ Päringukeha:
   "tekst": "Sisestatud peatüki tekst.",
   "peatuki_tyyp": "sissejuhatus",
   "prompti_tyyp": "struktureeritud",
-  "mudel": "claude-3-5-sonnet-20241022"
+  "mudel": "claude-opus-4-7"
 }
 ```
 
@@ -105,7 +105,7 @@ Vastusekeha:
     }
   ],
   "meta": {
-    "mudel": "claude-3-5-sonnet-20241022",
+    "mudel": "claude-opus-4-7",
     "prompti_tyyp": "struktureeritud",
     "peatuki_tyyp": "sissejuhatus",
     "leidude_arv_kategooriate_kaupa": {"VIITAMISVAJADUS": 1},

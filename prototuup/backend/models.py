@@ -1,5 +1,4 @@
 from enum import Enum
-from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
@@ -32,31 +31,33 @@ class PromptiTyyp(str, Enum):
 
 
 class Mudel(str, Enum):
-    CLAUDE_3_5_SONNET = "claude-3-5-sonnet-20241022"
-    GPT_4O = "gpt-4o-2024-08-06"
+    CLAUDE_OPUS_4_7 = "claude-opus-4-7"
+    GPT_5 = "gpt-5"
 
 
 class Leid(BaseModel):
     kategooria: Kategooria
-    tsitaat: str = Field(..., max_length=400)
+    tsitaat: str
     probleem: str = Field(..., max_length=400)
     pohjendus: str = Field(..., alias="põhjendus", max_length=600)
-    soovitus: str = Field(..., max_length=200)
+    soovitus: str
     kindlus: Kindlus
 
     model_config = {"populate_by_name": True}
 
-    @field_validator("soovitus")
+    @field_validator("tsitaat", "soovitus", mode="before")
     @classmethod
-    def trunkeeri_soovitus(cls, v: str) -> str:
-        return v[:200]
+    def trunkeeri_kuni_200(cls, v: object) -> object:
+        if isinstance(v, str):
+            return v[:200]
+        return v
 
 
 class AnalyysiPaaring(BaseModel):
     tekst: str = Field(..., min_length=50, max_length=20_000)
     peatuki_tyyp: PeatykiTyyp
     prompti_tyyp: PromptiTyyp = PromptiTyyp.STRUKTUREERITUD
-    mudel: Mudel = Mudel.CLAUDE_3_5_SONNET
+    mudel: Mudel = Mudel.CLAUDE_OPUS_4_7
 
 
 class AnalyysiMeta(BaseModel):
@@ -72,5 +73,5 @@ class AnalyysiVastus(BaseModel):
     meta: AnalyysiMeta
 
 
-class MudelivasusVorming(BaseModel):
+class MudeliVastuseVorming(BaseModel):
     leiud: list[Leid]

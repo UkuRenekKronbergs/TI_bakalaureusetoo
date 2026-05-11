@@ -16,7 +16,7 @@ Vasta JSON-formaadis järgmise skeemi järgi:
   ]
 }
 
-Peatüki tüüp: ${peatüki_tüüp}
+Peatüki tüüp: ${peatuki_tyyp}
 Peatüki tekst:
 """
 ${tekst}

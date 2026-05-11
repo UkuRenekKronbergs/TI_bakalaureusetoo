@@ -6,7 +6,7 @@ from .base import LLMProvider, ProviderError
 
 
 class OpenAIProvider(LLMProvider):
-    def __init__(self, mudel: str = "gpt-4o-2024-08-06", api_key: str | None = None) -> None:
+    def __init__(self, mudel: str = "gpt-5", api_key: str | None = None) -> None:
         self._mudel = mudel
         self._klient = OpenAI(api_key=api_key or os.environ.get("OPENAI_API_KEY"))
 
@@ -18,7 +18,7 @@ class OpenAIProvider(LLMProvider):
         try:
             vastus = self._klient.chat.completions.create(
                 model=self._mudel,
-                max_tokens=max_tokens,
+                max_completion_tokens=max_tokens,
                 temperature=temperature,
                 response_format={"type": "json_object"},
                 messages=[{"role": "user", "content": prompt}],

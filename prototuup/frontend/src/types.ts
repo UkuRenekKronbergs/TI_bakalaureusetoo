@@ -16,7 +16,7 @@ export type PeatykiTyyp =
 
 export type PromptiTyyp = "yldine" | "struktureeritud";
 
-export type Mudel = "claude-3-5-sonnet-20241022" | "gpt-4o-2024-08-06";
+export type Mudel = "claude-opus-4-7" | "gpt-5";
 
 export interface Leid {
   kategooria: Kategooria;
@@ -69,6 +69,6 @@ export const PROMPTI_NIMED: Record<PromptiTyyp, string> = {
 };
 
 export const MUDELI_NIMED: Record<Mudel, string> = {
-  "claude-3-5-sonnet-20241022": "Claude 3.5 Sonnet",
-  "gpt-4o-2024-08-06": "GPT-4o",
+  "claude-opus-4-7": "Claude 4.7 Opus",
+  "gpt-5": "GPT-5",
 };

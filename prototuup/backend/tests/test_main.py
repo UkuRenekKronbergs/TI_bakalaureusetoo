@@ -68,13 +68,13 @@ def test_analyse_endpoint_kehtiv(klient: TestClient):
             "tekst": "Sissejuhatuse teksti näide. " * 10,
             "peatuki_tyyp": "sissejuhatus",
             "prompti_tyyp": "struktureeritud",
-            "mudel": "claude-3-5-sonnet-20241022",
+            "mudel": "claude-opus-4-7",
         },
     )
     assert r.status_code == 200
     keha = r.json()
     assert len(keha["leiud"]) == 1
-    assert keha["meta"]["mudel"] == "claude-3-5-sonnet-20241022"
+    assert keha["meta"]["mudel"] == "claude-opus-4-7"
 
 
 def test_analyse_endpoint_liiga_lyhike_tekst_400(klient: TestClient):
@@ -84,7 +84,7 @@ def test_analyse_endpoint_liiga_lyhike_tekst_400(klient: TestClient):
             "tekst": "lühike",
             "peatuki_tyyp": "sissejuhatus",
             "prompti_tyyp": "struktureeritud",
-            "mudel": "claude-3-5-sonnet-20241022",
+            "mudel": "claude-opus-4-7",
         },
     )
     assert r.status_code == 422
@@ -97,7 +97,7 @@ def test_analyse_endpoint_tundmatu_peatyki_tyyp_422(klient: TestClient):
             "tekst": "Pikem tekst, mis ületab piiri. " * 10,
             "peatuki_tyyp": "tundmatu",
             "prompti_tyyp": "struktureeritud",
-            "mudel": "claude-3-5-sonnet-20241022",
+            "mudel": "claude-opus-4-7",
         },
     )
     assert r.status_code == 422

@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from models import Kategooria, Kindlus, Leid, MudelivasusVorming
+from models import Kategooria, Kindlus, Leid, MudeliVastuseVorming
 
 
 def test_leid_aktsepteerib_pohjenduse_alias():
@@ -42,5 +42,5 @@ def test_kindlus_madal_voti_ei_aktsepteeritud():
 
 
 def test_mudelivasus_aktsepteerib_tyhja_loendi():
-    v = MudelivasusVorming(leiud=[])
+    v = MudeliVastuseVorming(leiud=[])
     assert v.leiud == []

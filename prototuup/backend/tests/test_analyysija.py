@@ -61,7 +61,7 @@ def teha_paaring(tekst: str | None = None) -> AnalyysiPaaring:
         tekst=tekst or ("Sõnad sõnade järel " * 20),
         peatuki_tyyp=PeatykiTyyp.SISSEJUHATUS,
         prompti_tyyp=PromptiTyyp.STRUKTUREERITUD,
-        mudel=Mudel.CLAUDE_3_5_SONNET,
+        mudel=Mudel.CLAUDE_OPUS_4_7,
     )
 
 
@@ -97,8 +97,10 @@ def test_korduvalt_vigane_skeem_viskab_erandit(asenda_pakkuja):
 
 def test_promptisse_pannakse_peatuki_tyyp_ja_tekst(asenda_pakkuja):
     pakkuja = asenda_pakkuja([KEHTIVA_VASTUSE_KEHA])
-    paaring = teha_paaring(tekst="Spetsiifiline tekst, mille leidmist soovin.")
+    paaring = teha_paaring(
+        tekst="Spetsiifiline tekst, mille leidmist soovin promptist allpool."
+    )
     analyysija.analyysi(paaring)
     saadetud = pakkuja.kysitud_promptid[0]
     assert "sissejuhatus" in saadetud
-    assert "Spetsiifiline tekst, mille leidmist soovin." in saadetud
+    assert "Spetsiifiline tekst, mille leidmist soovin promptist allpool." in saadetud

@@ -90,8 +90,8 @@ export default function TagasisidePaneel({
       </div>
 
       {KATEGOORIA_JARJEKORD.map((k) => {
-        const ssrysm = ryhmad[k];
-        if (ssrysm.length === 0) return null;
+        const ryhm = ryhmad[k];
+        if (ryhm.length === 0) return null;
         const avatud = avatudKategooriad[k];
         return (
           <section
@@ -109,14 +109,14 @@ export default function TagasisidePaneel({
               <span>
                 {KATEGOORIA_NIMED[k]}{" "}
                 <span className="ml-2 text-xs font-normal text-gray-500">
-                  ({ssrysm.length})
+                  ({ryhm.length})
                 </span>
               </span>
               <span aria-hidden>{avatud ? "▾" : "▸"}</span>
             </button>
             {avatud && (
               <div className="border-t border-gray-100 p-3 space-y-3">
-                {ssrysm.map((leid, i) => (
+                {ryhm.map((leid, i) => (
                   <LeiuKaart key={i} leid={leid} />
                 ))}
               </div>

@@ -16,7 +16,7 @@ from models import (
     AnalyysiPaaring,
     AnalyysiVastus,
     Leid,
-    MudelivasusVorming,
+    MudeliVastuseVorming,
 )
 from providers import LLMProvider, ProviderError, vali_pakkuja
 
@@ -40,27 +40,51 @@ def _lae_prompti_mall(prompti_tyyp: str) -> Template:
 
 
 def _ekstraktee_json(tekst: str) -> str:
-    """Lõika tekstist välja esimene JSON-objekt.
+    """Lõika tekstist välja esimene tasakaalustatud JSON-objekt.
 
-    Mudel võib mõnikord tagastada JSON-i koos selgituse või koodiblokimärgenditega
-    (```json ... ```), seega otsime esimese ``{``-ga algava ja viimase ``}``-ga
-    lõppeva osa.
+    Mudel võib tagastada JSON-i koos selgituse või koodiblokimärgenditega
+    (```json ... ```). Liigume tähemärgi kaupa, eirates stringe ja escape'itud
+    märke, ning loendame avavate ja sulgevate loogeliste sulgude tasakaalu.
     """
     algus = tekst.find("{")
-    lopp = tekst.rfind("}")
-    if algus == -1 or lopp == -1 or lopp <= algus:
+    if algus == -1:
         raise AnalyysiViga(f"Mudeli vastuses ei õnnestunud JSON-i leida: {tekst[:200]}")
-    return tekst[algus : lopp + 1]
+
+    sygavus = 0
+    stringis = False
+    escape = False
+    for i in range(algus, len(tekst)):
+        c = tekst[i]
+        if stringis:
+            if escape:
+                escape = False
+            elif c == "\\":
+                escape = True
+            elif c == '"':
+                stringis = False
+            continue
+        if c == '"':
+            stringis = True
+        elif c == "{":
+            sygavus += 1
+        elif c == "}":
+            sygavus -= 1
+            if sygavus == 0:
+                return tekst[algus : i + 1]
+
+    raise AnalyysiViga(
+        f"Mudeli vastuses ei õnnestunud tasakaalustatud JSON-i leida: {tekst[:200]}"
+    )
 
 
-def _valideeri_vastus(toores_tekst: str) -> MudelivasusVorming:
+def _valideeri_vastus(toores_tekst: str) -> MudeliVastuseVorming:
     json_tekst = _ekstraktee_json(toores_tekst)
     try:
         andmed = json.loads(json_tekst)
     except json.JSONDecodeError as e:
         raise AnalyysiViga(f"Mudeli vastus pole kehtiv JSON: {e}") from e
     try:
-        return MudelivasusVorming.model_validate(andmed)
+        return MudeliVastuseVorming.model_validate(andmed)
     except ValidationError as e:
         raise AnalyysiViga(f"Mudeli vastus ei vasta skeemile: {e}") from e
 
@@ -95,7 +119,7 @@ def analyysi(paaring: AnalyysiPaaring) -> AnalyysiVastus:
     pakkuja = vali_pakkuja(paaring.mudel.value)
     mall = _lae_prompti_mall(paaring.prompti_tyyp.value)
     prompt = mall.substitute(
-        peatüki_tüüp=paaring.peatuki_tyyp.value,
+        peatuki_tyyp=paaring.peatuki_tyyp.value,
         tekst=paaring.tekst,
     )
 

@@ -42,7 +42,7 @@ REEGLID:
 - Kindlus "kõrge" tähendab, et oled täiesti veendunud; "madal" et see on subjektiivne hinnang ja võiks olla teisiti.
 - Sa EI tohi pakkuda valmis ümbersõnastusi; soovitus peab olema juhis, mitte asendustekst.
 
-Peatüki tüüp: ${peatüki_tüüp}
+Peatüki tüüp: ${peatuki_tyyp}
 Peatüki tekst:
 """
 ${tekst}
