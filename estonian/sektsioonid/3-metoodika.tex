@@ -42,6 +42,13 @@ Töös käsitletakse nelja tagasisidekategooriat. Iga kategooria kohta on tabeli
 
 Kategooriad on disainitud nii, et nad on \emph{vastastikku eristatavad} -- ühte sõnastust ei tohiks korraga liigitada kahte kategooriasse. Seda eristatavust kontrolliti pilootuuringus mudeli väljundi käsitsi läbivaatamise käigus ning eristatavus osutus piisavaks; täismahulises annoteerimises kontrollitakse seda inter-annoteerija kokkuleppe abil.
 
+\textbf{Pilootuuringust tulenevad määratluste täpsustused.} Pilootuuringus täheldatud paistvad valepositiivsed (vt alapeatükk~\ref{hindamine:kategooriad}) viisid kahe määratluse selgesõnalise täpsustuseni, mida rakendatakse nii prompti vastunäidetes kui ka kuldstandardi annoteerimisreeglites:
+\begin{itemize}
+    \item \emph{Viitamisvajadus} ei rakendu üldteadmise tasandi väidetele -- näiteks levinud protokollide või põhimõistete tutvustamisele --, mille puhul viidet ei oleks ka inimese kirjutatud akadeemilises tekstis oodatud.
+    \item \emph{Akadeemiline stiil} ei märgi probleemiks mina-vormi kasutust kohtades, kus tudeng kirjeldab selgelt enda originaalset panust või metoodilist valikut, kuna Tartu Ülikooli juhend lubab mina-vormi sellises kontekstis.
+\end{itemize}
+Need täpsustused on \emph{tulemus} pilootuuringust ning on aluseks täismahulise hindamise annoteerimisreeglitele.
+
 \subsection{Mudeli valik} \label{metoodika:mudel}
 
 Töös kasutatakse esmase mudelina Anthropici \texttt{claude-opus-4-7} mudelit. Valiku tegemise kriteeriumid olid:
@@ -149,7 +156,7 @@ Testkogu on kavandatud koosnema 20 eestikeelse informaatika lõputöö katkendis
 
 \subsubsection{Kuldstandardi koostamise protseduur}
 
-Täismahulises hindamises annoteeritakse iga katkendi puhul probleemid kahes etapis. Esiteks märgistab autor iseseisvalt iga tuvastatud probleemi: probleemse tekstilõigu, kategooria ning lühikese põhjenduse. Teiseks vaatab teine sõltumatu annoteerija (näiteks teise õppekava tudeng või juhendaja) samad katkendid läbi, ning lahkarvamuste korral lepitakse kokku ühises lahenduses. Inter-annoteerija kokkulepet mõõdetakse Coheni $\kappa$~\cite{cohen_kappa_1960} või Krippendorffi $\alpha$~\cite{krippendorff_alpha_2011} mõõdiku abil iga kategooria kohta eraldi.
+Täismahulises hindamises annoteeritakse iga katkendi puhul probleemid kahes etapis. Esiteks märgistab autor iseseisvalt iga tuvastatud probleemi: probleemse tekstilõigu, kategooria ning lühikese põhjenduse. Teiseks vaatab teine sõltumatu annoteerija (näiteks teise õppekava tudeng või juhendaja) samad katkendid läbi, ning lahkarvamuste korral lepitakse kokku ühises lahenduses. Inter-annoteerija kokkulepet mõõdetakse iga kategooria kohta eraldi Coheni $\kappa$-ga~\cite{cohen_kappa_1960}, mis on kahe annoteerija ja nominaalsete kategooriate puhul konventsionaalne valik. Krippendorffi $\alpha$~\cite{krippendorff_alpha_2011} on jäetud reservi juhuks, kui hindamiskava laieneb järgmistes versioonides mitme annoteerijaga skeemiks.
 
 \subsubsection{Mõõdikud}
 
@@ -178,7 +185,7 @@ Sellest järeldatakse järgmised mõõdikud:
     \label{eq:f1}
 \end{equation}
 
-\textbf{Kattuvuse defineerimine.} Kuna mudel ja annoteerija võivad sama probleemi kirjeldada erinevate sõnadega, ei ole võimalik nõuda eksaktset stringivastet. Kattuvust hinnatakse järgmise reegli järgi: mudeli leid loetakse tõeseks positiivseks, kui (1) tema osutatud tekstilõik kattub kuldstandardi probleemse lõiguga vähemalt 50\% ulatuses sõnatasemel ning (2) kategooria on sama. Kui kategooria erineb, loetakse leid mudeli vaates valepositiivseks ja kuldstandardi vaates valenegatiivseks.
+\textbf{Kattuvuse defineerimine.} Kuna mudel ja annoteerija võivad sama probleemi kirjeldada erinevate sõnadega, ei ole võimalik nõuda eksaktset stringivastet. Kattuvust hinnatakse järgmise reegli järgi: mudeli leid loetakse tõeseks positiivseks, kui (1) tema osutatud tekstilõik kattub kuldstandardi probleemse lõiguga vähemalt 50\% ulatuses sõnatasemel ning (2) kategooria on sama. 50\% lävi on valitud kooskõlas span-tasemel hindamise levinud tavadega: poole ulatuses kattuv viidatud lõik tagab, et mudel ja annoteerija osutavad samale probleemile, mitte erinevatele probleemidele samas lauses. Kuna lävi ise on disainivalik, kontrollitakse selle robustsust täismahulises hindamises eraldi tundlikkusanalüüsiga, esitades peamised mõõdikud ka 30\% ja 70\% läviga ning jälgides, kas kvalitatiivsed järeldused muutuvad. Kui kategooria erineb, loetakse leid mudeli vaates valepositiivseks ja kuldstandardi vaates valenegatiivseks.
 
 \subsubsection{Promptide võrdlus}
 
