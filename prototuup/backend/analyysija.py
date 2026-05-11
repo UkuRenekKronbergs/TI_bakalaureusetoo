@@ -149,10 +149,11 @@ def analyysi(paaring: AnalyysiPaaring) -> AnalyysiVastus:
     leiud = valideeritud.leiud
     meta = _ehita_meta(leiud, paaring, kestus_ms)
     logger.info(
-        "Analüüs valmis: mudel=%s, prompt=%s, leide=%d, kestus=%dms",
+        "Analüüs valmis: mudel=%s, prompt=%s, peatykk=%s, leide_kategooriate_kaupa=%s, kestus=%dms",
         meta.mudel,
         meta.prompti_tyyp,
-        len(leiud),
+        meta.peatuki_tyyp,
+        meta.leidude_arv_kategooriate_kaupa,
         kestus_ms,
     )
     return AnalyysiVastus(leiud=leiud, meta=meta)
