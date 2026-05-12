@@ -1,10 +1,13 @@
 """Sünteetiline testkogu ja kuldstandard hindamis-pipeline'i illustratsiooniks.
 
-KÕIK SELLE FAILI ANDMED ON GENEREERITUD (Claude 4.7 Opus) eesmärgiga
-demonstreerida hindamis-pipeline'i toimimist. Need ei ole päris üliõpilaste
-tööde katkendid ega päris annoteerijate märgendused. Tabelid ja graafikud,
-mis nende andmete põhjal arvutatakse, ei mõõda LLM-ide tegelikku sooritust
-eestikeelse akadeemilise teksti analüüsil.
+KÕIK SELLE FAILI ANDMED ON GENEREERITUD autori juhendamisel Claude 4.7 Opus
+mudeliga INTERAKTIIVSE VESTLUSLIIDESE (Claude Code) kaudu, mitte tasuliste
+API-päringute kaudu. Ühekordne genereerimisprotsess on metoodiliselt eraldatud
+skriptist `paris_hindamine.py`, mis kasutab tasulisi API-sid
+hindamispäringuteks.
+
+Need ei ole päris üliõpilaste tööde katkendid ega päris annoteerijate
+märgendused.
 
 Andmete struktuur:
   TESTKOGU: list[dict] — iga element on üks katkend, milles on:

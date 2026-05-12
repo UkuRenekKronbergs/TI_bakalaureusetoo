@@ -118,6 +118,16 @@ Pärast `koguda.py` käivitamist annab `andmed/` kaust järgmist üldpilti
 
 Skript `paris_hindamine.py` käivitas tegelikud API-päringud Anthropic Claude 4.7 Opus ja OpenAI GPT-5.5 mudelitele 20 sünteetilise testkatkendi vastu, mõlema prompti versiooniga (üldine + struktureeritud) — kokku 80 päringut. Tegelikud salvestatud vastused on kaustas `andmed/paris_vastused/`.
 
+**Tegelik tokenikulu ja rahaline kogukulu** (Anthropici ja OpenAI arvelduste paneelide andmed; mõlemad pakkujad arveldavad USD-s):
+
+| Mudel | Päringuid | Sisend-tokeneid | Väljund-tokeneid | Maksumus (USD) |
+|---|---:|---:|---:|---:|
+| Claude 4.7 Opus | 40 | 57 967 | 77 228 | $2,22 |
+| GPT-5.5         | 40 | 34 177 | 49 663 | $1,66 |
+| **Kokku**       | **80** | **92 144** | **126 891** | **$3,88** |
+
+Kogu kestus: ~37 minutit (keskmine ~28 sekundit päringu kohta). Kogukulu jäi $10 USD eelarves alla 40 % (ligikaudu €3,6 kursi 1 USD ≈ 0,93 EUR juures, mai 2026); piirav tegur on inimese kuldstandardi annoteerimise aeg, mitte arvutuslik mahukus.
+
 | Mudel | Prompti tüüp | Macro T | Macro S | Macro F₁ | TP | FP | FN |
 |---|---|---|---|---|---|---|---|
 | Claude 4.7 Opus | struktureeritud | 0,33 | 0,93 | 0,46 | 39 |  79 |  3 |

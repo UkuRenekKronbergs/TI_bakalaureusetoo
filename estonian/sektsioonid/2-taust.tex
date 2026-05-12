@@ -51,7 +51,7 @@ LLM-i käitumist juhitakse \emph{prompti} ehk viiba abil – see on tekstiline j
     \item \textbf{Struktureeritud väljundi nõue} – mudelilt nõutakse väljundit kindlal kujul, näiteks JSON-i, mis lihtsustab automaatset järeltöötlust~\cite{geng_structured_2025}.
 \end{itemize}
 
-Käesolevas töös testitakse kaht promptimisstrateegiat. \emph{Üldine} (\emph{baseline}) prompt küsib mudelilt vabavormilist tagasisidet, ilma et oleks ette antud kategooriaid ega väljundskeemi. \emph{Struktureeritud} prompt määrab täpselt neli kategooriat, esitab iga kategooria kohta vähehetk-näiteid, nõuab väljundi JSON-i kujul ning sisaldab mõtteahel-elementi (mudel peab iga tuvastatud probleemi jaoks põhjendama, miks ta seda probleemiks peab). Hüpotees on, et struktureeritud prompt annab täpsemat ja võrreldavamat väljundit.
+Käesolevas töös testitakse kaht promptimisstrateegiat. Mõlemad nõuavad mudelilt sama JSON-skeemiga väljundit, et automaatne järeltöötlus oleks võrreldav. \emph{Üldine} (\emph{baseline}) prompt esitab mudelile vaid rolli ja minimaalse JSON-skeemi (lisaks neljale tagasisidekategooriale lubatud ka \texttt{MUU}), kuid \emph{ei sisalda} kategooriate definitsioone, näiteid ega täpsustavaid reegleid. \emph{Struktureeritud} prompt määrab täpselt neli kategooriat, esitab iga kategooria kohta vähehetk-näiteid ja vastunäiteid, sisaldab mõtteahel-elementi (mudel peab iga tuvastatud probleemi jaoks põhjendama, miks ta seda probleemiks peab) ning sõnastab konservatiivsust suunavaid reegleid. Hüpotees on, et struktureeritud prompt annab täpsemat ja võrreldavamat väljundit.
 
 \subsection{Seotud tööd} \label{taust:seotud}
 

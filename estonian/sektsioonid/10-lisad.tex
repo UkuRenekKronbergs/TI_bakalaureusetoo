@@ -1,15 +1,21 @@
 \section*{Lisad} \label{lisad} \addcontentsline{toc}{section}{Lisad}
 
-\subsection*{Lisa I: Kavandatud testkogu disain} \label{lisa:testkogu}
-\addcontentsline{toc}{subsection}{Lisa I: Kavandatud testkogu disain}
+\subsection*{Lisa I: Testkogu disain ja kasutatud sünteetiline testkogu} \label{lisa:testkogu}
+\addcontentsline{toc}{subsection}{Lisa I: Testkogu disain ja kasutatud sünteetiline testkogu}
 
-Käesolev lisa kirjeldab \emph{kavandatud} testkogu disaini täismahulise hindamise jaoks. Testkogu koostamine ja annoteerimine kuulub töö jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}) ning käesoleva töö esitamise hetkel ei ole testkogu konkreetsed katkendid veel anonüümitud ega lõplikult valitud. Käesolevas lisas esitatakse testkogu \emph{kvoot} (jaotus peatükitüübi järgi ja sihtpikkused), mis on aluseks jätkutöö annoteerimisetapile.
+Käesolev lisa kirjeldab kaht omavahel seotud testkogu: (a) \emph{kasutatud} sünteetilist testkogu, mille vastu viidi läbi alapeatükis~\ref{hindamine:synteetiline} esitatud empiiriline hindamine, ning (b) \emph{kavandatud} päris testkogu disaini, mille koostamine ja annoteerimine kuulub töö jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}). Kvoodi jaotus peatükitüübi järgi on mõlemal sama, kuid katkendite päritolu, sihtpikkus ja koostamise protseduur erinevad.
 
-Testkogu kavandatakse koosnema 20 tekstikatkendist, mis valitakse Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024. Pilootuuringus on kasutatud orienteeruvalt 3--5 esialgset, autori käsitsi koostatud katkendit peatükitüübi kohta prompti disaini iteratsiooni jaoks; need pilootkatkendid \emph{ei moodusta} lõplikku testkogu, vaid teenivad ajutise prompti iteratsioonimaterjalina, mis täismahulise hindamise hetkeks asendatakse anonüümitud ja kuldstandardi-annoteeritud testkoguga.
+\subsubsection*{Kasutatud sünteetiline testkogu}
+
+Alapeatükis~\ref{hindamine:synteetiline} esitatud empiirilises hindamises kasutatud 20-katkendiline testkogu on autori juhendamisel Claude 4.7 Opus mudeliga interaktiivse vestlusliidese (Claude Code) kaudu koostatud sünteetiline materjal, mis on talletatud failis \texttt{statistika/andmestik\_synth.py}. Iga katkendi pikkus on ligikaudu 100--160 sõna, mis on tahtlikult lühem kui altpoolt kavandatud päris testkogu sihtpikkus, kuna sünteetilised katkendid on koostatud kategooriapõhise tundlikkuse hindamiseks (üks-kaks tahtlikult sissepandud probleemi katkendi kohta), mitte kogu peatüki realistliku pikkuse jäljendamiseks. Sünteetilise testkogu piirangud on käsitletud alapeatükis~\ref{hindamine:synteetiline} (piirangute jaotis) ning sissejuhatuse generatiivse tehisaru deklaratsioonis.
+
+\subsubsection*{Kavandatud päris testkogu}
+
+Päris testkogu \emph{kavandatakse} koosnema 20 tekstikatkendist, mis valitakse Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024. Käesoleva töö esitamise hetkel ei ole päris testkogu konkreetsed katkendid veel anonüümitud ega lõplikult valitud -- selle samme on kirjeldatud alapeatükis~\ref{hindamine:edasine} (jätkukava). Allpool esitatud kvoot ja valikuprintsiibid on aluseks päris testkogu koostamisel.
 
 \begin{table}[htb!]
     \centering
-    \caption{Kavandatud testkogu kvoot peatükitüübi järgi.}
+    \caption{Kavandatud päris testkogu kvoot peatükitüübi järgi. Sünteetiline testkogu järgib sama jaotust peatükitüübi järgi, kuid kasutab lühemaid katkendeid (100--160 sõna).}
     \label{tab:testkogu-detail}
     \begin{tblr}{
                 colspec = { Q[l] Q[c] Q[c] },
@@ -26,13 +32,13 @@ Testkogu kavandatakse koosnema 20 tekstikatkendist, mis valitakse Tartu Ülikool
     \end{tblr}
 \end{table}
 
-\textbf{Katkendite valikuprintsiibid täismahulise hindamise jaoks:}
+\textbf{Katkendite valikuprintsiibid päris testkogu jaoks:}
 \begin{itemize}
     \item Iga katkend on iseseisev tervik, milles teema- ja stiilihinnang on lokaalselt teostatav (üks kuni kaks lõiku).
     \item Katkendid sisaldavad nii probleeme kui ka korrektseid lõike, mis välistab kuldstandardi kallutuse ainult probleemide tuvastamise poole.
     \item Originaaltöödest valitakse välja peamine sisuline tekst ilma joonisteta, valemiteta ja koodinäideteta, sest mudel ei käsitle praegusel hetkel pildilist sisu.
     \item Katkendid anonüümitakse enne kuldstandardi annoteerimist (autorite ja konkreetsete tööde nimed eemaldatakse), kuna eesmärk on hinnata mudeli oskust tagasisidet anda, mitte autorit tuvastada.
-    \item Iga katkendi puhul hoitakse eraldi metaandmeid: peatükitüüp, ligikaudne sõnade arv, kuldstandardi probleemide arv ja jaotus kategooriate kaupa. Need andmed lisatakse repositooriumisse koos täismahulise hindamise tulemustega.
+    \item Iga katkendi puhul hoitakse eraldi metaandmeid: peatükitüüp, ligikaudne sõnade arv, kuldstandardi probleemide arv ja jaotus kategooriate kaupa. Need andmed lisatakse repositooriumisse koos päris testkogu hindamise tulemustega.
 \end{itemize}
 
 \subsection*{Lisa II: Struktureeritud prompti täielik tekst} \label{lisa:promptid}
@@ -65,7 +71,7 @@ kategoorias:
    NÄIDE: "Üle 75% arendajatest kasutab seda raamistikku." VAJAB viidet originaaluuringule.
    VASTUNÄIDE: "HTTP on rakenduskihi protokoll." EI VAJA viidet (üldteadmine).
 
-VASTA JSON-formaadis järgmise skeemi järgi (ja ainult sellisel kujul):
+VASTA JSON-formaadis järgmise skeemi järgi (ja ainult selles kujul):
 {
   "leiud": [
     {

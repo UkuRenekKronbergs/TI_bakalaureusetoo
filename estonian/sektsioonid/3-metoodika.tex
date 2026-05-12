@@ -63,27 +63,47 @@ Tulemuste üldistatavuse kontrollimiseks katsetatakse paralleelselt ka OpenAI \t
 
 \subsection{Promptide disain} \label{metoodika:promptid}
 
-Töös võrreldakse kahte prompti varianti: \emph{üldist} ja \emph{struktureeritud}.
+Töös võrreldakse kahte prompti varianti: \emph{üldist} ja \emph{struktureeritud}. Mõlemad nõuavad mudelilt sama JSON-skeemiga vastust (et automaatne järeltöötlus oleks võrreldav), kuid erinevad mahukalt selles, kui palju juhiseid mudelile kategooriate ja oodatava käitumise kohta antakse.
 
 \subsubsection{Üldine prompt}
 
-Üldine prompt on lühike ning ei suuna mudelit konkreetsetele kategooriatele:
+Üldine prompt on lühike: see annab mudelile rolli ja JSON-skeemi (sealhulgas vabavormilise \texttt{MUU}-kategooria), kuid \emph{ei sisalda} ühegi kategooria definitsiooni, näiteid, vastunäiteid ega kindlushinnangu täpsemat juhist. Seega on üldine prompt funktsionaalselt minimaalne tasapind, millele struktureeritud prompt lisab kategooriapõhise sisu:
 
 \begin{minted}[breaklines,fontsize=\small]{text}
 Oled eestikeelse informaatika lõputöö juhendaja abiline. Anna sisestatud
 peatükile tagasisidet selle kvaliteedi kohta. Ole konstruktiivne ja
 konkreetne. Tagasiside peab olema eesti keeles.
 
+OLULINE: Sa ei kirjuta lõputööd tudengi eest ega sõnasta lõike ümber.
+Anna ainult soovituslikku tagasisidet.
+
+Vasta JSON-formaadis järgmise skeemi järgi:
+{
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR" | "AKADEEMILINE_STIIL"
+                  | "TERMINOLOOGIA" | "VIITAMISVAJADUS" | "MUU",
+      "tsitaat":  "tekstis täpne probleemne kohaviit (kuni 200 tähemärki)",
+      "probleem": "lühike kirjeldus, mis selles kohaviites on valesti",
+      "põhjendus": "miks see on probleem",
+      "soovitus": "konkreetne soovitus (kuni 200 tähemärki)",
+      "kindlus":  "kõrge" | "keskmine" | "madal"
+    }
+  ]
+}
+
 Peatüki tüüp: ${peatuki_tyyp}
 Peatüki tekst:
 """
 ${tekst}
 """
+
+Vasta ainult JSON-iga, ilma lisaselgituseta.
 \end{minted}
 
 \subsubsection{Struktureeritud prompt}
 
-Struktureeritud prompt on oluliselt mahukam ja erineb üldisest promptist neljal olulisel viisil: (1) süsteemi rolli ja eesmärgi täpne määratlus, (2) iga tagasisidekategooria kohta vähehetk-näited, (3) väljundskeemi nõue (JSON), ja (4) mõtteahel-element, mille käigus mudel peab iga tuvastatud probleemi puhul põhjendama, miks see probleem on. Prompti täielik tekst on esitatud lisas~II.
+Struktureeritud prompt erineb üldisest neljal olulisel viisil: (1) iga tagasisidekategooria täpne määratlus koos vähehetk-näidetega ja vastunäidetega, (2) selgesõnaline eetiline meelespea (mudel ei tohi ümber sõnastada), (3) mõtteahel-element (\emph{põhjendus}-väli, mis nõuab mudelilt enda järelduse põhjendamist enne soovitust) ja (4) reeglid, mis suunavad mudelit konservatiivsusele (\emph{parem vähem õigeid kui palju valesid}). Kategooria \texttt{MUU} on jäetud välja, nõudes mudelilt nelja täpselt määratletud kategooria kasutamist. Prompti täielik tekst on esitatud lisas~II.
 
 Prompti võtmeosad on järgmised:
 
@@ -189,4 +209,4 @@ Sellest järeldatakse järgmised mõõdikud:
 
 \subsubsection{Promptide võrdlus}
 
-Üldist ja struktureeritud prompti võrreldakse, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Kuna üldine prompt ei nõua kategoriseeritud väljundit, viiakse selle väljund kategooriatesse \emph{post hoc} (käsitsi) vastavalt alapeatükis~\ref{metoodika:kategooriad} esitatud kategooria määratlustele. Et see protseduur on omakorda subjektiivsuse allikas, kavandatakse selle subjektiivsuse hindamiseks teha vähemalt osa kategoriseerimisest ka teise annoteerija poolt ning arvutada üldise prompti puhul eraldi annoteerijatevaheline kokkulepe.
+Üldist ja struktureeritud prompti võrreldakse, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Mõlemad promptid nõuavad sama JSON-skeemiga väljundit ja kategooriavalikut, mistõttu skoorimine kuldstandardi vastu toimub mõlemal juhul automaatselt, ilma käsitsi vahesammuta. Erinevus, mida hindamine mõõdab, taandub seetõttu sisuliste juhiste mõjule -- kas kategooria definitsioonid, näited ja reeglid parandavad mudeli täpsust ja saagist iga kategooria sees -- mitte väljundvormingu erinevusele. Kategooria \texttt{MUU}, mida üldine prompt lubab, kuid struktureeritud mitte, käsitatakse skoorimises automaatselt valepositiivsena, kuna see ei vasta ühelegi nelja kategooria kuldstandardi annotatsioonile.
