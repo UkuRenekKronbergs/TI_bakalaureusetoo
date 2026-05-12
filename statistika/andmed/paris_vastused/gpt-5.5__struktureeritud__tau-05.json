@@ -1,0 +1,48 @@
+{
+  "katkend_id": "tau-05",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 29190,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Masinõpe jaguneb laias laastus juhendatud, juhendamata ja stiimulõppeks.",
+      "probleem": "Väljend „laias laastus“ on pigem kõnekeelne.",
+      "põhjendus": "Taustapeatükis tuleks kasutada neutraalset ja täpset akadeemilist sõnastust, eriti mõistete liigitamisel.",
+      "soovitus": "Kasuta formaalsemat väljendust või täpsusta, millise käsitluse järgi jaotus esitatakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Convolutional neural network ehk CNN on populaarne pildianalüüsis.",
+      "probleem": "Ingliskeelne termin ja lühend esitatakse ilma eestikeelse vaste või lühikese selgituseta.",
+      "põhjendus": "Terminoloogia peaks olema läbivalt selge; esmakasutusel on soovitatav anda eestikeelne vaste ja selgitada lühendit.",
+      "soovitus": "Lisa esmakasutusel eestikeelne termin ning selgita lühidalt, mida CNN tähendab.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tänapäeval kasutavad kõik mudelid süvaõpet.",
+      "probleem": "Väide on liiga absoluutne üldistus.",
+      "põhjendus": "Sõna „kõik“ muudab väite ebateaduslikult kategooriliseks ja tõenäoliselt ebatäpseks, sest paljud mudelid ei kasuta süvaõpet.",
+      "soovitus": "Piira väite ulatust ja täpsusta, millistest mudelitest või rakendusvaldkondadest jutt käib.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Süvaõpe (deep learning) on viimase kümnendi domineeriv lähenemine, mis kasutab mitmekihilisi närvivõrke.",
+      "probleem": "Konkreetne väide süvaõppe domineerimise kohta on esitatud ilma viiteta.",
+      "põhjendus": "Väide kirjeldab valdkonna arengut ja mõju kindlal ajaperioodil, mistõttu vajab usaldusväärset allikat.",
+      "soovitus": "Lisa viide allikale, mis käsitleb süvaõppe levikut või domineerimist viimase kümnendi jooksul.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval kasutavad kõik mudelid süvaõpet.",
+      "probleem": "Üldistav faktiväide mudelite kasutuse kohta on ilma viiteta.",
+      "põhjendus": "Kui autor soovib väita laialdast kasutust, peab see tuginema allikale; praegusel kujul on väide ka tõenäoliselt liiga absoluutne.",
+      "soovitus": "Toeta väidet allikaga või muuda see ettevaatlikumaks ja kitsenda käsitlusala.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

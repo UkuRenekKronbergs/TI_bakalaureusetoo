@@ -1,0 +1,64 @@
+{
+  "katkend_id": "met-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 30616,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "3.2 A/B-testi disain\nSelleks et hinnata uue checkout-flow mõju konversioonile, viidi läbi A/B-test.",
+      "probleem": "Alampeatükk 3.2 algab kohe sisuga ilma, et eelnevalt oleks peatükki 3 sissejuhatav lõik (eeldusel, et 3.1 ei kata seda).",
+      "põhjendus": "Hea struktuuri puhul peaks peatükk algama lühikese sissejuhatava lõiguga, mis annab ülevaate alampeatükkide sisust ja seostest.",
+      "soovitus": "Kontrolli, kas peatükil 3 on sissejuhatav lõik enne 3.1; kui ei ole, kaalu selle lisamist, et lugeja saaks konteksti.",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina jaotasin kasutajad juhuslikult kahte gruppi",
+      "probleem": "Mina-vormi kasutamine akadeemilises metoodikapeatükis.",
+      "põhjendus": "Akadeemilises stiilis eelistatakse umbisikulist tegumoodi või passiivi, eriti metoodika kirjeldamisel, et rõhutada objektiivsust.",
+      "soovitus": "Asenda mina-vorm umbisikulise tegumoega, jälgides järjepidevust kogu peatükis (nt sama mustri rakendamine ka väljendile „valisin“).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "ning olulisuse tasemeks 0,05. Eeldatav efekti suurus oli 5% konversiooni kasv",
+      "probleem": "Lauses vahelduvad mina-vormiga ning passiiviga (\"valisin\" vs \"viidi läbi\"), mis loob stiililise ebajärjepidevuse.",
+      "põhjendus": "Stiili järjepidevus on akadeemilises tekstis oluline; ühe peatüki sees ei tohiks tegumood juhuslikult muutuda.",
+      "soovitus": "Vali üks tegumood ja kasuta seda kogu metoodika kirjelduses järjepidevalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "uue checkout-flow mõju konversioonile ... checkout-protsessi keskmine kestus",
+      "probleem": "Inglise keelsed terminid „checkout-flow“ ja „checkout-protsess“ on kasutusel ilma esmakordse selgituseta ning näivad tähistavat sama mõistet erineval kujul.",
+      "põhjendus": "Võõrkeelsed terminid tuleks esmakasutusel defineerida ning sama mõiste tähistamiseks tuleks valida üks järjepidev termin.",
+      "soovitus": "Defineeri „checkout“ esmakasutusel (nt eestikeelne vaste sulgudes) ja kasuta seejärel ühtset terminit läbivalt.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kahte gruppi: kontrollgrupp (vana flow) ja katsegrupp (uus flow)",
+      "probleem": "Sõna „flow“ kasutatakse iseseisva terminina ilma selgituseta ja vaheldumisi mõistega „checkout-flow“ / „checkout-protsess“.",
+      "põhjendus": "Sama mõiste tähistamiseks tuleks kasutada üht terminit; lühend „flow“ tekitab segadust.",
+      "soovitus": "Ühtlusta terminikasutus – vali kas „checkout-protsess“ või konkreetne eestikeelne vaste ja kasuta seda järjepidevalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Statistilise testi efekti tuvastamise võimsuseks valisin 0,8 ning olulisuse tasemeks 0,05.",
+      "probleem": "Standardväärtused on esitatud ilma viiteta metodoloogilisele allikale, mis põhjendaks just nende konkreetsete väärtuste valikut.",
+      "põhjendus": "Kuigi need on levinud konventsioonid, on akadeemilises töös tavaks viidata allikale (nt Cohen 1988), kes need väärtused põhjendab.",
+      "soovitus": "Lisa viide metodoloogilisele allikale, mis põhjendab võimsuse 0,8 ja olulisuse 0,05 valikut.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eeldatav efekti suurus oli 5% konversiooni kasv, mis nõudis igas grupis vähemalt 1500 kasutajat.",
+      "probleem": "Valimi suuruse arvutus on esitatud konkreetse arvuna ilma viiteta kasutatud valemile, tööriistale või allikale.",
+      "põhjendus": "Konkreetsed metoodilised arvutused vajavad viidet kasutatud meetodile või tarkvarale, et tulemust saaks taastoota.",
+      "soovitus": "Viita valimi suuruse arvutamise meetodile või kasutatud tööriistale (nt G*Power vms).",
+      "kindlus": "kõrge"
+    }
+  ]
+}

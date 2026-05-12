@@ -1,0 +1,80 @@
+{
+  "katkend_id": "tau-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 36528,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Docker tutvustas konteinereid laiale arendajaskonnale alates 2013. aastast.",
+      "probleem": "Ajaloolisele faktiväitele puudub viide allikale.",
+      "põhjendus": "Taustapeatükis esitatud konkreetsed väited (aastaarvud, ajaloolised faktid) peavad olema viidatud kirjandusele.",
+      "soovitus": "Lisa viide usaldusväärsele allikale (nt Docker'i ametlik dokumentatsioon, akadeemiline artikkel või tehnoloogia ajalugu käsitlev teos).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Üks Docker konteiner käivitub millisekunditega, samas kui virtuaalmasin vajab käivitamiseks mitukümmend sekundit.",
+      "probleem": "Kvantitatiivne väide jõudluse kohta on esitatud ilma allikata.",
+      "põhjendus": "Konkreetsed ajalised väited nõuavad kas viidet mõõtmistulemustele või kirjandusele, et oleks tõestatav.",
+      "soovitus": "Lisa viide võrdlusuuringule või benchmarkidele, mis seda väidet kinnitavad.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et see on kiirem.",
+      "probleem": "Mitteakadeemiline ja üldistav väljend.",
+      "põhjendus": "Akadeemilises tekstis ei tohi tugineda üldlevinud arvamusele („kõik teavad”) – väited peavad põhinema allikatel või andmetel.",
+      "soovitus": "Eemalda lause või asenda see konkreetse, viidatud väitega jõudluserinevuse kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Konteinerid jagavad kerneliga",
+      "probleem": "Lause on grammatiliselt poolik – ei ole selge, mida jagatakse.",
+      "põhjendus": "Tõenäoliselt on mõeldud, et konteinerid jagavad hostmasina kerneli (tuuma), kuid praegune sõnastus on ebatäpne ja segane.",
+      "soovitus": "Täpsusta, et konteinerid jagavad hostmasina operatsioonisüsteemi tuuma (kernelit).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "VM-id ... VM-i lähedasi lahendusi",
+      "probleem": "Lühendi VM kasutamine ilma esmakordse lahtikirjutamiseta.",
+      "põhjendus": "Akadeemilises tekstis tuleb lühendid esimesel mainimisel lahti kirjutada (nt „virtuaalmasin (VM)”).",
+      "soovitus": "Defineeri lühend VM esmamainimisel ja kasuta seda järjepidevalt kogu tekstis.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Konteinerid on lihtsamad ja kergemad kui täisvirtualiseerimine.",
+      "probleem": "Peatüki avalause on liiga üldine ja ei tutvusta peatüki teemat ega struktuuri.",
+      "põhjendus": "„Konteineritehnoloogia areng” peaks algama ülevaatega arengust või sissejuhatava lõiguga, mis paigutab teema konteksti.",
+      "soovitus": "Alusta peatükki sissejuhatava lõiguga, mis selgitab, mida peatükis käsitletakse ja millises järjekorras.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Konteinereid orkestreeritakse Kubernetese abil. Kuberneteses on pod kõige väiksem üksus",
+      "probleem": "Teemavahetus on järsk ja pole loogilist üleminekut konteinerite võrdlusest orkestreerimisele.",
+      "põhjendus": "Lõik hüppab eri teemade vahel (konteinerite olemus, jõudlus, orkestreerimine, terminoloogia segadus) ilma sidusa struktuurita.",
+      "soovitus": "Jaota lõik mitmeks alalõiguks või tekita selgemad sidusad üleminekud teemade vahel.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "ka VM-i lähedasi lahendusi (näiteks Firecracker) nimetatakse vahel konteineriteks",
+      "probleem": "Väide Firecrackeri kohta on ebatäpne ja viiteta.",
+      "põhjendus": "Firecrackerit ei nimetata tavaliselt konteineriks – see on mikro-VM-tehnoloogia ja segadust tekitav väide vajab täpsustamist ja allikat.",
+      "soovitus": "Täpsusta väidet ja lisa allikas, kus Firecrackerit on segaselt konteineriks nimetatud, või sõnasta täpsemalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "2.1 Konteineritehnoloogia areng",
+      "probleem": "Peatüki pealkiri lubab käsitleda tehnoloogia arengut, kuid sisu keskendub peamiselt võrdlusele virtuaalmasinatega.",
+      "põhjendus": "Pealkiri ja sisu ei vasta üksteisele – ajaloolist arengut on käsitletud väga põgusalt.",
+      "soovitus": "Kas täienda sisu ajaloolise arengu kirjeldusega (chroot → LXC → Docker → Kubernetes) või muuda pealkirja sisule vastavaks.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

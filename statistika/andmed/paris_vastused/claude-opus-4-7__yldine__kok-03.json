@@ -1,0 +1,56 @@
+{
+  "katkend_id": "kok-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 29288,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulevikutööna oleks väärtuslik uurida hübriidlähenemiste rakendamise edutegureid pikemas ajaraamis...",
+      "probleem": "Kokkuvõttes puudub selge ülevaade töö peamistest tulemustest ja uurimisküsimustele vastamisest",
+      "põhjendus": "Lõputöö kokkuvõte peaks alustama töö eesmärgi ja uurimisküsimuste meeldetuletusega ning andma süstemaatilise ülevaate peamistest tulemustest, mitte hüppama otse järelduste ja tulevikutöö juurde.",
+      "soovitus": "Lisa kokkuvõtte algusesse lõik, mis tuletab meelde töö eesmärgi ja uurimisküsimused ning toob välja, kuidas neile vastati.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Lisaks väärib tähelepanu kaasaegsete AI-tööriistade integreerimine intsidendi-haldamise protsessi, mis on viimaste aastate kiire arengu valdkond.",
+      "probleem": "Kokkuvõttes tuuakse sisse uus teema (AI-tööriistad), mida tõenäoliselt töö põhiosas käsitletud ei ole",
+      "põhjendus": "Kokkuvõte peaks põhinema töös tehtud analüüsil ja mitte tutvustama uusi teemasid, mida varem pole arutatud.",
+      "soovitus": "Eemalda AI-tööriistade mainimine või veendu, et see oleks töö põhiosas piisavalt käsitletud, ning sõnasta see ümber põhinedes konkreetsetel töös tehtud leidudel.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "DevOps-orienteeritud raamistikud (näiteks Site Reliability Engineering ehk SRE) on kergem alustada",
+      "probleem": "Grammatiline viga ning ebaselge sõnastus",
+      "põhjendus": "Lause ei ole grammatiliselt korrektne (peaks olema „on kergemad alustada\" või „on lihtsam alustada\"). Akadeemilises tekstis peaks sõnastus olema täpne.",
+      "soovitus": "Paranda lause grammatika ja sõnastus ning kaalu täpsemat formuleeringut, näiteks ressursinõudluse või rakendamise lihtsuse kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Eesti keskmise suurusega tarkvaraettevõtete kontekstis on otstarbekam alustada SRE-st ja vajaduspõhiselt laieneda ITIL-i elementidele.",
+      "probleem": "Soovitus on esitatud ilma viiteta töös tehtud analüüsile või konkreetsetele tulemustele",
+      "põhjendus": "Kokkuvõttes esitatud väited peaksid olema selgelt seotud töö põhiosas tehtud analüüsiga, mitte mõjuma autori isikliku arvamusena.",
+      "soovitus": "Selgita, millistele töö tulemustele või kriteeriumitele tuginedes see soovitus on tehtud (nt kulud, juurutamise aeg, kultuurimuutuse vajadus).",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kaasaegsete AI-tööriistade integreerimine intsidendi-haldamise protsessi",
+      "probleem": "Ingliskeelse lühendi „AI\" kasutamine eestikeelses akadeemilises tekstis ning kokku-lahkukirjutuse küsimus",
+      "põhjendus": "Eestikeelses akadeemilises töös on soovitatav kasutada terminit „tehisintellekt\" (TI). Samuti tuleks kontrollida „intsidendihaldus\" kirjapilti (tõenäoliselt kokku kirjutatud).",
+      "soovitus": "Asenda „AI\" sõnaga „tehisintellekt\" ning kontrolli ühend- ja liitsõnade kirjapilti (nt „intsidendihaldus\").",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tarkvara hooldamise raamistike võrdluses ilmnesid selged kompromissid.",
+      "probleem": "Kokkuvõte on liiga lühike ega kata kõiki olulisi aspekte",
+      "põhjendus": "Üks lõik tundub lõputöö kokkuvõtte jaoks ebapiisav — tavaliselt käsitletakse eesmärki, metoodikat, peamisi tulemusi, järeldusi ja tulevikutööd eraldi.",
+      "soovitus": "Kaalu kokkuvõtte laiendamist, kus käsitled selgelt eraldi töö eesmärki, kasutatud metoodikat, peamisi tulemusi, järeldusi ja edasiarendamise võimalusi.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

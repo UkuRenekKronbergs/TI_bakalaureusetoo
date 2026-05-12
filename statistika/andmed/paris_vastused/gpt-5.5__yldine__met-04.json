@@ -1,0 +1,56 @@
+{
+  "katkend_id": "met-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 22228,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Analüüs hõlmas 12 projekti, mis valiti GitHubi populaarseimate Java-projektide hulgast.",
+      "probleem": "Valimikriteeriumid on liiga üldised.",
+      "põhjendus": "Metoodika peab võimaldama uuringut korrata; praegu ei selgu, mida tähendab „populaarseim” ega miks valiti just 12 projekti.",
+      "soovitus": "Täpsusta valikukriteeriumid: mõõdik, kuupäev, välistamistingimused ja põhjendus valimi suurusele.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Analüüs viidi läbi nii projekti kõige uuemal versioonil kui ka aasta vanusel versioonil",
+      "probleem": "Versioonide määratlus on ebatäpne.",
+      "põhjendus": "„Kõige uuem” ja „aasta vanune” sõltuvad analüüsi ajast ning võivad eri kordustel anda erinevad tulemused.",
+      "soovitus": "Lisa analüüsi kuupäev ning kasutatud commit’id, tag’id või väljalaskeversioonid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Lähtekoodi staatiliseks analüüsiks kasutati tööriista SonarQube versiooni 10.4.",
+      "probleem": "Analüüsikeskkonna ja konfiguratsiooni kirjeldus puudub.",
+      "põhjendus": "SonarQube tulemused sõltuvad kvaliteediprofiilist, reeglitest, pluginatest, välistustest ja projekti ehitusseadistustest.",
+      "soovitus": "Kirjelda kasutatud SonarQube profiili, pluginad, skaneerimiskäsud, välistused ja keskkonna põhiparameetrid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "tehnilise võla hinnang (tundides), koodi katvus testidega, dubleerimise määr ja turvanõrkuste arv",
+      "probleem": "Mõõdikute operatsionaliseerimine on puudulik.",
+      "põhjendus": "Ei selgu, kas kasutatakse SonarQube’i vaikeväärtusi ja kuidas näiteks testikatvus imporditi või arvutati.",
+      "soovitus": "Lisa iga mõõdiku täpne allikas, definitsioon ja ühik ning selgita, kuidas testikatvuse andmed saadi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused agregeeriti projektitüüpide kaupa (raamistikud, tarbeprogrammid, IDE-laiendused).",
+      "probleem": "Projektitüüpide määramise alus on kirjeldamata.",
+      "põhjendus": "Ilma klassifitseerimisreegliteta võib jaotus olla subjektiivne ning mõjutada agregeeritud tulemusi.",
+      "soovitus": "Selgita kategooriate määramise kriteeriumid ja esita, millisesse rühma iga projekt kuulus.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "korrelatsioonid arvutati Spearmani $\\rho$-ga, kuna jaotused ei olnud normaalsed.",
+      "probleem": "Normaalsuse hindamise viis on nimetamata.",
+      "põhjendus": "Statistilise meetodi valiku põhjendus peab põhinema kontrollitaval protseduuril, mitte üksnes väitel.",
+      "soovitus": "Lisa, millise testi või diagnostika alusel normaaljaotuse eeldus tagasi lükati.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

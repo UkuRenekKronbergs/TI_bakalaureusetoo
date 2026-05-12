@@ -1,0 +1,80 @@
+{
+  "katkend_id": "sis-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 35560,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kuna mina arvan, et avatud lähtekoodiga projektide turvalisus on ühiskondlikult oluline",
+      "probleem": "Väljend on subjektiivne ja kõnekeelne.",
+      "põhjendus": "Sissejuhatuses peaks töö olulisus olema põhjendatud objektiivselt, mitte autori isikliku arvamuse kaudu.",
+      "soovitus": "Põhjenda olulisust faktide, varasemate uuringute või konkreetse probleemikirjeldusega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tarkvarapakettide turvanõrkused on suur murekoht.",
+      "probleem": "Väide on üldine ja vajab allikat või täpsustust.",
+      "põhjendus": "Akadeemilises tekstis peaks olulised taustaväited olema tõendatud, eriti kui need põhjendavad töö vajalikkust.",
+      "soovitus": "Lisa viide usaldusväärsele allikale või too konkreetne näide probleemi ulatusest.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Nende süsteemide täpsus ja saagis varieerub.",
+      "probleem": "Väide vajab viidet või täpsustavat selgitust.",
+      "põhjendus": "Kui töö lähtub eeldusest, et tööriistade tulemused erinevad, tuleks seda toetada varasema kirjanduse või näidetega.",
+      "soovitus": "Lisa viide uuringule või selgita lühidalt, milles varieerumine avaldub.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "täpsus ja saagis",
+      "probleem": "Termin „saagis” võib olla sihtrühmale ebaselge.",
+      "põhjendus": "Ingliskeelse termini recall vaste ei pruugi olla informaatika lõputöös üheselt mõistetav ilma määratluseta.",
+      "soovitus": "Määra sissejuhatuses või taustas, mida „täpsus” ja „saagis” töö kontekstis tähendavad.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "nelja Eestis levinud avatud lähtekoodiga projekti pealt",
+      "probleem": "Sõnastus „projekti pealt” on kõnekeelne.",
+      "põhjendus": "Akadeemiline stiil eeldab täpsemat ja formaalsemat väljendust.",
+      "soovitus": "Kasuta formaalsemat väljendust ja täpsusta, mille alusel projektid valiti.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "nelja Eestis levinud avatud lähtekoodiga projekti",
+      "probleem": "Ei ole selge, mille põhjal projektid on „Eestis levinud”.",
+      "põhjendus": "Valimi põhjendus on sissejuhatuses oluline, et lugeja mõistaks töö ulatust ja üldistatavust.",
+      "soovitus": "Lisa lühike valikukriteerium või viide andmetele, mis levikut kinnitavad.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolev bakalaureusetöö hindab nelja Eestis levinud avatud lähtekoodiga projekti pealt, kui hästi tuvastavad need süsteemid teadaolevaid haavatavusi.",
+      "probleem": "Töö eesmärk on olemas, kuid uurimisküsimused ja täpsem piirang puuduvad.",
+      "põhjendus": "Sissejuhatus peaks lugejale selgelt näitama, mida täpselt uuritakse ja millistele küsimustele töö vastab.",
+      "soovitus": "Lisa eraldi eesmärk ja 1–3 uurimisküsimust või hindamiskriteeriumi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö koosneb kuuest osast. Teises osas on taust. Kolmandas on metoodika. Neljas on tulemused. Viiendas arutelu. Kuuendas kokkuvõte.",
+      "probleem": "Töö ülesehituse kirjeldus on liiga napp ja loetelulaadne.",
+      "põhjendus": "Sissejuhatuse lõpus võiks peatükkide kirjeldus anda lugejale sisulise ülevaate, mitte ainult nimetada osi.",
+      "soovitus": "Täpsusta iga osa rolli ühe lühikese sisulise märkusega ja väldi väga katkendlikku loetelu.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tarkvarapakettide turvanõrkused on suur murekoht. Nendega tegelemiseks on loodud mitmesuguseid süsteeme",
+      "probleem": "Probleemitaust on väga lühike.",
+      "põhjendus": "Sissejuhatus peaks avama probleemi konteksti piisavalt, et põhjendada töö vajalikkust ja uurimisfookust.",
+      "soovitus": "Lisa paar lauset tarneahela turbe, sõltuvuste või haavatavuste mõju kohta.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

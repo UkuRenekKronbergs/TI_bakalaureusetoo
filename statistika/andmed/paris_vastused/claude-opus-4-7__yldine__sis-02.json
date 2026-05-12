@@ -1,0 +1,72 @@
+{
+  "katkend_id": "sis-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 29953,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "tulevad mängu NoSQL ja key-value store'id",
+      "probleem": "Kõnekeelne väljend ja inglisekeelne termin originaalkujul",
+      "põhjendus": "Akadeemilises tekstis tuleks vältida kõnekeelseid fraase ning kasutada eestikeelseid termineid või vähemalt selgitada võõrkeelseid",
+      "soovitus": "Asenda kõnekeelne fraas neutraalsema sõnastusega ja kasuta eestikeelset terminit (nt võti-väärtus salvestid)",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Esimesel pilgul tundub, et asjad on lihtsad: kumb on kiirem, see võidab.",
+      "probleem": "Kõnekeelne ja võistluslik sõnastus",
+      "põhjendus": "Bakalaureusetöö sissejuhatuses ei sobi sellised hinnangulised ja kõnekeelsed väljendid",
+      "soovitus": "Sõnasta probleemi mitmemõõtmelisus neutraalsemalt ja akadeemilisemalt",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Veebipoodide jaoks on iga sekundi viivitus kasutaja jaoks mõõdetav kahju.",
+      "probleem": "Tugev väide ilma allikaviiteta",
+      "põhjendus": "Sissejuhatuses esitatud faktiväited peavad tuginema kirjandusele, eriti kui need põhjendavad töö olulisust",
+      "soovitus": "Lisa viide uuringule või allikale, mis kinnitab viivituse mõju e-kaubandusele",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Suur osa veebirakendusi tugineb täna SQL-andmebaasidele.",
+      "probleem": "Üldistav väide ilma viiteta",
+      "põhjendus": "Sissejuhatuse taustaväited vajavad akadeemilises töös allikat",
+      "soovitus": "Toeta väidet statistikaga (nt DB-Engines edetabel) ja viita allikale",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolevas bakalaureusetöös on eesmärgiks võrrelda Redise ja Memcached'i sooritust e-poe sessioonihoidlana koormustestide kaudu.",
+      "probleem": "Sissejuhatus on liiga lühike ja mitmed klassikalised komponendid puuduvad",
+      "põhjendus": "Sissejuhatuses peaksid olema selgelt eristatud probleem, eesmärk, uurimisküsimused, metoodika lühitutvustus ja töö struktuur",
+      "soovitus": "Lisa eraldi uurimisküsimused/hüpoteesid, töö ulatuse piiritlemine ning peatükkide ülevaade",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö annab konkreetse soovituse, millise lahenduse poole Eesti väikeste e-poodide arendajatel tasub kalduda.",
+      "probleem": "Sihtgrupp (Eesti väikesed e-poed) ilmub esmakordselt alles viimases lauses ilma põhjendamata",
+      "põhjendus": "Sihtrühma piiritlus peaks olema selgemalt põhjendatud ja varem sisse toodud",
+      "soovitus": "Selgita, miks just Eesti väikesed e-poed on fookuses ja too see välja eesmärgi sõnastamisel",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Redise ja Memcached'i sooritust",
+      "probleem": "Ebajärjekindel käänamine ja apostroofi kasutus võõrnimedega",
+      "põhjendus": "Eesti keele reeglite järgi tuleks võõrnimede käänamisel olla järjekindel ning kaaluda terminit jõudlus sõna sooritus asemel",
+      "soovitus": "Kasuta järjekindlat käänamist (nt Redise ja Memcachedi) ning eelista terminit jõudlus",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "kuid mastaapsuse osas tulevad mängu NoSQL ja key-value store'id",
+      "probleem": "Loogiline hüpe — SQL-i ja NoSQL-i vastandus ei seostu selgelt järgneva Redise/Memcachedi võrdlusega",
+      "põhjendus": "Lugejale jääb ebaselgeks, miks just need kaks lahendust valiti ja kuidas see seostub sissejuhatuse algusega",
+      "soovitus": "Lisa selgitav sild SQL/NoSQL üldjutu ja konkreetse võrdluse vahele",
+      "kindlus": "keskmine"
+    }
+  ]
+}

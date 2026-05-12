@@ -1,0 +1,72 @@
+{
+  "katkend_id": "tau-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 36452,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Räsifunktsiooni hash output on tüüpiliselt 128 kuni 512 bitti pikk. Hash function peab olema kollisioonikindel ja ühe-suunaline.",
+      "probleem": "Ingliskeelsete terminite 'hash output' ja 'hash function' kasutamine eestikeelses tekstis, kuigi varem on kasutatud eestikeelseid vasteid (räsifunktsioon).",
+      "põhjendus": "Akadeemilises eestikeelses tekstis tuleks järjekindlalt kasutada eestikeelset terminoloogiat. Terminite sega-kasutamine vähendab teksti professionaalsust ja loetavust.",
+      "soovitus": "Asenda 'hash output' terminiga 'räsi(väärtus)' ja 'hash function' terminiga 'räsifunktsioon'. Kontrolli terminikasutuse järjekindlust kogu töös.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Eestis kasutab digiallkirja infrastruktuur SHA-256-d.",
+      "probleem": "Väide on üldsõnaline ja ilma viiteta ning ei seostu selgelt ülejäänud lõigu argumendiga.",
+      "põhjendus": "Faktiväide riikliku infrastruktuuri kohta vajab viidet (nt RIA dokumentatsioon või asjakohane standard). Lisaks katkestab see lause räsifunktsioonide ajaloolise ülevaate loogilist voogu.",
+      "soovitus": "Lisa viide ametlikule allikale (nt RIA, eIDAS) ning kaalu, kas see info sobib paremini eraldi lõiku Eesti konteksti kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "MD5-l avastati kokkupõrkenõrkused alates 1996. aastast",
+      "probleem": "1996. aasta nõrkuste leiu kohta puudub viide (mainitud on vaid Wangi 2004. aasta tööd).",
+      "põhjendus": "Konkreetsete aastaarvude ja teadustulemuste mainimisel peab olema vastav primaarallikas (nt Dobbertini 1996. aasta töö).",
+      "soovitus": "Lisa viide 1996. aasta nõrkuste leiu kohta (nt Dobbertin) või sõnasta väide ümber, kui täpset allikat ei viidata.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Google demonstreeris 2017. aastal esimest praktilist SHA-1 kokkupõrget",
+      "probleem": "Google'i nimetamine autorina on ebatäpne — teaduspublikatsioonil on konkreetsed autorid (Stevens jt).",
+      "põhjendus": "Akadeemilises tekstis tuleks viidata autoritele, mitte ettevõttele. Lugeja saab viitest selgemini aru, kelle teadustööst on jutt.",
+      "soovitus": "Sõnasta nii, et viidatakse autoritele (nt 'Stevens jt demonstreerisid 2017. aastal...'), nagu on tehtud Wangi näite puhul.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tänapäeval soovitatakse kasutada SHA-256 ja SHA-3 perekondi.",
+      "probleem": "Soovituse taga puudub viide standardile või autoriteetsele allikale (nt NIST FIPS 180-4, FIPS 202).",
+      "põhjendus": "Tausta peatükis peavad praktilised soovitused tuginema tunnustatud standarditele või akadeemilistele allikatele, mitte üldistele väidetele.",
+      "soovitus": "Lisa viide NIST-i standardile või muule autoriteetsele allikale, mis SHA-2 ja SHA-3 kasutamist soovitab.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Krüptograafilised räsifunktsioonid moodustavad nüüdisaegse infoturbe ühe alustala.",
+      "probleem": "Peatükk algab vahetult ajalooga, kuid räsifunktsiooni mõistet, omadusi ja rolli ei defineerita enne näidete toomist.",
+      "põhjendus": "Tausta peatükis on hea esmalt anda lühike kontseptuaalne määratlus (mis on räsifunktsioon, milleks seda kasutatakse, millised omadused peavad olema täidetud) ning alles seejärel siirduda konkreetsete algoritmide ajaloole.",
+      "soovitus": "Lisa enne ajaloolist ülevaadet definitsioon ja räsifunktsiooni põhiomadused (kollisioonikindlus, ühesuunalisus, teise eelkujutise kindlus).",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Hash function peab olema kollisioonikindel ja ühe-suunaline.",
+      "probleem": "Sõna 'ühe-suunaline' on kirjapildilt ebakorrektne — eesti keeles kirjutatakse 'ühesuunaline' kokku.",
+      "põhjendus": "Akadeemilise teksti puhul on oluline järgida õigekirja, eriti terminite osas.",
+      "soovitus": "Paranda kirjapilt: 'ühesuunaline'. Samuti kaalu täiendava omaduse (teise eelkujutise kindlus) mainimist.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "SHA-1 oli MD5-le järelkäija",
+      "probleem": "Sõna 'järelkäija' on kõnekeelne; akadeemilises tekstis sobib paremini 'järglane' või 'järeltulija'.",
+      "põhjendus": "Akadeemilises eestikeelses tekstis tuleks eelistada neutraalsemat ja täpsemat sõnavara.",
+      "soovitus": "Asenda sõnaga 'järglane' või sõnasta lause ümber täpsemalt (nt 'SHA-1 töötati välja MD5 asendajaks').",
+      "kindlus": "keskmine"
+    }
+  ]
+}

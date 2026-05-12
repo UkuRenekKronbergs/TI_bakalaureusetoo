@@ -114,24 +114,29 @@ Pärast `koguda.py` käivitamist annab `andmed/` kaust järgmist üldpilti
 - **Tekstistatistika filter**: `põhi.tex` poolt `\input`-imata mallifailid
   (nt `2-vormistamine.tex`, `3-tekstiloome.tex`) on välja jäetud.
 
-## Sünteetilised tulemused viimase käivituse seisuga
+## Päris empiirilised tulemused (80 päris API-päringut)
+
+Skript `paris_hindamine.py` käivitas tegelikud API-päringud Anthropic Claude 4.7 Opus ja OpenAI GPT-5.5 mudelitele 20 sünteetilise testkatkendi vastu, mõlema prompti versiooniga (üldine + struktureeritud) — kokku 80 päringut. Tegelikud salvestatud vastused on kaustas `andmed/paris_vastused/`.
 
 | Mudel | Prompti tüüp | Macro T | Macro S | Macro F₁ | TP | FP | FN |
 |---|---|---|---|---|---|---|---|
-| Claude 4.7 Opus | struktureeritud | 0,74 | 0,79 | **0,75** | 33 | 15 | 9 |
-| Claude 4.7 Opus | üldine          | 0,50 | 0,55 | 0,52 | 22 | 21 | 20 |
-| GPT-5.5 | struktureeritud | 0,66 | 0,72 | **0,68** | 29 | 16 | 13 |
-| GPT-5.5 | üldine          | 0,39 | 0,40 | 0,39 | 17 | 24 | 25 |
+| Claude 4.7 Opus | struktureeritud | 0,33 | 0,93 | 0,46 | 39 |  79 |  3 |
+| Claude 4.7 Opus | üldine          | 0,29 | 0,79 | 0,41 | 34 | 100 |  8 |
+| **GPT-5.5** | **struktureeritud** | **0,47** | **0,77** | **0,56** | **34** | **39** | **8** |
+| GPT-5.5 | üldine          | 0,27 | 0,85 | 0,38 | 33 | 102 |  9 |
 
-Sünteetilises andmestikus on parim kombinatsioon Claude 4.7 Opus + struktureeritud prompt (F₁ = 0,75); halvim on GPT-5.5 + üldine prompt (F₁ = 0,39). **Need vahed on autori postulaadi otsene tulemus** — profiilid sätestati nii, et struktureeritud > üldine ja Claude > GPT-5.5 (kooskõlas thesis ptk 5 pilootuuringu kvalitatiivsete tähelepanekutega), mistõttu nendele numbritele tuginedes ei saa teha väiteid päris mudelite tegeliku soorituse kohta. Päris mõõtmiseks tuleb simulatsioon asendada tegelike LLM-i päringutega (vt thesis ptk 5.9).
+**Päris empiirilises hindamises on parim kombinatsioon GPT-5.5 + struktureeritud prompt (F₁ = 0,56),** mitte Claude (vastupidi varasema sünteetilise demonstratsiooni postuleeritud profiilile). Mudelid on kallutatud saagise poole — kõrge saagis (0,77--0,93), madalam täpsus (0,27--0,47). See tähendab, et mudelid leiavad peaaegu kõik kuldstandardi probleemid, kuid signaleerivad ka palju kandidaate, mida autori-poolne kuldstandard probleemiks ei pidanud.
+
+## Sünteetiline pipeline-demonstratsioon (varasem iteratsioon)
+
+Skript `synteetiline_hindamine.py` jätkab eksisteerimist eelmise iteratsiooni demonstratsioonina, kus mudelivastused simuleeriti seeditud Bernoulli-tõmmistega (mitte tegelikud API-päringud). Vt vastavad CSV-d kausta `andmed/synth_*.csv` ja graafikud `joonised_png/09_synth*..12_synth*.png`. **Sünteetilised numbrid ei mõõda päris LLM-ide sooritust.** Erinevus päris vs sünteetiliste tulemuste vahel ongi õpetlik: päris mõõtmine andis hoopis erinevad mustrid (GPT-5.5 > Claude struktureeritud prompti puhul; mudelid saagisele kallutatud).
 
 ## Edasised analüüsisuunad (jätkukava)
 
-Kui täismahuline hindamine päris LLM-i päringutega läbi viiakse, on käesoleva paketi struktuur juba sobiv: tuleb ainult asendada `synteetiline_hindamine.py` skriptis `simuleeri()` funktsioon päris API-päringute funktsiooniga ning ülejäänud pipeline (kuldstandardiga võrdlemine, mõõdikute arvutus, graafikud) töötab muutmata kujul.
+Päris üliõpilastöödel sama metoodika kohaldamine kuulub jätkukavasse:
 
-Edasised laiendused:
-
-1. Sõltumatu teise annoteerija lisamine — inter-annoteerija kokkuleppe ($\kappa$) arvutamine kategooriate kaupa.
-2. ROC-kõverad kindlushinnangu kalibratsiooni jaoks (kõrge kindlusega leidude osakaal tegelikult tõestest leidudest).
-3. Kattuvuse 50% lävi tundlikkusanalüüs (vt thesis ptk 3.5.4).
-4. Suurem testkogu (100+ katkendit) statistilise usaldusvahemiku jaoks.
+1. Päris katkendite kogumine TÜ arvutiteaduse instituudi avalikest töödest (2020--2024) — asendab praeguse sünteetilise testkogu (`andmestik_synth.py`).
+2. Sõltumatu teise annoteerija lisamine — inter-annoteerija kokkuleppe (Coheni $\kappa$) arvutamine kategooriate kaupa.
+3. Kindlushinnangu kalibratsioon — kõrge kindlusega leidude osakaal tegelikult tõestest leidudest (andmed olemas failis `andmed/paris_klassifikatsioonid.csv`).
+4. Span-tasemel kattuvuse 50% läve tundlikkusanalüüs (kontrollimine 30% ja 70% läviga).
+5. Suurem testkogu (100+ katkendit) statistilise usaldusvahemiku jaoks.

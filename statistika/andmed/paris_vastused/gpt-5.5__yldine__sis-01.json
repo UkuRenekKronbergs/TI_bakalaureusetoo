@@ -1,0 +1,64 @@
+{
+  "katkend_id": "sis-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 31051,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval kasutab üle 80% Eesti väikeettevõtetest mingisugust pilveteenust andmete säilitamiseks.",
+      "probleem": "Statistiline väide on esitatud ilma allikata.",
+      "põhjendus": "Sissejuhatuses kasutatud arvandmed peavad olema kontrollitavad, vastasel juhul jääb probleemi ulatus põhjendamata.",
+      "soovitus": "Lisa usaldusväärne allikas või täpsusta väidet, kui täpne statistika puudub.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "mingisugust pilveteenust",
+      "probleem": "Sõna „mingisugust” on kõnekeelne ja ebatäpne.",
+      "põhjendus": "Akadeemilises tekstis tuleks kasutada täpseid ja neutraalseid väljendeid, eriti probleemi kirjeldamisel.",
+      "soovitus": "Kasuta täpsemat nimetust, nt „pilveteenust” või täpsusta teenuste liiki.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Käesoleva bakalaureusetöö raames vaatlen, kuidas saaks väikeettevõtete jaoks pakkuda lihtsasti kasutatavat krüpteeritud varundusteenust.",
+      "probleem": "Esimese isiku kasutus ja sõnastus „vaatlen, kuidas saaks” jätavad eesmärgi ebamääraseks.",
+      "põhjendus": "Sissejuhatus peaks selgelt esitama töö eesmärgi, uurimisülesanded või lahendatava probleemi.",
+      "soovitus": "Sõnasta töö eesmärk konkreetsemalt ja akadeemiliselt; lisa vajadusel uurimisküsimused või ülesanded.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tegelikult on see asi keerulisem, kui esmapilgul tundub, kuna krüptograafia on mitmekihiline distsipliin.",
+      "probleem": "Väljend „see asi” on kõnekeelne ja ebamäärane.",
+      "põhjendus": "Ebamäärane sõnastus vähendab teksti täpsust ega selgita, milline aspekt täpselt keeruline on.",
+      "soovitus": "Täpsusta, kas keerukus puudutab võtmehaldust, kasutatavust, turvamudelit või varundusprotsessi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "1.1 Probleem",
+      "probleem": "Alapeatükk kirjeldab probleemi, kuid sissejuhatuses puuduvad selgelt eristatud eesmärk, ulatus ja uurimisülesanded.",
+      "põhjendus": "Lõputöö sissejuhatus peaks lugejale näitama, mida täpselt uuritakse või arendatakse ning kuidas töö eesmärgini jõutakse.",
+      "soovitus": "Lisa sissejuhatusse eraldi töö eesmärk, võimalikud uurimisküsimused või arendusülesanded ning töö piirangud.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Neljas peatükk on prototüüp.",
+      "probleem": "Peatüki kirjeldus on liiga napp ja grammatiliselt kohmakas.",
+      "põhjendus": "Töö ülesehituse tutvustus peaks selgitama, mida peatükis käsitletakse, mitte nimetama peatükki objektina.",
+      "soovitus": "Täpsusta, kas neljandas peatükis kirjeldatakse prototüübi kavandamist, teostust või valideerimist.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "krüpteeritud varundusteenust",
+      "probleem": "Termin võib olla liiga üldine, sest pole selge, mida krüpteeritakse ja kus krüpteerimine toimub.",
+      "põhjendus": "Turvateemalises töös on oluline eristada näiteks kliendipoolset krüpteerimist, serveripoolset krüpteerimist ja edastuskrüpteerimist.",
+      "soovitus": "Täpsusta hiljem sissejuhatuses või taustas, millist krüpteerimise mudelit töö käsitleb.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

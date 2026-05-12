@@ -1,0 +1,32 @@
+{
+  "katkend_id": "tul-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 15346,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Küsitlusele vastas 87 tudengit. Demograafia osas olid vastajatest 58 (66,7%) meessoost...",
+      "probleem": "Peatükk algab kohe konkreetsete arvandmetega ilma sissejuhatava lõiguta, mis tutvustaks tulemuste ülesehitust.",
+      "põhjendus": "Tulemuste peatükk peaks algama lühikese sissejuhatusega, mis annab lugejale ülevaate, milliseid tulemusi ja millises järjekorras esitatakse.",
+      "soovitus": "Lisa peatüki algusesse sissejuhatav lõik, mis tutvustab, milliseid tulemusi peatükis käsitletakse ja millises järjekorras.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mann-Whitney U-test näitas, et hinnangute erinevus VS Code'i ja IntelliJ IDEA vahel ei olnud statistiliselt oluline (p = 0,18).",
+      "probleem": "Kogu tulemuste peatükk koosneb ühest pikast lõigust, kus demograafia, tööriistade populaarsus, rahulolu ja statistiline test on segamini.",
+      "põhjendus": "Erinevad teemad (demograafia, kasutus, rahulolu, statistilised testid) peaksid olema eraldi lõikudes või alapeatükkides, et lugeja saaks neil paremini orienteeruda.",
+      "soovitus": "Jaga tulemused temaatilisteks lõikudeks või alampeatükkideks (nt valim/demograafia, tööriistade kasutus, rahulolu, statistiline võrdlus).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Visual Studio Code (kasutab 79 vastajat ehk 90,8%) ... VS Code'i keskmine hinnang oli 4,3",
+      "probleem": "Sama tööriista kohta kasutatakse kahte vormi: \"Visual Studio Code\" ja \"VS Code\" ilma lühendi sissetoomist selgitamata.",
+      "põhjendus": "Akadeemilises tekstis tuleks lühend esmakasutusel sulgudes defineerida ning seejärel kasutada järjekindlalt.",
+      "soovitus": "Too lühend VS Code esmakasutusel sulgudes sisse ja kasuta seda edaspidi järjekindlalt (või kasuta läbivalt täisnime).",
+      "kindlus": "keskmine"
+    }
+  ]
+}

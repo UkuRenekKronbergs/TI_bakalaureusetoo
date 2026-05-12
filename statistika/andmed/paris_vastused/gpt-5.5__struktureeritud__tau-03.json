@@ -1,0 +1,24 @@
+{
+  "katkend_id": "tau-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 19714,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Online-meetoditena on populaarsed kuumakaardid (Hotjar, Microsoft Clarity) ja kliki-analüüs.",
+      "probleem": "Ingliskeelne termin „Online-meetodid” on esitatud ilma selgituse või eestikeelse vaste valikuta.",
+      "põhjendus": "Terminoloogia peaks olema töös läbivalt ühtne ja esmakasutusel arusaadav; praegu jääb ebaselgeks, kas mõeldakse veebipõhiseid, kaug- või automaatseid meetodeid.",
+      "soovitus": "Vali täpsem eestikeelne termin või defineeri esmakasutusel, mida „online-meetodite” all selles töös mõeldakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Online-meetoditena on populaarsed kuumakaardid (Hotjar, Microsoft Clarity) ja kliki-analüüs.",
+      "probleem": "Väide meetodite populaarsuse kohta on esitatud ilma viiteta.",
+      "põhjendus": "Populaarsus on empiiriline või turuolukorda kirjeldav väide; lugeja peaks saama kontrollida, millele hinnang tugineb.",
+      "soovitus": "Lisa allikas, mis toetab populaarsuse väidet, või sõnasta väide ettevaatlikumalt ilma üldistava hinnanguta.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

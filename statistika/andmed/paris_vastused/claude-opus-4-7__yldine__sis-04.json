@@ -1,0 +1,64 @@
+{
+  "katkend_id": "sis-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 28951,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kuna mina arvan, et avatud lähtekoodiga projektide turvalisus on ühiskondlikult oluline",
+      "probleem": "Esimeses isikus subjektiivne hinnang akadeemilises tekstis",
+      "põhjendus": "Akadeemilises stiilis tuleks vältida isiklikke arvamusavaldusi ning väited peaksid olema põhjendatud allikate või objektiivsete argumentidega.",
+      "soovitus": "Sõnasta motivatsioon ümber neutraalsemalt ja toeta seda viidetega (nt avatud lähtekoodiga tarkvara levik, mõju kriitilisele taristule).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Nendega tegelemiseks on loodud mitmesuguseid süsteeme, näiteks GitHubi Dependabot ja Snyk. Nende süsteemide täpsus ja saagis varieerub.",
+      "probleem": "Väited tööriistade olemasolu ja nende täpsuse varieeruvuse kohta esitatakse ilma viideteta",
+      "põhjendus": "Sissejuhatuses esitatud faktiväited (eriti varasemate uuringute tulemused) vajavad allikaviiteid.",
+      "soovitus": "Lisa viited Dependaboti ja Snyki dokumentatsioonile ning varasematele uuringutele, mis on nende täpsust ja saagist hinnanud.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö koosneb kuuest osast. Teises osas on taust. Kolmandas on metoodika. Neljas on tulemused. Viiendas arutelu. Kuuendas kokkuvõte.",
+      "probleem": "Töö ülesehituse kirjeldus on liiga telegraafiline ja sisutühi",
+      "põhjendus": "Sissejuhatuse lõpus peaks iga peatüki sisu olema lühidalt, kuid sisuliselt kirjeldatud – mitte ainult pealkirjana üles loetud.",
+      "soovitus": "Lisa iga peatüki kohta 1–2 lauset, mis selgitavad selle sisu ja rolli töös.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolev bakalaureusetöö hindab nelja Eestis levinud avatud lähtekoodiga projekti pealt, kui hästi tuvastavad need süsteemid teadaolevaid haavatavusi.",
+      "probleem": "Sissejuhatuses puuduvad selgelt sõnastatud uurimisküsimused või eesmärgid ja töö panus",
+      "põhjendus": "Hea sissejuhatus sisaldab probleemipüstitust, eesmärki, uurimisküsimusi/hüpoteese ning oodatavat panust – praegu on need ainult vihjamisi olemas.",
+      "soovitus": "Sõnasta selgelt eraldi töö eesmärk, uurimisküsimused ja oodatav panus ning põhjenda projektide valikut.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Nende süsteemide täpsus ja saagis varieerub.",
+      "probleem": "Mõisted \"täpsus\" ja \"saagis\" (precision/recall) kasutatakse ilma defineerimata",
+      "põhjendus": "Tehnilised terminid tuleb sissejuhatuses kas defineerida või viidata kohale, kus neid hiljem defineeritakse, et lugeja konteksti mõistaks.",
+      "soovitus": "Lisa lühike selgitus või viide, mida nende mõõdikute all silmas peetakse haavatavuste tuvastamise kontekstis.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tarkvarapakettide turvanõrkused on suur murekoht.",
+      "probleem": "Avalause on liiga üldsõnaline ja kõnekeelne (\"suur murekoht\")",
+      "põhjendus": "Sissejuhatuse avalõik peaks probleemi tähtsust põhjendama konkreetsete faktide ja viidetega, mitte üldise tundetooniga.",
+      "soovitus": "Asenda üldine väide konkreetsete andmetega (nt haavatavuste arvu kasv, juhtumiuuringud) ja lisa viited.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "hindab nelja Eestis levinud avatud lähtekoodiga projekti pealt",
+      "probleem": "Pole selgitatud, mida tähendab \"Eestis levinud\" ja miks just neli projekti valiti",
+      "põhjendus": "Valimi piiritlus ja valikukriteeriumid mõjutavad töö valiidsust ning peaksid olema sissejuhatuses lühidalt põhjendatud.",
+      "soovitus": "Põhjenda lühidalt valimi suurust ja valikukriteeriume ning täpsustamist jäta vajadusel metoodika peatükki.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tau-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 30275,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Pilvepõhise arvutuse mõiste on lai. Klassikaliselt eristatakse kolme teenusemudelit: IaaS...",
+      "probleem": "Peatükk algab väga lühikese üldlausega ja läheb kohe loetelu-stiilis sisusse, puudub sissejuhatav lõik, mis selgitaks peatüki eesmärki ja ülesehitust.",
+      "põhjendus": "Taustapeatükk peaks lugejat teemasse juhatama ja andma ülevaate, mida käsitletakse, mitte alustama kohe definitsioonide loendiga.",
+      "soovitus": "Lisa peatüki algusesse sissejuhatav lõik, mis selgitab, miks pilveteenuste mudeleid käsitletakse ja kuidas need lõputöö teemaga seostuvad.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Hindade osas on FaaS odav väiksete rakenduste puhul ja kallis suurte koormuste puhul.",
+      "probleem": "Peatükk lõpeb järsult ühe konkreetse hinnamärkusega, ilma kokkuvõtva või üleminekulause, mis seoks taustainfo järgmise peatükiga.",
+      "põhjendus": "Peatüki lõpp peaks võtma kokku või suunama edasi, mitte jääma juhuslikule faktiväitele.",
+      "soovitus": "Lisa lõpetav lõik, mis võtab kokku teenusemudelite olemuse ja juhatab sisse järgmise peatüki teema.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Asi see, et piirid nende vahel on hägused: paljud teenused on hübriidid.",
+      "probleem": "Kõnekeelne sõnastus ja sõna „asi“ ning lause on grammatiliselt vigane („Asi see, et“).",
+      "põhjendus": "Akadeemilises tekstis tuleks vältida kõnekeelseid täitesõnu ja kasutada korrektset lauseehitust.",
+      "soovitus": "Sõnasta lause akadeemilisemas registris ümber, vältides sõna „asi“ ja parandades lauseehitust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "IaaS näiteks on AWS EC2, mis pakub virtuaalmasinaid kasutaja poolt seadistatava operatsioonisüsteemiga.",
+      "probleem": "Lause stiil on loetelulik ja kõnekeelne („IaaS näiteks on...“); samuti kasutatakse lühendit OS ilma esmakasutuse selgituseta järgnevas lauses.",
+      "põhjendus": "Akadeemilises tekstis peaks näitepõhised laused olema sõnastatud ametlikumalt, nt „IaaS-i näiteks võib tuua...“.",
+      "soovitus": "Sõnasta näitelaused ametlikumas registris ja ühtlustusta nende ülesehitus.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "PaaS näiteks on Heroku, kus arendaja ei seadista OS-i, vaid lihtsalt paigaldab oma rakenduse.",
+      "probleem": "Lühendit „OS“ kasutatakse ilma esmakasutuse selgituseta; varem kirjutati välja „operatsioonisüsteem“, hiljem aga lühend.",
+      "põhjendus": "Lühendi esmakasutusel tuleb see sulgudes selgitada ning seejärel kasutada järjepidevalt.",
+      "soovitus": "Tutvusta lühendit OS esmakasutusel sulgudes ja kasuta läbivalt sama varianti.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Hindade osas on FaaS odav väiksete rakenduste puhul ja kallis suurte koormuste puhul.",
+      "probleem": "Konkreetne väide hinnastruktuuri kohta esitatakse ilma allikaviiteta.",
+      "põhjendus": "Hinnavõrdlused ja kuluefektiivsuse väited ei ole üldteadmine ja vajavad allikat, näiteks teenusepakkuja dokumentatsioonile või uuringule.",
+      "soovitus": "Lisa väitele viide kirjandusele või teenusepakkuja hinnastruktuuri dokumentatsioonile.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Lisaks on tekkinud uued kategooriad — FaaS (Function as a Service), millest tuntum on AWS Lambda, ja CaaS (Container as a Service).",
+      "probleem": "Väide uute teenusekategooriate tekke ja levinuima esindaja kohta esitatakse ilma allikaviiteta.",
+      "põhjendus": "Kuigi mõisted on tuntud, on väide „tuntum on AWS Lambda“ hinnangulist laadi ja vajaks toetavat allikat.",
+      "soovitus": "Lisa viide kirjandusele, mis käsitleb FaaS- ja CaaS-kategooriate teket ning levikut.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

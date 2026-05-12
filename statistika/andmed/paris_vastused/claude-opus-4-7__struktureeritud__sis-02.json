@@ -1,0 +1,64 @@
+{
+  "katkend_id": "sis-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 28081,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolevas bakalaureusetöös on eesmärgiks võrrelda Redise ja Memcached'i sooritust e-poe sessioonihoidlana koormustestide kaudu.",
+      "probleem": "Sissejuhatuses puuduvad mitmed olulised struktuurielemendid: töö ülesehituse tutvustus, uurimisküsimused ja metoodika lühikirjeldus.",
+      "põhjendus": "Bakalaureusetöö sissejuhatus peaks lisaks eesmärgile sisaldama ka uurimisküsimusi, töö struktuuri kirjeldust ja motivatsiooni laiemat konteksti.",
+      "soovitus": "Kaalu sissejuhatuse laiendamist - lisa uurimisküsimused, töö ülesehitus peatükkide kaupa ning täpsem probleemipüstitus.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "kuid mastaapsuse osas tulevad mängu NoSQL ja key-value store'id",
+      "probleem": "Väljend \"tulevad mängu\" on kõnekeelne ja akadeemilises tekstis sobimatu; sama väljendit korratakse hiljem (\"tuleb mängu mälukasutus\").",
+      "põhjendus": "Akadeemiline stiil eeldab neutraalset ja täpset sõnastust ning väldib kõnekeelseid idioome.",
+      "soovitus": "Asenda kõnekeelne väljend \"tulevad/tuleb mängu\" akadeemilisema vastega ning väldi sama väljendi kordamist.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Esimesel pilgul tundub, et asjad on lihtsad: kumb on kiirem, see võidab.",
+      "probleem": "Kõnekeelne sõnastus (\"esimesel pilgul tundub\", \"asjad\", \"see võidab\") ei sobi akadeemilisse teksti.",
+      "põhjendus": "Sõnad \"asjad\" ja võistluslik metafoor (\"võidab\") on liiga argikeelsed bakalaureusetöö sissejuhatuse jaoks.",
+      "soovitus": "Sõnasta lause akadeemilises stiilis, vältides määramatuid sõnu nagu \"asjad\" ja metafoorseid väljendeid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Veebipoodide jaoks on iga sekundi viivitus kasutaja jaoks mõõdetav kahju.",
+      "probleem": "Üldistav väide ilma täpsustamata, mida \"mõõdetav kahju\" tähendab; samuti sõna \"jaoks\" kordus.",
+      "põhjendus": "Akadeemilises tekstis tuleks üldistusi vältida või täpsustada ning korduvaid sõnu varieerida.",
+      "soovitus": "Täpsusta, mida tähendab \"mõõdetav kahju\" ja väldi sõna \"jaoks\" kordamist samas lauses.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kuid mastaapsuse osas tulevad mängu NoSQL ja key-value store'id",
+      "probleem": "Ingliskeelne termin \"key-value store\" on esitatud ilma eestikeelse vaste või selgituseta esmakasutusel.",
+      "põhjendus": "Esmakasutuse korral tuleks ingliskeelsele terminile lisada eestikeelne vaste või selgitus, et tagada terminoloogiline järjepidevus.",
+      "soovitus": "Lisa terminile \"key-value store\" esmakasutusel eestikeelne vaste (nt võti-väärtus-hoidla) või selgitus.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Veebipoodide jaoks on iga sekundi viivitus kasutaja jaoks mõõdetav kahju.",
+      "probleem": "Konkreetne väide viivituse mõju kohta esitatakse ilma allikaviiteta.",
+      "põhjendus": "Selline väide tugineb tüüpiliselt uuringutele (nt Amazoni või Google'i andmed laadimisaja mõjust) ja vajab viitamist.",
+      "soovitus": "Lisa viide uuringule või allikale, mis kinnitab viivituse ja äritulemuste seost.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Suur osa veebirakendusi tugineb täna SQL-andmebaasidele.",
+      "probleem": "Üldistav kvantitatiivne väide (\"suur osa\") ilma allikaviiteta.",
+      "põhjendus": "Kuigi väide võib tunduda üldteadmisena, kasutab see kvantitatiivset hinnangut, mis vajaks toetavat allikat (nt DB-Engines edetabel).",
+      "soovitus": "Kaalu viite lisamist statistikale või asenda \"suur osa\" tagasihoidlikuma sõnastusega.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

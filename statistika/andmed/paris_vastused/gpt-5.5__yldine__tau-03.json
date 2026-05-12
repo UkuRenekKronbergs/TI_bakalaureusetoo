@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tau-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 37051,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Klassikalised meetodid hõlmavad lähivaatlust, mõtle-valjusti-protokolli ja ülesannetepõhist testimist.",
+      "probleem": "Meetodite loetelu on esitatud ilma allikaviiteta.",
+      "põhjendus": "Taustapeatükis peaksid üldistavad väited metoodikate kohta tuginema kirjandusele, eriti kui neid nimetatakse klassikalisteks.",
+      "soovitus": "Lisa viide kasutatavustestimise meetodeid käsitlevale allikale või õpikule.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Hiljutised tööd on aga seda väidet vaidlustanud~\\cite{faulkner_2003}",
+      "probleem": "Allikas aastast 2003 ei ole enam hästi kirjeldatav kui „hiljutine“.",
+      "põhjendus": "Sõna „hiljutine“ on ajas muutuv ja võib jätta mulje, et kasutatud on kaasaegset kirjandust.",
+      "soovitus": "Kasuta neutraalsemat sõnastust või lisa tõesti uuemaid allikaid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Online-meetoditena on populaarsed kuumakaardid (Hotjar, Microsoft Clarity) ja kliki-analüüs.",
+      "probleem": "Väide populaarsuse kohta ja tööriistade näited on viitamata.",
+      "põhjendus": "Populaarsust kirjeldav väide vajab tõendust; tööriistade nimetamine ilma kontekstita võib mõjuda juhusliku loeteluna.",
+      "soovitus": "Lisa allikas veebianalüütika meetodite kasutuse kohta või täpsusta, miks just need tööriistad on olulised.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "lähivaatlust, mõtle-valjusti-protokolli ja ülesannetepõhist testimist",
+      "probleem": "Mõned terminid võivad vajada ühtlustamist või täpsustamist.",
+      "põhjendus": "„Lähivaatlus“ ei ole kasutatavusuuringute kontekstis nii üheselt mõistetav kui nt vaatlus või kasutaja jälgimine; terminite järjepidevus on oluline.",
+      "soovitus": "Kontrolli eestikeelseid vasteid ja kasuta kogu töös samu termineid.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "konteksti-eripärad",
+      "probleem": "Liitsõna vormistus on tõenäoliselt ebatäpne.",
+      "põhjendus": "Eesti keeles tuleks selline väljend enamasti kirjutada kokku või sõnastada teisiti; sidekriips võib mõjuda põhjendamatuna.",
+      "soovitus": "Kontrolli õigekirja ja kaalu vormi „kontekstieripärad“ või täpsemat sõnastust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "näidates et keerukate süsteemide puhul on vajalik suurem valim.",
+      "probleem": "Puudub koma sidesõna „et“ ees.",
+      "põhjendus": "Keelevead vähendavad akadeemilise teksti korrektsust ja loetavust.",
+      "soovitus": "Lisa koma: „näidates, et ...“.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mobiilirakenduste puhul lisanduvad konteksti-eripärad: ekraani suurus, ühe käega kasutamise mugavus ja katkestuste rohkus.",
+      "probleem": "Mobiilirakenduste eripärad tuuakse sisse järsult ja ilma seoseta lõputöö fookusega.",
+      "põhjendus": "Taustapeatükis peaks olema selge, miks just need aspektid on töö seisukohalt olulised.",
+      "soovitus": "Lisa lühike selgitus, kuidas mobiilikontekst seostub uurimisprobleemi või järgnevate peatükkidega.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

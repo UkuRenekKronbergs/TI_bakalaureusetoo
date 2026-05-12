@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tau-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 28203,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Docker tutvustas konteinereid laiale arendajaskonnale alates 2013. aastast.",
+      "probleem": "Ajalooline väide vajab allikat.",
+      "põhjendus": "Taustapeatükis peavad tehnoloogia leviku ja ajaloo kohta esitatud väited olema kontrollitavad.",
+      "soovitus": "Lisa viide Dockerile või konteineritehnoloogia ajalugu käsitlevale usaldusväärsele allikale.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Konteinerid jagavad kerneliga, samas kui virtuaalmasinad emuleerivad terve operatsioonisüsteemi.",
+      "probleem": "Lause on terminoloogiliselt ja grammatiliselt ebatäpne.",
+      "põhjendus": "Konteinerid jagavad tavaliselt hosti operatsioonisüsteemi kernelit; VM-id ei pruugi „emuleerida” tervet OS-i, vaid käitavad eraldi OS-i virtualiseeritud riistvaral.",
+      "soovitus": "Täpsusta, mida konteinerid jagavad, ning erista emuleerimist ja virtualiseerimist.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Üks Docker konteiner käivitub millisekunditega, samas kui virtuaalmasin vajab käivitamiseks mitukümmend sekundit.",
+      "probleem": "Esitatud on konkreetne jõudlusvõrdlus ilma allikata.",
+      "põhjendus": "Käivitusaeg sõltub platvormist, konfiguratsioonist, pildist ja töökoormusest; ilma viiteta mõjub väide liiga üldistavalt.",
+      "soovitus": "Lisa mõõtmistulemuste allikas või sõnasta väide tingimuslikumalt ja kontekstiga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et see on kiirem.",
+      "probleem": "Väljend on kõnekeelne ja põhjendamata.",
+      "põhjendus": "Akadeemilises tekstis ei sobi apelleerida üldisele teadmisele; väited peavad olema põhjendatud või viidatud.",
+      "soovitus": "Eemalda see lause või asenda see allikaga toetatud täpsema väitega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Konteinereid orkestreeritakse Kubernetese abil.",
+      "probleem": "Väide on liiga järsk ja absolutiseeriv.",
+      "põhjendus": "Kubernetes on levinud orkestreerimisplatvorm, kuid mitte ainus; taustapeatükis võiks üleminek konteineritelt orkestreerimisele olla selgem.",
+      "soovitus": "Too lühidalt sisse orkestreerimise vajadus ja nimeta Kubernetes ühe levinud lahendusena.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Üks Docker konteiner",
+      "probleem": "Termin on keeleliselt kohmakas.",
+      "põhjendus": "Eesti erialatekstis kasutatakse tavaliselt omastavalist täiendit või liitsõnalaadset kuju, et vältida inglispärast konstruktsiooni.",
+      "soovitus": "Kasuta läbivalt ühtset vormi, nt „Dockeri konteiner”, kui see sobib töö terminikasutusega.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "ka VM-i lähedasi lahendusi (näiteks Firecracker) nimetatakse vahel konteineriteks, kuigi need on hoopis mikro-virtuaalmasinad",
+      "probleem": "Klassifikatsioon ja väide nimetamispraktika kohta vajavad allikat.",
+      "põhjendus": "Firecrackeri käsitlemine mikro-VM-ina on oluline täpsustus, kuid ilma viiteta võib see jääda autori hinnanguks.",
+      "soovitus": "Lisa viide Firecrackeri dokumentatsioonile või teadusartiklile ning täpsusta, kes neid vahel konteineriteks nimetab.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

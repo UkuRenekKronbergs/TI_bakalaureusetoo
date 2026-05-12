@@ -59,7 +59,7 @@ Töös kasutatakse esmase mudelina Anthropici \texttt{claude-opus-4-7} mudelit. 
     \item \textbf{Hind ja kättesaadavus}: API-ligipääs on tudengieelarve piires.
 \end{itemize}
 
-Tulemuste üldistatavuse kontrollimiseks on kavandatud paralleelselt katsetada ka OpenAI \texttt{gpt-5.5} mudelit, mille tugi on prototüübis realiseeritud. Käesoleva töö pilootuuringus käivitati üksikud katsekatkendid mõlema mudeliga, et veenduda, kas struktureeritud prompti kasu üldistub mudelite vahel; täismahuline mudelivahelise tundlikkuse analüüs jääb jätkukavasse. Claude'i puhul kasutatakse temperatuuri väärtust 0,2 -- madal temperatuur toob kaasa stabiilsemad tulemused, kuid säilitab teatud loovuse, mis on keele- ja stiilihinnangute andmiseks vajalik. GPT-5.5 puhul kasutatakse mudeli vaikimisi parameetreid, kuna uuemate OpenAI mudelite Chat Completions API ei toeta enam temperatuuri muutmist kõikidel variantidel~\cite{openai_gpt5_2026}.
+Tulemuste üldistatavuse kontrollimiseks katsetatakse paralleelselt ka OpenAI \texttt{gpt-5.5} mudelit, mille tugi on prototüübis realiseeritud. Alapeatükis~\ref{hindamine:synteetiline} esitatud empiirilise hindamise raames käivitati prototüüp kõikide 20 sünteetilise testkatkendi vastu mõlema mudeli ja mõlema prompti versiooniga (kokku 80 API-päringut). Mõlema uue põlvkonna mudeli (Claude 4.7 Opus ja GPT-5.5) Messages/Chat Completions API ei aktsepteeri enam \texttt{temperature}-parameetrit, mistõttu pakkujakihid jätavad selle parameetri päringust automaatselt välja ning kasutatakse mudelite vaikeväärtuseid~\cite{anthropic_models_2026, openai_gpt5_2026}.
 
 \subsection{Promptide disain} \label{metoodika:promptid}
 

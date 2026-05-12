@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tau-05",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 31911,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "2.3 Statistilise õppe alused",
+      "probleem": "Pealkiri lubab statistilise õppe aluseid, kuid lõik kirjeldab väga üldiselt masinõppe tüüpe ja süvaõpet.",
+      "põhjendus": "Taustapeatüki pealkiri ja sisu peaksid olema kooskõlas; praegu jäävad statistilise õppe põhimõisted käsitlemata.",
+      "soovitus": "Lisa või täpsusta fookust: nt üldistamine, kaofunktsioon, treening/testandmed, üleõppimine ja mudeli hindamine.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Süvaõpe (deep learning) on viimase kümnendi domineeriv lähenemine, mis kasutab mitmekihilisi närvivõrke.",
+      "probleem": "Väide süvaõppe domineerivuse kohta on lai ja allikata.",
+      "põhjendus": "Akadeemilises taustapeatükis vajavad sellised üldistavad ajaloolised või valdkondlikud väited usaldusväärset viidet.",
+      "soovitus": "Lisa viide või täpsusta valdkonda, kus süvaõpe on domineerinud, nt arvutinägemine või loomuliku keele töötlus.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Tänapäeval kasutavad kõik mudelid süvaõpet.",
+      "probleem": "Väide on faktiviga ja liigne üldistus.",
+      "põhjendus": "Paljud mudelid ei kasuta süvaõpet, näiteks lineaarne regressioon, otsustuspuud, SVM-id ja juhumetsad.",
+      "soovitus": "Asenda absoluutne väide nüansseerituma väitega süvaõppe laialdase kasutuse kohta kindlates rakendustes.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Convolutional neural network ehk CNN on populaarne pildianalüüsis.",
+      "probleem": "Ingliskeelne termin on jäetud eestikeelse vasteta ning seletus on liiga napp.",
+      "põhjendus": "Eestikeelses lõputöös tuleks kasutada eestikeelset terminit ja anda lühike selgitus, miks see on pildianalüüsis oluline.",
+      "soovitus": "Kasuta terminit „konvolutsiooniline närvivõrk“ ja lisa lühidalt, mille poolest CNN pildiandmetele sobib.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Masinõpe jaguneb laias laastus juhendatud, juhendamata ja stiimulõppeks.",
+      "probleem": "Väljend „laias laastus“ on kõnekeelne ning jaotus vajab täpsustamist.",
+      "põhjendus": "Akadeemilises stiilis tuleks vältida kõnekeelseid väljendeid ja esitada kategooriad täpselt.",
+      "soovitus": "Kasuta neutraalsemat sõnastust ning märgi, et tegemist on ühe levinud jaotusega.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Stiimulõppes õpib agent keskkonnaga suhtlemise käigus, saades preemiat või karistust.",
+      "probleem": "Mõiste „preemia või karistus“ on lihtsustatud ja võib jätta ebatäpse mulje.",
+      "põhjendus": "Stiimulõppes räägitakse enamasti tasust või tasusignaalist, mis võib olla positiivne või negatiivne.",
+      "soovitus": "Täpsusta terminoloogiat ja kasuta läbivalt ühtset eestikeelset vastet mõistele reinforcement learning.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Juhendatud õppes treenitakse mudelit märgendatud andmetel, eesmärgiga ennustada uutele sisenditele märgendeid.",
+      "probleem": "Lõik koosneb definitsioonidest, kuid puudub seos töö teema või järgmiste peatükkidega.",
+      "põhjendus": "Taustapeatükk peaks näitama, miks need mõisted on konkreetse lõputöö jaoks vajalikud.",
+      "soovitus": "Lisa lõigu lõppu lühike seos töö meetodi, andmete või uurimisprobleemiga.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

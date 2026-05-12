@@ -1,0 +1,72 @@
+{
+  "katkend_id": "tau-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 32208,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Kasutatavusuuringud (ingl. usability studies) on tarkvaraarenduses kasutusel olnud alates 1980-ndatest",
+      "probleem": "Peatükk algab kohe ajaloolise faktiga, ilma sissejuhatava lõiguta, mis selgitaks teema rolli lõputöö kontekstis",
+      "põhjendus": "Taustapeatükk peaks lugejat teema juurde sisse juhatama ja selgitama, miks see on antud töö seisukohast oluline",
+      "soovitus": "Lisa lühike sissejuhatav lause, mis seob kasutatavusuuringud sinu töö konkreetse fookusega (nt mobiilirakenduste kasutatavus)",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Nielseni klassikaline soovitus on, et viiest testijast piisab umbes 85% kasutatavusprobleemide tuvastamiseks",
+      "probleem": "Väide on esitatud lihtsustatult ja ilma tingimusteta, milles see kehtib",
+      "põhjendus": "Akadeemilises tekstis tuleks väite kehtivuse eeldused (nt kasutajatüübid, ülesannete olemus) ära mainida, eriti kui järgmises lauses seda väidet kohe vaidlustatakse",
+      "soovitus": "Täpsusta, mis tingimustel Nielseni järeldus kehtib, ja seo see selgemalt järgneva kriitikaga",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Online-meetoditena on populaarsed kuumakaardid (Hotjar, Microsoft Clarity) ja kliki-analüüs",
+      "probleem": "Anglitsism „online-meetodid\" ja ebaühtlane terminikasutus (kuumakaardid, kliki-analüüs)",
+      "põhjendus": "Eestikeelses akadeemilises tekstis tuleks eelistada eestikeelseid termineid või lisada ingliskeelne vaste sulgudes esmamainimisel",
+      "soovitus": "Kasuta nt „veebipõhised meetodid\" ja lisa terminite juurde ingliskeelsed vasted (heatmap, click analysis)",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Online-meetoditena on populaarsed kuumakaardid (Hotjar, Microsoft Clarity) ja kliki-analüüs.",
+      "probleem": "Väide tööriistade populaarsuse ja meetodite kohta on ilma viiteta",
+      "põhjendus": "Faktiväited meetodite leviku ja konkreetsete toodete kohta vajavad allikaviidet",
+      "soovitus": "Lisa viide kirjandusele või tööriistade dokumentatsioonile, mis kinnitab nende meetodite kasutust",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Mobiilirakenduste puhul lisanduvad konteksti-eripärad: ekraani suurus, ühe käega kasutamise mugavus ja katkestuste rohkus.",
+      "probleem": "Mobiilse konteksti eripärade loetelu esitatakse ilma allikata",
+      "põhjendus": "Tegemist on uurimuslike väidete kokkuvõttega, mis peaks põhinema kirjandusel (nt Hoober, Harrison jt mobiilse HCI uurijad)",
+      "soovitus": "Lisa viide(d) mobiilse kasutatavuse uuringutele, mis neid eripärasid käsitlevad",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mobiilirakenduste puhul lisanduvad konteksti-eripärad: ekraani suurus, ühe käega kasutamise mugavus ja katkestuste rohkus.",
+      "probleem": "Mobiilikontekst on mainitud vaid ühe lausega peatüki lõpus, kuigi see näib olevat töö fookus",
+      "põhjendus": "Kui töö keskendub mobiilirakendustele, peaks see osa olema põhjalikumalt avatud, mitte taandatud loeteluks",
+      "soovitus": "Laienda mobiilikonteksti käsitlust eraldi alapeatükiks või vähemalt lõiguks koos viidetega",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Hiljutised tööd on aga seda väidet vaidlustanud",
+      "probleem": "Sõna „hiljutised\" on suhteline ja ebamäärane",
+      "põhjendus": "Akadeemilises tekstis tuleks ajamääratlused esitada täpselt; Faulkneri 2003. aasta tööd ei saa enam „hiljutiseks\" nimetada",
+      "soovitus": "Asenda „hiljutised\" konkreetse aastaviite või neutraalsema sõnastusega (nt „hilisemad uuringud\")",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "alates 1980-ndatest",
+      "probleem": "Kirjapilt „1980-ndatest\" ei vasta eesti keele standardile",
+      "põhjendus": "Eesti õigekeel soovitab kasutada kuju „1980. aastatest\" või „1980ndatest\"",
+      "soovitus": "Paranda vormistus standardse kujule",
+      "kindlus": "kõrge"
+    }
+  ]
+}

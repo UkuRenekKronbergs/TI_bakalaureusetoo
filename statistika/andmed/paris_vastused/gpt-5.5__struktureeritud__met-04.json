@@ -1,0 +1,16 @@
+{
+  "katkend_id": "met-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 14642,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "12 projekti, mis valiti GitHubi populaarseimate Java-projektide hulgast",
+      "probleem": "Väide projektide populaarsuse kohta ei täpsusta allikat ega populaarsuse mõõdikut.",
+      "põhjendus": "Valimi moodustamine peab olema kontrollitav; ilma viite või kriteeriumita pole selge, mille alusel projektid „populaarseimateks” loeti.",
+      "soovitus": "Lisa GitHubi andmete võtmise kuupäev ja populaarsuse mõõdik või viita kasutatud pingereale/andmeallikale.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "katkend_id": "tau-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 41052,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Räsifunktsiooni hash output on tüüpiliselt 128 kuni 512 bitti pikk. Hash function peab olema kollisioonikindel ja ühe-suunaline.",
+      "probleem": "Eestikeelses akadeemilises tekstis on ingliskeelsed terminid segamini eestikeelsetega.",
+      "põhjendus": "Terminoloogiline ebaühtlus vähendab töö professionaalsust ja võib jätta mulje, et mõisted pole täpselt läbi töötatud.",
+      "soovitus": "Kasuta läbivalt eestikeelseid termineid, nt „räsiväljund“, „räsiväärtus“ ja „räsifunktsioon“.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Hash function peab olema kollisioonikindel ja ühe-suunaline.",
+      "probleem": "„Ühe-suunaline“ on ebatäpne ning krüptograafiliste omaduste loetelu on liiga üldine.",
+      "põhjendus": "Räsifunktsioonide turvaomadusi kirjeldatakse tavaliselt eelkujutisekindluse, teise eelkujutise kindluse ja kollisioonikindlusena.",
+      "soovitus": "Täpsusta, millist omadust mõtled: eelkujutisekindlus, teise eelkujutise kindlus või kollisioonikindlus.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval soovitatakse kasutada SHA-256 ja SHA-3 perekondi.",
+      "probleem": "Väide soovituste kohta vajab allikat ja konteksti.",
+      "põhjendus": "Krüptograafilised soovitused sõltuvad standardist, kasutusjuhust ja ajast; ilma viiteta on väide liiga üldine.",
+      "soovitus": "Lisa viide asjakohasele standardile või juhendile, nt NIST, ETSI või Eesti digiallkirja nõuded.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eestis kasutab digiallkirja infrastruktuur SHA-256-d.",
+      "probleem": "Väide Eesti digiallkirja infrastruktuuri kohta on viitamata ja võib olla liiga lihtsustatud.",
+      "põhjendus": "Digiallkirja vormingud ja nõuded võivad erineda ajas ning sõltuda sertifikaatidest, algoritmiprofiilidest ja standarditest.",
+      "soovitus": "Lisa ametlik allikas ning täpsusta, millises digiallkirja komponendis või standardis SHA-256 kasutust käsitled.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tänapäeval soovitatakse kasutada SHA-256 ja SHA-3 perekondi.",
+      "probleem": "Sõna „tänapäeval“ on akadeemilises tekstis ajaliselt ebamäärane.",
+      "põhjendus": "Krüptograafia soovitused muutuvad; ebamäärane ajamäärus võib muuta väite hiljem raskesti kontrollitavaks.",
+      "soovitus": "Seo väide konkreetse aasta, standardi versiooni või allikaga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Esimene laiemalt kasutatud räsifunktsioon oli MD5",
+      "probleem": "Väide võib olla ajalooliselt vaieldav või liiga kategooriline.",
+      "põhjendus": "Enne MD5 kasutati ka teisi räsifunktsioone ja kontrollsumma-/räsialgoritme; „esimene laiemalt kasutatud“ vajab selget piiritlust.",
+      "soovitus": "Täpsusta, kas mõtled krüptograafilist räsifunktsiooni konkreetses kontekstis, või pehmenda väidet allikaga.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "SHA-1 oli MD5-le järelkäija",
+      "probleem": "Väide on ebatäpne: SHA-1 ei olnud otseselt MD5 ametlik järelkäija.",
+      "põhjendus": "SHA-1 pärineb SHA-perekonnast ja järgnes SHA-0-le; MD5-ga seos on pigem ajalooline ja disainiline, mitte otsene järgnevus.",
+      "soovitus": "Täpsusta SHA-1 seost SHA-0 ja NISTi standarditega; ära nimeta seda otseselt MD5 järelkäijaks ilma selgituseta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Räsifunktsiooni hash output on tüüpiliselt 128 kuni 512 bitti pikk.",
+      "probleem": "Väide väljundi tüüpilise pikkuse kohta vajab allikat või täpsustust.",
+      "põhjendus": "Väljundi pikkused sõltuvad algoritmist ja turvatasemest; ilma näideteta jääb väide üldiseks.",
+      "soovitus": "Too lühidalt näited: MD5 128 bitti, SHA-1 160 bitti, SHA-256 256 bitti, SHA-3 variandid.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Krüptograafilised räsifunktsioonid moodustavad nüüdisaegse infoturbe ühe alustala.",
+      "probleem": "Peatükk algab üldväitega, kuid ei selgita enne ajalooülevaadet räsifunktsiooni mõistet ega rolli.",
+      "põhjendus": "Taustapeatükis aitaks mõistete ja kasutusjuhtude lühike avamine lugejal hilisemat ajaloolist ülevaadet paremini mõista.",
+      "soovitus": "Lisa enne ajaloolist ülevaadet lühike selgitus, mis on räsifunktsioon ja milleks seda infoturbes kasutatakse.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "katkend_id": "met-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 29442,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "uue checkout-flow mõju konversioonile ... kontrollgrupp (vana flow) ja katsegrupp (uus flow)",
+      "probleem": "Ingliskeelset terminit „flow” kasutatakse ilma selgituseta ja läbisegi kujul „checkout-flow” ja „flow”.",
+      "põhjendus": "Terminoloogia peaks olema järjekindel ning võõrkeelne termin vajab esmakasutusel selgitust või eestikeelset vastet.",
+      "soovitus": "Vali mõistele üks läbiv termin ning selgita esmakasutusel, mida see töös täpselt tähendab.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "checkout-flow ... checkout-protsessi keskmine kestus",
+      "probleem": "Sama või lähedast mõistet tähistatakse eri kujul: „checkout-flow” ja „checkout-protsess”.",
+      "põhjendus": "Läbisegi terminikasutus võib jätta ebaselgeks, kas mõeldakse sama protsessi või eri nähtusi.",
+      "soovitus": "Täpsusta, kas need tähistavad sama mõistet, ja kasuta edaspidi ühtset nimetust.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eeldatav efekti suurus oli 5% konversiooni kasv, mis nõudis igas grupis vähemalt 1500 kasutajat.",
+      "probleem": "Valimi suuruse nõue esitatakse konkreetse arvulise tulemusena ilma viite, tööriista või arvutuskäiguta.",
+      "põhjendus": "Metoodika peab olema kontrollitav; lugeja peab aru saama, mille alusel 1500 kasutajat grupi kohta saadi.",
+      "soovitus": "Lisa viide kasutatud valimi suuruse arvutamise meetodile/tööriistale või kirjelda arvutuskäiku.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina jaotasin kasutajad juhuslikult kahte gruppi",
+      "probleem": "Kasutatakse otsest mina-vormi, mis võib metoodikapeatükis mõjuda liiga isikukeskselt.",
+      "põhjendus": "Akadeemilises metoodikakirjelduses eelistatakse sageli neutraalset või umbisikulist kirjeldusviisi, kui juhend ei nõua teisiti.",
+      "soovitus": "Kontrolli töö stiilinõudeid ja kaalu isikukeskse sõnastuse vähendamist.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

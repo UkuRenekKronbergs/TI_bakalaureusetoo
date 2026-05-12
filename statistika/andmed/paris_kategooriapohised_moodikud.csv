@@ -1,0 +1,17 @@
+mudel,prompti_tyyp,kategooria,TP,FP,FN,tapsus,saagis,F1
+claude-opus-4-7,yldine,STRUKTUUR,3,48,1,0.059,0.75,0.109
+claude-opus-4-7,yldine,AKADEEMILINE_STIIL,16,21,3,0.432,0.842,0.571
+claude-opus-4-7,yldine,TERMINOLOOGIA,6,20,3,0.231,0.667,0.343
+claude-opus-4-7,yldine,VIITAMISVAJADUS,9,11,1,0.45,0.9,0.6
+claude-opus-4-7,struktureeritud,STRUKTUUR,4,25,0,0.138,1.0,0.242
+claude-opus-4-7,struktureeritud,AKADEEMILINE_STIIL,18,12,1,0.6,0.947,0.735
+claude-opus-4-7,struktureeritud,TERMINOLOOGIA,7,17,2,0.292,0.778,0.424
+claude-opus-4-7,struktureeritud,VIITAMISVAJADUS,10,25,0,0.286,1.0,0.444
+gpt-5.5,yldine,STRUKTUUR,4,41,0,0.089,1.0,0.163
+gpt-5.5,yldine,AKADEEMILINE_STIIL,12,15,7,0.444,0.632,0.522
+gpt-5.5,yldine,TERMINOLOOGIA,7,22,2,0.241,0.778,0.368
+gpt-5.5,yldine,VIITAMISVAJADUS,10,24,0,0.294,1.0,0.455
+gpt-5.5,struktureeritud,STRUKTUUR,2,2,2,0.5,0.5,0.5
+gpt-5.5,struktureeritud,AKADEEMILINE_STIIL,15,9,4,0.625,0.789,0.698
+gpt-5.5,struktureeritud,TERMINOLOOGIA,7,11,2,0.389,0.778,0.519
+gpt-5.5,struktureeritud,VIITAMISVAJADUS,10,17,0,0.37,1.0,0.541

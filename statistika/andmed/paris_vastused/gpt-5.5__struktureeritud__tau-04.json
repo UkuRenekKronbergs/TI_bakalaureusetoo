@@ -1,0 +1,40 @@
+{
+  "katkend_id": "tau-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 25521,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Asi see, et piirid nende vahel on hägused: paljud teenused on hübriidid.",
+      "probleem": "Väljend „Asi see, et” on kõnekeelne ja sobib halvasti akadeemilisse taustapeatükki.",
+      "põhjendus": "Akadeemilises tekstis peaks vältima argiseid ja ebatäpseid väljendeid, sest need vähendavad teksti formaalsust ja täpsust.",
+      "soovitus": "Asenda kõnekeelne algus neutraalsema akadeemilise sõnastusega, säilitades autori enda mõtte.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "CaaS (Container as a Service)",
+      "probleem": "Ingliskeelne termin ja lühend esitatakse ilma sisulise selgituseta.",
+      "põhjendus": "Esmakordsel kasutamisel peaks lugejale olema selge, mida termin tähendab ja kuidas see eelnevate pilvemudelitega suhestub.",
+      "soovitus": "Lisa lühike selgitus, mida CaaS tähendab ja miks see on eraldi kategooriana oluline.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "millest tuntum on AWS Lambda",
+      "probleem": "Väide AWS Lambda tuntuse kohta on esitatud ilma viiteta.",
+      "põhjendus": "„Tuntum” on võrdlev populaarsus- või levikuväide, mis vajab allikat või tuleb sõnastada ettevaatlikumalt.",
+      "soovitus": "Lisa viide usaldusväärsele allikale või väldi tuntuse võrdlevat väidet.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Hindade osas on FaaS odav väiksete rakenduste puhul ja kallis suurte koormuste puhul.",
+      "probleem": "Konkreetne hinnang FaaS-i kulukusele on esitatud ilma allikata.",
+      "põhjendus": "Kulude võrdlus sõltub kasutusmustrist, teenusepakkujast ja hinnastamismudelist, mistõttu vajab selline väide viidet või täpsustust.",
+      "soovitus": "Lisa allikas hinnastamispõhimõtete kohta või täpsusta, milliste eelduste põhjal hinnang kehtib.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "katkend_id": "tul-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 24272,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Selle järgi valisime lõpliku mudeli epohhis 32.",
+      "probleem": "Kasutatud on meie-vormi.",
+      "põhjendus": "Akadeemilises lõputöös võib isikuline vorm jätta subjektiivsema mulje, eriti kui töö autor on üks inimene.",
+      "soovitus": "Kaalu umbisikulise või neutraalsema vormi kasutamist, kui juhend või õppekava seda eelistab.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "valideerimiskaotus hakkas kasvama (overfitting)",
+      "probleem": "Ingliskeelne termin on esitatud ilma eestikeelse vaste või selgituseta.",
+      "põhjendus": "Eestikeelses lõputöös peaks ingliskeelsete terminite esmakasutus olema põhjendatud ning seostatud eestikeelse terminiga.",
+      "soovitus": "Lisa eestikeelne vaste või selgita, miks kasutatakse sulgudes ingliskeelset terminit.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "kasutades Adami optimeerijat õpisammuga 0,001",
+      "probleem": "Konkreetset optimeerimisalgoritmi mainitakse ilma viiteta.",
+      "põhjendus": "Adam on konkreetne avaldatud meetod; kui seda ei ole metoodika peatükis juba viidatud, vajab see allikaviidet.",
+      "soovitus": "Kontrolli, kas Adamile on varasemas metoodikaosas viidatud; kui mitte, lisa sobiv viide esmakasutuse juurde.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

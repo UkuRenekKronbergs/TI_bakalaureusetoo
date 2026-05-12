@@ -1,0 +1,72 @@
+{
+  "katkend_id": "met-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 32685,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Küsimustik valideeriti pilootuuringuga viie tudengi peal enne laialisaatmist.",
+      "probleem": "Pilootuuringu kirjeldus on liiga lühike ja pinnapealne.",
+      "põhjendus": "Lugeja ei saa teada, mida pilootuuring täpsemalt hõlmas, milliseid muudatusi selle tulemusel tehti ja kuidas valiti viis testijat. See vähendab metoodika korratavust.",
+      "soovitus": "Lisa pilootuuringu kirjeldus: kuidas valiti osalejad, mida hinnati (arusaadavus, ajakulu jms) ja millised muudatused küsimustikus tehti.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Küsimustik koosnes 18 küsimusest, mis jagunesid kolme blokki: demograafia (4 küsimust), tarkvaraarenduse kogemus (8 küsimust) ja hinnangud konkreetsetele tööriistadele (6 küsimust).",
+      "probleem": "Küsimustiku sisu ja küsimuste tüübid on kirjeldamata.",
+      "põhjendus": "Metoodika peatükis peaks olema selge, milliseid skaalasid (nt Likert), avatud/suletud küsimusi kasutati ja millised olid konkreetsed mõõdetavad konstruktid. Praegune kirjeldus on liiga üldsõnaline.",
+      "soovitus": "Täpsusta küsimuste tüüpe ja skaalasid ning viita lisas olevale küsimustikule.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Küsimustik saadeti laiali 200 Tartu Ülikooli arvutiteaduse tudengile e-posti teel.",
+      "probleem": "Valimi moodustamise meetod pole selgitatud.",
+      "põhjendus": "Pole selge, kuidas valiti just need 200 tudengit (juhuvalim, mugavusvalim, kogu populatsioon?), millistelt õppeastmetelt nad pärinesid ja kust e-posti aadressid saadi. See mõjutab tulemuste üldistatavust.",
+      "soovitus": "Kirjelda valimi moodustamise põhimõtteid, sihtpopulatsiooni piiritlemist ja valimi esinduslikkust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Vastuste analüüsiks kasutati programmi R 4.3.0 ning paketti `tidyverse`.",
+      "probleem": "Analüüsimeetodid on kirjeldamata.",
+      "põhjendus": "Mainitud on ainult tööriista, mitte konkreetseid statistilisi meetodeid (kirjeldav statistika, hüpoteeside testid, korrelatsioonid vms). Andmete analüüsi metoodika on peatüki keskne osa.",
+      "soovitus": "Lisa eraldi alapeatükk või lõik andmeanalüüsi meetodite kohta — millised testid, miks just need ja millise olulisuse nivooga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Vastasid 87 tudengit, mille vastamismääraks oli 43,5%.",
+      "probleem": "Eetilised aspektid ja vastamise vabatahtlikkus on käsitlemata.",
+      "põhjendus": "Inimuuringutes tuleks metoodikas mainida nõusoleku küsimist, anonüümsust ja andmete säilitamist. Praegu need aspektid puuduvad.",
+      "soovitus": "Lisa lõik uurimuse eetiliste aspektide kohta (informeeritud nõusolek, anonüümsus, andmekaitse).",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "viie tudengi peal",
+      "probleem": "Kõnekeelne väljend akadeemilises tekstis.",
+      "põhjendus": "Väljend „kellegi peal“ on kõnekeelne; akadeemilises stiilis sobiks neutraalsem sõnastus.",
+      "soovitus": "Kaalu neutraalsemat sõnastust, nt „viie tudengiga“.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "1. märtsist kuni 14. märtsini 2026",
+      "probleem": "Tulevikukuupäev metoodikas tagasivaatavas vormis.",
+      "põhjendus": "Kui töö esitatakse enne 2026. aastat, on andmete kogumise periood loogiliselt vastuoluline. Kontrolli, kas aasta on õige.",
+      "soovitus": "Veendu kuupäevade õigsuses ja vasta kontekstile (kas tegu on toimunud või kavandatava uuringuga).",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Andmete kogumiseks kasutati struktureeritud küsimustikku",
+      "probleem": "Metoodilised valikud on viitamata.",
+      "põhjendus": "Küsimustikupõhise uuringu meetodi valikut tuleks põhjendada viitega metoodikakirjandusele või sarnastele uuringutele.",
+      "soovitus": "Lisa viited küsimustiku-meetodi alusele ja võimalusel allikatele, kust pärinevad küsimuste/skaalade eeskujud.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

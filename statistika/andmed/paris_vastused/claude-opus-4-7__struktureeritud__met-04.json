@@ -1,0 +1,48 @@
+{
+  "katkend_id": "met-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 26191,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Lähtekoodi staatiliseks analüüsiks kasutati tööriista SonarQube versiooni 10.4.",
+      "probleem": "Metoodika peatükk algab kohe konkreetse tööriista mainimisega ilma sissejuhatava lõiguta, mis annaks ülevaate peatüki ülesehitusest ja metoodika üldisest lähenemisest.",
+      "põhjendus": "Lugejale jääb arusaamatuks, milline on metoodika üldine struktuur ja milliseid etappe peatükk käsitleb. Sissejuhatav lõik aitaks orienteeruda.",
+      "soovitus": "Lisa peatüki algusesse lühike sissejuhatav lõik, mis kirjeldab metoodika üldist lähenemist ja peatüki struktuuri.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Statistiline analüüs viidi läbi R-i abil; korrelatsioonid arvutati Spearmani $\\rho$-ga, kuna jaotused ei olnud normaalsed.",
+      "probleem": "Peatükk lõpeb järsult tehnilise detailiga ilma kokkuvõtva lõiguta või üleminekuta järgmisele peatükile.",
+      "põhjendus": "Metoodika peatüki lõpp peaks pakkuma sujuvat üleminekut tulemuste peatükile või kokkuvõtet metoodilistest valikutest.",
+      "soovitus": "Kaalu lõpetava lause või lõigu lisamist, mis võtab kokku metoodilise lähenemise või loob ülemineku tulemuste peatükile.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "korrelatsioonid arvutati Spearmani $\\rho$-ga, kuna jaotused ei olnud normaalsed",
+      "probleem": "Spearmani korrelatsioonikordaja kasutamine konkreetse põhjendusega (mittenormaalsed jaotused) on metoodiline valik, mille puhul oleks asjakohane viidata statistikaalasele allikale.",
+      "põhjendus": "Konkreetse statistilise meetodi valik ja selle põhjendus vajab tavaliselt akadeemilises töös metoodilist viidet.",
+      "soovitus": "Lisa viide statistikaalasele kirjandusele, mis põhjendab Spearmani korrelatsiooni kasutamist mittenormaalsete jaotuste korral.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Analüüs hõlmas 12 projekti, mis valiti GitHubi populaarseimate Java-projektide hulgast.",
+      "probleem": "Pole selgitatud ega viidatud, milliste kriteeriumide alusel \"populaarseimad\" projektid valiti (nt tähtede arv, forkide arv) ega millisel kuupäeval valim moodustati.",
+      "põhjendus": "Metoodikas peab valimi moodustamise alus olema läbipaistev ja korratav; \"populaarseim\" on subjektiivne mõiste, mis vajab täpsustust.",
+      "soovitus": "Täpsusta valimi moodustamise kriteeriume ja viita allikatele või andmebaasidele, mille põhjal projektid valiti.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "tehnilise võla hinnang (tundides) ... et hinnata tehnilise võla kasvu",
+      "probleem": "Mõiste \"tehniline võlg\" on erialaspetsiifiline termin (technical debt), mille esmakasutusel võiks olla ingliskeelne vaste või lühike määratlus.",
+      "põhjendus": "Erialaterminite esmakasutusel on tavaks anda ingliskeelne vaste või selgitus, et tagada üheselt mõistetavus.",
+      "soovitus": "Lisa termini esmakasutusel sulgudesse ingliskeelne vaste (technical debt) või lühike määratlus.",
+      "kindlus": "madal"
+    }
+  ]
+}

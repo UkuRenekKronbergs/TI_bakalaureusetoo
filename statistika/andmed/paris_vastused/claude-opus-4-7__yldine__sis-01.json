@@ -1,0 +1,64 @@
+{
+  "katkend_id": "sis-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 28963,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval kasutab üle 80% Eesti väikeettevõtetest mingisugust pilveteenust andmete säilitamiseks.",
+      "probleem": "Konkreetne statistiline väide ilma allikaviiteta",
+      "põhjendus": "Akadeemilises töös peavad arvulised väited olema kontrollitavad ja viidatud usaldusväärsele allikale.",
+      "soovitus": "Lisa viide statistika allikale (nt Statistikaamet, uuring) või sõnasta üldisemalt, kui konkreetset allikat pole.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "vaatlen, kuidas saaks väikeettevõtete jaoks pakkuda",
+      "probleem": "Esimese isiku kasutamine (\"vaatlen\")",
+      "põhjendus": "Eestikeelsetes lõputöödes eelistatakse umbisikulist tegumoodi või passiivset väljendust.",
+      "soovitus": "Kaalu umbisikulise tegumoe kasutamist (nt \"vaadeldakse\", \"käesolevas töös uuritakse\").",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tegelikult on see asi keerulisem, kui esmapilgul tundub, kuna krüptograafia on mitmekihiline distsipliin.",
+      "probleem": "Kõnekeelne ja ebatäpne sõnastus (\"tegelikult\", \"see asi\", \"esmapilgul tundub\")",
+      "põhjendus": "Akadeemilises tekstis tuleb vältida kõnekeelseid väljendeid ja ebamääraseid viiteid (\"see asi\").",
+      "soovitus": "Sõnasta konkreetsemalt ja neutraalsemalt, täpsustades, millised aspektid muudavad probleemi keerukaks.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "1.1 Probleem",
+      "probleem": "Sissejuhatuses puuduvad selgelt eristatud osad: probleemipüstitus, eesmärk, uurimisküsimused ja oodatavad tulemused",
+      "põhjendus": "Tüüpiline lõputöö sissejuhatus sisaldab eraldi probleemi, eesmärgi ja ülesannete kirjeldust; praegu on need ühte lõiku segatud.",
+      "soovitus": "Lisa alapeatükid või selgelt eristatud lõigud eesmärgi, uurimisküsimuste/ülesannete ja oodatavate tulemuste jaoks.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö koosneb viiest peatükist. Teises peatükis tutvustatakse krüptograafia põhitõdesid. Kolmandas kirjeldatakse metoodikat. Neljas peatükk on prototüüp. Viiendas vaadeldakse tulemusi.",
+      "probleem": "Töö ülesehituse kirjeldus on liiga lühike ja telegraafiline ning puudub esimese peatüki (sissejuhatuse) mainimine",
+      "põhjendus": "Peatükkide ülevaade peaks andma lugejale sisulise pildi iga peatüki eesmärgist, mitte ainult teema nime.",
+      "soovitus": "Laienda iga peatüki kirjeldust 1–2 lausega, mis selgitab peatüki sisu ja rolli töös; maini ka kokkuvõtet/järeldusi.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "krüpteeritud varundusteenust",
+      "probleem": "Mõisted \"krüpteerimine\" ja \"varundamine\" on kasutatud defineerimata",
+      "põhjendus": "Sissejuhatuses tasuks tutvustada võtmemõisteid või vähemalt viidata, kus need defineeritakse, eriti kui sihtgrupp pole tehniline.",
+      "soovitus": "Lisa lühike selgitus võtmemõistete kohta või viide teoreetilisele peatükile, kus need defineeritakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Lahendus peaks olema kasutatav ka ilma sügava IT-teadmiseta.",
+      "probleem": "Sihtgrupp ja \"lihtsa kasutatavuse\" kriteeriumid jäävad ebamääraseks",
+      "põhjendus": "Lugejale ei selgu, mille alusel hinnatakse, kas lahendus on \"lihtsasti kasutatav\" või sobib mitte-IT-kasutajale.",
+      "soovitus": "Täpsusta sihtgrupp ja kasutatavuse hindamise kriteeriumid (nt SUS-skoor, kasutajatestid).",
+      "kindlus": "keskmine"
+    }
+  ]
+}

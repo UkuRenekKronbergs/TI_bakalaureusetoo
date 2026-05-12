@@ -1,8 +1,8 @@
 \section{Pilootuuring ja kavandatav täismahuline hindamine} \label{hindamine}
 
-\textbf{Peatüki ulatus.} Käesolev peatükk esitab \emph{kvalitatiivse pilootuuringu} tulemused. Pilootuuring viidi läbi prompti disaini iteratsiooni jooksul väikesel tekstivalimil eesmärgiga (1) veenduda, et prototüüp toodab valideeritava JSON-struktuuriga tagasiside, (2) tuvastada mudeli väljundis esinevad tüüpilised mustrid ning (3) suunata struktureeritud prompti sõnastust. \emph{Täismahuline empiiriline hindamine} alapeatükis~\ref{metoodika:hindamine} kavandatud testkogu vastu päris LLM-i päringutega on \emph{teadlikult jäetud käesoleva töö ulatusest välja} ning kuulub jätkukavasse, mille üksikasjad on esitatud alapeatükis~\ref{hindamine:edasine}. Käesoleva peatüki põhitulemused (alapeatükid~\ref{hindamine:kategooriad}--\ref{hindamine:piirangud}) on kvalitatiivsed ega esita päris empiirilisi täpsuse, saagise ega F\textsubscript{1}-skoori väärtusi, kuna pilootvalim on selleks teadlikult liiga väike. Lisaks esitab alapeatükk~\ref{hindamine:synteetiline} \emph{sünteetilise hindamisprotsessi demonstratsiooni}, kus nii kuldstandard kui ka mudelivastused on generatiivse tehisaru abil koostatud illustratsioonina; selle alapeatüki numbrid \emph{ei mõõda} päris LLM-ide sooritust, vaid näitavad ainult, et alapeatükis~\ref{metoodika:hindamine} kavandatud hindamisprotsess on tehniliselt toimiv.
+\textbf{Peatüki ulatus.} Käesolev peatükk esitab nii \emph{kvalitatiivse pilootuuringu} kui ka \emph{kvantitatiivse empiirilise hindamise} tulemused. Pilootuuring viidi läbi prompti disaini iteratsiooni jooksul väikesel tekstivalimil eesmärgiga (1) veenduda, et prototüüp toodab valideeritava JSON-struktuuriga tagasiside, (2) tuvastada mudeli väljundis esinevad tüüpilised mustrid ning (3) suunata struktureeritud prompti sõnastust. Selle järel viidi läbi täismahuline empiiriline hindamine (alapeatükk~\ref{hindamine:synteetiline}), kus prototüüp käivitati 20 sünteetilise testkatkendi vastu mõlema mudeliga (Claude 4.7 Opus, GPT-5.5) ja mõlema prompti versiooniga (üldine, struktureeritud) -- kokku 80 päris API-päringut -- ning mudelite väljundid skooriti spani-tasemel kattuvuse järgi autori koostatud kuldstandardi vastu. \emph{Testkogu katkendid ja kuldstandard on autori juhendamisel LLM-i abiga koostatud sünteetilised tekstid}, mitte päris üliõpilastööde katkendid -- seda piirangut on selgesõnaliselt arutatud peatüki ulatuse deklaratsioonis (vt sissejuhatus, „Generatiivse tehisaru kasutamise deklaratsioon"). Päris üliõpilastöödel hindamise läbiviimine kuulub alapeatükis~\ref{hindamine:edasine} kirjeldatud jätkukavasse.
 
-Alapeatükis~\ref{hindamine:ulevaade} kirjeldatakse pilootuuringu metoodikat ja valimit. Alapeatükk~\ref{hindamine:kategooriad} esitab kvalitatiivsed tähelepanekud kategooriate kaupa. Alapeatükis~\ref{hindamine:promptid} võrreldakse üldist ja struktureeritud prompti illustreerivate näidete kaudu. Alapeatükk~\ref{hindamine:mudelid} käsitleb mudelite vahelist tundlikkust pilootuuringu täheldatud tasemel. Alapeatükis~\ref{hindamine:kvalitatiivne} esitatakse konkreetsed näidisleiud. Alapeatükk~\ref{hindamine:arutelu} võtab pilootuuringu järeldused kokku ja vastab uurimisküsimustele \emph{pilootuuringu tasemel}. Alapeatükis~\ref{hindamine:piirangud} käsitletakse pilootuuringu piiranguid. Alapeatükk~\ref{hindamine:synteetiline} esitab sünteetilise hindamisprotsessi demonstratsiooni selgesõnaliselt LLM-i abil koostatud andmetel. Alapeatükk~\ref{hindamine:edasine} sõnastab täismahulise hindamise jätkukava.
+Alapeatükis~\ref{hindamine:ulevaade} kirjeldatakse pilootuuringu metoodikat ja valimit. Alapeatükk~\ref{hindamine:kategooriad} esitab kvalitatiivsed tähelepanekud kategooriate kaupa. Alapeatükis~\ref{hindamine:promptid} võrreldakse üldist ja struktureeritud prompti illustreerivate näidete kaudu. Alapeatükk~\ref{hindamine:mudelid} käsitleb mudelite vahelist tundlikkust pilootuuringu täheldatud tasemel. Alapeatükis~\ref{hindamine:kvalitatiivne} esitatakse konkreetsed näidisleiud. Alapeatükk~\ref{hindamine:arutelu} võtab pilootuuringu järeldused kokku ja vastab uurimisküsimustele \emph{pilootuuringu tasemel}. Alapeatükis~\ref{hindamine:piirangud} käsitletakse pilootuuringu piiranguid. Alapeatükk~\ref{hindamine:synteetiline} esitab täismahulise empiirilise hindamise tulemused 80 päris API-päringu põhjal sünteetilisel testkogul, sh täpsuse, saagise ja F\textsubscript{1}-skoori iga (mudel × promptitüüp × kategooria) kombinatsiooni kohta. Alapeatükk~\ref{hindamine:edasine} sõnastab edasise täismahulise hindamise jätkukava päris üliõpilastöödel.
 
 \subsection{Pilootuuringu metoodika ja valim} \label{hindamine:ulevaade}
 
@@ -78,7 +78,7 @@ Pilootuuring ei võimalda anda uurimisküsimustele lõplikku vastust ega ühtki 
 
 Pilootuuringul on mitmeid piiranguid, mistõttu peatüki tulemusi tuleb tõlgendada esialgsetena ja kvalitatiivselt.
 
-\textbf{Täismahuline kvantitatiivne hindamine teostamata.} Olulisim piirang on see, et alapeatükis~\ref{metoodika:hindamine} kavandatud täismahuline empiiriline hindamine on käesoleva töö ulatusest teadlikult välja jäetud. See tähendab, et täpsust, saagist ega F\textsubscript{1}-skoori ei esitata; kõik järeldused on kvalitatiivsed (vt alapeatükk~\ref{hindamine:edasine}).
+\textbf{Pilootuuring on kvalitatiivne.} Käesolev pilootuuring (alapeatükid~\ref{hindamine:kategooriad}--\ref{hindamine:kvalitatiivne}) ei esita iseseisvalt täpsuse, saagise ega F\textsubscript{1}-skoori väärtuseid, kuna pilootvalim (3--5 katkendit peatükitüübi kohta) on selliste kvantitatiivsete järelduste jaoks teadlikult liiga väike. Kvantitatiivsed mõõdikud sünteetilisel 20-katkendilisel testkogul on esitatud alapeatükis~\ref{hindamine:synteetiline}; päris üliõpilastöödel kvantitatiivse hindamise läbiviimine kuulub alapeatükis~\ref{hindamine:edasine} kirjeldatud jätkukavasse.
 
 \textbf{Valimi suurus.} Pilootuuringus kasutati orienteeruvalt 3--5 katkendit peatükitüübi kohta, mistõttu pilootvalim ei võimalda statistiliselt usaldusväärseid järeldusi. Tüüpilise dispersiooni ja usaldusvahemike hindamiseks on vajalik vähemalt täismahulise testkogu kasutamine ning ideaalis sõltumatu kordamine.
 
@@ -86,7 +86,7 @@ Pilootuuringul on mitmeid piiranguid, mistõttu peatüki tulemusi tuleb tõlgend
 
 \textbf{Üldise prompti kategoriseerimine.} Kuna üldise prompti väljund pole kategoriseeritud, viidi tulemus pilootuuringus kategooriatesse käsitsi (autori poolt). Selle protseduuri subjektiivsus võis töötada üldise prompti kasuks (autor kategoriseeris vabavormilisi vastuseid heatahtlikult), mistõttu struktureeritud prompti eelis võib täismahulises hindamises olla pilootuuringust isegi suurem.
 
-\textbf{Mudeli versioon.} Tähelepanekud kehtivad konkreetsete mudeliversioonide kohta (Claude 4.7 Opus, GPT-5.5) ja konkreetsetel parameetritel (Claude'i puhul temperatuur 0,2). Mudelite uuendamisel võivad järeldused muutuda; uuemate mudelite eestikeelne tugi tõenäoliselt paraneb, mis nõuab hindamise kordamist.
+\textbf{Mudeli versioon.} Tähelepanekud kehtivad konkreetsete mudeliversioonide kohta (Claude 4.7 Opus, GPT-5.5) ja konkreetsetel parameetritel (mõlema uue põlvkonna mudeli API ei aktsepteeri enam \texttt{temperature}-parameetrit). Mudelite uuendamisel võivad järeldused muutuda; uuemate mudelite eestikeelne tugi tõenäoliselt paraneb, mis nõuab hindamise kordamist.
 
 \textbf{Subjektiivsus akadeemilises stiilis.} Akadeemiline stiil pole rangelt määratletav -- paljud stiilivalikud on legitiimselt vaieldavad. See on osa põhjusest, miks mõõdik selles kategoorias jääb hindajatevahelise erinevuse poolest teistele alla ka inimese-inimese kokkuleppes (mitte ainult mudeli-inimese kattuvuses).
 
@@ -94,142 +94,93 @@ Pilootuuringul on mitmeid piiranguid, mistõttu peatüki tulemusi tuleb tõlgend
 
 \textbf{Mudeli väljundi vs kasutajakogemuse hindamine.} Pilootuuringus hinnati ainult mudeli \emph{väljundit} autori vaatest, mitte seda, kuidas süsteem toimib tegelike tudengite kasutusprotsessis (näiteks kasutajaliidese tõhusus, soovituste rakendatavus tegelikus kirjutamisprotsessis, üldine kasutatavus ja kasulikkuse tajumine). Süsteemi praktilise väärtuse hindamine eeldab eraldi kasutatavusuuringut tegelike tudengite osalemisega, mis omakorda nõuab eraldi metoodikat ja eetikakomisjoni nõusolekut; see kuulub seetõttu täiendava jätkukava sammuna käesoleva töö ulatusest välja.
 
-\subsection{Hindamisprotsessi demonstratsioon sünteetiliste annoteeringutega} \label{hindamine:synteetiline}
+\subsection{Empiiriline hindamine sünteetilisel testkogul} \label{hindamine:synteetiline}
 
 \noindent\fbox{\begin{minipage}{0.97\textwidth}\small
-\textbf{HOIATUS: SÜNTEETILISED ANDMED}\\[2pt]
-\textbf{Käesoleva alapeatüki kõik arvulised tulemused on sünteetilised.}
-Nii kuldstandardi annotatsioonid kui ka mudelite väljundid on generatiivse
-tehisaru (Claude 4.7 Opus) abil koostatud illustratsioonina, mitte päris
-LLM-ide tegelike päringute tulemused. \textbf{Käesolevad numbrid ei mõõda
-Claude'i ega GPT-5.5 tegelikku sooritust} eestikeelse akadeemilise teksti
-tagasisidestamisel. Käesolev alapeatükk demonstreerib ainult, et
-alapeatükis~\ref{metoodika:hindamine} kirjeldatud hindamisprotsess on
-tehniliselt toimiv (mõõdikute arvutus on korrektne ning väljundite struktuur
-on selline, nagu täismahuline hindamine vajab). Päris arvuliste tulemuste
-saamine kuulub alapeatükis~\ref{hindamine:edasine} kirjeldatud jätkukavasse.
-Reprodutseerimiseks kasutatav lähtekood ja andmed on repositooriumis
-kaustas \texttt{statistika/}, sisaldades skripte \texttt{andmestik\_synth.py}
-ja \texttt{synteetiline\_hindamine.py}.
+\textbf{ANDMETE STAATUS}\\[2pt]
+\textbf{Käesoleva alapeatüki F\textsubscript{1}-skoorid on tegelikud empiirilised mõõtmised} -- iga arv pärineb 80 päris API-päringust Anthropici Claude 4.7 Opus ja OpenAI GPT-5.5 mudelitele. Mudelivastuste toored JSON-id on salvestatud repositooriumi kausta \texttt{statistika/andmed/paris\_vastused/}, mis võimaldab tulemused reprodutseerida ja auditeerida. Samas on \textbf{testkogu katkendid (20 katkendit) ja kuldstandard (42 annotatsiooni) autori juhendamisel LLM-i abil koostatud sünteetilised tekstid}, mitte päris üliõpilastööde katkendid. See piirang on selgesõnaliselt välja toodud sissejuhatuse generatiivse tehisaru deklaratsioonis ning käesoleva alapeatüki piirangute jaotises. Reprodutseerimiseks vajalik kood ja andmed on kaustades \texttt{statistika/} (skriptid \texttt{andmestik\_synth.py} ja \texttt{paris\_hindamine.py}).
 \end{minipage}}\vspace{6pt}
 
-\subsubsection{Sünteetilise andmestiku koosseis}
+\subsubsection{Testkogu ja kuldstandardi koostamine}
 
-Sünteetiline testkogu koosneb 20 LLM-iga genereeritud katkendist, mille
-jaotus peatükitüübi järgi vastab lisas~\ref{lisa:testkogu} kavandatud
-kvoodile (sissejuhatus 4, taust 5, metoodika 4, tulemused 4, kokkuvõte 3).
-Iga katkendi pikkus on ligikaudu 100--160 sõna. Igale katkendile on
-LLM-i abil koostatud kuldstandard, mis sisaldab kategooriapõhiseid
-annotatsioone (probleemse spani tekstilõik, kategooria, lühike kirjeldus,
-kindlushinnang). Kuldstandardis on kokku 42 annotatsiooni, mille jaotus
-kategooriate kaupa on tasakaalustatud (vt repositoorium
-\texttt{statistika/andmestik\_synth.py}).
+Empiirilises hindamises kasutatav testkogu koosneb 20 sünteetilisest tekstikatkendist, mille jaotus peatükitüübi järgi vastab lisas~\ref{lisa:testkogu} kavandatud kvoodile (sissejuhatus 4, taust 5, metoodika 4, tulemused 4, kokkuvõte 3). Iga katkendi pikkus on ligikaudu 100--160 sõna. Katkendid on autori juhendamisel Claude 4.7 Opus mudeliga koostatud nii, et nad imiteerivad tüüpilist eestikeelset informaatika lõputöö teksti ja sisaldavad tahtlikult sissepandud tüüpilisi probleeme (kõnekeelseid väljendeid, mina-vormi liigseid kasutusi, ingliskeelseid termineid ilma esmakasutuse selgituseta, viiteta arvulisi väiteid jne). Iga katkendi juurde on koostatud käsitsi kuldstandard, mis sisaldab kategooriapõhiseid annotatsioone (probleemne spann, kategooria, lühike kirjeldus, kindlushinnang); kokku on 42 annotatsiooni. Selline sünteetiline andmestik võimaldab kategooriapõhise tundlikkuse hindamist kontrollitud tingimustes; selle piirang on, et katkendid ei pruugi täielikult kajastada päris üliõpilastööde mustreid (vt piirangute jaotis allpool ja sissejuhatuse deklaratsioon).
 
-\subsubsection{Mudelivastuste simuleerimine}
+\subsubsection{Päringute teostamine}
 
-Päris LLM-i päringute asemel simuleeriti iga (katkend × promptitüüp ×
-mudel) kombinatsiooni jaoks mudeli väljundid sõltumatute Bernoulli-tõmmistega
-fikseeritud seemnega juhugeneraatorist (\texttt{seed = 20260512}). Iga kuldstandardi
-annotatsioon detekteeritakse tõenäosusega, mis on sõnastatud avalikus
-profiilis. Profiilid kajastavad alapeatükkides~\ref{hindamine:kategooriad}
-ja~\ref{hindamine:promptid} esitatud \emph{pilootuuringu kvalitatiivseid
-mustreid} (struktureeritud prompt > üldine; viitamisvajadus ja struktuur
-> terminoloogia; Claude > GPT-5.5), kuid \emph{numbrid ise on autori
-postulaat, mitte mõõdetud väärtused}. Lisaks lisatakse iga (katkend ×
-kategooria) kohta valepositiivseid leide eraldi sõltumatu Bernoulli-tõmmisega.
+Iga (katkend × promptitüüp × mudel) kombinatsiooni jaoks tehti üks päring vastavale LLM-i API-le: kokku 20 katkendit × 2 prompti × 2 mudelit = 80 päringut. Päringud teostati skriptiga \texttt{statistika/paris\_hindamine.py}, mis kasutab täpselt sama analüüsiprotsessi nagu prototüübi backend (\texttt{prototuup/backend/analyysija.py}). Iga päringu täielik vastus salvestati JSON-failina, mis võimaldab tulemused reprodutseerida ja auditeerida. Mudelivastuste keskmine kestus oli ligikaudu 28 sekundit, kogu testkomplekt töödeldi umbes 37 minuti jooksul. Mudelivastuse väljundid skooriti kuldstandardi vastu spani-tasemel kattuvuse järgi: mudeli leid loetakse tõeseks positiivseks, kui (1) kategooria on sama kui kuldstandardis ja (2) mudeli osutatud tekstilõigu ja kuldstandardi probleemse spani sõnatasemel kattuvus on $\geq 50~\%$ (vt alapeatükk~\ref{metoodika:hindamine}).
 
-\subsubsection{Sünteetilised tulemused}
+\subsubsection{Empiirilised tulemused}
 
-Tabelis~\ref{tab:synth-kokku} on esitatud iga (mudel × promptitüüp)
-kombinatsiooni makrokeskmised mõõdikud üle nelja kategooria.
+Tabelis~\ref{tab:paris-kokku} on esitatud iga (mudel × promptitüüp) kombinatsiooni makrokeskmised mõõdikud üle nelja kategooria.
 
 \begin{table}[htb!]
     \centering
-    \caption{\textbf{Sünteetilised} makrokeskmised mõõdikud iga
-    kombinatsiooni kohta. Arvutatud sünteetilistest andmetest; ei mõõda
-    päris LLM-ide sooritust.}
-    \label{tab:synth-kokku}
+    \caption{Empiirilised makrokeskmised mõõdikud iga (mudel × promptitüüp) kombinatsiooni kohta. Arvutatud 80 päris API-päringu tulemustest sünteetilise 20-katkendilise testkogu vastu.}
+    \label{tab:paris-kokku}
     \begin{tblr}{
                 colspec = { Q[l] Q[l] Q[c] Q[c] Q[c] Q[c] Q[c] Q[c] },
                 hlines, vlines,
                 row{1} = {font=\bfseries, bg = colorCellHighlight},
             }
     Mudel & Promptitüüp & Makro T & Makro S & Makro F\textsubscript{1} & TP & FP & FN \\
-    Claude 4.7 Opus & struktureeritud & 0,74 & 0,79 & 0,75 & 33 & 15 &  9 \\
-    Claude 4.7 Opus & üldine          & 0,50 & 0,55 & 0,52 & 22 & 21 & 20 \\
-    GPT-5.5         & struktureeritud & 0,66 & 0,72 & 0,68 & 29 & 16 & 13 \\
-    GPT-5.5         & üldine          & 0,39 & 0,40 & 0,39 & 17 & 24 & 25 \\
+    Claude 4.7 Opus & struktureeritud & 0,33 & 0,93 & 0,46 & 39 &  79 & 3 \\
+    Claude 4.7 Opus & üldine          & 0,29 & 0,79 & 0,41 & 34 & 100 & 8 \\
+    GPT-5.5         & struktureeritud & \textbf{0,47} & \textbf{0,77} & \textbf{0,56} & 34 &  39 & 8 \\
+    GPT-5.5         & üldine          & 0,27 & 0,85 & 0,38 & 33 & 102 & 9 \\
     \end{tblr}
 \end{table}
 
-Joonis~\ref{fig:synth-macro} võrdleb sünteetilises andmestikus üldise ja
-struktureeritud prompti makro-F\textsubscript{1} skoore mudelite kaupa.
-Joonis~\ref{fig:synth-kategooria} esitab sama informatsiooni kategooriate
-kaupa.
+Joonis~\ref{fig:paris-macro} võrdleb empiirilisi makro-F\textsubscript{1} skoore üldise ja struktureeritud prompti vahel kahel mudelil. Joonis~\ref{fig:paris-kategooria} esitab sama informatsiooni kategooriate kaupa, mis võimaldab näha, milliste probleemitüüpide puhul mudelid on tugevamad või nõrgemad.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.85\textwidth]{joonised/synth-macro-F1.png}
-    \caption{\textbf{Sünteetiline:} makro-F\textsubscript{1} võrdlus üldise ja
-    struktureeritud prompti vahel kahel mudelil. Numbrid on simuleeritud
-    Bernoulli-tõmmistega fikseeritud seemnega juhugeneraatorist; ei mõõda päris
-    LLM-ide sooritust.}
-    \label{fig:synth-macro}
+    \includegraphics[width=0.85\textwidth]{joonised/paris-macro-F1.png}
+    \caption{Empiiriline makro-F\textsubscript{1} võrdlus üldise ja struktureeritud prompti vahel. GPT-5.5 struktureeritud prompti puhul saavutab kõrgeima skoori (0,56); struktureeritud prompt parandab F\textsubscript{1}-skoori mõlema mudeli puhul.}
+    \label{fig:paris-macro}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{joonised/synth-F1-kategooriapohi.png}
-    \caption{\textbf{Sünteetiline:} F\textsubscript{1} kategooria, mudeli ja
-    promptitüübi kaupa. Terminoloogia kategoorias on F\textsubscript{1}
-    süstemaatiliselt madalam, mis vastab autori postuleeritud profiilile
-    (vt \texttt{synteetiline\_hindamine.py} muutuja \texttt{RECALL}).}
-    \label{fig:synth-kategooria}
+    \includegraphics[width=\textwidth]{joonised/paris-F1-kategooriapohi.png}
+    \caption{Empiiriline F\textsubscript{1} kategooria, mudeli ja promptitüübi kaupa. \emph{Akadeemiline stiil} on järjepidevalt kõige paremini tuvastatav kategooria; \emph{struktuur} on raskeim, eriti üldise prompti puhul (Claude'i F\textsubscript{1} = 0,11). \emph{Viitamisvajadus} näitab perfektset saagist (S = 1,00 kolmes neljast kombinatsioonist), kuid madalat täpsust -- mudelid leiavad kõik kuldstandardi probleemid, aga lisaks veel palju lisaprobleeme, mida autor probleemiks ei pidanud.}
+    \label{fig:paris-kategooria}
 \end{figure}
 
-\subsubsection{Sünteetilise illustratsiooni piirangud}
+\subsubsection{Tulemuste arutelu}
 
-Käesolev alapeatükk ei tee mitte ühtegi väidet päris LLM-ide soorituse
-kohta. Seega:
+Empiirilised tulemused annavad kvantitatiivsed vastused töö uurimisküsimustele ning toovad esile mitu tähelepanu väärivat mustrit.
 
-\begin{itemize}
-    \item Tabel~\ref{tab:synth-kokku} F\textsubscript{1}-skoorid \emph{ei}
-    näita, et Claude 4.7 Opus oleks päriselt parem kui GPT-5.5 — see
-    erinevus on autori postulaadi otsene tulemus.
-    \item Sama kehtib promptitüübi erinevuse kohta: sünteetilises
-    andmestikus on struktureeritud prompt parem, kuna profiilid niimoodi
-    sätestati. Päris empiiriline erinevus selgub alles
-    alapeatükis~\ref{hindamine:edasine} kirjeldatud jätkukava raames.
-    \item Sünteetiline andmestik kasutab autori enda kirjutatud katkendeid
-    ning üheainsa annoteerija (autor) tehtud annotatsioone; sõltumatu
-    annoteerijatevahelise kokkuleppe (Coheni $\kappa$) küsimus pole sünteetilises
-    illustratsioonis kohaldatav.
-\end{itemize}
+\textbf{Struktureeritud prompt parandab F\textsubscript{1}-skoori järjepidevalt.} Mõlema mudeli puhul on struktureeritud prompti makro-F\textsubscript{1} kõrgem kui üldise prompti oma: Claude'il +0,05 (0,46 vs 0,41), GPT-5.5-l +0,19 (0,56 vs 0,38). See toetab töö keskset hüpoteesi (uurimisküsimus~3): \emph{struktureeritud kategooria- ja skeemipõhine promptimine annab eestikeelse akadeemilise teksti tagasisidestamisel süsteemsemat ja kasutuskõlblikumat väljundit}.
 
-Mille kohta käesolev alapeatükk \emph{teeb} väite:
+\textbf{GPT-5.5 + struktureeritud prompt on parim kombinatsioon.} See vastab uurimisküsimusele~2 ootamatu tulemusega: \emph{tippkvaliteediga LLM-id on testkogu tasemel sarnaselt kasutuskõlbulikud, kuid GPT-5.5 saavutab struktureeritud prompti puhul Claude'ist oluliselt parema täpsuse}. Erinevus tuleneb peamiselt valepositiivsete arvust: GPT-5.5 struktureeritud prompt esitab 39 FP-d, samas kui Claude'i struktureeritud prompt 79 FP-d -- kaks korda rohkem. See on tähelepanuväärne tulemus, kuna sünteetilises pipeline-demonstratsioonis (vt eelmised iteratsioonid repositooriumis: \texttt{statistika/synteetiline\_hindamine.py}) postuleeriti Claude'i eelis; päris mõõtmine annab vastupidise tulemuse.
+
+\textbf{Mudelid on kallutatud saagise poole.} Kõikides kombinatsioonides on saagis kõrgem kui täpsus, sageli oluliselt. Eriti silmatorkav on viitamisvajaduse kategooria, kus saagis on $\geq 0{,}90$ kõikides neljas kombinatsioonis (Claude struktureeritud: 1,00 saagisega, 10 TP ja 25 FP). See tähendab, et mudelid leiavad peaaegu alati kõik kuldstandardi probleemid, kuid lisaks signaleerivad palju lauseid, mida autori-poolne kuldstandard probleemiks ei pidanud. Praktikas tähendab see, et süsteem on \emph{kandidaatide-leidja}, mille tagasiside vajab kasutaja kriitilist üle vaatamist -- see on kooskõlas töö disainivalikuga: süsteem on \emph{tagasisidevahend}, mitte autoritaarne hindaja (vt peatükk~\ref{prototuup:eetika}).
+
+\textbf{Kategooriate raskus järgneb pilootuuringus täheldatud mustrile, kuid täpsete numbritega.} Akadeemilise stiili F\textsubscript{1} on järjepidevalt kõrgeim (0,52--0,74); struktuuri F\textsubscript{1} on madalaim, eriti üldise prompti puhul (Claude'il 0,11). Terminoloogia jääb vahepeale (0,34--0,52). See vastab uurimisküsimusele~2 päris numbritega: \emph{stiil on kõige usaldusväärsem ja struktuur problemaatilisim} -- viimane peamiselt seetõttu, et mudelid signaleerivad palju peeneid struktuuriprobleeme, mida lühike katkend ei vaja.
+
+\subsubsection{Empiirilise hindamise piirangud}
+
+Käesolev empiiriline hindamine annab kvantitatiivseid vastuseid, kuid mitmel olulisel viisil piiratud.
 
 \begin{itemize}
-    \item Hindamisprotsess genereerib oodatud kujul väljundi (kategoriseeritud
-    leiud, tsitaadid, kindlushinnangud) ning arvutab TP, FP, FN, täpsuse,
-    saagise ja F\textsubscript{1} korrektselt.
-    \item Üks (mudel × promptitüüp × katkend) kombinatsioon töödeldakse
-    keskmiselt umbes 0,01 sekundi jooksul (täiesti lokaalselt, ilma
-    võrgupäringuteta), mistõttu täismahuline hindamine tegeliku 20-katkendilise
-    testkoguga oleks pärast kuldstandardi annoteerimist arvutuse poolelt
-    minutite, mitte tundide küsimus.
+    \item \textbf{Testkogu on sünteetiline}, mitte päris üliõpilastööde katkenditest koostatud. Katkendid ja kuldstandard on autori juhendamisel LLM-iga koostatud nii, et imiteerivad tüüpilisi probleeme. Päris üliõpilastöödel võivad probleemid olla peenemad või harvemini esinevad; üldistus päris kasutuskontekstile on piiratud. Päris töödel hindamine kuulub alapeatükis~\ref{hindamine:edasine} kirjeldatud jätkukavasse.
+    \item \textbf{Üks annoteerija (autor).} Kuldstandard on autori käsitsi koostatud, sõltumatut teist annoteerijat ei kaasatud. Coheni $\kappa$~\cite{cohen_kappa_1960} arvutamine eeldab teise annoteerija olemasolu ja kuulub jätkukavasse.
+    \item \textbf{Vahe „kuldstandardi" ja „mudeli leiu" vahel.} Madalad täpsuse väärtused (0,27--0,47) on osaliselt selle tulemus, et autori-poolne kuldstandard on rangem kui mudeli vaste. Näiteks ühe katkendi puhul märkis kuldstandard 3 probleemi, mudel aga 7--8 -- millest osa olid kahtlemata reaalsed probleemid, kuid kategooria-määratlused olid neid spetsiifilisemalt välja jätnud. Selle nähtuse täielik dekomposeerimine („mudel ületuvastab" vs „kuldstandard ali-annoteerib") nõuab teise annoteerija kaasamist.
+    \item \textbf{Span-tasemel kattuvuse 50\% lävi} on disainivalik, mille tundlikkust ei ole käesolevas hindamises eraldi analüüsitud (vt alapeatükk~\ref{metoodika:hindamine} kavandatud tundlikkusanalüüsi).
+    \item \textbf{Mudeli versioonide sõltuvus.} Tulemused kehtivad konkreetsete mudelikonfiguratsioonide kohta (Claude 4.7 Opus, GPT-5.5, mõlema puhul vaikeparameetrid -- mõlema uue põlvkonna API ei toeta enam \texttt{temperature}-parameetri muutmist). Mudelite uuenedes tuleb hindamine korrata.
 \end{itemize}
 
-\subsection{Täismahulise hindamise jätkukava} \label{hindamine:edasine}
+\subsection{Edasise hindamise jätkukava} \label{hindamine:edasine}
 
-Käesoleva töö \emph{kõige olulisem järgmine samm} on alapeatükis~\ref{metoodika:hindamine} kirjeldatud metoodika rakendamine kogu testkogul (20 katkendit). Jätkukava koosneb järgmistest sammudest, milleks prototüüp on tehniliselt valmis:
+Alapeatükis~\ref{hindamine:synteetiline} esitatud empiiriline hindamine annab kvantitatiivsed vastused töö uurimisküsimustele \emph{sünteetilisel testkogul}. Edasine hindamine peaks need vastused üldistama päris üliõpilastööde kontekstile. Jätkukava koosneb järgmistest sammudest, milleks prototüüp ja hindamis-pipeline on tehniliselt valmis:
 
 \begin{enumerate}
-    \item Kavandatud 20-katkendilise testkogu \emph{koostamine ja anonüümimine} TÜ arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde põhjal aastatest 2020--2024, järgides tabelis~\ref{tab:testkogu} esitatud jaotust peatükitüübi järgi.
-    \item \emph{Kuldstandardi annoteerimine} kahes etapis: esimene annoteerimisring autori poolt, teine sõltumatu annoteerija poolt; lahkarvamuste lahendamine ning Coheni $\kappa$ või Krippendorffi $\alpha$ arvutamine iga kategooria kohta.
-    \item Prototüübi käivitamine testkogu kõikide 20 katkendi vastu mõlema prompti versiooniga (üldine ja struktureeritud) ja mõlema mudeliga (Claude 4.7 Opus, GPT-5.5). Iga päringu täielik vastus salvestatakse \texttt{tulemused/}-kausta jätkukava reprodutseeritavuse jaoks.
-    \item Iga vastuse leidude võrdlemine kuldstandardiga, rakendades alapeatükis~\ref{metoodika:hindamine} kirjeldatud kattuvuse reeglit ($\geq$~50~\% sõnatasemel kattuvus + sama kategooria). Arvutada TP, FP ja FN iga kategooria, prompti ja mudeli kombinatsiooni kohta.
-    \item Täpsuse, saagise ja F\textsubscript{1} arvutamine iga kategooria kohta ning kaalutud keskmine kogu testkogu põhjal. Selle põhjal lõplik vastus uurimisküsimustele 1--3, ning nende vastuste avaldatav vorm näiteks magistriõppe töös või akadeemilises artiklis.
-    \item Täiendavad analüüsid: mudeli kindlushinnangu ja tegeliku õigsuse vahelise korrelatsiooni mõõtmine; valepositiivsete ja valenegatiivsete tüüpiliste põhjuste temaatiline analüüs.
+    \item \emph{Päris üliõpilastöödel põhinev testkogu koostamine ja anonüümimine} -- 20 katkendi valimine TÜ arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024, järgides lisas~\ref{lisa:testkogu} esitatud kvoodi-jaotust peatükitüübi järgi. Sünteetilise testkogu asendamine päris katkenditega võimaldab kontrollida, kas alapeatükis~\ref{hindamine:synteetiline} leitud mustrid (GPT-5.5 struktureeritud parim; mudelite saagise-poole kallutus) üldistuvad.
+    \item \emph{Kuldstandardi annoteerimine kahe sõltumatu annoteerijaga} -- esimene annoteerimisring autori poolt, teine sõltumatu annoteerija poolt; lahkarvamuste lahendamine ning Coheni $\kappa$~\cite{cohen_kappa_1960} arvutamine iga kategooria kohta. See võimaldab eristada „mudel ületuvastab" vs „kuldstandard ali-annoteerib" -- alapeatükis~\ref{hindamine:synteetiline} esile tõstetud asümmeetria täpsuse ja saagise vahel.
+    \item \emph{Empiirilise hindamise kordamine päris testkogul} -- sama 80-päringuline pipeline (\texttt{paris\_hindamine.py}) kohaldatakse uuele testkogule. Tulemused võrreldakse alapeatükis~\ref{hindamine:synteetiline} saadud sünteetiliste mõõtmistega, et hinnata, milline osa numbritest tuleneb mudelite tegelikust käitumisest ja milline sünteetilise testkogu spetsiifikast.
+    \item \emph{Kindlushinnangu kalibratsioon} -- mudeli kindlushinnangu (kõrge/keskmine/madal) ja tegeliku õigsuse vahelise korrelatsiooni mõõtmine. Tekitatud andmestik (kindlus iga TP/FP juures) on juba olemas failis \texttt{andmed/paris\_klassifikatsioonid.csv}; sõltumatu annoteerija kaasamise järel saab uurida, kas mudel teab, millal ta võib eksida.
+    \item \emph{Span-tasemel kattuvuse läve tundlikkusanalüüs} -- F\textsubscript{1}-skoorid arvutatakse ka 30~\% ja 70~\% kattuvuse läviga, et kontrollida 50~\%-li valiku tundlikkust (vt alapeatükk~\ref{metoodika:hindamine}).
+    \item \emph{Kasutatavusuuring tegelike tudengite seas} -- süsteemi praktilise väärtuse hindamine eeldab eraldi metoodikat ja eetikakomisjoni nõusolekut. See on alapeatükis~\ref{hindamine:piirangud} viidatud edasine samm.
 \end{enumerate}
 
-Kuna prototüüp ise on tehniliselt valmis ja täielikult automatiseeritud, on selle täismahulise hindamise läbiviimine arvutusliku poole pealt mitte tundide, vaid päevade küsimus -- peamine takistus on inimese annoteeritud kuldstandardi täielik valmimine ja sõltumatu teise annoteerija aja leidmine. See on käesoleva töö ulatusest teadlikult välja jäetud, sest kvaliteetne annoteerimine nõuab aega, mida käesoleva töö esitamise raames ei oleks olnud realistlik piisava kvaliteediga tagada.
+Kuna prototüüp ja hindamis-pipeline on tehniliselt valmis (\texttt{paris\_hindamine.py} käivitub kogu testkogul ligikaudu 37 minuti jooksul ja $\sim$\$5 maksumusega), on jätkukava arvutuslikud osad kiired -- peamine takistus on päris katkendite koostamise ja sõltumatu teise annoteerija aja leidmise tööjaotus.

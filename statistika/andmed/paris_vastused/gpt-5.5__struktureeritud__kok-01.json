@@ -1,0 +1,32 @@
+{
+  "katkend_id": "kok-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 23761,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "kuidas need süsteemid käituvad suuremate projektide peal",
+      "probleem": "Väljend „projektide peal” on kõnekeelne.",
+      "põhjendus": "Akadeemilises kokkuvõttes tuleks eelistada neutraalsemat ja täpsemat väljendusviisi, sest kõnekeelsus vähendab teksti formaalsust.",
+      "soovitus": "Asenda kõnekeelne väljend akadeemilisema konstruktsiooniga, mis kirjeldab süsteemide rakendamist suuremates projektides.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kuidas false positive'ide määra vähendada",
+      "probleem": "Ingliskeelne termin „false positive” on esitatud ilma eestikeelse vaste või selgituseta.",
+      "põhjendus": "Kui ingliskeelset terminit kasutatakse eestikeelses lõputöös, peaks esmakasutusel olema selge, mida selle all mõeldakse, ning edaspidi tuleks terminikasutus hoida järjepidev.",
+      "soovitus": "Lisa termini esmakasutusel eestikeelne vaste või lühiselgitus ning kasuta valitud terminit läbivalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "avatud lähtekoodiga haavatavusi tuvastavad süsteemid",
+      "probleem": "Sõnastus võib jätta mulje, et haavatavused ise on „avatud lähtekoodiga”.",
+      "põhjendus": "Terminoloogiliselt peaks olema üheselt arusaadav, kas tuvastatakse avatud lähtekoodiga tarkvara sõltuvuste haavatavusi või midagi muud.",
+      "soovitus": "Täpsusta mõistet nii, et oleks selge, millise tarkvara või sõltuvuste haavatavusi süsteemid tuvastavad.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

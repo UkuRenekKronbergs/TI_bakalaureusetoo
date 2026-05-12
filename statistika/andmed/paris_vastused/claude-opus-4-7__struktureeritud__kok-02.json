@@ -1,0 +1,64 @@
+{
+  "katkend_id": "kok-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 24920,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Käesolev töö oli üks lahe väljakutse.",
+      "probleem": "Kõnekeelne ja hinnanguline väljend ('üks lahe väljakutse'), mis ei sobi akadeemilisse stiili.",
+      "põhjendus": "Akadeemilises tekstis tuleks vältida kõnekeelseid ja emotsionaalseid hinnanguid, eriti kokkuvõttes, kus oodatakse neutraalset ja kontsentreeritud tooni.",
+      "soovitus": "Sõnasta lause neutraalsemalt ja akadeemilisemalt, vältides hinnangulisi omadussõnu nagu 'lahe'.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina õppisin palju andmebaaside rände kohta.",
+      "probleem": "Mina-vormi kasutamine ja umbmäärane väide ('palju').",
+      "põhjendus": "Akadeemilises tekstis välditakse mina-vormi liigset kasutamist ning umbmääraseid üldistusi; kokkuvõte peaks keskenduma töö tulemustele, mitte autori isiklikule õppimisele.",
+      "soovitus": "Kaalu mina-vormi vältimist ja sõnasta umbisikuliselt või keskendu töö sisulistele tulemustele.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "andmetüüpide ühildumatusega on tegelikult palju asja",
+      "probleem": "Kõnekeelsed sõnad 'tegelikult' ja 'asja'.",
+      "põhjendus": "Sõnad 'tegelikult' ja 'asi' on kõnekeelsed ning ebatäpsed - akadeemiline tekst peaks olema konkreetne.",
+      "soovitus": "Asenda kõnekeelsed sõnad konkreetsema terminoloogiaga, mis viitab täpselt probleemide laadile.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et iga andmebaas teeb asju erinevalt.",
+      "probleem": "Määramatu üldistus ('kõik teavad') ja kõnekeelne sõnastus ('teeb asju erinevalt').",
+      "põhjendus": "Akadeemilises tekstis tuleb vältida põhjendamatuid üldistusi nagu 'kõik teavad' ning ebamääraseid väljendeid.",
+      "soovitus": "Eemalda üldistus 'kõik teavad' ja sõnasta väide konkreetselt, viidates kindlatele erinevustele andmebaasisüsteemide vahel.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tulevikutöös võiks teha veel mõned asjad",
+      "probleem": "Kõnekeelne ja ebamäärane väljend ('mõned asjad').",
+      "põhjendus": "Tulevikutöö suundi tuleks kokkuvõttes esitada konkreetselt ja täpselt, mitte ebamääraselt.",
+      "soovitus": "Sõnasta tulevikutöö suunad konkreetsemalt, vältides sõna 'asjad'.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolev töö oli üks lahe väljakutse. Mina õppisin palju andmebaaside rände kohta.",
+      "probleem": "Kokkuvõte algab isikliku hinnanguga, mitte töö eesmärgi või peamiste tulemuste kokkuvõtliku esitusega.",
+      "põhjendus": "Kokkuvõtte struktuur peaks algama töö eesmärgi või põhitulemuste kokkuvõttega, mitte autori isiklike emotsioonidega.",
+      "soovitus": "Alusta kokkuvõtet töö eesmärgi ja konteksti lühikese ülevaatega ning liigu seejärel tulemuste ja panuse juurde.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Töö praktiline panus on rändamisskript, mis on saadaval GitHubis.",
+      "probleem": "Viidatakse GitHubis asuvale ressursile ilma konkreetse viite või lingita.",
+      "põhjendus": "Kui mainitakse konkreetset praktilist tulemust (skript GitHubis), peaks lugejal olema võimalus see leida - vajalik on viide hoidlale.",
+      "soovitus": "Lisa konkreetne viide või link GitHubi hoidlale, kus skript asub.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "katkend_id": "sis-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 33918,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Euroopa Liidu juurdepääsetavuse akt kohustab alates 2025. aastast paljusid mobiilirakendusi vastama WCAG 2.1 tasemele AA.",
+      "probleem": "Õiguslik väide vajab täpset allikat ja sõnastuse kontrolli.",
+      "põhjendus": "Sissejuhatuses esitatud regulatiivsed väited peavad olema kontrollitavad ning seaduse kohaldamisala võib olla nüansirikas.",
+      "soovitus": "Lisa viide EL juurdepääsetavuse aktile ja täpsusta, millistele rakendustele nõue kehtib.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eestis on enam kui 100 000 inimest, kellel on mingisugune nägemise või liikumise piirang",
+      "probleem": "Statistiline väide on viitamata ja liiga üldine.",
+      "põhjendus": "Arvulised väited vajavad usaldusväärset allikat, et põhjendada teema olulisust ja vältida kontrollimatuid üldistusi.",
+      "soovitus": "Lisa allikas ning täpsusta, kas arv puudutab nägemis-, liikumis- või mõlemat tüüpi piiranguid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolevas töös uuritakse, kuidas Tartu Ülikooli sisemiste teenuste mobiilirakendused vastavad WCAG nõuetele.",
+      "probleem": "Uurimiseesmärk on olemas, kuid uurimisküsimused või konkreetsed eesmärgid puuduvad.",
+      "põhjendus": "Sissejuhatus peaks lugejale selgelt näitama, mida täpselt töö välja selgitab ja mille alusel edu hinnatakse.",
+      "soovitus": "Lisa 1–3 konkreetset uurimisküsimust või eesmärki pärast üldist eesmärgilauset.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö hõlmab automaatset analüüsi neljal rakendusel ning käsitsi auditit kahel.",
+      "probleem": "Valimi kujunemine ja piirangud ei ole selged.",
+      "põhjendus": "Lugeja peab mõistma, miks valiti just neli ja kaks rakendust ning kas tulemusi saab üldistada kõigile TÜ rakendustele.",
+      "soovitus": "Selgita lühidalt valikukriteeriume ja märgi, et tulemused kehtivad valitud rakenduste kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Kasutatakse tööriistu nagu Accessibility Scanner Androidil ja Accessibility Inspector iOS-il.",
+      "probleem": "Tööriistade nimetused ja platvormiseos vajavad täpsustamist.",
+      "põhjendus": "Akadeemilises tekstis peaks tööriistade nimed olema täpsed, et meetod oleks korratav ja üheselt mõistetav.",
+      "soovitus": "Täpsusta tööriistade täisnimed, arendajad või versioonid ning platvormid, millel neid kasutatakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "tööriistu nagu Accessibility Scanner Androidil ja Accessibility Inspector iOS-il",
+      "probleem": "Väljend „nagu” mõjub loetelus kõnekeelselt ja jätab mulje, et tööriistu võib olla veel.",
+      "põhjendus": "Meetodi kirjeldus peaks olema täpne ega tohiks jätta ebaselgeks, milliseid tööriistu tegelikult kasutati.",
+      "soovitus": "Kui loetelu on täielik, esita see konkreetselt; kui mitte, täpsusta, et tegemist on näidetega.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused võimaldavad teha konkreetseid parandussoovitusi.",
+      "probleem": "Sissejuhatus ei kirjelda töö oodatavat panust piisavalt konkreetselt.",
+      "põhjendus": "Lõputöö sissejuhatus peaks selgitama, kellele ja kuidas tulemused kasulikud on.",
+      "soovitus": "Täpsusta, kas soovitused on mõeldud rakenduste arendajatele, haldajatele või TÜ teenuseomanikele.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

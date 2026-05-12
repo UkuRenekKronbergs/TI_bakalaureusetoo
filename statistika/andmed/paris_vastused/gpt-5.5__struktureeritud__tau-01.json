@@ -1,0 +1,56 @@
+{
+  "katkend_id": "tau-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 32682,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et see on kiirem.",
+      "probleem": "Lause kasutab määramatut üldistust ja kõnekeelset väljendust.",
+      "põhjendus": "Akadeemilises tekstis ei sobi toetuda väitele „kõik teavad”; lisaks jääb asesõna „see” ebaselgeks.",
+      "soovitus": "Täpsusta, mille kiirusest räägitakse, ning toeta väidet konkreetse põhjenduse või viitega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "virtuaalmasinad ... VM-id ... VM-i",
+      "probleem": "Lühendit „VM” kasutatakse ilma selge esmakordse defineerimiseta.",
+      "põhjendus": "Kuigi lühend on informaatikas levinud, peaks lõputöös lühend olema esmakasutusel avatud ja seejärel läbivalt samal kujul kasutatud.",
+      "soovitus": "Määra esmakasutusel, et „VM” tähistab virtuaalmasinat, ja kasuta valitud vormi järjekindlalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Konteinerid jagavad kerneliga",
+      "probleem": "Ingliskeelset terminit „kernel” kasutatakse ilma selgituseta ning lause on terminoloogiliselt ebatäpne.",
+      "põhjendus": "Lugejale peaks olema selge, kas mõeldakse operatsioonisüsteemi tuuma ja mida konteinerid sellega jagavad.",
+      "soovitus": "Selgita termini „kernel” tähendust esmakasutusel või kasuta läbivalt valitud eestikeelset vastet.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Docker tutvustas konteinereid laiale arendajaskonnale alates 2013. aastast.",
+      "probleem": "Ajalooline ja konkreetne väide on esitatud ilma viiteta.",
+      "põhjendus": "Väide Dockeri rolli ja ajastuse kohta põhineb välisel allikal ning vajab kontrollitavat viidet.",
+      "soovitus": "Lisa allikas Dockeri 2013. aasta avaldamise ja selle mõju kohta konteinerite levikule.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Üks Docker konteiner käivitub millisekunditega, samas kui virtuaalmasin vajab käivitamiseks mitukümmend sekundit.",
+      "probleem": "Konkreetne arvuline võrdlus on esitatud ilma viiteta.",
+      "põhjendus": "Käivitusaeg sõltub keskkonnast, konfiguratsioonist ja mõõtmismetoodikast; selline väide vajab allikat või autori enda mõõtmist.",
+      "soovitus": "Lisa viide mõõtmistulemustele või täpsusta, et tegemist on autori enda testiga koos metoodikaga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Termini „konteiner” tähendus on selles kontekstis tihti segane, kuna ka VM-i lähedasi lahendusi (näiteks Firecracker) nimetatakse vahel konteineriteks",
+      "probleem": "Teiste käsitlusi ja terminikasutust puudutav väide vajab viidet.",
+      "põhjendus": "Väide Firecrackeri ja konteinertermini kasutuse kohta ei ole üldteadmine ning peaks tuginema allikale.",
+      "soovitus": "Lisa viide allikale, mis käsitleb Firecrackerit ja selle seost konteinerite või mikro-VM-idega.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

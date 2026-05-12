@@ -1,0 +1,40 @@
+{
+  "katkend_id": "met-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 18280,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "3.1 Andmete kogumine\nAndmete kogumiseks kasutati struktureeritud küsimustikku...",
+      "probleem": "Peatükk 3 algab kohe alapealkirjaga 3.1 ilma sissejuhatava lõiguta.",
+      "põhjendus": "Akadeemilises töös peaks peatükk algama lühikese sissejuhatava lõiguga, mis tutvustab metoodika ülesehitust ja alapeatükkide järjekorda, et lugeja saaks konteksti.",
+      "soovitus": "Lisa peatüki 3 algusesse sissejuhatav lõik, mis tutvustab metoodika ülesehitust ja seletab, millised alapeatükid järgnevad.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Vastasid 87 tudengit, mille vastamismääraks oli 43,5%.",
+      "probleem": "Lause sidumine sõnaga \"mille\" on grammatiliselt ebatäpne — \"mille\" ei viita selgelt eelnevale subjektile.",
+      "põhjendus": "Akadeemilises stiilis peab viitesõna olema üheselt mõistetav; siin jääb ebaselgeks, millele \"mille\" viitab (tudengite arvule? vastamisele?).",
+      "soovitus": "Sõnasta lause selgemalt, eraldades faktid kaheks lauseks või kasutades täpsemat sidemikku.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Küsimustik valideeriti pilootuuringuga viie tudengi peal enne laialisaatmist.",
+      "probleem": "Pilootuuringu metoodika on esitatud ilma viiteta metodoloogilisele allikale.",
+      "põhjendus": "Pilootuuringu kasutamine küsimustiku valideerimiseks on konkreetne metoodiline võte, mille puhul tavaliselt viidatakse metoodikakirjandusele, et põhjendada valitud lähenemist.",
+      "soovitus": "Kaalu viite lisamist uurimismetoodika allikale, mis põhjendab pilootuuringu kasutamist ja valimi suurust.",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Vastuste analüüsiks kasutati programmi R 4.3.0 ning paketti `tidyverse`.",
+      "probleem": "Kasutatud tarkvara ja paketid on nimetatud ilma viideteta.",
+      "põhjendus": "Akadeemilises töös on tavaks viidata kasutatud tarkvarale ja olulistele pakettidele (nt R Core Team, Wickham et al.), et tagada korratavus ja anda autoritele tunnustus.",
+      "soovitus": "Lisa viited R-i ja tidyverse'i ametlikele tsiteerimisjuhistele.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

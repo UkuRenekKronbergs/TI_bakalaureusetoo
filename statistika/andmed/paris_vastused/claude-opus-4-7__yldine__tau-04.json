@@ -1,0 +1,56 @@
+{
+  "katkend_id": "tau-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 25183,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Asi see, et piirid nende vahel on hägused: paljud teenused on hübriidid.",
+      "probleem": "Kõnekeelne ja grammatiliselt vigane sõnastus ('Asi see, et')",
+      "põhjendus": "Akadeemilises tekstis tuleks vältida kõnekeelseid väljendeid ning kasutada selget ja korrektset lauseehitust.",
+      "soovitus": "Sõnasta lause ümber neutraalsemas akadeemilises stiilis, näiteks alustades 'Praktikas on piirid nende mudelite vahel hägused...'",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Lisaks on tekkinud uued kategooriad — FaaS (Function as a Service), millest tuntum on AWS Lambda, ja CaaS (Container as a Service).",
+      "probleem": "Uute teenusemudelite (FaaS, CaaS) tutvustamisel puudub viide allikale.",
+      "põhjendus": "Taustpeatükis peavad mõistete definitsioonid ja kategoriseeringud tuginema kirjandusele, et tagada usaldusväärsus.",
+      "soovitus": "Lisa viide akadeemilisele või tunnustatud allikale, mis defineerib FaaS-i ja CaaS-i mõisted.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Hindade osas on FaaS odav väiksete rakenduste puhul ja kallis suurte koormuste puhul.",
+      "probleem": "Hinnastust puudutav väide on esitatud ilma allikata ning ilma konkreetsete andmeteta.",
+      "põhjendus": "Kvantitatiivseid või võrdlevaid väiteid hindade kohta tuleb põhjendada allikatega või konkreetsete arvandmetega.",
+      "soovitus": "Lisa viide uuringule või teenusepakkuja hinnakirjale ning täpsusta, mida tähendab 'väike' ja 'suur' koormus.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Hindade osas on FaaS odav väiksete rakenduste puhul ja kallis suurte koormuste puhul.",
+      "probleem": "Lause hindade kohta on lõigu lõpus järsk ja ei haaku eelneva teenusemudelite ülevaatega.",
+      "põhjendus": "Taustpeatükis peaks teemade üleminek olema sujuv; hindamise käsitlus väärib eraldi alalõiku või selgemat sidumist.",
+      "soovitus": "Eralda hinnastuse teema omaette alapeatükki või lisa sidustav lause, mis selgitab, miks hinnastus on oluline.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "PaaS näiteks on Heroku, kus arendaja ei seadista OS-i, vaid lihtsalt paigaldab oma rakenduse.",
+      "probleem": "Lühend 'OS' on kasutusel ilma eelneva selgituseta ning sõna 'lihtsalt' on hinnanguline.",
+      "põhjendus": "Akadeemilises tekstis tuleb lühendid esmakordsel kasutamisel avada ning vältida hinnangulisi täitesõnu.",
+      "soovitus": "Kirjuta välja 'operatsioonisüsteem (OS)' esmakordsel mainimisel ja eemalda sõna 'lihtsalt'.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Pilvepõhise arvutuse mõiste on lai.",
+      "probleem": "Termin 'pilvepõhine arvutus' on defineerimata ning kasutus võib eesti keeles varieeruda ('pilvarvutus').",
+      "põhjendus": "Taustpeatükk peaks keskse mõiste selgelt defineerima ja viitama tunnustatud allikale (nt NIST).",
+      "soovitus": "Lisa peatüki alguses pilvarvutuse definitsioon koos viitega ning täpsusta eestikeelne terminivalik.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tul-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 29396,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina mõõtsin veebirakenduse vastuseaegu 50 erineva päringutüübi peal.",
+      "probleem": "Esimese isiku kasutus ja väljend „peal” mõjuvad akadeemilises tekstis kõnekeelselt.",
+      "põhjendus": "Tulemuste peatükis eelistatakse neutraalset ja impersonaalset esitust, et rõhutada meetodit ja tulemusi, mitte autorit.",
+      "soovitus": "Kasuta neutraalsemat sõnastust, nt kirjelda, mida mõõdeti ja millise valimi alusel.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Üle 90% kasutajatest leiab, et alla 200 ms on hea kogemus.",
+      "probleem": "Väide kasutajate hinnangu kohta vajab allikat.",
+      "põhjendus": "Tegemist on empiirilise või kirjandusest pärineva väitega, mille usaldusväärsus sõltub viitest uuringule või standardile.",
+      "soovitus": "Lisa viide kasutajakogemuse või vastuseaja tajumise uuringule või eemalda protsendiväide.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Meie rakendus jääb sellele piirile veidi alla, kuid keskmine kogemus on siiski okei.",
+      "probleem": "Väide on ebatäpne ja võib olla vastuolus eelneva tulemusega.",
+      "põhjendus": "Kui 95-protsentiil on 230 ms ja piiriks on 200 ms, siis ei jää tulemus piirist alla, vaid ületab seda. Lisaks on „okei” kõnekeelne.",
+      "soovitus": "Täpsusta, millist mõõdikut piiriga võrreldakse, ja kasuta akadeemilisemat hinnangut.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Vastuseaja jaotus oli paremalt kalduv, mis on tüüpiline veebirakenduste käitumine.",
+      "probleem": "Üldistus veebirakenduste tüüpilise käitumise kohta vajab põhjendust või viidet.",
+      "põhjendus": "Ilma viiteta jääb ebaselgeks, kas väide põhineb kirjandusel, varasematel mõõtmistel või autori hinnangul.",
+      "soovitus": "Lisa viide või selgita lühidalt, mille põhjal seda tüüpiliseks peetakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Vastuseaja optimeerimist tasub alustada pildi-laadivatest päringutest, kuna nende osa kogu liiklusest on 31% ja parandamise potentsiaal on suurim.",
+      "probleem": "Tulemuste peatükki on lisatud soovituslik järeldus ilma piisava tulemuste toeta.",
+      "põhjendus": "Tulemuste peatükk peaks esmalt esitama mõõdetud tulemused; optimeerimissoovitused sobivad pigem arutelu või järelduste peatükki.",
+      "soovitus": "Esita siin ainult mõõdetud osakaalud ja viita optimeerimissoovitustele arutelu või järelduste osas.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "pildi-laadivad päringud",
+      "probleem": "Termin on kohmakas ja võib olla ebaselge.",
+      "põhjendus": "Lõputöös peaks päringutüüpide nimetamine olema järjekindel ja üheselt mõistetav.",
+      "soovitus": "Defineeri päringutüüpide nimetused metoodikas ja kasuta neid läbivalt samal kujul.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "50 erineva päringutüübi peal",
+      "probleem": "Ei ole selge, kas mõõdeti 50 päringutüüpi, 50 päringut või 50 päringuklassi.",
+      "põhjendus": "Tulemuste tõlgendamine sõltub valimi mahust ja sellest, mitu mõõtmist iga tüübi kohta tehti.",
+      "soovitus": "Täpsusta mõõtmisühikut ja lisa vajadusel mõõtmiste arv iga päringutüübi kohta.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

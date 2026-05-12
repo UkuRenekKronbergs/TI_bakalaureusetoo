@@ -1,0 +1,72 @@
+{
+  "katkend_id": "met-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 30160,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused on esitatud peatükis 4. Üldiselt oli kiir-sort kõige kiirem, aga see asi sõltub palju sisendi struktuurist.",
+      "probleem": "Metoodika peatükis esitatakse juba tulemuse tõlgendus.",
+      "põhjendus": "Metoodika peaks kirjeldama mõõtmise korraldust; tulemused ja järeldused kuuluvad tulemuste või arutelu peatükki.",
+      "soovitus": "Jäta siia ainult viide tulemuste peatükile; tõsta kiiruse võrdlus ja tõlgendus peatükki 4.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "aga see asi sõltub palju sisendi struktuurist",
+      "probleem": "Väljend „see asi“ on kõnekeelne ja ebamäärane.",
+      "põhjendus": "Akadeemilises tekstis peaksid väited olema täpsed ja formaalsed, eriti metoodika kirjelduses.",
+      "soovitus": "Kasuta täpset nimetust, nt viita mõõdetud täitmisajale või algoritmide jõudlusele.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "kasutati Hyperfine tööriista (versioon 1.18)",
+      "probleem": "Tööriistale puudub viide.",
+      "põhjendus": "Kasutatud tarkvara ja mõõteriistad peaksid olema viidatud, et metoodika oleks kontrollitav ja taastatav.",
+      "soovitus": "Lisa viide Hyperfine’i dokumentatsioonile või repositooriumile ning vajadusel kasutatud käsuparameetrid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Iga mõõtmist korrati 30 korda",
+      "probleem": "Pole selge, mida täpselt loeti üheks mõõtmiseks.",
+      "põhjendus": "Kirjeldatud on mitu mõõtmistasandit: sisendsuurus, viis sisendit, kolm algoritmi ja kordused; korduste jaotus jääb ebaselgeks.",
+      "soovitus": "Täpsusta, kas 30 kordust tehti iga algoritmi, sisendi ja sisendsuuruse kombinatsiooni kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "juhuslikult vahemikus [0, 10^9]",
+      "probleem": "Sisendite genereerimise protseduur pole piisavalt reprodutseeritav.",
+      "põhjendus": "Juhuslike sisendite puhul on vaja teada jaotust, seemet ja duplikaatide käsitlust, et katset saaks korrata.",
+      "soovitus": "Kirjelda juhuarvude jaotust, kasutatud seemneid ning kas väärtused võisid korduda.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "AMD Ryzen 7 5800X protsessor, 32 GB DDR4-3200 RAM, Ubuntu 22.04 LTS",
+      "probleem": "Keskkonna kirjeldus on osaline.",
+      "põhjendus": "Jõudlusmõõtmised sõltuvad ka kompilaatorist või interpretaatorist, versioonidest, optimeerimislippudest ja protsessori seadistustest.",
+      "soovitus": "Lisa programmeerimiskeel, kompilaator/interpretaator, versioonid, optimeerimislipud ja olulised süsteemiseaded.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kiir-sort, ühenda-sort ja kuhi-sort",
+      "probleem": "Terminikasutus on ebaühtlane ja võib olla ebatavaline.",
+      "põhjendus": "Eesti informaatikatekstides kasutatakse sageli termineid „kiirsortimine“, „põimemeetod“/„ühildussortimine“ ja „kuhjasortimine“; valik peaks olema läbivalt ühtne.",
+      "soovitus": "Kontrolli valdkonna terminibaasist sobivad eestikeelsed terminid ja kasuta neid kogu töös järjekindlalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Algoritmi sooritust hinnati kontrollitud keskkonnas",
+      "probleem": "„Sooritus“ ei ole siin kõige täpsem termin.",
+      "põhjendus": "Algoritmide hindamisel räägitakse tavaliselt jõudlusest, täitmisajast või efektiivsusest; „sooritus“ võib jääda ebaselgeks.",
+      "soovitus": "Täpsusta, millist mõõdikut hinnati: täitmisaeg, mälukasutus, läbilase vms.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

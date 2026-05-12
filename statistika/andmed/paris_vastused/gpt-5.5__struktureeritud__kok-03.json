@@ -1,0 +1,32 @@
+{
+  "katkend_id": "kok-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 24120,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "ITIL pakub kõige laiemat hõlmavust",
+      "probleem": "Lühend ITIL esineb ilma selgituseta.",
+      "põhjendus": "Kui lühendit ei ole töös varem defineeritud, võib lugejal jääda ebaselgeks, mida termin täpselt tähistab.",
+      "soovitus": "Kontrolli, et ITIL oleks esmakasutusel lahti seletatud ja seejärel läbivalt samal kujul kasutatud.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kaasaegsete AI-tööriistade integreerimine intsidendi-haldamise protsessi",
+      "probleem": "Ingliskeelne lühend AI on esitatud ilma eestikeelse selgituseta.",
+      "põhjendus": "Akadeemilises tekstis tuleks võõrkeelsed lühendid esmakasutusel selgitada, et terminoloogia oleks üheselt mõistetav.",
+      "soovitus": "Lisa esmakasutusel eestikeelne vaste ja lühend sulgudes; edaspidi kasuta valitud terminit järjekindlalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Lisaks väärib tähelepanu kaasaegsete AI-tööriistade integreerimine intsidendi-haldamise protsessi, mis on viimaste aastate kiire arengu valdkond.",
+      "probleem": "Väide valdkonna kiire arengu kohta on esitatud ilma viiteta.",
+      "põhjendus": "See ei ole pelgalt üldteadmine, vaid ajakohane hinnang tehnoloogiavaldkonna arengule, mida tuleks toetada allikaga.",
+      "soovitus": "Lisa sobiv viide hiljutisele ülevaatele, raportile või teadusartiklile või seo väide selgelt töö varasemate tulemustega.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "katkend_id": "tul-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 42786,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tabel 4.1 näitab mõõtmistulemusi.",
+      "probleem": "Tabelile viidatakse ilma sisulise sissejuhatuse ja kirjelduseta, mida tabel täpselt sisaldab.",
+      "põhjendus": "Lugeja ei saa tekstist aru, milliseid veerge, ridu ja mõõtühikuid tabel sisaldab ning millistel tingimustel mõõtmised tehti. Tulemuste peatükk peaks tabeli sisu ka tekstis tutvustama.",
+      "soovitus": "Lisa lause, mis selgitab, mida tabel täpselt esitab (algoritmid, sisendisuurused, mõõdetav suurus, ühik, korduste arv).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "See on päris hea tulemus.",
+      "probleem": "Hinnanguline ja kõnekeelne sõnastus, mis ei sobi akadeemilisse stiili.",
+      "põhjendus": "Tulemuste peatükis tuleks esitada faktid neutraalselt; subjektiivsed hinnangud (\"päris hea\") kuuluvad pigem arutelu osasse ja peavad olema põhjendatud.",
+      "soovitus": "Kasuta neutraalset sõnastust või too välja konkreetne võrdlusalus, mille suhtes tulemust hinnatakse.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Põhjuseks on tõenäoliselt mälu hierarhia parem kasutamine, kuna ühenda-sort omab paremat ruumilist lokaalsust.",
+      "probleem": "Tulemuste peatükis esitatakse tõlgendus/oletus ilma andmepõhise tõestuseta; samuti kuulub põhjuste arutelu pigem arutelu peatükki.",
+      "põhjendus": "Tulemuste peatükk peaks keskenduma vaatlustele; põhjuste analüüs (eriti sõnaga \"tõenäoliselt\") kuulub arutelu alla või vajab tuge mõõtmistest (nt cache miss'ide mõõtmine) või viidatud kirjandusest.",
+      "soovitus": "Vii tõlgendus arutelu peatükki või toeta seda lisaandmete/viitega kirjandusele.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "ühenda-sort omab paremat ruumilist lokaalsust",
+      "probleem": "Sõna \"omama\" kasutus on eesti keeles ebasoovitatav kalka.",
+      "põhjendus": "Eesti keele stiilisoovituste järgi tuleks \"omama\" asendada loomulikuma väljendiga (nt \"on\", \"sellel on\").",
+      "soovitus": "Asenda \"omab paremat ruumilist lokaalsust\" väljendiga \"sellel on parem ruumiline lokaalsus\".",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kiir-sort ... ühenda-sort ... Kuhi-sort",
+      "probleem": "Algoritmide nimetuste kirjapilt on ebajärjekindel ja sidekriipsuga vorm ei ole standardne eestikeelne termin.",
+      "põhjendus": "Eestikeelses informaatikakirjanduses on levinud kujud \"kiirsort\", \"põimsort\"/\"liitsort\" ja \"kuhjasort\"; samuti tuleks järgida ühte kirjaviisi kogu töös.",
+      "soovitus": "Vali järjepidev terminoloogia (nt eestikeelne või ingliskeelne kursiivis) ja kasuta seda läbivalt; vajadusel sea esmamainimisel paralleeltermin.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõige üllatavama tulemus oli see, et 10^3 sisendi korral",
+      "probleem": "Keeleline viga (\"üllatavama\" vs \"üllatavam\") ja subjektiivne sõnastus.",
+      "põhjendus": "Lisaks grammatikaveale on \"üllatav\" hinnanguline väljend; tulemuste peatükis tuleks tähelepanek esitada neutraalselt.",
+      "soovitus": "Paranda grammatikaviga ja esita tähelepanek neutraalselt, nt \"Märkimisväärne on, et ...\" või jätke ainult faktiline kirjeldus.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Suurte sisendite (10^7) korral oli ühenda-sort 12% kiirem kui kiir-sort.",
+      "probleem": "Konkreetsete arvtulemuste esitamisel puudub viide tabelile/joonisele ning mõõtühik (aeg? tehete arv?).",
+      "põhjendus": "Iga kvantitatiivne väide tulemuste peatükis peaks olema seostatud konkreetse andmeallikaga ning selge ühikuga, et lugeja saaks järelduse kontrollida.",
+      "soovitus": "Lisa viide vastavale tabeli reale/joonisele ja täpsusta, mille suhtes 12% on arvutatud (nt keskmine täitmisaeg sekundites).",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Standardhälve oli kõikides mõõtmistes alla 5% keskmisest",
+      "probleem": "Üldistus ilma konkreetsete arvude või tabeliviiteta.",
+      "põhjendus": "Tulemuste peatükis on oluline esitada täpsed väärtused või viidata tabelile/joonisele, kus need on toodud, et väide oleks kontrollitav.",
+      "soovitus": "Viita tabelile, kus on standardhälbed esitatud, või too näiteks min/max standardhälve protsentides.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "(p > 0,1 kõikides paaride võrdlustes)",
+      "probleem": "Statistiline test on mainitud, kuid pole täpsustatud, millist testi kasutati ega kas tehti mitmese võrdluse korrektuuri.",
+      "põhjendus": "p-väärtuse esitamine eeldab konteksti: milline test, mitu võrdlust, milline olulisuse nivoo. Vastasel juhul on tulemus tõlgendamiseks ebapiisav.",
+      "soovitus": "Täpsusta kasutatud testi (nt Welchi t-test, Mann-Whitney U), võrdluste arvu ja võimalikku korrektuuri (nt Bonferroni); metoodika osa peab olema selles osas eelnevalt kirjeldatud.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "katkend_id": "met-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 30489,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Küsimustik saadeti laiali 200 Tartu Ülikooli arvutiteaduse tudengile e-posti teel.",
+      "probleem": "Valimi moodustamise põhimõte on kirjeldamata.",
+      "põhjendus": "Metoodika peatükis peab olema selge, kuidas vastajad valiti, milline oli üldkogum ja kas valim oli juhuslik, mugavusvalim või muu.",
+      "soovitus": "Lisa, kuidas 200 tudengit valiti, milline oli sihtrühm ja milliste kriteeriumite alusel nad kaasati.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Küsimustik koosnes 18 küsimusest, mis jagunesid kolme blokki: demograafia (4 küsimust), tarkvaraarenduse kogemus (8 küsimust) ja hinnangud konkreetsetele tööriistadele (6 küsimust).",
+      "probleem": "Pole selge, kas küsimustik on autori koostatud või põhineb varasematel instrumentidel.",
+      "põhjendus": "Kui küsimused või mõõdikud pärinevad varasematest uuringutest, tuleb neile viidata; kui mitte, tuleks seda metoodikas täpsustada.",
+      "soovitus": "Täpsusta küsimustiku päritolu ja lisa viited kasutatud mõõdikutele või märgi, et küsimustik koostati autori poolt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "hinnangud konkreetsetele tööriistadele (6 küsimust)",
+      "probleem": "Mõõtmise sisu on liiga üldine.",
+      "põhjendus": "Lugeja ei saa aru, milliseid tööriistu hinnati ega millisel skaalal või milliste tunnuste põhjal hinnanguid koguti.",
+      "soovitus": "Lisa lühidalt, milliseid tööriistu hinnati ja millist vastuseskaalat või mõõtmistüüpi kasutati.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Küsimustik valideeriti pilootuuringuga viie tudengi peal enne laialisaatmist.",
+      "probleem": "Sõnastus „viie tudengi peal” on kõnekeelne ning „valideeriti” võib olla liiga tugev väide.",
+      "põhjendus": "Väikese pilootuuringuga saab tavaliselt kontrollida küsimuste arusaadavust ja tehnilist toimivust, mitte täielikult valideerida mõõtevahendit.",
+      "soovitus": "Kasuta akadeemilisemat sõnastust ja täpsusta, mida pilootuuringuga kontrolliti.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Vastuste analüüsiks kasutati programmi R 4.3.0 ning paketti `tidyverse`.",
+      "probleem": "Analüüsimeetodid on ebapiisavalt kirjeldatud.",
+      "põhjendus": "Tarkvara nimetamine ei selgita, milliseid statistilisi või kvalitatiivseid analüüsivõtteid kasutati.",
+      "soovitus": "Lisa, milliseid analüüse tehti, näiteks kirjeldav statistika, rühmade võrdlus, korrelatsioon või muu sobiv meetod.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Küsimustik saadeti laiali 200 Tartu Ülikooli arvutiteaduse tudengile e-posti teel.",
+      "probleem": "Eetika ja andmekaitse aspektid puuduvad.",
+      "põhjendus": "Küsitlusuuringu metoodikas tuleks kirjeldada, kas osalemine oli vabatahtlik, kuidas tagati anonüümsus ja kuidas andmeid säilitati.",
+      "soovitus": "Lisa lühike kirjeldus nõusolekust, anonüümsusest, andmete kasutamisest ja säilitamisest.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kolme blokki: demograafia (4 küsimust), tarkvaraarenduse kogemus (8 küsimust)",
+      "probleem": "Sõna „blokk” ei ole siin kõige täpsem akadeemiline termin.",
+      "põhjendus": "Metoodika tekstis sobib eesti keeles paremini „plokk”, „teemaplokk” või „osa”.",
+      "soovitus": "Asenda termin täpsema ja akadeemilisema variandiga, näiteks „teemaplokk” või „osa”.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

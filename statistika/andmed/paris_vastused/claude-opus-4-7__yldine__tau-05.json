@@ -1,0 +1,56 @@
+{
+  "katkend_id": "tau-05",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 25395,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tänapäeval kasutavad kõik mudelid süvaõpet.",
+      "probleem": "Üldistav ja faktiliselt ebatäpne väide ilma viiteta",
+      "põhjendus": "Akadeemilises tekstis tuleb vältida absolutistlikke väiteid nagu „kõik“. Paljud praktilised masinõppe mudelid (nt otsustuspuud, gradient boosting, lineaarsed mudelid) ei kasuta süvaõpet.",
+      "soovitus": "Sõnasta väide täpsemalt (nt millistes valdkondades süvaõpe domineerib) ja lisa viide allikale.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Masinõpe jaguneb laias laastus juhendatud, juhendamata ja stiimulõppeks.",
+      "probleem": "Üldteoreetilised väited masinõppe taksonoomia ja süvaõppe kohta on esitatud ilma ühegi allikaviiteta",
+      "põhjendus": "Tausta peatükis peavad teoreetilised määratlused ja valdkonna ülevaated tuginema akadeemilistele allikatele (õpikud, ülevaateartiklid).",
+      "soovitus": "Lisa viited tunnustatud käsitlustele (nt Bishop, Goodfellow et al., Russell & Norvig) iga alajaotuse juurde.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Convolutional neural network ehk CNN on populaarne pildianalüüsis.",
+      "probleem": "Ingliskeelne termin ilma eestikeelse vasteta",
+      "põhjendus": "Eestikeelses lõputöös tuleks kasutada eestikeelset terminit (konvolutsiooniline närvivõrk) ja lisada inglise vaste sulgudes esmamainimisel.",
+      "soovitus": "Kasuta vormi „konvolutsiooniline närvivõrk (ingl convolutional neural network, CNN)“.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Stiimulõppes õpib agent keskkonnaga suhtlemise käigus, saades preemiat või karistust.",
+      "probleem": "Termini „stiimulõpe“ valik ei pruugi olla standardne",
+      "põhjendus": "Eesti keeles kasutatakse sagedamini terminit „sihipärane õpe“ või „tugevdusõpe“ (reinforcement learning). Termini valikut tuleks põhjendada või kasutada levinumat varianti.",
+      "soovitus": "Kontrolli terminit (nt AKIT, e-Keeleressursid) ja lisa esmamainimisel ingliskeelne vaste.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Süvaõpe (deep learning) on viimase kümnendi domineeriv lähenemine, mis kasutab mitmekihilisi närvivõrke.",
+      "probleem": "Peatükk on liiga lühike ja pinnapealne, kontseptsioonid on loetletud, kuid mitte avatud",
+      "põhjendus": "„Statistilise õppe alused“ pealkiri eeldab sügavamat käsitlust (nt kadufunktsioonid, üle- ja alasobitus, valideerimine, bias-variance), mida praegu ei puudutata.",
+      "soovitus": "Laienda peatükki statistilise õppe põhimõistete (kadufunktsioon, generaliseerimine, treening/test) käsitlusega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "eesmärgiks on andmete struktuuri leidmine (näiteks klasterdamine)",
+      "probleem": "Mõttekriipsude ja kirjavahemärkide kasutus on ebaühtlane (kasutatud on em-kriipsu „—“)",
+      "põhjendus": "Eesti keeles soovitatakse mõttekriipsuna kasutada en-kriipsu (–) tühikutega, mitte em-kriipsu.",
+      "soovitus": "Ühtlusta kirjavahemärgid kogu töö ulatuses.",
+      "kindlus": "madal"
+    }
+  ]
+}

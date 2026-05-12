@@ -1,0 +1,64 @@
+{
+  "katkend_id": "met-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 28106,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Analüüs hõlmas 12 projekti, mis valiti GitHubi populaarseimate Java-projektide hulgast.",
+      "probleem": "Valimi moodustamise kriteeriumid on ebamäärased",
+      "põhjendus": "Pole selgitatud, mida tähendab 'populaarseim' (tähtede arv, forkide arv, ajavahemik), ega seda, kuidas täpselt 12 projekti välja valiti. See takistab uuringu korratavust.",
+      "soovitus": "Täpsusta valikukriteeriumid: millise mõõdiku alusel (nt staaride arv), millisel kuupäeval, millised olid kaasamis- ja välistamiskriteeriumid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused agregeeriti projektitüüpide kaupa (raamistikud, tarbeprogrammid, IDE-laiendused).",
+      "probleem": "Projektitüüpide klassifitseerimise alus puudub",
+      "põhjendus": "Pole kirjeldatud, kuidas projektid kategooriatesse jaotati, kes seda tegi ja mille alusel. See on subjektiivne samm, mis vajab põhjendust.",
+      "soovitus": "Lisa klassifitseerimise metoodika ning märgi ära, mitu projekti igas kategoorias oli.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Analüüs viidi läbi nii projekti kõige uuemal versioonil kui ka aasta vanusel versioonil",
+      "probleem": "Versioonide valiku täpsus on ebapiisav",
+      "põhjendus": "Pole määratletud, mis kuupäeval 'kõige uuem' versioon fikseeriti ega kuidas 'aasta vanune' versioon valiti (täpne commit, release-versioon vms).",
+      "soovitus": "Märgi konkreetsed kuupäevad või commit-hash'id ning selgita, kas kasutati release-tag'e või suvalisi commit'e.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Statistiline analüüs viidi läbi R-i abil; korrelatsioonid arvutati Spearmani $\\rho$-ga, kuna jaotused ei olnud normaalsed.",
+      "probleem": "Normaaljaotuse hindamise viis pole kirjeldatud",
+      "põhjendus": "Mainitakse, et jaotused ei olnud normaalsed, kuid pole näidatud, millise testiga (nt Shapiro-Wilk) seda kontrolliti ega millisel olulisuse tasemel.",
+      "soovitus": "Lisa, millise normaalsuse testi ja olulisuse nivooga kontrolliti ning märgi ka R-i versioon ja kasutatud paketid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Lähtekoodi staatiliseks analüüsiks kasutati tööriista SonarQube versiooni 10.4.",
+      "probleem": "Tööriista valiku põhjendus ja viide puuduvad",
+      "põhjendus": "Metoodikapeatükis on tavaks põhjendada tööriista valikut ning viidata tootja dokumentatsioonile või teaduskirjandusele, kus seda tööriista on kasutatud.",
+      "soovitus": "Lisa viide SonarQube dokumentatsioonile ja lühike põhjendus, miks just see tööriist valiti võrreldes alternatiividega (nt PMD, SpotBugs).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "tehnilise võla hinnang (tundides), koodi katvus testidega, dubleerimise määr ja turvanõrkuste arv",
+      "probleem": "Mõõdikute definitsioonid puuduvad",
+      "põhjendus": "Lugeja ei tea täpselt, kuidas SonarQube neid mõõdikuid arvutab (nt millise reeglistiku alusel) ja kas kasutati vaikeseadeid või kohandatud profiili.",
+      "soovitus": "Defineeri iga mõõdik lühidalt ning märgi, millist kvaliteediprofiili (Quality Profile) ja reeglistikku kasutati.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "et hinnata tehnilise võla kasvu",
+      "probleem": "Uurimisküsimused või hüpoteesid pole metoodikas seotud",
+      "põhjendus": "Metoodikast ei selgu otseselt, milliseid uurimisküsimusi see kavand vastab; samuti pole mainitud, mis on sõltuvad ja sõltumatud muutujad.",
+      "soovitus": "Seo metoodika selgemalt töö uurimisküsimustega ning täpsusta, milliseid muutujaid võrreldakse.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

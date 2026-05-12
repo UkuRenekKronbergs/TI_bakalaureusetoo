@@ -1,0 +1,48 @@
+{
+  "katkend_id": "kok-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 22055,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "DevOps-orienteeritud raamistikud (näiteks Site Reliability Engineering ehk SRE) on kergem alustada",
+      "probleem": "Grammatiliselt vigane lause - subjekt ja predikaat ei ühildu ('raamistikud ... on kergem alustada')",
+      "põhjendus": "Akadeemilises tekstis peab lause olema grammatiliselt korrektne; praegune sõnastus on segane ja võib lugejat eksitada.",
+      "soovitus": "Vaata lause struktuur üle ja taga subjekti-predikaadi ühildumine ning selgita, mille suhtes on midagi 'kergem'.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "kaasaegsete AI-tööriistade integreerimine intsidendi-haldamise protsessi, mis on viimaste aastate kiire arengu valdkond",
+      "probleem": "Määramatu üldistus ilma konkretiseerimise või viiteta ('viimaste aastate kiire arengu valdkond')",
+      "põhjendus": "Selline üldine väide jääb akadeemilises stiilis liiga ähmaseks ja hinnangu andvaks.",
+      "soovitus": "Kaalu väite konkretiseerimist või eemaldamist; kui jätad, lisa toetav viide või täpsustus.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kaasaegsete AI-tööriistade integreerimine",
+      "probleem": "Ingliskeelne lühend 'AI' on kokkuvõttes esmakordselt kasutatud ilma eestikeelse vaste või selgituseta",
+      "põhjendus": "Akadeemilises töös tuleks ingliskeelsed lühendid esmakasutusel lahti seletada või kasutada eestikeelset terminit (tehisintellekt).",
+      "soovitus": "Kasuta eestikeelset terminit (nt tehisintellekt) või kontrolli, kas lühend on töö varasemas osas korrektselt sisse toodud.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eesti keskmise suurusega tarkvaraettevõtete kontekstis on otstarbekam alustada SRE-st ja vajaduspõhiselt laieneda ITIL-i elementidele.",
+      "probleem": "Konkreetne soovitus Eesti ettevõtete kohta esitatakse ilma viiteta töö enda tulemustele või allikatele",
+      "põhjendus": "Kokkuvõttes võib viidata töö enda peatükkidele või uuringutele, kuid praegu jääb väide tõestamata.",
+      "soovitus": "Lisa viide töö analüüsipeatükile või empiirilisele alusele, millele see soovitus tugineb.",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tarkvara hooldamise raamistike võrdluses ilmnesid selged kompromissid.",
+      "probleem": "Kokkuvõte algab kohe tulemuste esitusega ilma lühikese sissejuhatava raamistuseta töö eesmärgist või uurimisküsimusest",
+      "põhjendus": "Kokkuvõtte peatükk peaks tavaliselt alustama töö eesmärgi/kontseptsiooni meeldetuletusega enne tulemuste sünteesi.",
+      "soovitus": "Kaalu sissejuhatava lause lisamist, mis tuletab meelde töö eesmärgi või uurimisküsimuse enne tulemuste kokkuvõtet.",
+      "kindlus": "madal"
+    }
+  ]
+}

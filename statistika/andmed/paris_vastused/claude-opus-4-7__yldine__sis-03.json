@@ -1,0 +1,72 @@
+{
+  "katkend_id": "sis-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 34729,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "1. Sissejuhatus\n\nMobiilirakenduste ligipääsetavus puuetega kasutajatele on kasvav nõue...",
+      "probleem": "Sissejuhatuses puuduvad selgelt eristatud osad: probleemipüstitus, eesmärk, uurimisküsimused, metoodika ülevaade ja töö struktuur.",
+      "põhjendus": "Lõputöö sissejuhatus peaks lugejale andma selge ülevaate töö motivatsioonist, eesmärgist ja ülesehitusest. Praegu on kogu info ühes lõigus ja osad komponendid (nt uurimisküsimused, töö struktuur) puuduvad.",
+      "soovitus": "Lisa eraldi lõigud probleemi taustaks, töö eesmärgiks, uurimisküsimusteks, metoodika lühikirjelduseks ja peatükkide ülevaateks.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Euroopa Liidu juurdepääsetavuse akt kohustab alates 2025. aastast paljusid mobiilirakendusi vastama WCAG 2.1 tasemele AA.",
+      "probleem": "Faktiväide õigusakti ja standardi kohta esitatakse ilma viiteta allikale.",
+      "põhjendus": "Akadeemilises töös peab konkreetne juriidiline või normatiivne väide olema viidatud algallikale (direktiiv, WCAG dokumentatsioon).",
+      "soovitus": "Lisa viide Euroopa juurdepääsetavuse direktiivile (EAA, 2019/882) ning W3C WCAG 2.1 spetsifikatsioonile.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eestis on enam kui 100 000 inimest, kellel on mingisugune nägemise või liikumise piirang, mis mõjutab nutiseadme kasutust.",
+      "probleem": "Statistiline väide esitatakse ilma allikaviiteta.",
+      "põhjendus": "Konkreetsed arvulised andmed vajavad allikat (nt Statistikaamet, Sotsiaalkindlustusamet), et väide oleks kontrollitav.",
+      "soovitus": "Lisa viide statistilisele allikale ning täpsusta, kuidas number on saadud (nägemis- ja liikumispuude eraldi näitajad).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Töö hõlmab automaatset analüüsi neljal rakendusel ning käsitsi auditit kahel.",
+      "probleem": "Metoodika kirjeldus on liiga üldine ja ebatäpne.",
+      "põhjendus": "Lugejale jääb ebaselgeks, milliseid rakendusi analüüsitakse, mille alusel need valiti ja milles seisneb käsitsi audit. Sissejuhatuses võiks anda metoodikast selgema ülevaate.",
+      "soovitus": "Täpsusta, millised rakendused on valimis, valikukriteeriumid ning auditi protseduuri lühike olemus.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Mobiilirakenduste ligipääsetavus puuetega kasutajatele... vastama WCAG 2.1 tasemele AA... Euroopa Liidu juurdepääsetavuse akt",
+      "probleem": "Samas tekstis kasutatakse vaheldumisi termineid „ligipääsetavus\" ja „juurdepääsetavus\".",
+      "põhjendus": "Terminoloogiline ebajärjepidevus võib lugejat segadusse ajada. Eesti keeles on ametlik termin WCAG kontekstis „ligipääsetavus\" (vt EKI ja RIA materjale), kuid valitud termin tuleks läbivalt kasutada.",
+      "soovitus": "Vali üks termin (soovitavalt „ligipääsetavus\") ja kasuta seda kogu töös järjekindlalt; vajadusel defineeri esmamainimisel.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kasutatakse tööriistu nagu Accessibility Scanner Androidil ja Accessibility Inspector iOS-il.",
+      "probleem": "Väljend „tööriistu nagu\" on kõnekeelne ning loetelu jääb avatuks.",
+      "põhjendus": "Akadeemilises tekstis tuleks loetelu sõnastada täpselt (nt „kasutatakse järgmisi tööriistu: ...\") ja vältida ebamäärasust.",
+      "soovitus": "Sõnasta loetelu lõpetatuna, nt „Kasutatakse tööriistu Accessibility Scanner (Android) ja Accessibility Inspector (iOS).\"",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused võimaldavad teha konkreetseid parandussoovitusi.",
+      "probleem": "Sissejuhatus lõpeb ilma töö struktuuri (peatükkide ülevaate) tutvustuseta.",
+      "põhjendus": "Hea sissejuhatuse lõpus antakse tavaliselt lühike ülevaade järgnevatest peatükkidest, et lugeja oskaks tööd orienteeruda.",
+      "soovitus": "Lisa viimaseks lõiguks peatükkide ülevaade („Peatükis 2 ... Peatükis 3 ...\").",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Käesolevas töös uuritakse, kuidas Tartu Ülikooli sisemiste teenuste mobiilirakendused vastavad WCAG nõuetele.",
+      "probleem": "Töö eesmärk ja uurimisküsimused pole selgelt sõnastatud.",
+      "põhjendus": "Sissejuhatus peaks sisaldama eraldi eesmärgi ja uurimisküsimuste sõnastust, mis on aluseks töö hindamisele ja tulemuste tõlgendamisele.",
+      "soovitus": "Sõnasta selgelt töö eesmärk ja 2–3 konkreetset uurimisküsimust eraldi lõiguna.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "katkend_id": "met-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 32101,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Üldiselt oli kiir-sort kõige kiirem, aga see asi sõltub palju sisendi struktuurist.",
+      "probleem": "Metoodika peatükki on lisatud tulemuste tõlgendus ja kõnekeelne sõnastus ('see asi').",
+      "põhjendus": "Metoodika peatükk peaks kirjeldama uurimisprotsessi, mitte esitama tulemusi ega järeldusi. Lisaks rikub kõnekeelne väljend ('see asi') akadeemilist stiili.",
+      "soovitus": "Eemalda tulemustele viitav lause metoodikast ja paiguta see (akadeemilises sõnastuses) tulemuste või arutelu peatükki.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "kasutati Hyperfine tööriista (versioon 1.18)",
+      "probleem": "Kasutatud tööriistale puudub viide (nt repositoorium või dokumentatsioon).",
+      "põhjendus": "Reprodutseeritavuse tagamiseks tuleb kolmandate osapoolte tööriistadele lisada viide allikale.",
+      "soovitus": "Lisa viide Hyperfine'i ametlikule allikale (nt GitHub-repositoorium või dokumentatsioon).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Iga mõõtmist korrati 30 korda",
+      "probleem": "Puudub põhjendus mõõtmiste arvu (30) ja korduste statistilise käsitluse kohta.",
+      "põhjendus": "Metoodika peaks selgitama, miks valiti just selline korduste arv ning kuidas tulemusi koondati (keskmine, mediaan, hajuvus, kõrvalekallete käsitlus).",
+      "soovitus": "Põhjenda korduste arvu valikut ja kirjelda, milliseid koondnäitajaid ning hajuvusmõõdikuid tulemuste analüüsiks kasutatakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "AMD Ryzen 7 5800X protsessor, 32 GB DDR4-3200 RAM, Ubuntu 22.04 LTS",
+      "probleem": "Riistvara ja OS on kirjeldatud, kuid puuduvad detailid kompilaatori/keele versiooni, optimeerimislipikute, taustaprotsesside ja CPU sageduse fikseerimise kohta.",
+      "põhjendus": "Benchmark-mõõtmiste reprodutseeritavuse jaoks on olulised ka tarkvaralised tingimused (nt kompilaator, optimeerimistasemed, turbo/scaling).",
+      "soovitus": "Täienda keskkonna kirjeldust kompilaatori versiooni, optimeerimislippude ja võimalike süsteemiseadete (nt CPU governor) infoga.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kiir-sort, ühenda-sort ja kuhi-sort",
+      "probleem": "Algoritmide nimekuju on ebaühtlane ja mitte-standardne.",
+      "põhjendus": "Eesti informaatikakirjanduses kasutatakse tavaliselt kas ingliskeelseid termineid (quicksort, mergesort, heapsort) või väljakujunenud eestikeelseid vasteid; sidekriipsuga vorm pole levinud.",
+      "soovitus": "Vali järjekindel terminoloogia (nt 'kiirsort, põimsort, kuhjasort' või ingliskeelsed nimed) ja kasuta seda kogu töös läbivalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Sisendsuurused olid 10^3, 10^4, 10^5, 10^6 ja 10^7 elementi.",
+      "probleem": "Puudub põhjendus sisendsuuruste ja sisendite jaotuste valikule (nt miks ainult juhuslik ühtlane jaotus).",
+      "põhjendus": "Sortimisalgoritmide jõudlus sõltub oluliselt sisendi struktuurist (nt juba sorditud, pööratud, korduvate elementidega); ainult juhuslik jaotus piirab järelduste üldistatavust.",
+      "soovitus": "Põhjenda valitud suuruste vahemikku ja kaalu erinevate sisendijaotuste (sorditud, pöördsorditud, kordustega) lisamist või selgita selle välistust.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Tulemused on esitatud peatükis 4.",
+      "probleem": "Konkreetne peatüki number on kõva-kodeeritud, ristviite asemel.",
+      "põhjendus": "Peatüki numbrid võivad muutuda; akadeemilises töös on soovitatav kasutada automaatseid ristviiteid.",
+      "soovitus": "Asenda staatiline number automaatse ristviitega (nt LaTeX \\ref või Wordi ristviide).",
+      "kindlus": "madal"
+    }
+  ]
+}

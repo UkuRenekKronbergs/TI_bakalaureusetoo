@@ -1,0 +1,48 @@
+{
+  "katkend_id": "tul-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 21534,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "4.3 Mudeli treenimistulemused\n\nMudelit treeniti 50 epohhi vältel, kasutades Adami optimeerijat...",
+      "probleem": "Alampeatükk algab kohe tehniliste detailidega ilma sissejuhatava lõiguta, mis tutvustaks, mida selles alapeatükis käsitletakse.",
+      "põhjendus": "Lugejal on lihtsam teksti jälgida, kui alampeatüki alguses on lühike sissejuhatav lause, mis tutvustab tulemuste esitamise konteksti või eesmärki.",
+      "soovitus": "Kaalu lisada alampeatüki algusesse 1–2 lauset, mis tutvustavad, mida treenimistulemuste osas käsitletakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Selle järgi valisime lõpliku mudeli epohhis 32.",
+      "probleem": "Mina/meie-vormi kasutamine akadeemilises tekstis.",
+      "põhjendus": "Eestikeelses akadeemilises stiilis eelistatakse umbisikulist tegumoodi, mis muudab esituse objektiivsemaks.",
+      "soovitus": "Kaalu lause ümbersõnastamist umbisikulisse tegumoodi, vältides 'valisime'-vormi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "valideerimiskao arengukõvera ... valideerimiskaotus hakkas kasvama",
+      "probleem": "Sama mõiste jaoks kasutatakse läbisegi kahte erinevat eestikeelset terminit ('valideerimiskadu' ja 'valideerimiskaotus').",
+      "põhjendus": "Terminoloogiline järjepidevus on akadeemilises tekstis oluline, et lugejal ei tekiks segadust, kas tegemist on sama mõistega.",
+      "soovitus": "Vali üks termin (nt 'valideerimiskadu') ja kasuta seda kogu töös järjepidevalt.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "pärast mida valideerimiskaotus hakkas kasvama (overfitting)",
+      "probleem": "Ingliskeelne termin 'overfitting' on esitatud ilma eestikeelse vaste või selgituseta.",
+      "põhjendus": "Esmakasutusel tuleks ingliskeelne termin kas tõlkida või selgitada, et tagada terminoloogiline selgus eestikeelses töös.",
+      "soovitus": "Lisa terminile eestikeelne vaste (nt 'ülesobitumine') või selgita esmakasutusel mõistet lühidalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Võrreldes baasjoone-mudeliga (logistiline regressioon) on need näitajad vastavalt 12, 18 ja 15 protsendipunkti paremad.",
+      "probleem": "Võrdlus baasjoone-mudeliga esitab konkreetsed arvulised tulemused, kuid pole selge, kas baasjoone-mudel on käesoleva töö osa või viidatud allikast.",
+      "põhjendus": "Kui baasjoone-mudel pärineb mõnest varasemast tööst või kirjandusest, vajab see viidet; kui see on töö enda osa, tuleks viidata vastavale peatükile.",
+      "soovitus": "Täpsusta, kas baasjoone-mudel on töö enda tulemus (viide vastavale alajaotusele) või pärineb mujalt (lisa kirjandusviide).",
+      "kindlus": "keskmine"
+    }
+  ]
+}

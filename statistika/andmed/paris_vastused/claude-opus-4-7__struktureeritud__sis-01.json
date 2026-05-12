@@ -1,0 +1,64 @@
+{
+  "katkend_id": "sis-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 26315,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "1. Sissejuhatus\n1.1 Probleem\nTänapäeval kasutab üle 80% Eesti väikeettevõtetest...",
+      "probleem": "Peatükk 1 algab kohe alapealkirjaga 1.1 ilma sissejuhatava lõiguta.",
+      "põhjendus": "Peatüki algus peaks lugejat teemasse sisse juhatama enne alampeatükkidesse minekut, muidu mõjub struktuur järsult.",
+      "soovitus": "Lisa peatüki 1 ja alampeatüki 1.1 vahele lühike sissejuhatav lõik, mis tutvustab peatüki üldist konteksti.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö koosneb viiest peatükist. Teises peatükis tutvustatakse krüptograafia põhitõdesid. Kolmandas kirjeldatakse metoodikat. Neljas peatükk on prototüüp. Viiendas vaadeldakse tulemusi.",
+      "probleem": "Töö ülesehituse kirjeldus on paigutatud alampeatükki „Probleem“, kuhu see sisuliselt ei kuulu.",
+      "põhjendus": "Töö struktuuri tutvustus peaks olema eraldi alampeatükis või sissejuhatuse lõpus, mitte probleemikirjelduse sees.",
+      "soovitus": "Kaalu töö ülesehituse kirjelduse eraldamist omaette alampeatükki või sissejuhatuse lõppu.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tegelikult on see asi keerulisem, kui esmapilgul tundub, kuna krüptograafia on mitmekihiline distsipliin.",
+      "probleem": "Kasutatakse kõnekeelseid sõnu „tegelikult“ ja „asi“.",
+      "põhjendus": "Akadeemilises tekstis tuleks vältida kõnekeelseid täitesõnu ja umbmääraseid mõisteid nagu „asi“.",
+      "soovitus": "Asenda kõnekeelsed sõnad konkreetsema sõnastusega, mis viitab täpselt probleemile või valdkonnale.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Käesoleva bakalaureusetöö raames vaatlen, kuidas saaks väikeettevõtete jaoks pakkuda lihtsasti kasutatavat krüpteeritud varundusteenust.",
+      "probleem": "Kasutatakse mina-vormi („vaatlen“).",
+      "põhjendus": "Eesti akadeemilises kirjutamises eelistatakse umbisikulist või passiivset väljendust.",
+      "soovitus": "Kaalu mina-vormi asendamist umbisikulise tegumoega (nt „vaadeldakse“ vms).",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval kasutab üle 80% Eesti väikeettevõtetest mingisugust pilveteenust andmete säilitamiseks.",
+      "probleem": "Konkreetne arvuline väide ilma viiteta originaalallikale.",
+      "põhjendus": "Statistiline väide protsendiga vajab viidet uuringule või ametlikule statistikale, vastasel juhul pole väide kontrollitav.",
+      "soovitus": "Lisa viide allikale, kust statistika pärineb, või muuda väide kvalitatiivseks, kui täpne arv pole kinnitatud.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Selliste teenustega kaasnevad turvariskid, kuna andmed asuvad teenusepakkuja serverites.",
+      "probleem": "Väide turvariskide kohta esitatud üldistusena ilma viiteta.",
+      "põhjendus": "Kuigi väide on intuitiivne, oleks akadeemilises töös sobilik toetuda allikatele, mis pilveteenuste turvariske käsitlevad.",
+      "soovitus": "Kaalu viite lisamist kirjandusele, mis käsitleb pilveteenuste turvariske.",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "krüpteeritud varundusteenust ... krüptograafia on mitmekihiline distsipliin",
+      "probleem": "Kasutusel on tüvi „krüpteerima“ ja „krüptograafia“ – kontrolli, kas eelistatud termin on „krüpteerimine“ või „krüpteering“/„šifreerimine“ ning kasuta läbivalt ühte.",
+      "põhjendus": "Eesti keeles esineb varieerumist (krüpteerima/krüptima); järjepidev terminikasutus parandab teksti selgust.",
+      "soovitus": "Vali eelistatud termin (nt EKI või ITterministika soovitusel) ja kasuta seda kogu töös läbivalt.",
+      "kindlus": "madal"
+    }
+  ]
+}

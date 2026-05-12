@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tul-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 30559,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "valideerimiskaotus hakkas kasvama (overfitting)",
+      "probleem": "Ingliskeelne termin on sulgudes ning eestikeelne vaste puudub.",
+      "põhjendus": "Eestikeelses lõputöös tuleks kasutada läbivalt eestikeelset terminoloogiat või anda termin esmamainimisel korrektselt.",
+      "soovitus": "Kasuta terminit „ülesobitamine“ või „ületreenimine“ ja vajadusel lisa ingliskeelne vaste esmamainimisel.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Selle järgi valisime lõpliku mudeli epohhis 32.",
+      "probleem": "Esimese isiku mitmuse kasutus võib olla liiga kõnekeelne või ebaühtlane.",
+      "põhjendus": "Akadeemilises stiilis eelistatakse sageli umbisikulist või neutraalset sõnastust, kui töö stiilijuhend seda nõuab.",
+      "soovitus": "Kontrolli töö stiilijuhendit ja kasuta kogu töös ühtset isikukasutust.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "mudeli täpsus (precision) 0,87",
+      "probleem": "„Täpsus“ võib eesti keeles seguneda mõistega accuracy.",
+      "põhjendus": "Masinõppes on precision ja accuracy erinevad mõõdikud; ebaselgus võib lugejat eksitada.",
+      "soovitus": "Lisa mõõdikute definitsioonid või kasuta precision’i puhul täpsustavat eestikeelset terminit.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "F-skoor 0,85",
+      "probleem": "Pole täpsustatud, kas tegemist on F1-skooriga või mõne muu F-mõõdiku variandiga.",
+      "põhjendus": "F-skoor sõltub beeta väärtusest; ilma täpsustuseta ei ole tulemus üheselt tõlgendatav.",
+      "soovitus": "Täpsusta, kas kasutati F1-skoori, ning lisa vajadusel selle arvutusviis.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Võrreldes baasjoone-mudeliga (logistiline regressioon) on need näitajad vastavalt 12, 18 ja 15 protsendipunkti paremad.",
+      "probleem": "Võrdluse aluseks olevad baasjoone-mudeli konkreetsed väärtused puuduvad.",
+      "põhjendus": "Lugejal on raske hinnata tulemuste suurust ja kontrollida väidetavat paranemist.",
+      "soovitus": "Lisa baasjoone-mudeli precision, recall ja F-skoor kas teksti või tabelisse.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mudel saavutas parima valideerimissoorituse epohhis 32",
+      "probleem": "Pole täpsustatud, millise mõõdiku alusel „parim valideerimissooritus“ määrati.",
+      "põhjendus": "Valideerimiskadu, täpsus, saagis ja F-skoor võivad anda erineva parima epohhi.",
+      "soovitus": "Täpsusta, kas mudeli valik põhines valideerimiskaol, F1-skooril või mõnel muul mõõdikul.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "kasutades Adami optimeerijat",
+      "probleem": "Adami optimeerija mainimisel puudub viide algsele meetodile, kui seda pole varem viidatud.",
+      "põhjendus": "Meetodite ja algoritmide nimetamisel on lõputöös tavaliselt vaja viidata allikale või varasemale tutvustusele.",
+      "soovitus": "Lisa viide Adami optimeerija allikale või veendu, et see on meetodite peatükis juba korrektselt viidatud.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

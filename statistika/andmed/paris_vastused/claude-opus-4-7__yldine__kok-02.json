@@ -1,0 +1,64 @@
+{
+  "katkend_id": "kok-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 24803,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Käesolev töö oli üks lahe väljakutse. Mina õppisin palju andmebaaside rände kohta.",
+      "probleem": "Mitteakadeemiline, kõnekeelne stiil ja isikuvormi kasutamine",
+      "põhjendus": "Lõputöö kokkuvõte peaks olema neutraalses akadeemilises stiilis, vältima emotsionaalseid hinnanguid ja isiklikku vormi (\"mina\", \"lahe\")",
+      "soovitus": "Sõnasta ümber umbisikulises vormis ja neutraalses toonis, keskendudes töö eesmärgile ja tulemustele.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "andmetüüpide ühildumatusega on tegelikult palju asja",
+      "probleem": "Ebamäärane ja kõnekeelne sõnastus",
+      "põhjendus": "Väljend \"palju asja\" ei ole akadeemiliselt täpne ega edasta konkreetset infot tulemuste kohta",
+      "soovitus": "Asenda konkreetse kirjeldusega, milliseid probleeme andmetüüpide ühildumatus põhjustas.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et iga andmebaas teeb asju erinevalt.",
+      "probleem": "Üldistav ja põhjendamata väide",
+      "põhjendus": "\"Kõik teavad\" tüüpi väited ei sobi akadeemilisse teksti; sellised üldistused tuleb kas eemaldada või põhjendada",
+      "soovitus": "Eemalda väide või asenda konkreetse, töös käsitletud erinevuste kirjeldusega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolev töö oli üks lahe väljakutse.",
+      "probleem": "Kokkuvõte ei alga töö eesmärgi ja probleemipüstituse tutvustusega",
+      "põhjendus": "Hea kokkuvõte peaks kokku võtma töö eesmärgi, kasutatud meetodid, peamised tulemused ja järeldused — praegu puudub eesmärgi ja meetodite kirjeldus",
+      "soovitus": "Lisa kokkuvõtte algusesse töö eesmärk, käsitletud probleem ja kasutatud meetodid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö praktiline panus on rändamisskript, mis on saadaval GitHubis.",
+      "probleem": "Tulemused ja järeldused on liiga pinnapealselt esitatud",
+      "põhjendus": "Kokkuvõttes peaksid peamised tulemused olema selgelt välja toodud koos arvuliste või kvalitatiivsete näitajatega, mitte üldsõnaliselt mainitud",
+      "soovitus": "Esita konkreetsemad tulemused: mida skript teeb, milliseid probleeme lahendab, millised olid katsetulemused.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulevikutöös võiks teha veel mõned asjad — näiteks proovida ka MongoDB-st PostgreSQL-i rändamist.",
+      "probleem": "Edasiarendusvõimalused on esitatud pealiskaudselt",
+      "põhjendus": "\"Mõned asjad\" on ebamäärane; edasiarendused peaksid olema konkreetsed ja töö kontekstiga seotud",
+      "soovitus": "Loetle 2–3 konkreetset edasiarendussuunda koos lühikese põhjendusega, miks need on asjakohased.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "andmebaaside rände",
+      "probleem": "Termini kasutus võib olla ebaühtlane",
+      "põhjendus": "Veendu, et töös kasutatakse järjepidevalt sama eestikeelset terminit (nt \"andmebaasi migratsioon\" vs \"andmebaasi ränne\")",
+      "soovitus": "Kontrolli termini ühtsust läbi kogu töö ja vajadusel defineeri see sissejuhatuses.",
+      "kindlus": "madal"
+    }
+  ]
+}

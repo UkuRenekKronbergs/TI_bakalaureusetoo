@@ -1,0 +1,56 @@
+{
+  "katkend_id": "tul-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 21728,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mina mõõtsin veebirakenduse vastuseaegu 50 erineva päringutüübi peal. Tulemused näitavad, et 95-protsentiil oli 230 ms...",
+      "probleem": "Peatükk algab kohe konkreetsete mõõtmistulemustega ilma sissejuhatava lõiguta, mis tutvustaks, mida tulemuste peatükis esitatakse.",
+      "põhjendus": "Tulemuste peatükk peaks algama lühikese sissejuhatusega, mis selgitab, milliseid tulemusi ja millises järjekorras esitletakse, et lugejal oleks lihtsam jälgida.",
+      "soovitus": "Lisa peatüki algusesse sissejuhatav lõik, mis tutvustab, milliseid mõõtmistulemusi peatükis käsitletakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina mõõtsin veebirakenduse vastuseaegu 50 erineva päringutüübi peal.",
+      "probleem": "Mina-vormi kasutamine akadeemilises tekstis.",
+      "põhjendus": "Akadeemilises stiilis välditakse üldjuhul mina-vormi ja eelistatakse umbisikulist või passiivset väljendust.",
+      "soovitus": "Kaalu mina-vormi asendamist umbisikulise tegumoega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "kuid keskmine kogemus on siiski okei",
+      "probleem": "Kõnekeelne sõna 'okei' ei sobi akadeemilisse stiili.",
+      "põhjendus": "Akadeemilises tekstis tuleb vältida kõnekeelseid hinnanguid ja kasutada täpsemaid, neutraalseid termineid.",
+      "soovitus": "Asenda kõnekeelne 'okei' täpsema ja neutraalse hinnanguga, mis tugineb mõõdetud väärtustele.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Üle 90% kasutajatest leiab, et alla 200 ms on hea kogemus.",
+      "probleem": "Konkreetne statistiline väide ilma viiteta.",
+      "põhjendus": "Konkreetne arvuline väide kasutajakogemuse kohta nõuab viidet algallikale või uuringule.",
+      "soovitus": "Lisa viide uuringule või allikale, kust pärineb 90% ja 200 ms läve väide.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Vastuseaja jaotus oli paremalt kalduv, mis on tüüpiline veebirakenduste käitumine.",
+      "probleem": "Üldistav väide veebirakenduste tüüpilise käitumise kohta esitatakse ilma viiteta.",
+      "põhjendus": "Väide selle kohta, mis on 'tüüpiline veebirakenduste käitumine', on üldistus, mida tuleks toetada kirjandusviitega.",
+      "soovitus": "Lisa viide allikale, mis kinnitab, et selline jaotus on veebirakendustele iseloomulik.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Vastuseaja optimeerimist tasub alustada pildi-laadivatest päringutest, kuna nende osa kogu liiklusest on 31% ja parandamise potentsiaal on suurim.",
+      "probleem": "Tulemuste peatükis esitatakse soovitused/järeldused, mis kuuluvad pigem arutelu või järelduste peatükki.",
+      "põhjendus": "Tulemuste peatükk peaks keskenduma faktide esitamisele; tõlgendused ja soovitused kuuluvad järgmistesse peatükkidesse.",
+      "soovitus": "Kaalu optimeerimissoovituse viimist arutelu või järelduste peatükki.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "katkend_id": "met-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 29688,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "3.3 Benchmark-mõõtmised\n\nAlgoritmi sooritust hinnati kontrollitud keskkonnas: AMD Ryzen 7 5800X protsessor...",
+      "probleem": "Alapeatükk algab kohe tehniliste detailidega ilma sissejuhatava lauseta, mis selgitaks mõõtmiste eesmärki ja konteksti.",
+      "põhjendus": "Lugeja vajab enne konkreetseid mõõtmistingimusi lühikest sissejuhatust, mis selgitab, miks ja mida mõõdetakse.",
+      "soovitus": "Lisa alapeatüki algusesse sissejuhatav lause või lõik, mis tutvustab mõõtmiste eesmärki ja üldist lähenemist.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused on esitatud peatükis 4. Üldiselt oli kiir-sort kõige kiirem, aga see asi sõltub palju sisendi struktuurist.",
+      "probleem": "Metoodika peatükis esitatakse tulemuste kokkuvõte, mis kuulub tulemuste peatükki.",
+      "põhjendus": "Metoodika osas tuleks kirjeldada ainult mõõtmismetoodikat, mitte tulemusi - see rikub peatükkide loogilist eraldatust.",
+      "soovitus": "Eemalda tulemuste kirjeldus metoodika peatükist ja vii see vastavasse peatükki.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "aga see asi sõltub palju sisendi struktuurist",
+      "probleem": "Kõnekeelne väljend \"see asi\" ei sobi akadeemilisse teksti.",
+      "põhjendus": "Akadeemiline stiil nõuab täpset ja konkreetset sõnavara, mitte määramatuid viiteid nagu \"asi\".",
+      "soovitus": "Asenda \"see asi\" konkreetse mõistega (nt jõudlus, sooritusaeg) või sõnasta lause akadeemilisemaks.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Üldiselt oli kiir-sort kõige kiirem, aga see asi sõltub palju sisendi struktuurist.",
+      "probleem": "Määramatu üldistus ilma kvantitatiivse aluseta (\"üldiselt\", \"palju\").",
+      "põhjendus": "Akadeemiline tekst peaks kasutama täpseid kvantitatiivseid väiteid, mitte ebamääraseid hinnanguid.",
+      "soovitus": "Esita väited konkreetsete arvuliste tulemuste või viidetega tulemuste peatükile.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Benchmark-mõõtmised",
+      "probleem": "Ingliskeelne termin \"benchmark\" on kasutatud ilma esmakasutuse selgituse või eestikeelse vasteta.",
+      "põhjendus": "Esmakordsel kasutamisel tuleks võõrkeelne termin selgitada või pakkuda eestikeelne vaste (nt jõudlustestid, võrdlustestid).",
+      "soovitus": "Selgita terminit \"benchmark\" esmakasutusel või kasuta eestikeelset vastet läbivalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kiir-sort, ühenda-sort ja kuhi-sort",
+      "probleem": "Algoritmide nimed on tõlgitud sidekriipsuga vormis, mis ei ole eesti informaatikakirjanduses tavapärane terminoloogia.",
+      "põhjendus": "Tavaliselt kasutatakse kas ingliskeelseid nimesid (quicksort, mergesort, heapsort) või kinnistunud eestikeelseid vasteid - segavorm võib lugejat segadusse viia.",
+      "soovitus": "Kontrolli erialakirjandusest tavapäraseid eestikeelseid termineid ja kasuta neid läbivalt.",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "kasutati Hyperfine tööriista (versioon 1.18)",
+      "probleem": "Konkreetne tööriist on nimetatud ilma viiteta selle dokumentatsioonile või originaalallikale.",
+      "põhjendus": "Metoodikas kasutatud tööriistadele tuleks viidata, et lugeja saaks meetodit reprodutseerida.",
+      "soovitus": "Lisa viide Hyperfine tööriista ametlikule dokumentatsioonile või repositooriumile.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Iga mõõtmist korrati 30 korda",
+      "probleem": "Mõõtmiste arvu valik (30 kordust) on esitatud ilma metoodilise põhjenduseta või viiteta.",
+      "põhjendus": "Konkreetne korduste arv on metoodiline otsus, mis vajaks põhjendust või viidet statistilisele kirjandusele.",
+      "soovitus": "Põhjenda korduste arvu valikut või viita allikale, mis seda valikut toetab.",
+      "kindlus": "madal"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "katkend_id": "sis-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 29985,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "kuid mastaapsuse osas tulevad mängu NoSQL ja key-value store'id",
+      "probleem": "Väljend „tulevad mängu” on kõnekeelne.",
+      "põhjendus": "Akadeemilises sissejuhatuses tasub vältida kujundlikke ja kõnekeelseid väljendeid, et tekst oleks täpsem ja formaalsem.",
+      "soovitus": "Asenda kõnekeelne väljend neutraalse akadeemilise sõnastusega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Esimesel pilgul tundub, et asjad on lihtsad: kumb on kiirem, see võidab.",
+      "probleem": "Lause kasutab kõnekeelseid väljendeid „asjad” ja „see võidab”.",
+      "põhjendus": "Selline sõnastus mõjub lõputöö sissejuhatuses liiga argiselt ja vähendab akadeemilist täpsust.",
+      "soovitus": "Sõnasta mõte formaalsemalt ning täpsusta, mida võrreldakse ja mille alusel.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "NoSQL ja key-value store'id",
+      "probleem": "Ingliskeelne termin „key-value store'id” on esitatud ilma selgituse või eestikeelse vasteta.",
+      "põhjendus": "Esmakordsel kasutamisel tuleks erialatermin lugejale selgelt määratleda, eriti kui kasutatakse ingliskeelset terminit eestikeelses töös.",
+      "soovitus": "Lisa esmakasutusel lühike selgitus või vali läbiv eestikeelne termin.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Suur osa veebirakendusi tugineb täna SQL-andmebaasidele.",
+      "probleem": "Empiiriline üldistus on esitatud ilma viiteta.",
+      "põhjendus": "Väide veebirakenduste laialdase tehnoloogiakasutuse kohta vajab allikat, kui seda kasutatakse taustaväitena.",
+      "soovitus": "Lisa usaldusväärne allikas või muuda väide üldisemaks ilma ulatust rõhutamata.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Veebipoodide jaoks on iga sekundi viivitus kasutaja jaoks mõõdetav kahju.",
+      "probleem": "Konkreetne põhjuslik väide viivituse kahjuliku mõju kohta on esitatud ilma viiteta.",
+      "põhjendus": "Veebipoodide jõudluse mõju kasutajakäitumisele või tulule on uurimuslik väide ning vajab allikat.",
+      "soovitus": "Toeta väidet uuringu, raporti või muu usaldusväärse allikaga.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

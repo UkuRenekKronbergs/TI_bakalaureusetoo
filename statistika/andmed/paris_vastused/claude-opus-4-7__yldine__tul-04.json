@@ -1,0 +1,72 @@
+{
+  "katkend_id": "tul-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 29518,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "valideerimiskaotus hakkas kasvama (overfitting)",
+      "probleem": "Ingliskeelne termin sulgudes ilma eestikeelse vasteta esikohal",
+      "põhjendus": "Akadeemilises eestikeelses tekstis tuleks kasutada eestikeelset terminit (ülesobitumine / üleõppimine), ingliskeelne vaste võib olla sulgudes selgituseks esmamainimisel.",
+      "soovitus": "Kasuta eestikeelset terminit nagu „ülesobitumine\" ja lisa vajadusel ingliskeelne vaste sulgudes.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Selle järgi valisime lõpliku mudeli epohhis 32.",
+      "probleem": "Mitmuse esimese isiku kasutamine",
+      "põhjendus": "Eestikeelsetes lõputöödes eelistatakse umbisikulist või passiivset stiili („valiti\", „valitakse\"), mitte „valisime\".",
+      "soovitus": "Sõnasta umbisikuliselt, nt umbisikulises tegumoes.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "mudeli täpsus (precision) 0,87, saagis (recall) 0,83 ja F-skoor 0,85",
+      "probleem": "Sõna „täpsus\" on mitmetähenduslik ning võib segi minna terminiga „accuracy\"",
+      "põhjendus": "Eesti keeles tähendab „täpsus\" sageli ka accuracy't; selguse huvides võiks selgitada, mis mõõdik on kasutusel ja kuidas on arvutatud.",
+      "soovitus": "Defineeri kasutatud meetrikud (täpsus, saagis, F-skoor) selgelt, võimalik valemiga või viitega metoodika peatükile.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Võrreldes baasjoone-mudeliga (logistiline regressioon) on need näitajad vastavalt 12, 18 ja 15 protsendipunkti paremad.",
+      "probleem": "Baasmudeli tulemusi ei esitata absoluutarvudes ega tabelis",
+      "põhjendus": "Tulemuste peatükis on hea esitada võrdlus tabelina, kus on näha mõlema mudeli absoluutsed väärtused, mitte ainult vahe.",
+      "soovitus": "Lisa võrdlustabel, kus on baasjoone ja pakutava mudeli täpsus, saagis ja F-skoor.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "baasjoone-mudeliga (logistiline regressioon)",
+      "probleem": "„Baasjoone-mudel\" on otsetõlge, eesti keeles levinum on „baasmudel\" või „võrdlusmudel\"",
+      "põhjendus": "Terminoloogiline täpsus ja loetavus paranevad standardse eestikeelse termini kasutamisel.",
+      "soovitus": "Kasuta terminit „baasmudel\" või „võrdlusmudel\".",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mudelit treeniti 50 epohhi vältel, kasutades Adami optimeerijat õpisammuga 0,001 ja partii suurusega 64.",
+      "probleem": "Treeningu hüperparameetrite kirjeldus kuulub pigem metoodika peatükki",
+      "põhjendus": "Tulemuste peatükis tuleks keskenduda saavutatud tulemustele; treeningu seadistus on metoodika osa või tuleks sellele lihtsalt viidata.",
+      "soovitus": "Vii hüperparameetrite kirjeldus metoodika peatükki või viita sellele lühidalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "kasutades Adami optimeerijat",
+      "probleem": "Adami optimeerija esmamainimisel puudub viide originaalallikale",
+      "põhjendus": "Tavapäraselt viidatakse meetodi esmamainimisel selle algupärasele allikale (Kingma & Ba, 2014).",
+      "soovitus": "Lisa viide Adami optimeerija originaalallikale.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Joonis 4.2 esitab treening- ja valideerimiskao arengukõvera.",
+      "probleem": "Joonisele viidatakse, kuid selle sisu ei kommenteerita piisavalt põhjalikult",
+      "põhjendus": "Tulemuste peatükis peaks joonist tõlgendama – mida konkreetselt sellelt on näha (nt kõverate käitumine, lahknemiskoht).",
+      "soovitus": "Lisa joonise sisuline tõlgendus: kuidas treeningkaotus ja valideerimiskaotus käituvad ning millal nad lahknevad.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

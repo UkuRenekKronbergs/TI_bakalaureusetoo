@@ -1,0 +1,40 @@
+{
+  "katkend_id": "tau-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 27208,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Räsifunktsiooni hash output on tüüpiliselt 128 kuni 512 bitti pikk. Hash function peab olema kollisioonikindel ja ühe-suunaline.",
+      "probleem": "Ingliskeelsed terminid „hash output” ja „Hash function” esinevad ilma selgituseta ning segamini eestikeelse terminiga „räsifunktsioon”.",
+      "põhjendus": "Terminoloogiline järjepidevus on akadeemilises tekstis oluline; segakeelne kasutus võib jätta mulje, et mõisted pole täpselt määratletud.",
+      "soovitus": "Vali läbiv eestikeelne termin ja lisa ingliskeelne vaste ainult vajadusel esmakasutusel sulgudes.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kokkupõrkenõrkused ... kokkupõrkerünnet ... kokkupõrget ... kollisioonikindel",
+      "probleem": "Sama mõiste kohta kasutatakse läbisegi „kokkupõrke” ja „kollisiooni” tüve.",
+      "põhjendus": "Kui sama tehnilist mõistet tähistatakse eri terminitega, võib lugejal tekkida kahtlus, kas viidatakse samale nähtusele või eri mõistetele.",
+      "soovitus": "Otsusta, kas kasutad läbivalt „kokkupõrget” või „kollisiooni”, ning järgi seda kogu peatükis.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval soovitatakse kasutada SHA-256 ja SHA-3 perekondi.",
+      "probleem": "Soovitus esitatakse üldise normatiivse väitena ilma allikata.",
+      "põhjendus": "Krüptograafiliste algoritmide soovitused sõltuvad standarditest ja juhistest; väide vajab autoriteetset viidet.",
+      "soovitus": "Lisa viide asjakohasele standardile või ametlikule juhisele, millele soovitus tugineb.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eestis kasutab digiallkirja infrastruktuur SHA-256-d.",
+      "probleem": "Konkreetne väide Eesti digiallkirja infrastruktuuri kohta on ilma viiteta.",
+      "põhjendus": "See on kontrollitav fakt konkreetse süsteemi kohta, mitte üldteadmine; lugejal peab olema võimalik allikat kontrollida.",
+      "soovitus": "Lisa viide Eesti digiallkirja tehnilisele dokumentatsioonile, standardile või ametlikule allikale.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

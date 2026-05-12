@@ -1,0 +1,40 @@
+{
+  "katkend_id": "tul-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 28580,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "4.1 Algoritmide võrdlus\nTabel 4.1 näitab mõõtmistulemusi.",
+      "probleem": "Peatükk näib algavat kohe alampeatükiga ja alampeatükk algab väga järsu viitega tabelile.",
+      "põhjendus": "Tulemuste peatükk vajab tavaliselt lühikest sissejuhatust, mis selgitab, milliseid tulemusi ja mis järjekorras esitatakse.",
+      "soovitus": "Lisa peatüki algusesse lühike sissejuhatav lõik ning ava enne tabelile viitamist tulemuste esitamise loogika.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "See on päris hea tulemus.",
+      "probleem": "Väljend „päris hea“ on kõnekeelne ja hinnanguline.",
+      "põhjendus": "Akadeemilises tulemuste peatükis peaks hinnang tuginema selgele kriteeriumile, mitte subjektiivsele muljele.",
+      "soovitus": "Asenda hinnangulisus mõõdetava võrdluse või põhjendatud tõlgendusega, vältides kõnekeelset sõnastust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Põhjuseks on tõenäoliselt mälu hierarhia parem kasutamine, kuna ühenda-sort omab paremat ruumilist lokaalsust.",
+      "probleem": "Esitatakse tehniline põhjendus algoritmi jõudluse kohta ilma viite või oma mõõtmistõendita.",
+      "põhjendus": "Mälu hierarhia ja ruumilise lokaalsuse mõju on konkreetne seletus, mis vajab kas kirjandusviidet või töö enda eksperimentaalset kinnitust.",
+      "soovitus": "Lisa viide vastavale allikale või täpsusta, milline töö enda mõõtmine seda põhjendust toetab.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Kuhi-sort oli kõikides katsetes aeglasem, mis on kooskõlas ootustega.",
+      "probleem": "Väide „kooskõlas ootustega“ jääb põhjendamata.",
+      "põhjendus": "Kui ootused tulenevad teooriast või varasematest uuringutest, tuleks sellele viidata; muidu pole selge, mille alusel ootust hinnatakse.",
+      "soovitus": "Selgita, kust ootus pärineb, või lisa viide varasemale allikale või teoreetilisele põhjendusele.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

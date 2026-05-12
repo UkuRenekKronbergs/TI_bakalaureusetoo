@@ -10,20 +10,21 @@ Akadeemilises kontekstis on LLM-ide kasutamine samas eetiliselt tundlik teema. T
 
 Käesoleva bakalaureusetöö \textbf{eesmärk} on \emph{kavandada ja realiseerida} LLM-il põhinev prototüüp, mis annab eestikeelsele informaatika lõputöö tekstile automaatset tagasisidet struktuuri, akadeemilise stiili, terminoloogia järjepidevuse ja viitamisvajaduse kohta, ning \emph{pilootida} selle väljundi kvaliteeti väikesel valimil eesmärgiga iteratiivselt täpsustada prompti disaini.
 
-\textbf{Töö ulatus} jaguneb selgelt kaheks osaks. Käesoleva töö raames \emph{viiakse lõpule}:
+\textbf{Töö ulatus.} Käesoleva töö raames viiakse lõpule:
 \begin{enumerate}
     \item tagasisidekategooriate operatsionaalne määratlus;
     \item kahe promptimisstrateegia (üldine ja struktureeritud) disain;
     \item veebipõhise prototüübi realiseerimine, sealhulgas demo-režiim, mis võimaldab süsteemi proovida ilma välise LLM-i API juurdepääsuta;
-    \item kvalitatiivne pilootuuring väikesel tekstivalimil nii prompti disaini iteratsiooniks kui ka mudeli väljundi tüüpiliste mustrite tuvastamiseks;
-    \item 20-katkendilise käsitsi annoteeritava testkogu \emph{kavandamine} koos kuldstandardi koostamise protseduuri ja hindamismõõdikute valikuga.
+    \item kvalitatiivne pilootuuring väikesel tekstivalimil prompti disaini iteratsiooniks ja mudeli väljundi tüüpiliste mustrite tuvastamiseks;
+    \item 20-katkendilise sünteetilise testkogu ja kuldstandardi koostamine (autori juhendamisel LLM-iga; vt allpool generatiivse tehisaru deklaratsioon);
+    \item täismahuline empiiriline hindamine 80 päris API-päringu põhjal (kaks mudelit × kaks prompti × 20 katkendit) koos täpsuse, saagise ja F\textsubscript{1}-skoori arvutamisega iga (mudel × promptitüüp × kategooria) kombinatsiooni kohta.
 \end{enumerate}
 
-\textbf{Töö ulatusest on teadlikult välja jäetud}: testkogu täielik annoteerimine kuldstandardiks, prototüübi täismahuline käivitamine kõikide testkatkendite vastu ning täpsuse, saagise ja F\textsubscript{1}-skoori arvutamine. Nende sammude jätkukava on esitatud peatükis~\ref{hindamine:edasine}. Selline ulatusepiirang teeb käesoleva töö hinnatavaks ja avaldatavaks praeguses vormis ning hoiab eraldi viimase, mahukaima ja sõltumatu teise annoteerija aega nõudva sammu, mille tulemused saavad olla aluseks edasisele tööle (näiteks magistriõppes või avaldatavas artiklis).
+\textbf{Töö ulatusest on teadlikult välja jäetud}: päris üliõpilastöödel põhinev testkogu (käesolev testkogu on sünteetiline) ning sõltumatu teise annoteerija kaasamine kuldstandardi koostamisse (käesoleva töö kuldstandard on üheainsa annoteerija — autori — tehtud). Nende sammude jätkukava on esitatud peatükis~\ref{hindamine:edasine}. Selline ulatusepiirang on motiveeritud sellega, et päris üliõpilastöödel kuldstandardi koostamine sõltumatu teise annoteerijaga nõuab eraldi tööd, mis kuulub edasisse töösse (näiteks magistriõppes või avaldatavas artiklis).
 
 \subsection*{Uurimisküsimused}
 
-Töö kavandi tasemel käsitletakse järgmisi \textbf{uurimisküsimusi}, millele käesolev töö annab pilootuuringu raames \emph{esialgse, kvalitatiivse vastuse}; täismahuliste kvantitatiivsete vastuste saamine on peatükis~\ref{hindamine:edasine} kirjeldatud jätkukava ülesanne:
+Käesolev töö käsitleb järgmisi \textbf{uurimisküsimusi}, millele annab nii kvalitatiivse pilootuuringu vastused (peatükk~\ref{hindamine:arutelu}) kui ka kvantitatiivse empiirilise hindamise vastused sünteetilisel testkogul (peatükk~\ref{hindamine:synteetiline}); päris üliõpilastöödel sama metoodika kohaldamine kuulub jätkukavasse (peatükk~\ref{hindamine:edasine}):
 \begin{enumerate}
     \item Millise iseloomuga tagasisidet annab tippkvaliteediga LLM eestikeelse informaatika lõputöö tekstile, kui sellele antakse struktureeritud kategoorianõuetega prompt?
     \item Millistes tagasisidekategooriates näib mudeli väljund pilootuuringus kõige usaldusväärsem ning millistes kõige problemaatilisem, ning miks?
@@ -46,11 +47,12 @@ Peatükis~\ref{taust} esitatakse ülevaade suurte keelemudelite arhitektuurist, 
 
 \subsection*{Generatiivse tehisaru kasutamise deklaratsioon}
 
-Käesoleva töö koostamisel on generatiivset tehisaru (peamiselt Anthropici Claude 4.7 Opus mudelit) kasutatud kahel laiendatud viisil, mille autor selgesõnaliselt deklareerib:
+Käesoleva töö koostamisel on generatiivset tehisaru (peamiselt Anthropici Claude 4.7 Opus mudelit) kasutatud kolmel laiendatud viisil, mille autor selgesõnaliselt deklareerib:
 
 \begin{enumerate}
     \item \textbf{Tekstilise abivahendina} -- loetavuse parandamiseks, sõnastuse poleerimiseks ja struktuurinõustamiseks. Kõik sisulised mõtted, töö ulatuse valikud, metoodilised valikud ja järeldused on autori enda otsused. Mudeli ettepanekud on iga kord kriitiliselt üle vaadatud ja vajadusel ümber sõnastatud või kõrvale jäetud.
-    \item \textbf{Sünteetilise illustratsioonimaterjali genereerimiseks} -- alapeatükis~\ref{hindamine:synteetiline} esitatud hindamisprotsessi demonstratsiooni jaoks on \emph{kõik} andmeelemendid (20 testkatkendit, 42 kuldstandardi annotatsiooni, simuleeritud mudelivastused, mille põhjal arvutatakse F\textsubscript{1}-skoorid) genereeritud Claude 4.7 Opus mudeli abil. Need andmed on selgesõnaliselt sõnastatud \emph{sünteetiliste illustratsioonidena}, mitte päris LLM-ide tegelike päringute tulemustena, ning vastavate jooniste ja tabelite juures on märkus, mis ütleb otse, et numbrid \emph{ei mõõda} päris mudelite sooritust. Selline kasutus on otseses kooskõlas Tartu Ülikooli generatiivse tehisaru juhendiga~\cite{ut_genAI_2024}, mis lubab generatiivse tehisaru kasutamist õppetöös \emph{tingimusel, et selline kasutus on selgesõnaliselt deklareeritud}.
+    \item \textbf{Hindamise testkogu ja kuldstandardi koostamise abivahendina} -- alapeatükis~\ref{hindamine:synteetiline} esitatud empiirilise hindamise jaoks on 20 testkatkendit (iga ligikaudu 100--160 sõna) ja 42 kuldstandardi annotatsiooni koostatud autori juhendamisel Claude 4.7 Opus mudeli abil. Tegu ei ole anonüümitud üliõpilastööde katkenditega, vaid sünteetiliste tekstidega, mis on koostatud nii, et katkendid sisaldaksid kavandatud tüüpilisi probleeme tagasisidekategooriates. See piirang on selgesõnaliselt välja toodud alapeatükis~\ref{hindamine:synteetiline} ning piirangute jaotises~\ref{hindamine:piirangud}. Päris üliõpilastööde katkendite kasutamine kuulub jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}).
+    \item \textbf{Hinnatavate mudelivastuste tegelike API-päringute kaudu} -- alapeatükis~\ref{hindamine:synteetiline} esitatud F\textsubscript{1}-skoorid \emph{on tegelikud empiirilised mõõtmised}: iga (katkend × promptitüüp × mudel) kombinatsiooni jaoks tehti tegelik API-päring Anthropici Claude 4.7 Opus või OpenAI GPT-5.5 mudelile (kokku 80 päringut), salvestati toores vastus repositooriumi kausta \texttt{statistika/andmed/paris\_vastused/}, ning skooriti spani-tasemel kattuvuse järgi kuldstandardi vastu. \emph{Need numbrid kajastavad tegelikku mudelite sooritust} antud sünteetilisel testkogul, kuid nende üldistatavus päris üliõpilastöödele on piiratud, kuna testkogu ise on sünteetiline (vt punkt 2).
 \end{enumerate}
 
-Reprodutseerimiseks vajalikud skriptid ja andmestik on saadaval töö repositooriumis (\url{https://github.com/UkuRenekKronbergs/TI_bakalaureusetoo}) kaustas \texttt{statistika/}. Lugeja saab seal vaadata, kuidas iga sünteetiline number tekib (failid \texttt{andmestik\_synth.py} ja \texttt{synteetiline\_hindamine.py}).
+Selline kasutus on otseses kooskõlas Tartu Ülikooli generatiivse tehisaru juhendiga~\cite{ut_genAI_2024}, mis lubab generatiivse tehisaru kasutamist õppetöös \emph{tingimusel, et selline kasutus on selgesõnaliselt deklareeritud}. Reprodutseerimiseks vajalikud skriptid, salvestatud API-vastused ja andmestik on saadaval töö repositooriumis (\url{https://github.com/UkuRenekKronbergs/TI_bakalaureusetoo}) kaustas \texttt{statistika/}. Lugeja saab seal vaadata, kuidas iga arv tekib (failid \texttt{andmestik\_synth.py}, \texttt{paris\_hindamine.py} ning vastuste JSON-id alamkaustas \texttt{paris\_vastused/}).

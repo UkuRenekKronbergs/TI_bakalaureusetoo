@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tau-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 28317,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Pilvepõhise arvutuse mõiste on lai.",
+      "probleem": "Termin „pilvepõhine arvutus” kõlab eesti informaatikatekstis ebatavaliselt.",
+      "põhjendus": "Taustapeatükis peaks kasutama valdkonnas levinud ja järjepidevat terminoloogiat, nt standardset vastet cloud computing’ule.",
+      "soovitus": "Kontrolli eestikeelset vastet ja kasuta kogu töös järjepidevalt sama terminit.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "IaaS näiteks on AWS EC2",
+      "probleem": "Väljend on keeleliselt kohmakas ja lühendit ei ole käändes selgelt vormistatud.",
+      "põhjendus": "Akadeemilises tekstis peaks lauseehitus olema täpne ning lühendite käänamine üheselt mõistetav.",
+      "soovitus": "Paranda lühendite käänamist ja kontrolli sama mustrit ka PaaS-i ja SaaS-i näidetes.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Asi see, et piirid nende vahel on hägused: paljud teenused on hübriidid.",
+      "probleem": "Väljend „Asi see, et” on kõnekeelne ja grammatiliselt puudulik.",
+      "põhjendus": "Taustapeatükk peab hoidma formaalset akadeemilist stiili; kõnekeelsus vähendab teksti usaldusväärsust.",
+      "soovitus": "Asenda kõnekeelne algus formaalsema selgitava üleminekuga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "piirid nende vahel on hägused: paljud teenused on hübriidid.",
+      "probleem": "Väide teenusemudelite hägusate piiride ja hübriidsuse kohta on viitamata.",
+      "põhjendus": "See ei ole pelgalt definitsioon, vaid tõlgendav väide, millele tuleks taustapeatükis lisada allikas.",
+      "soovitus": "Lisa viide allikale, mis käsitleb pilveteenuste mudelite kattuvust või hübriidseid teenuseid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Lisaks on tekkinud uued kategooriad — FaaS (Function as a Service), millest tuntum on AWS Lambda, ja CaaS (Container as a Service).",
+      "probleem": "FaaS-i, CaaS-i ja AWS Lambda tuntuse kohta puudub allikas.",
+      "põhjendus": "Uute teenusemudelite tutvustamine vajab usaldusväärset allikat, eriti kui väidetakse, et mõni teenus on „tuntum”.",
+      "soovitus": "Lisa FaaS-i ja CaaS-i määratlustele ning AWS Lambda näitele sobivad viited.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Hindade osas on FaaS odav väiksete rakenduste puhul ja kallis suurte koormuste puhul.",
+      "probleem": "Väide on üldistav ja viitamata.",
+      "põhjendus": "Pilveteenuste hinnastamine sõltub kasutusmustrist, teenusepakkujast ja arhitektuurist; lihtsustatud väide võib olla eksitav.",
+      "soovitus": "Täpsusta tingimusi või lisa allikas, mis võrdleb FaaS-i kulusid eri koormuste korral.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Hindade osas on FaaS odav väiksete rakenduste puhul ja kallis suurte koormuste puhul.",
+      "probleem": "Hinnastamise teema ilmub lõpus järsult ega ole seotud eelneva teenusemudelite selgitusega.",
+      "põhjendus": "Taustapeatükis peaks lõik liikuma loogiliselt definitsioonidelt võrdluse või töö seisukohalt olulise aspektini.",
+      "soovitus": "Seo hinnastamise väide selgelt töö fookusega või paiguta see eraldi hinnastamise alapeatükki.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

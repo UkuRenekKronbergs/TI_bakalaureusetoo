@@ -1,0 +1,24 @@
+{
+  "katkend_id": "met-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 21544,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "3.1 Andmete kogumine\nAndmete kogumiseks kasutati struktureeritud küsimustikku",
+      "probleem": "Metoodika peatükk algab kohe alapealkirjaga, ilma peatükki sisse juhatava lõiguta.",
+      "põhjendus": "Peatüki alguses võiks enne alampeatükki lühidalt kirjeldada metoodika üldist ülesehitust, et lugejal oleks selge, mida peatükis käsitletakse.",
+      "soovitus": "Lisa enne alampeatükki 3.1 lühike sissejuhatav lõik metoodika peatüki eesmärgi ja alamteemade kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Küsimustik valideeriti pilootuuringuga viie tudengi peal enne laialisaatmist.",
+      "probleem": "Väljend „viie tudengi peal” on akadeemilise teksti jaoks kõnekeelne.",
+      "põhjendus": "Metoodika kirjelduses tuleks kasutada täpsemat ja formaalsemat sõnastust, eriti osalejate või valimi kirjeldamisel.",
+      "soovitus": "Asenda kõnekeelne väljend formaalsema osalejaid kirjeldava sõnastusega.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

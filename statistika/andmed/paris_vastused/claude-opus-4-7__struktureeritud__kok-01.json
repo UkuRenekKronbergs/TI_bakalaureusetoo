@@ -1,0 +1,32 @@
+{
+  "katkend_id": "kok-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 17951,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesoleva bakalaureusetöö raames vaadeldi, kuidas avatud lähtekoodiga haavatavusi tuvastavad süsteemid...",
+      "probleem": "Kokkuvõte on esitatud ühe pika lõiguna, milles puudub selge struktuur (taust, tulemused, panus, edasiarendus on kokku surutud).",
+      "põhjendus": "Kokkuvõtte loetavus paraneb, kui erinevad osad (eesmärk, tulemused, järeldused, edasiarendus) on selgemalt eristatud, kas lõikude või loogiliste üleminekutega.",
+      "soovitus": "Kaalu kokkuvõtte jagamist loogilisteks osadeks või lisa selgemad üleminekulaused tulemuste, järelduste ja edasiarenduse vahele.",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "kuidas need süsteemid käituvad suuremate projektide peal ning kuidas false positive'ide määra vähendada.",
+      "probleem": "Väljend \"projektide peal\" on kõnekeelne ning ingliskeelne termin \"false positive'ide\" on esitatud ilma eestikeelse vasteta või selgituseta.",
+      "põhjendus": "Akadeemilises tekstis tuleks eelistada eestikeelseid termineid ja neutraalsemat sõnastust; \"peal\" asemel sobib \"korral\" vms.",
+      "soovitus": "Asenda kõnekeelne väljend neutraalsema vastega ning lisa false positive'ile eestikeelne termin (nt valepositiivsed) või selgitus.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Snyk tuvastas keskmiselt 87% kõikidest teadaolevatest haavatavustest ... Saagise erinevus Snyki ja Dependaboti vahel oli statistiliselt oluline",
+      "probleem": "Kokkuvõttes kasutatakse mõõdiku kohta terminit \"saagis\", samas kui eelnevalt räägitakse \"tuvastamisest\" ja \"leidmisest\" - mõisteline seos ei pruugi lugejale selge olla.",
+      "põhjendus": "Kui \"saagis\" (recall) on töö põhimõõdik, peaks see olema läbivalt ja järjekindlalt kasutusel; muidu jääb mulje erinevatest mõistetest.",
+      "soovitus": "Veendu, et kasutad mõõdiku jaoks kogu töös läbivalt sama terminit, ning kokkuvõttes selgita lühidalt, mida \"saagis\" tähendab.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

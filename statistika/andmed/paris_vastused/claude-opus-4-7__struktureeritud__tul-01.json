@@ -1,0 +1,56 @@
+{
+  "katkend_id": "tul-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 24687,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "4.1 Algoritmide võrdlus\nTabel 4.1 näitab mõõtmistulemusi.",
+      "probleem": "Peatükk algab kohe alapealkirjaga ja esimene sisuline lause viitab vaid tabelile ilma sissejuhatava lõiguta.",
+      "põhjendus": "Lugejale ei anta konteksti, mida selles alapeatükis võrreldakse, milliseid algoritme ja mis tingimustel - peatükk peaks algama lühikese sissejuhatava lõiguga.",
+      "soovitus": "Lisa enne tabelile viitamist sissejuhatav lõik, mis selgitab, milliseid algoritme võrreldakse ja mis tingimustel mõõtmised tehti.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "See on päris hea tulemus.",
+      "probleem": "Kõnekeelne ja hinnanguline väljend, mis ei sobi akadeemilisse stiili.",
+      "põhjendus": "Sõnastus \"päris hea\" on subjektiivne ja kõnekeelne; tulemuste tähtsust tuleks põhjendada konkreetsemalt ja neutraalsemalt.",
+      "soovitus": "Asenda hinnanguline väljend neutraalse ja konkreetsema sõnastusega, mis selgitab, miks 12% erinevus on oluline.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõige üllatavama tulemus oli see, et 10^3 sisendi korral...",
+      "probleem": "Grammatikaviga (\"üllatavama tulemus\") ja hinnanguline väljend \"üllatav\".",
+      "põhjendus": "Lisaks käändevormi veale on \"üllatav\" akadeemilises tekstis subjektiivne hinnang, mida tuleks vältida või põhjendada.",
+      "soovitus": "Paranda käändevorm ja kaalu, kas \"üllatav\" on vajalik - võimalusel sõnasta neutraalsemalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kiir-sort ... ühenda-sort ... Kuhi-sort",
+      "probleem": "Algoritmide nimede kirjapilt on ebajärjekindel: \"kiir-sort\" ja \"ühenda-sort\" väikese tähega, kuid \"Kuhi-sort\" suure tähega.",
+      "põhjendus": "Sama tüüpi terminite kirjapilt peab olema läbiv; ka tasub kaaluda, kas eestikeelne sidekriipsuga vorm või rahvusvaheline termin (quicksort jne) on järjepidev valik.",
+      "soovitus": "Ühtlusta algoritmide nimede kirjapilt kogu tekstis ja vali üks järjepidev terminoloogia (näiteks kõik väikese algustähega).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Põhjuseks on tõenäoliselt mälu hierarhia parem kasutamine, kuna ühenda-sort omab paremat ruumilist lokaalsust.",
+      "probleem": "Tehniline põhjendus esitatakse ilma viiteta allikale.",
+      "põhjendus": "Mälu hierarhia ja ruumilise lokaalsuse mõju sorteerimisalgoritmide jõudlusele on konkreetne tehniline väide, mis tugineb varasematele uuringutele.",
+      "soovitus": "Lisa viide kirjandusele, mis käsitleb mälu hierarhia ja ruumilise lokaalsuse mõju sorteerimisalgoritmide jõudlusele.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Kuhi-sort oli kõikides katsetes aeglasem, mis on kooskõlas ootustega.",
+      "probleem": "Viidatakse \"ootustele\" ilma allikata, kuigi see eeldab varasemat teoreetilist või empiirilist tausta.",
+      "põhjendus": "Kui tulemus on kooskõlas varasema kirjandusega, tuleks viidata konkreetsele teoreetilisele alusele või uuringule.",
+      "soovitus": "Viita teoreetilisele peatükile või kirjandusallikale, millest need ootused tulenevad.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

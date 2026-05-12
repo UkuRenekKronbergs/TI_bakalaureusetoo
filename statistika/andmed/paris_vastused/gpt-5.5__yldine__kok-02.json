@@ -1,0 +1,72 @@
+{
+  "katkend_id": "kok-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 29479,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Käesolev töö oli üks lahe väljakutse.",
+      "probleem": "Väljend „lahe väljakutse” on kõnekeelne ja subjektiivne.",
+      "põhjendus": "Kokkuvõte peab olema akadeemiline ning keskenduma töö eesmärgile, tulemustele ja järeldustele, mitte autori emotsioonile.",
+      "soovitus": "Asenda hinnanguline väljend neutraalse kirjeldusega töö eesmärgist või saavutatud tulemusest.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina õppisin palju andmebaaside rände kohta.",
+      "probleem": "Lause keskendub autori isiklikule õpikogemusele.",
+      "põhjendus": "Lõputöö kokkuvõttes tuleks rõhutada uurimistulemusi ja töö panust, mitte autori õppimisprotsessi.",
+      "soovitus": "Too esile, millised teadmised või järeldused töö tulemusena saadi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "andmetüüpide ühildumatusega on tegelikult palju asja",
+      "probleem": "Sõnastus on ebatäpne ja kõnekeelne.",
+      "põhjendus": "Akadeemilises tekstis peab probleem olema selgelt nimetatud, näiteks millised ühildumatuse tüübid või piirangud ilmnesid.",
+      "soovitus": "Täpsusta, millised andmetüüpide ühildumatuse probleemid ilmnesid ja kuidas need mõjutasid rännet.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "PostgreSQL-i ja MySQL-i vahel rändamine on tehniliselt lihtne",
+      "probleem": "Väide on üldistav ja vajab täpsustust või toetust töö tulemustega.",
+      "põhjendus": "Kokkuvõttes peab olema selge, mille põhjal selline järeldus tehti: katsete, mõõdikute või konkreetse rakenduse põhjal.",
+      "soovitus": "Seo väide konkreetsete töö tulemustega või täpsusta, millises ulatuses ränne lihtsaks osutus.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et iga andmebaas teeb asju erinevalt.",
+      "probleem": "Väide on kõnekeelne, ebamäärane ja põhjendamata.",
+      "põhjendus": "Fraas „kõik teavad” ei sobi akadeemilisse teksti ning ei anna lugejale kontrollitavat infot.",
+      "soovitus": "Asenda üldistus konkreetse järeldusega andmebaasisüsteemide erinevuste kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö praktiline panus on rändamisskript, mis on saadaval GitHubis.",
+      "probleem": "Praktiline panus on nimetatud, kuid selle ulatus ja väärtus jäävad ebaselgeks.",
+      "põhjendus": "Kokkuvõttes peaks lühidalt selguma, mida skript teeb, milliseid juhtumeid toetab ja milline on selle piirang.",
+      "soovitus": "Lisa lühidalt skripti põhifunktsioon, toetatud rände suund ja peamine piirang.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulevikutöös võiks teha veel mõned asjad",
+      "probleem": "Tulevikutöö kirjeldus on liiga ebamäärane.",
+      "põhjendus": "Kokkuvõtte lõpus peaks tulevikusuund olema konkreetne ja põhjendatud töö piirangute või leidudega.",
+      "soovitus": "Nimeta 1–2 konkreetset edasiarendust ja seo need töö käigus ilmnenud piirangutega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolev töö oli üks lahe väljakutse. Mina õppisin palju andmebaaside rände kohta.",
+      "probleem": "Kokkuvõte ei alga töö eesmärgi ja tehtud töö lühikese meenutusega.",
+      "põhjendus": "Kokkuvõtte lugeja peaks kohe aru saama, mis probleemi töö lahendas, millist meetodit kasutati ja milliste tulemusteni jõuti.",
+      "soovitus": "Alusta kokkuvõtet töö eesmärgi, kasutatud lähenemise ja peamise tulemuse lühikese esitusega.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

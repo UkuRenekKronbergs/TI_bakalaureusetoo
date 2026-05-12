@@ -1,0 +1,72 @@
+{
+  "katkend_id": "sis-04",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 31546,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kuna mina arvan, et avatud lähtekoodiga projektide turvalisus on ühiskondlikult oluline, on selliste süsteemide võrdlemine kasulik.",
+      "probleem": "Mina-vormi ja subjektiivse arvamuse kasutamine akadeemilises tekstis.",
+      "põhjendus": "Akadeemilises stiilis välditakse esimese isiku kasutust ja isiklikke arvamusi, eelistatakse objektiivset sõnastust.",
+      "soovitus": "Sõnasta väide neutraalselt, viidates objektiivsele asjaolule või uuringutele, mitte oma isiklikule arvamusele.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tarkvarapakettide turvanõrkused on suur murekoht.",
+      "probleem": "Kõnekeelne ja ebamäärane väljend \"suur murekoht\".",
+      "põhjendus": "Akadeemilises tekstis tuleks kasutada täpsemat ja neutraalsemat sõnavara.",
+      "soovitus": "Asenda \"murekoht\" täpsema akadeemilise terminiga ning täpsusta, millises kontekstis probleem avaldub.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö koosneb kuuest osast. Teises osas on taust. Kolmandas on metoodika. Neljas on tulemused. Viiendas arutelu. Kuuendas kokkuvõte.",
+      "probleem": "Töö ülesehituse kirjeldus on esitatud katkendlike, loeteluviisiliste lausetena, mis ei moodusta sidusat lõiku.",
+      "põhjendus": "Sissejuhatuse lõpuosa peaks andma sujuva ülevaate töö struktuurist, mitte koosnema lühikestest tükeldatud lausetest.",
+      "soovitus": "Ühenda peatükkide kirjeldused sidusateks lauseteks, mis selgitavad ka iga osa eesmärki, mitte ainult nime.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tarkvarapakettide turvanõrkused on suur murekoht. Nendega tegelemiseks on loodud mitmesuguseid süsteeme...",
+      "probleem": "Sissejuhatuses puudub selgelt eristatav probleemipüstitus, eesmärk ja uurimisküsimused enne metoodikasse minekut.",
+      "põhjendus": "Sissejuhatus peaks loogiliselt liikuma taustast probleemi, eesmärgi ja uurimisküsimuste juurde, praegune tekst hüppab kohe eesmärgile.",
+      "soovitus": "Lisa selge probleemipüstitus ja eesmärk eraldi, samuti uurimisküsimused enne struktuuri kirjeldust.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Nende süsteemide täpsus ja saagis varieerub.",
+      "probleem": "Konkreetne väide süsteemide täpsuse ja saagise kohta ilma viiteta allikale.",
+      "põhjendus": "Tegemist on empiirilise väitega, mis põhineb varasemal uurimistööl ja vajab seetõttu viidet.",
+      "soovitus": "Lisa viide uuringutele või allikatele, mis kinnitavad süsteemide täpsuse ja saagise varieeruvust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Nendega tegelemiseks on loodud mitmesuguseid süsteeme, näiteks GitHubi Dependabot ja Snyk.",
+      "probleem": "Konkreetsete tööriistade nimetamisel puuduvad viited nende dokumentatsioonile või tutvustavatele allikatele.",
+      "põhjendus": "Konkreetsete toodete esmamainimisel akadeemilises töös on tavaks viidata nende allikatele.",
+      "soovitus": "Lisa esmamainimisel viited Dependaboti ja Snyki ametlikele allikatele või neid kirjeldavatele uuringutele.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Tarkvarapakettide turvanõrkused ... kui hästi tuvastavad need süsteemid teadaolevaid haavatavusi.",
+      "probleem": "Samas tähenduses kasutatakse läbisegi termineid \"turvanõrkus\" ja \"haavatavus\".",
+      "põhjendus": "Sama mõiste tähistamiseks tuleks valida üks termin ja kasutada seda järjepidevalt kogu töös.",
+      "soovitus": "Vali üks termin (kas \"turvanõrkus\" või \"haavatavus\") ja kasuta seda läbivalt; vajadusel selgita esmakasutusel.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Nende süsteemide täpsus ja saagis varieerub.",
+      "probleem": "Erialatermin \"saagis\" (recall) on esitatud ilma selgituseta esmakasutuses.",
+      "põhjendus": "Sissejuhatuse lugejale ei pruugi infootsingu/masinõppe mõiste \"saagis\" olla tuttav ning ingliskeelne vaste võiks olla välja toodud.",
+      "soovitus": "Lisa esmakasutusel mõiste \"saagis\" lühike selgitus ja ingliskeelne vaste sulgudes.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

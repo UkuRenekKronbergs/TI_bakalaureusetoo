@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tul-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 34649,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tabel 4.1 näitab mõõtmistulemusi.",
+      "probleem": "Tabeliviide on liiga üldine ega ava, mida mõõdeti ja milliste sisendisuuruste või ühikutega.",
+      "põhjendus": "Tulemuste peatükis peaks lugeja saama enne tabelit aru, mis tulemused on esitatud ja milliste näitajate alusel neid võrreldakse.",
+      "soovitus": "Täpsusta lühidalt, milliseid mõõdikuid, algoritme ja sisendisuurusi tabel 4.1 sisaldab.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "See on päris hea tulemus.",
+      "probleem": "Väljend on kõnekeelne ja hinnanguline.",
+      "põhjendus": "Akadeemilises tulemuste peatükis tuleks vältida subjektiivseid hinnanguid, kui neid ei toetata selge kriteeriumi või võrdlusega.",
+      "soovitus": "Asenda hinnang mõõdetava võrdluse või neutraalse tõlgendusega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "kiir-sort ... ühenda-sort ... Kuhi-sort",
+      "probleem": "Algoritmide nimetused on ebaühtlased ning suure algustähe kasutus keset lauset on põhjendamata.",
+      "põhjendus": "Terminoloogiline järjepidevus on oluline, et tekst oleks professionaalne ja üheselt mõistetav.",
+      "soovitus": "Vali kogu töös üks eestikeelne terminivariant ja kasuta seda järjekindlalt.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Põhjuseks on tõenäoliselt mälu hierarhia parem kasutamine, kuna ühenda-sort omab paremat ruumilist lokaalsust.",
+      "probleem": "Põhjuslik seletus on esitatud ilma tõenduseta või viiteta.",
+      "põhjendus": "Kui tulemuste põhjuseid ei ole katses otseselt mõõdetud, vajab väide kas viidet kirjandusele või tuleks see esitada arutelu peatükis oletusena.",
+      "soovitus": "Lisa viide või mõõtmistugi; muul juhul tõsta seletus arutelu peatükki ja sõnasta ettevaatlikult.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Kuhi-sort oli kõikides katsetes aeglasem, mis on kooskõlas ootustega.",
+      "probleem": "Ei ole selge, millel „ootused” põhinevad.",
+      "põhjendus": "Akadeemilises tekstis peaks ootustele viitamine tuginema kas varasemale teooriale, kirjandusele või eelnevalt sõnastatud hüpoteesile.",
+      "soovitus": "Viita asjakohasele allikale või seosta väide töö varasema hüpoteesi/teoreetilise osaga.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "statistiliselt olulist erinevust (p > 0,1 kõikides paaride võrdlustes)",
+      "probleem": "Statistilise testi kirjeldus puudub.",
+      "põhjendus": "P-väärtuste tõlgendamiseks peab lugeja teadma, millist testi kasutati, kas eeldused kehtisid ja kas paarvõrdluste korral rakendati korrektsiooni.",
+      "soovitus": "Lisa kasutatud testi nimi, olulisustase ja vajadusel mitmikvõrdluste korrektsiooni info.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Kõige üllatavama tulemus oli see",
+      "probleem": "Lauses on vormiviga.",
+      "põhjendus": "Keelevead vähendavad töö professionaalsust ja võivad juhtida tähelepanu sisult kõrvale.",
+      "soovitus": "Paranda käände- ja ühildumisviga ning kontrolli peatükk keeleliselt üle.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

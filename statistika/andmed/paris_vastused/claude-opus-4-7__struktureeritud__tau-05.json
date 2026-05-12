@@ -1,0 +1,48 @@
+{
+  "katkend_id": "tau-05",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 21690,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "2.3 Statistilise õppe alused\n\nMasinõpe jaguneb laias laastus juhendatud, juhendamata ja stiimulõppeks.",
+      "probleem": "Alapeatükk algab kohe sisulise loeteluga ilma sissejuhatava lõiguta, mis tutvustaks alapeatüki eesmärki või konteksti.",
+      "põhjendus": "Akadeemilises tekstis peaks alapeatükk algama lühikese sissejuhatusega, mis seob teema eelnevaga ja annab lugejale ülevaate.",
+      "soovitus": "Lisa alapeatüki algusesse sissejuhatav lõik, mis tutvustab statistilise õppe konteksti ja seob selle eelmise alapeatükiga.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tänapäeval kasutavad kõik mudelid süvaõpet.",
+      "probleem": "Määramatu üldistus (\"kõik mudelid\"), mis ei vasta tegelikkusele ja on akadeemilises stiilis sobimatu.",
+      "põhjendus": "Sellised absoluutsed väited on faktiliselt ebatäpsed ja akadeemilises tekstis tuleb vältida liialdavaid üldistusi.",
+      "soovitus": "Sõnasta väide täpsemalt, lisades kvalifikatsiooni (nt millistes valdkondades või millistel tingimustel) ning toeta seda viitega.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Convolutional neural network ehk CNN on populaarne pildianalüüsis.",
+      "probleem": "Ingliskeelne termin esitatakse ilma eestikeelse vaste või selgituseta; eelnevalt kasutati eestikeelseid termineid (närvivõrk).",
+      "põhjendus": "Eestikeelses akadeemilises töös tuleks ingliskeelne termin esmakasutusel selgitada või tõlkida, et säilitada terminoloogiline järjepidevus.",
+      "soovitus": "Lisa eestikeelne vaste (nt konvolutsiooniline närvivõrk) enne ingliskeelset terminit ja kasuta edaspidi järjepidevalt.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Süvaõpe (deep learning) on viimase kümnendi domineeriv lähenemine, mis kasutab mitmekihilisi närvivõrke.",
+      "probleem": "Konkreetne väide süvaõppe domineerimise kohta viimasel kümnendil esitatakse ilma viiteta.",
+      "põhjendus": "Selline ajalooline ja valdkondlik üldistus ei ole üldteadmine ning vajab toetust kirjandusallikale (nt ülevaateartikkel).",
+      "soovitus": "Lisa viide tunnustatud ülevaateartiklile või õpikule, mis kinnitab süvaõppe domineerivat rolli viimasel kümnendil.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval kasutavad kõik mudelid süvaõpet.",
+      "probleem": "Faktiline väide ilma viiteta.",
+      "põhjendus": "Kui väide säilitatakse mingis vormis, peab see olema toetatud allikaga; praegusel kujul on tegemist tõestamata üldistusega.",
+      "soovitus": "Kas eemalda väide või sõnasta täpsemalt ja lisa viide kirjandusele, mis kinnitab süvaõppe levikut.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

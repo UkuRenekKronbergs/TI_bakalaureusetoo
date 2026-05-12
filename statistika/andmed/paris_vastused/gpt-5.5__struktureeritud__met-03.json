@@ -1,0 +1,40 @@
+{
+  "katkend_id": "met-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 33789,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused on esitatud peatükis 4. Üldiselt oli kiir-sort kõige kiirem, aga see asi sõltub palju sisendi struktuurist.",
+      "probleem": "Metoodika alapeatükk sisaldab tulemuste kokkuvõtet, kuigi ütleb, et tulemused esitatakse peatükis 4.",
+      "põhjendus": "Metoodika peaks kirjeldama mõõtmiste läbiviimist; tulemuste ja tõlgenduste esitamine sobib pigem tulemuste peatükki.",
+      "soovitus": "Jäta metoodikasse mõõtmisprotseduuri kirjeldus ja vii kiirusevõrdluse sisuline järeldus tulemuste peatükki.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "aga see asi sõltub palju sisendi struktuurist",
+      "probleem": "Väljend „see asi” on kõnekeelne ja ebamäärane.",
+      "põhjendus": "Akadeemilises tekstis peaks olema täpselt selge, millisele nähtusele või mõõdikule viidatakse; kõnekeelne sõnastus vähendab teksti formaalsust.",
+      "soovitus": "Asenda kõnekeelne ja ebamäärane viide täpse mõistega ning kasuta formaalsemat sidendit.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "3.3 Benchmark-mõõtmised",
+      "probleem": "Ingliskeelne termin „Benchmark” esineb ilma selgituse või eestikeelse vasteta.",
+      "põhjendus": "Kui ingliskeelset terminit kasutatakse esmakordselt, peaks lugejale olema selge selle tähendus ja seos eestikeelse terminoloogiaga.",
+      "soovitus": "Lisa esmakasutusel termini lühiselgitus või vali läbivalt sobiv eestikeelne vaste.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "kasutati Hyperfine tööriista (versioon 1.18)",
+      "probleem": "Konkreetse tarkvaratööriista kasutamine on esitatud ilma viiteta.",
+      "põhjendus": "Metoodikas kasutatud tööriistadele tuleks võimalusel viidata, et lugeja saaks nende päritolu, funktsiooni ja versiooni kontrollida.",
+      "soovitus": "Lisa viide Hyperfine’i ametlikule dokumentatsioonile, koodihoidlale või sobivale tarkvaraviitele.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "katkend_id": "met-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 34684,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina jaotasin kasutajad juhuslikult kahte gruppi",
+      "probleem": "Esimese isiku kasutus mõjub metoodikapeatükis liiga kõnekeelselt.",
+      "põhjendus": "Akadeemilises tekstis eelistatakse tavaliselt neutraalset ja protsessikeskset esitust, eriti metoodika kirjeldamisel.",
+      "soovitus": "Kasuta läbivalt neutraalset vormi ja keskendu protseduurile, mitte autorile.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "checkout-flow",
+      "probleem": "Ingliskeelne termin on eestikeelses tekstis selgitamata ja osaliselt mugandamata.",
+      "põhjendus": "Selgitamata võõrtermin võib vähendada töö arusaadavust ja terminoloogilist järjepidevust.",
+      "soovitus": "Määratle termin esmakasutusel või kasuta järjepidevalt eestikeelset vastet.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Statistilise testi efekti tuvastamise võimsuseks valisin 0,8 ning olulisuse tasemeks 0,05.",
+      "probleem": "Valitud statistiliste parameetrite põhjendus ja allikas puuduvad.",
+      "põhjendus": "Võimsus ja olulisuse tase mõjutavad otseselt valimi suurust ning järelduste usaldusväärsust; nende valik vajab põhjendust.",
+      "soovitus": "Lisa viide kasutatud metoodikale või põhjenda, miks valiti 0,8 ja 0,05.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Eeldatav efekti suurus oli 5% konversiooni kasv, mis nõudis igas grupis vähemalt 1500 kasutajat.",
+      "probleem": "Valimi suuruse arvutuse sisendid on puudulikud ja 5% kasv on ebaselge.",
+      "põhjendus": "Pole selge, kas mõeldud on absoluutset või suhtelist kasvu ning puudub lähtekonversioon, mille põhjal arvutus tehti.",
+      "soovitus": "Täpsusta lähtekonversioon, efekti definitsioon ja valimi suuruse arvutamise viis või tööriist.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mina jaotasin kasutajad juhuslikult kahte gruppi: kontrollgrupp (vana flow) ja katsegrupp (uus flow).",
+      "probleem": "Randomiseerimise protseduur on liiga üldine.",
+      "põhjendus": "Metoodika peab võimaldama hinnata, kas jaotus oli kallutamata ning kas korduvad külastused või seadmed võisid tulemusi mõjutada.",
+      "soovitus": "Kirjelda randomiseerimise ühikut, jaotussuhet ning kuidas välditi sama kasutaja sattumist mõlemasse gruppi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Konversioon mõõdeti kui ostuni jõudnud sessioonide osakaal kõikidest sessioonidest.",
+      "probleem": "Mõõtmisühik ei ühti eelnevalt kirjeldatud randomiseerimise ühikuga.",
+      "põhjendus": "Kasutajate kaupa randomiseerimine ja sessioonide kaupa mõõtmine võib rikkuda sõltumatuse eeldust ning mõjutada statistilist testi.",
+      "soovitus": "Selgita, miks analüüsiti sessioone, või vii mõõdik kooskõlla randomiseerimise ühikuga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Test kestis kuni vajalik valimi suurus saavutati, mis võttis aega 12 päeva.",
+      "probleem": "Testi lõpetamise reegel ja ajastuse mõju on ebapiisavalt kirjeldatud.",
+      "põhjendus": "A/B-testides võib jooksva jälgimise põhjal lõpetamine või lühike ajaperiood tekitada hooajalisuse ja nädalapäevade mõju.",
+      "soovitus": "Täpsusta, kas tulemusi vahepeal analüüsiti, ning põhjenda 12 päeva piisavust ajamõjude kontrollimiseks.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Sekundaarseteks mõõdikuteks olid keskmine ostukorvi väärtus, checkout-protsessi keskmine kestus ja katkestamise määr.",
+      "probleem": "Sekundaarsete mõõdikute operatsionaliseerimine puudub.",
+      "põhjendus": "Ilma täpsete definitsioonideta pole selge, kuidas mõõdikuid arvutati ja milliseid sündmusi või kasutajaid arvestati.",
+      "soovitus": "Defineeri iga sekundaarne mõõdik, andmeallikas ja arvutusreegel.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

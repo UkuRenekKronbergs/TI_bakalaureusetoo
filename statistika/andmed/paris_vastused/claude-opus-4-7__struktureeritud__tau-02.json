@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tau-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 30936,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Krüptograafilised räsifunktsioonid moodustavad nüüdisaegse infoturbe ühe alustala. Esimene laiemalt kasutatud räsifunktsioon oli MD5...",
+      "probleem": "Peatükk algab ühe lausega üldise sissejuhatusena, kuid läheb kohe ajaloolisesse detaili ilma selge ülesehituse tutvustuseta.",
+      "põhjendus": "Taustapeatükk peaks sissejuhatavas lõigus selgitama, mida peatükis käsitletakse ja mis on selle eesmärk, enne kui minnakse konkreetsete näidete (MD5, SHA-1) juurde.",
+      "soovitus": "Kaalu sissejuhatava lõigu lisamist, mis tutvustab räsifunktsioonide rolli ja peatüki ülesehitust enne ajalooliste detailide esitamist.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tänapäeval soovitatakse kasutada SHA-256 ja SHA-3 perekondi. Eestis kasutab digiallkirja infrastruktuur SHA-256-d. Räsifunktsiooni hash output on tüüpiliselt...",
+      "probleem": "Lõigu sees toimub järsk teemahüpe ajaloost ja soovitustest tehniliste omaduste juurde ilma üleminekuta.",
+      "põhjendus": "Loogiline üleminek puudub - viimased laused räsi pikkuse ja omaduste kohta ei seostu loogiliselt eelneva ajalooga.",
+      "soovitus": "Eralda tehnilised omadused eraldi lõiku või lisa selgitav üleminek, mis seostab ajaloolise konteksti räsifunktsiooni omadustega.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Räsifunktsiooni hash output on tüüpiliselt 128 kuni 512 bitti pikk. Hash function peab olema kollisioonikindel ja ühe-suunaline.",
+      "probleem": "Kasutatakse läbisegi eestikeelset terminit \"räsifunktsioon\" ja ingliskeelseid \"hash output\", \"hash function\" ilma selgituseta.",
+      "põhjendus": "Sama mõiste tähistamiseks kasutatakse kahte keelt segiläbi, mis rikub terminoloogilist järjepidevust ja akadeemilise teksti selgust.",
+      "soovitus": "Vali üks termin (soovitavalt eestikeelne \"räsifunktsioon\" ja \"räsi\") ja kasuta seda läbivalt; vajadusel märgi ingliskeelne vaste sulgudes esmakasutusel.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Hash function peab olema kollisioonikindel ja ühe-suunaline.",
+      "probleem": "Kasutatakse terminit \"kollisioonikindel\", kuigi eelnevalt räägiti \"kokkupõrkenõrkustest\" ja \"kokkupõrkerünnetest\".",
+      "põhjendus": "Sama mõiste (collision) tähistamiseks kasutatakse läbisegi \"kokkupõrge\" ja \"kollisioon\", mis tekitab segadust.",
+      "soovitus": "Ühtlusta terminoloogia - kasuta kogu peatükis kas \"kokkupõrge\" või \"kollisioon\".",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval soovitatakse kasutada SHA-256 ja SHA-3 perekondi.",
+      "probleem": "Soovitus on esitatud üldteadmisena, kuid puudub viide standardile või soovitusallikale (nt NIST).",
+      "põhjendus": "Konkreetne soovitus kasutada SHA-256/SHA-3 pärineb standarditest ja juhenditest, mille autoriteet tuleks viite kaudu kinnitada.",
+      "soovitus": "Lisa viide NIST või muu autoriteetse organisatsiooni juhendile, mis soovitab SHA-256/SHA-3 kasutamist.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eestis kasutab digiallkirja infrastruktuur SHA-256-d.",
+      "probleem": "Konkreetne faktiline väide Eesti infrastruktuuri kohta ilma viiteta.",
+      "põhjendus": "Spetsiifiline tehniline väide riikliku süsteemi kohta vajab viidet (nt RIA dokumentatsioon, BDOC/ASiC spetsifikatsioon).",
+      "soovitus": "Lisa viide RIA või SK ID Solutions dokumentatsioonile, mis seda väidet kinnitab.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Räsifunktsiooni hash output on tüüpiliselt 128 kuni 512 bitti pikk.",
+      "probleem": "Konkreetne arvuline vahemik esitatud ilma viiteta.",
+      "põhjendus": "Kuigi tegemist on suhteliselt üldteadmusliku faktiga, on konkreetsed arvulised piirid soovitatav siduda standardi või õpikuga.",
+      "soovitus": "Kaalu viite lisamist krüptograafia õpikule või standardile, mis räsi pikkuse vahemikku kinnitab.",
+      "kindlus": "madal"
+    }
+  ]
+}

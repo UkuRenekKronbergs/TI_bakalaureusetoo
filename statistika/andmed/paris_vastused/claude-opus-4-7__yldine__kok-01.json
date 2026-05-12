@@ -1,0 +1,64 @@
+{
+  "katkend_id": "kok-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 29355,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesoleva bakalaureusetöö raames vaadeldi, kuidas avatud lähtekoodiga haavatavusi tuvastavad süsteemid...",
+      "probleem": "Kokkuvõte algab vaid eesmärgi/meetodi kirjeldusega, kuid puudub selge probleemipüstitus või motivatsioon.",
+      "põhjendus": "Hea kokkuvõte peaks lühidalt katma konteksti/probleemi, eesmärgi, meetodi, tulemused ja järeldused. Praegu jääb taust katmata.",
+      "soovitus": "Lisa kokkuvõtte algusesse 1–2 lauset, mis põhjendavad, miks teema on oluline (nt tarkvaratarneahela turvariskid).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "neljas Eestis levinud projektis",
+      "probleem": "Valimi kirjeldus on liiga üldine ja ebamäärane.",
+      "põhjendus": "Lugeja ei saa aru, millised projektid valiti ja mille alusel neid „Eestis levinuks\" loeti. See vähendab tulemuste usaldusväärsust kokkuvõttes.",
+      "soovitus": "Täpsusta lühidalt projektide tüüpi (nt programmeerimiskeel, valdkond) ja valikukriteeriumi.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "false positive'ide määra",
+      "probleem": "Ingliskeelne termin keset eestikeelset teksti ilma vasteta.",
+      "põhjendus": "Akadeemilises eestikeelses tekstis tuleks kasutada eestikeelset vastet või lisada esmamainimisel selgitus.",
+      "soovitus": "Kasuta eestikeelset terminit (nt „valepositiivsete tulemuste määra\") või lisa sulgudes ingliskeelne vaste.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Töö praktiline panus on konkreetne soovitus: Eesti väikeprojektidele on Snyki kasutamine põhjendatud",
+      "probleem": "Soovitus võib olla liiga kategooriline ainult nelja projekti valimi põhjal.",
+      "põhjendus": "Väike valim ei pruugi õigustada üldistavat soovitust; akadeemilises stiilis tuleks järeldusi piiritleda.",
+      "soovitus": "Sõnasta järeldus ettevaatlikumalt ja maini valimi piiratust ning üldistatavuse piire.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Snyk tuvastas keskmiselt 87% kõikidest teadaolevatest haavatavustest, Dependabot 76% ja Trivy 81%",
+      "probleem": "Esitatakse arvulised tulemused, kuid puudub viide nende tähendusele või kontekstile (nt mitu CVE-d kokku).",
+      "põhjendus": "Kokkuvõttes peaksid tulemused olema tõlgendatavad ka ilma põhitekstita; protsendid üksi ei näita uuringu mahtu.",
+      "soovitus": "Lisa lühidalt CVE-de koguarv või uuritud haavatavuste hulk, et protsendid oleksid sisukamad.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "avatud lähtekoodiga haavatavusi tuvastavad süsteemid",
+      "probleem": "Sõnastus on mitmetimõistetav — kas tööriistad ise on avatud lähtekoodiga või tuvastavad nad haavatavusi avatud lähtekoodiga komponentides?",
+      "põhjendus": "Snyk ja Dependabot ei ole täielikult avatud lähtekoodiga; tõenäoliselt mõeldakse haavatavusi avatud lähtekoodiga sõltuvustes.",
+      "soovitus": "Täpsusta sõnastust, nt „tööriistad, mis tuvastavad haavatavusi avatud lähtekoodiga sõltuvustes\".",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Käesoleva bakalaureusetöö raames vaadeldi",
+      "probleem": "Sõna „käesoleva\" on kantseliitlik ja TÜ/TTÜ juhendites sageli ebasoovitatav.",
+      "põhjendus": "Akadeemilises eesti keeles soovitatakse vältida kantseliitlikke väljendeid ja eelistada selgemat sõnastust.",
+      "soovitus": "Kaalu sõnastust nagu „Bakalaureusetöös uuriti...\" või „Töös analüüsiti...\".",
+      "kindlus": "madal"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "katkend_id": "sis-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 30533,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Suur osa veebirakendusi tugineb täna SQL-andmebaasidele.",
+      "probleem": "Üldistav väide vajab allikat või täpsustust.",
+      "põhjendus": "Sissejuhatuses esitatud taustaväited peavad olema kontrollitavad, eriti kui need kirjeldavad valdkonna üldist olukorda.",
+      "soovitus": "Lisa usaldusväärne viide või sõnasta väide ettevaatlikumalt.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Veebipoodide jaoks on iga sekundi viivitus kasutaja jaoks mõõdetav kahju.",
+      "probleem": "Väide on mõjuv, kuid vajab empiirilist tuge.",
+      "põhjendus": "Jõudluse mõju kasutajakäitumisele ja tulule on uuritav väide, mida tuleks toetada allikaga.",
+      "soovitus": "Lisa viide uuringule, mis seostab laadimisaja või viivituse ärilise mõjuga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Esimesel pilgul tundub, et asjad on lihtsad: kumb on kiirem, see võidab.",
+      "probleem": "Sõnastus on liiga kõnekeelne.",
+      "põhjendus": "Bakalaureusetöö sissejuhatus peaks hoidma neutraalset ja akadeemilist tooni.",
+      "soovitus": "Muuda toon formaalsemaks, säilitades mõtte võrdluskriteeriumide mitmekesisusest.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "NoSQL ja key-value store'id",
+      "probleem": "Terminikasutus on ebaühtlane ja ingliskeelne.",
+      "põhjendus": "Eestikeelses lõputöös tuleks kasutada järjepidevaid eestikeelseid termineid või selgitada võõrterminid esmakordsel kasutusel.",
+      "soovitus": "Defineeri NoSQL ja kasuta nt „võti-väärtus-andmehoidlad“ või põhjenda ingliskeelse termini kasutust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Memcached'i",
+      "probleem": "Nime käänamine apostroofiga võib olla stiililiselt küsitav.",
+      "põhjendus": "Tarkvaranimede käänamisel tuleks järgida ühtset keelelist tava kogu töös.",
+      "soovitus": "Kontrolli juhendist või keelenõuandest sobiv kuju ja kasuta seda järjepidevalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesolevas bakalaureusetöös on eesmärgiks võrrelda Redise ja Memcached'i sooritust e-poe sessioonihoidlana koormustestide kaudu.",
+      "probleem": "Eesmärk on olemas, kuid uurimisküsimus ja mõõdikud jäävad ebamääraseks.",
+      "põhjendus": "Sissejuhatus peaks andma lugejale selge arusaama, mida täpselt võrreldakse ja mille alusel järeldused tehakse.",
+      "soovitus": "Täpsusta peamised mõõdikud, nt latentsus, läbilaskevõime, mälukasutus ja testikeskkond.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Töö annab konkreetse soovituse, millise lahenduse poole Eesti väikeste e-poodide arendajatel tasub kalduda.",
+      "probleem": "Sihtrühm on määratletud, kuid piiritlemata.",
+      "põhjendus": "„Eesti väikesed e-poed“ võib tähendada väga erineva koormuse, eelarve ja tehnilise arhitektuuriga lahendusi.",
+      "soovitus": "Määra, mida tähendab „väike e-pood“ töö kontekstis, nt kasutajate arv või koormusprofiil.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Reaalsuses tuleb mängu mälukasutus, andmete eluiga ja klastri konfiguratsioon.",
+      "probleem": "Olulised tegurid on nimetatud, kuid nende seos töö ulatusega pole selge.",
+      "põhjendus": "Kui need tegurid mõjutavad võrdlust, peaks sissejuhatusest ilmnema, kas ja kuidas neid töös käsitletakse.",
+      "soovitus": "Täpsusta, kas neid tegureid hinnatakse eksperimendis või käsitletakse vaid arutelus.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

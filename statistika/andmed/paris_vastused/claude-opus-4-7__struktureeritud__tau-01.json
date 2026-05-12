@@ -1,0 +1,64 @@
+{
+  "katkend_id": "tau-01",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 21732,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "2.1 Konteineritehnoloogia areng\nKonteinerid on lihtsamad ja kergemad kui täisvirtualiseerimine.",
+      "probleem": "Peatükk 2 algab kohe alapealkirjaga 2.1 ilma sissejuhatava lõiguta.",
+      "põhjendus": "Lugejale jääb arusaamatuks, mida peatükk 2 tervikuna käsitleb ja kuidas alampeatükid omavahel seostuvad.",
+      "soovitus": "Lisa peatüki 2 algusesse lühike sissejuhatav lõik, mis tutvustab peatüki sisu ja alampeatükkide ülesehitust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et see on kiirem.",
+      "probleem": "Määramatu üldistus akadeemilises tekstis.",
+      "põhjendus": "Väljend „kõik teavad” ei sobi akadeemilisse stiili ega põhjenda väidet.",
+      "soovitus": "Eemalda üldistav väljend ja asenda konkreetse, viidatud väitega kiiruse erinevuse kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "See teeb konteinerid kiiremaks kui VM-id. Üks Docker konteiner käivitub millisekunditega, samas kui virtuaalmasin vajab käivitamiseks mitukümmend sekundit.",
+      "probleem": "Sama mõiste jaoks kasutatakse läbisegi termineid „virtuaalmasin” ja „VM”.",
+      "põhjendus": "Akadeemilises tekstis peaks termin olema järjepidev või lühend esmakasutusel defineeritud ja seejärel järjekindlalt kasutatud.",
+      "soovitus": "Defineeri lühend VM esmakasutusel ja kasuta seejärel ühte vormi järjepidevalt.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Konteinerid jagavad kerneliga",
+      "probleem": "Ingliskeelne termin „kernel” esitatud ilma eestikeelse vaste või selgituseta.",
+      "põhjendus": "Esmakasutusel tuleks võõrkeelne tehniline termin selgitada või kasutada eestikeelset vastet (tuum).",
+      "soovitus": "Lisa esmakasutusel selgitus või kasuta eestikeelset terminit „tuum”.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Docker tutvustas konteinereid laiale arendajaskonnale alates 2013. aastast.",
+      "probleem": "Ajalooline faktiväide ilma viiteta.",
+      "põhjendus": "Konkreetne aastaarv ja ajalooline väide vajab allikat.",
+      "soovitus": "Lisa viide Dockeri ajalugu või konteinerite levikut käsitlevale allikale.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Üks Docker konteiner käivitub millisekunditega, samas kui virtuaalmasin vajab käivitamiseks mitukümmend sekundit.",
+      "probleem": "Konkreetsed arvulised väited käivitusaja kohta ilma viiteta.",
+      "põhjendus": "Mõõdetavad ajaväärtused peavad põhinema mõõdetud uuringul või allikal.",
+      "soovitus": "Lisa viide uuringule või võrdlustestile, kust käivitusaegade andmed pärinevad.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "ka VM-i lähedasi lahendusi (näiteks Firecracker) nimetatakse vahel konteineriteks, kuigi need on hoopis mikro-virtuaalmasinad.",
+      "probleem": "Konkreetne väide Firecrackeri olemuse kohta ilma viiteta.",
+      "põhjendus": "Tehnilise lahenduse kirjeldus ja klassifitseerimine vajavad allikat.",
+      "soovitus": "Lisa viide Firecrackeri dokumentatsioonile või vastavale akadeemilisele allikale.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

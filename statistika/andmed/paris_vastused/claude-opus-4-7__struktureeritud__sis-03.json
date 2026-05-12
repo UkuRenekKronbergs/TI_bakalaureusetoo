@@ -1,0 +1,56 @@
+{
+  "katkend_id": "sis-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 25347,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "1. Sissejuhatus\n\nMobiilirakenduste ligipääsetavus puuetega kasutajatele on kasvav nõue...",
+      "probleem": "Sissejuhatus koosneb ainult ühest lõigust ja puudub selge struktuur (taust, probleem, eesmärk, meetod, ülesehitus).",
+      "põhjendus": "Lõputöö sissejuhatus peaks olema jaotatud loogilisteks lõikudeks, mis tutvustavad järk-järgult tausta, probleemi, eesmärki ja töö ülesehitust - praegu on kogu info ühes plokis.",
+      "soovitus": "Kaalu sissejuhatuse jagamist mitmeks lõiguks: taust ja motivatsioon, probleemipüstitus, töö eesmärk ja uurimisküsimused, meetod ning töö struktuur.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulemused võimaldavad teha konkreetseid parandussoovitusi.",
+      "probleem": "Sissejuhatuses puudub töö struktuuri kirjeldav lõik, mis tutvustaks järgnevate peatükkide sisu.",
+      "põhjendus": "Lõputöö sissejuhatus peaks tavaliselt lõppema ülevaatega töö ülesehitusest, et lugeja saaks aimu järgnevate peatükkide sisust.",
+      "soovitus": "Lisa sissejuhatuse lõppu lühike ülevaade töö struktuurist - milliseid teemasid millises peatükis käsitletakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Euroopa Liidu juurdepääsetavuse akt kohustab alates 2025. aastast paljusid mobiilirakendusi vastama WCAG 2.1 tasemele AA.",
+      "probleem": "Konkreetne seadusandlik väide ilma viiteta originaalallikale.",
+      "põhjendus": "Viide konkreetsele õigusaktile ja selle nõuetele on faktiväide, mis peab olema tagasi viidatav esmaallikale (direktiiv, WCAG standard).",
+      "soovitus": "Lisa viide vastavale EL direktiivile (nt direktiiv 2019/882) ja WCAG 2.1 standardile.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eestis on enam kui 100 000 inimest, kellel on mingisugune nägemise või liikumise piirang, mis mõjutab nutiseadme kasutust.",
+      "probleem": "Konkreetne arvuline väide ilma viiteta.",
+      "põhjendus": "Statistiline väide nõuab viidet allikale (nt Statistikaamet, Sotsiaalministeerium või uuring).",
+      "soovitus": "Lisa viide statistikaallikale, kust arv pärineb.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Mobiilirakenduste ligipääsetavus puuetega kasutajatele... Käesolevas töös uuritakse, kuidas Tartu Ülikooli sisemiste teenuste mobiilirakendused vastavad WCAG nõuetele.",
+      "probleem": "Kasutatakse mõistet 'ligipääsetavus', kuid hilisemas tekstis ja seadusandluses on viidatud 'juurdepääsetavuse' aktile - sama mõiste tähistamiseks kasutatakse kahte erinevat terminit.",
+      "põhjendus": "Eesti keeles kasutatakse ligipääsetavuse ja juurdepääsetavuse mõisteid sageli sünonüümselt, kuid lõputöös tuleks valida üks termin ja kasutada seda läbivalt.",
+      "soovitus": "Otsusta, kas kasutad läbivalt terminit 'ligipääsetavus' või 'juurdepääsetavus' ja kasuta seda kogu töös järjepidevalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Kasutatakse tööriistu nagu Accessibility Scanner Androidil ja Accessibility Inspector iOS-il.",
+      "probleem": "Ingliskeelsed tööriistanimed esitatakse ilma esmakasutuse selgituseta või kontekstita.",
+      "põhjendus": "Kuigi tööriistade nimed jäävad ingliskeelseks, võiks esmakasutusel selgitada, mis tüüpi tööriistadega on tegu.",
+      "soovitus": "Lisa esmakasutusel lühike selgitus, mis liiki tööriistadega on tegu (nt automaatse ligipääsetavuse analüüsi tööriistad).",
+      "kindlus": "madal"
+    }
+  ]
+}

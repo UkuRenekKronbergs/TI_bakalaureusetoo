@@ -1,0 +1,72 @@
+{
+  "katkend_id": "met-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 48454,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina jaotasin kasutajad juhuslikult kahte gruppi",
+      "probleem": "Esimese isiku kasutamine ei sobi akadeemilisse stiili.",
+      "põhjendus": "Eestikeelsetes lõputöödes eelistatakse umbisikulist tegumoodi, et säilitada objektiivne toon.",
+      "soovitus": "Kasuta umbisikulist tegumoodi, nt kasutajad jaotati juhuslikult kahte gruppi, valiti olulisuse tasemeks.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "uue checkout-flow mõju konversioonile",
+      "probleem": "Ingliskeelsed terminid checkout-flow ja flow on kasutusel ilma eestikeelse vasteta või selgituseta.",
+      "põhjendus": "Akadeemilises tekstis tuleks võõrkeelsed mõisted esmasel kasutamisel defineerida või eestindada.",
+      "soovitus": "Esita esmakordsel kasutamisel eestikeelne vaste ja sulgudes ingliskeelne termin, edaspidi kasuta eestikeelset terminit järjekindlalt.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Statistilise testi efekti tuvastamise võimsuseks valisin 0,8 ning olulisuse tasemeks 0,05.",
+      "probleem": "Metoodiliste valikute põhjendus puudub viidetena allikatele.",
+      "põhjendus": "Standardväärtuste valik peab olema põhjendatud või toetatud erialakirjandusele (nt Cohen 1988).",
+      "soovitus": "Lisa viide statistilise võimsuse ja valimi suuruse arvutamise metoodilisele allikale.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "mis nõudis igas grupis vähemalt 1500 kasutajat",
+      "probleem": "Valimi suuruse arvutuskäik pole esitatud — pole selge, millise valemi või tööriistaga see saadi.",
+      "põhjendus": "Metoodikapeatükk peab olema korratav: lugeja peab saama samade sisenditega sama tulemuseni jõuda.",
+      "soovitus": "Kirjelda valimi suuruse arvutamise meetodit (valem või tarkvara, nt G*Power) ja sisendparameetrid.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Test kestis kuni vajalik valimi suurus saavutati, mis võttis aega 12 päeva.",
+      "probleem": "Puudub info testi läbiviimise konteksti kohta: millal, millisel platvormil, milline oli kasutajate segment.",
+      "põhjendus": "Need detailid mõjutavad tulemuste valiidsust ja korratavust.",
+      "soovitus": "Lisa testi periood (kuupäevad), platvorm, kasutajate sihtrühm ning kuidas käsitleti korduvaid sessioone.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Konversioon mõõdeti kui ostuni jõudnud sessioonide osakaal kõikidest sessioonidest.",
+      "probleem": "Mõõdikute definitsioonid on lakoonilised ja osa on määratlemata (katkestamise määr, checkout-protsessi kestus).",
+      "põhjendus": "Iga mõõdik peab olema operatsionaalselt defineeritud, et tulemusi oleks võimalik üheselt tõlgendada ja korrata.",
+      "soovitus": "Defineeri täpselt iga sekundaarne mõõdik (alguse ja lõpu sündmused, ühikud, arvutusvalem).",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Eeldatav efekti suurus oli 5% konversiooni kasv",
+      "probleem": "Pole selge, kas tegu on absoluutse või suhtelise muutusega ning millel põhineb eeldus.",
+      "põhjendus": "5% võib tähendada protsendipunkti või suhtelist kasvu — erinevus on valimisuuruse arvutuses oluline.",
+      "soovitus": "Täpsusta, kas tegu on absoluutse (protsendipunktides) või suhtelise muutusega, ja põhjenda eelduse päritolu.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "viidi läbi A/B-test",
+      "probleem": "Kasutatav statistiline test (nt z-test proportsioonidele, hii-ruut-test) on määratlemata.",
+      "põhjendus": "Metoodikas peab olema kirjas, millise konkreetse statistilise testiga hüpoteesi kontrollitakse.",
+      "soovitus": "Nimeta konkreetne kasutatud test ja põhjenda valikut (eeldused, ühe- või kahepoolne hüpotees).",
+      "kindlus": "kõrge"
+    }
+  ]
+}

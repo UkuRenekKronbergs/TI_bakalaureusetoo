@@ -1,0 +1,72 @@
+{
+  "katkend_id": "tul-02",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 32384,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Küsitlusele vastas 87 tudengit. Demograafia osas olid vastajatest 58 (66,7%) meessoost ja 29 (33,3%) naissoost",
+      "probleem": "Tulemused on esitatud ühe tiheda lõiguna ilma alapealkirjade või visuaalse struktureerimiseta",
+      "põhjendus": "Tulemuste peatükk peaks olema selgelt struktureeritud (nt alapeatükid demograafia, tööriistade kasutus, rahulolu hinnangud), et lugeja saaks tulemustes paremini orienteeruda",
+      "soovitus": "Jaga tulemused alapeatükkideks ja kaalu tabeli/joonise lisamist demograafia ja tööriistade kasutuse osas",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "VS Code'i keskmine hinnang oli 4,3 (SD = 0,7), IntelliJ IDEA-l 4,1 (SD = 0,9).",
+      "probleem": "Arvuliste tulemuste suur hulk on esitatud joostes tekstina, mitte tabelina",
+      "põhjendus": "Kirjeldav statistika (keskmised, standardhälbed, protsendid) on lugejale palju selgemini hoomatav tabeli kujul",
+      "soovitus": "Koonda hinnangud ja statistilised näitajad tabelisse ning viita sellele tekstis",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "oli ülekaalukalt kõige populaarsem Visual Studio Code",
+      "probleem": "Sõna „ülekaalukalt“ on hinnanguline ja emotsionaalne väljend",
+      "põhjendus": "Tulemuste peatükk peaks olema neutraalne ja faktipõhine; tõlgendused kuuluvad arutelusse",
+      "soovitus": "Esita arvuline fakt ilma hinnangulise täiendita, nt lihtsalt „kõige sagedamini kasutatud oli VS Code (90,8%)“",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Konkreetsete tööriistade hinnangus",
+      "probleem": "Sõna „konkreetsete“ on liiasõna ja jätab ebamäärase mulje",
+      "põhjendus": "Akadeemilises tekstis tuleks vältida ebavajalikke täitesõnu, mis ei lisa infot",
+      "soovitus": "Kaalu liiasõnade eemaldamist või asendamist täpsema sõnastusega",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Hinnangud esitati Likerti 5-pallisel skaalal",
+      "probleem": "Andmekogumismeetodi kirjeldus (skaala selgitus) sobib pigem metoodika peatükki, mitte tulemustesse",
+      "põhjendus": "Tulemuste peatükis tuleks esitada andmed; mõõtmismetoodika kuulub metoodika ossa, et vältida dubleerimist",
+      "soovitus": "Viige skaala kirjeldus metoodikasse ja viidake tulemustes lihtsalt sellele",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Mann-Whitney U-test näitas, et hinnangute erinevus VS Code'i ja IntelliJ IDEA vahel ei olnud statistiliselt oluline (p = 0,18).",
+      "probleem": "Statistilise testi tulemus on esitatud puudulikult – puuduvad testi statistiku väärtus (U), valimite suurused ja olulisuse nivoo",
+      "põhjendus": "Akadeemilises töös tuleb statistilise testi tulemused esitada täielikult, et tulemus oleks reprodutseeritav",
+      "soovitus": "Lisa U-statistik, mõlema rühma valimite suurused (n1, n2) ja kasutatud olulisuse nivoo (nt α = 0,05)",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "vastajatest 58 (66,7%) meessoost ja 29 (33,3%) naissoost",
+      "probleem": "Sooline tasakaalustamatus valimis võib mõjutada tulemuste üldistatavust, kuid seda ei mainita",
+      "põhjendus": "Tulemuste peatükis võib viidata valimi piirangutele või suunata lugeja arutelu peatüki juurde",
+      "soovitus": "Kaalu lühikese märkuse lisamist valimi koosseisu kohta või veendu, et seda käsitletakse arutelus/piirangutes",
+      "kindlus": "madal"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "71 vastajat (81,6%) olid bakalaureuseastmes, 16 (18,4%) magistrantuuris",
+      "probleem": "Puudub info, kas vastusemäärad erinesid õppeastmete lõikes ja kas hinnangud on esitatud eraldi rühmadele",
+      "põhjendus": "Kui valimis on selgelt eristuvad rühmad, tasuks tulemusi esitada ka rühmade kaupa, et toetada hilisemat analüüsi",
+      "soovitus": "Kaalu hinnangute esitamist õppeastme lõikes või põhjenda, miks rühmasid eraldi ei analüüsita",
+      "kindlus": "madal"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "katkend_id": "sis-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 30028,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Euroopa Liidu juurdepääsetavuse akt kohustab alates 2025. aastast paljusid mobiilirakendusi vastama WCAG 2.1 tasemele AA.",
+      "probleem": "Konkreetne õiguslik väide on esitatud ilma viiteta.",
+      "põhjendus": "Seadusest tulenevad kohustused ja tähtajad on kontrollitavad allikapõhised väited; lugeja peab saama viidatud õigusakti või juhendi järgi väidet kontrollida.",
+      "soovitus": "Lisa viide asjakohasele ELi õigusaktile või ametlikule juhendile ning kontrolli WCAG taseme täpsust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eestis on enam kui 100 000 inimest, kellel on mingisugune nägemise või liikumise piirang, mis mõjutab nutiseadme kasutust.",
+      "probleem": "Arvuline väide on esitatud ilma allikata.",
+      "põhjendus": "Konkreetne statistiline hinnang vajab usaldusväärset allikat, sest muidu ei ole selge, kust arv pärineb ega kuidas sihtrühm on määratletud.",
+      "soovitus": "Lisa viide statistika või uuringu allikale ning täpsusta, millist piirangute rühma arv hõlmab.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "mingisugune nägemise või liikumise piirang",
+      "probleem": "Sõna „mingisugune“ on akadeemilises tekstis ebamäärane ja kõnekeelne.",
+      "põhjendus": "Sissejuhatuses peaks sihtrühm olema võimalikult täpselt määratletud; ebamäärane sõnastus vähendab väite selgust ja usaldusväärsust.",
+      "soovitus": "Kasuta täpsemat määratlust või selgita, millist tüüpi piiranguid silmas peetakse.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "ligipääsetavus ... juurdepääsetavuse akt",
+      "probleem": "Tekstis kasutatakse lähestikku termineid „ligipääsetavus“ ja „juurdepääsetavus“ seotud mõistete tähistamiseks.",
+      "põhjendus": "Kui terminid tähistavad sama mõistet, võib vahelduv kasutus tekitada mulje, et neil on töös erinev tähendus.",
+      "soovitus": "Otsusta, millist eestikeelset põhiterminit töös kasutatakse, ja selgita erandit, kui teine kuju esineb õigusakti nimetuses.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

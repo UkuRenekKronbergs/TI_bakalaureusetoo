@@ -1,0 +1,56 @@
+{
+  "katkend_id": "kok-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 31535,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Käesolev töö oli üks lahe väljakutse.",
+      "probleem": "Väljend „lahe väljakutse” on kõnekeelne ja hinnanguline.",
+      "põhjendus": "Kokkuvõttes tuleks kasutada neutraalset akadeemilist stiili, mitte isiklikku või kõnekeelset hinnangut.",
+      "soovitus": "Asenda kõnekeelne hinnang neutraalse kirjeldusega töö keerukuse või eesmärgi kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina õppisin palju andmebaaside rände kohta.",
+      "probleem": "Kasutatakse mina-vormi ja keskendutakse autori isiklikule õpikogemusele.",
+      "põhjendus": "Lõputöö kokkuvõte peaks rõhutama töö tulemusi ja panust, mitte autori isiklikku kogemust.",
+      "soovitus": "Sõnasta mõte töö tulemuste või omandatud teadmiste rakendamise kaudu, vältides mina-vormi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "andmetüüpide ühildumatusega on tegelikult palju asja",
+      "probleem": "Väljendid „tegelikult” ja „palju asja” on kõnekeelsed ning ebatäpsed.",
+      "põhjendus": "Akadeemilises tekstis tuleb kirjeldada probleemi täpselt ja neutraalselt, eriti tulemuste esitamisel.",
+      "soovitus": "Täpsusta, millised ühildumatuse probleemid ilmnesid, ning kasuta neutraalset erialast sõnastust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kõik teavad, et iga andmebaas teeb asju erinevalt.",
+      "probleem": "Sisaldab määramatut üldistust ja kõnekeelset väljendit „teeb asju”.",
+      "põhjendus": "Väide on liiga üldine ega selgita, milliseid erinevusi silmas peetakse; „kõik teavad” ei sobi akadeemilisse stiili.",
+      "soovitus": "Täpsusta, millised andmebaaside erinevused on töö seisukohalt olulised, ja väldi üldistavat väljendit.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tulevikutöös võiks teha veel mõned asjad",
+      "probleem": "Väljend „mõned asjad” on ebamäärane ja kõnekeelne.",
+      "põhjendus": "Tulevikutöö kirjeldus peaks olema konkreetne, et lugeja mõistaks, milliseid arendusi või uurimissuundi pakutakse.",
+      "soovitus": "Nimeta tulevikutöö suunad konkreetsemalt ja väldi ebamäärast kõnekeelset väljendit.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "rändamisskript, mis on saadaval GitHubis",
+      "probleem": "Konkreetsele avalikule artefaktile viidatakse ilma täpse viite või lingita.",
+      "põhjendus": "Kui töö praktiline tulemus on kättesaadav välises keskkonnas, peab lugejal olema võimalik see üheselt üles leida.",
+      "soovitus": "Lisa töö nõuetele vastav viide või URL konkreetsele GitHubi repositooriumile.",
+      "kindlus": "kõrge"
+    }
+  ]
+}

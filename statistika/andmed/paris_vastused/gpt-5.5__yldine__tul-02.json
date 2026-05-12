@@ -1,0 +1,80 @@
+{
+  "katkend_id": "tul-02",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 35909,
+  "leiud": [
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Küsitlusele vastas 87 tudengit.",
+      "probleem": "Puudub info valimi suuruse või vastamismäära kohta.",
+      "põhjendus": "Tulemuste tõlgendamiseks on oluline teada, kui suur osa sihtrühmast vastas ja kas valim võib olla kallutatud.",
+      "soovitus": "Lisa võimalusel küsitluse saanud tudengite arv ja vastamismäär või selgita, et seda infot ei kogutud.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "ülekaalukalt kõige populaarsem Visual Studio Code",
+      "probleem": "Sõna „ülekaalukalt” on tulemuste peatükis hinnanguline.",
+      "põhjendus": "Tulemuste esitamisel tasub eelistada neutraalset ja mõõdetavat sõnastust, et vältida tõlgendavat tooni.",
+      "soovitus": "Asenda hinnanguline väljend neutraalse kirjeldusega või toeta seda konkreetse võrdlusega.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Konkreetsete tööriistade hinnangus oli ülekaalukalt kõige populaarsem Visual Studio Code",
+      "probleem": "Segunevad mõisted „hinnang” ja „populaarsus/kasutamine”.",
+      "põhjendus": "Populaarsus viitab kasutajate arvule, hinnang aga rahulolu skoorile; nende segamine võib lugejat eksitada.",
+      "soovitus": "Erista selgelt tööriistade kasutussagedus ja rahuloluhinnangud.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "IntelliJ IDEA (43,7%) ja Eclipse (5,7%).",
+      "probleem": "Mõne tööriista puhul on esitatud ainult protsent, mitte vastajate arv.",
+      "põhjendus": "Tulemuste ühtlane esitamine parandab loetavust ja võimaldab kontrollida arvutuste korrektsust.",
+      "soovitus": "Lisa kõigi tööriistade juurde nii vastajate arv kui protsent.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Visual Studio Code (kasutab 79 vastajat ehk 90,8%), millele järgnesid IntelliJ IDEA (43,7%) ja Eclipse (5,7%).",
+      "probleem": "Pole selge, kas vastajad said valida mitu tööriista.",
+      "põhjendus": "Protsentide summa ületab tõenäoliselt 100%, mis on mõistetav ainult mitmikvaliku korral.",
+      "soovitus": "Täpsusta, kas tööriistade kasutuse küsimus oli ühe või mitme vastusevariandiga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Mann-Whitney U-test näitas, et hinnangute erinevus VS Code'i ja IntelliJ IDEA vahel ei olnud statistiliselt oluline (p = 0,18).",
+      "probleem": "Testi sobivus on ebaselge.",
+      "põhjendus": "Kui samad vastajad hindasid mõlemat tööriista, oleks vaja paarisandmete testi, mitte sõltumatute gruppide Mann-Whitney U-testi.",
+      "soovitus": "Kontrolli, kas andmed on sõltumatud; paarisandmete korral kasuta sobivamat testi ja selgita valikut.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "VS Code'i keskmine hinnang oli 4,3 (SD = 0,7), IntelliJ IDEA-l 4,1 (SD = 0,9).",
+      "probleem": "Puudub hinnangute aluseks olev vastajate arv.",
+      "põhjendus": "Kõik küsitletud ei pruukinud mõlemat tööriista kasutada ega hinnata; n on vajalik tulemuste usaldusväärsuse hindamiseks.",
+      "soovitus": "Lisa iga keskmise hinnangu juurde vastajate arv, kelle hinnangut kasutati.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Hinnangud esitati Likerti 5-pallisel skaalal",
+      "probleem": "Likerti skaala puhul on kasutatud keskmist ja standardhälvet ilma põhjenduseta.",
+      "põhjendus": "Likerti andmeid käsitletakse sageli järjestustunnusena; keskmise kasutamine võib vajada põhjendust või täiendavaid mediaane.",
+      "soovitus": "Kaalu mediaani ja kvartiilide lisamist või põhjenda keskmise ja SD kasutamist.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Mann-Whitney U-test näitas, et hinnangute erinevus VS Code'i ja IntelliJ IDEA vahel ei olnud statistiliselt oluline (p = 0,18).",
+      "probleem": "Statistilise testi tulemused on esitatud puudulikult.",
+      "põhjendus": "Ainult p-väärtus ei anna infot efekti suuruse ega testi täpse statistiku kohta.",
+      "soovitus": "Lisa testi statistik, rühmade suurused ja võimalusel efekti suurus.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

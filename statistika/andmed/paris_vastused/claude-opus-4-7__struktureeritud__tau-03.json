@@ -1,0 +1,48 @@
+{
+  "katkend_id": "tau-03",
+  "mudel": "claude-opus-4-7",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 25359,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Kasutatavusuuringud (\\emph{ingl.\\ usability studies}) on tarkvaraarenduses kasutusel olnud alates 1980-ndatest... Mobiilirakenduste puhul lisanduvad konteksti-eripärad: ekraani suurus, ühe käega kasut",
+      "probleem": "Lõik koosneb ühest pikast lõigust, mis hüppab teemade vahel (ajalugu → Nielseni soovitus → online-meetodid → mobiil) ilma selgete üleminekuteta.",
+      "põhjendus": "Lugejal on raske jälgida mõttekäiku, kui ühes lõigus käsitletakse mitut alateemat ilma loogilise sillata. See vähendab teksti loetavust ja struktuurset selgust.",
+      "soovitus": "Kaalu lõigu jagamist väiksemateks temaatilisteks lõikudeks (nt klassikalised meetodid, online-meetodid, mobiili eripärad) ja lisa üleminekulaused.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Online-meetoditena on populaarsed kuumakaardid (Hotjar, Microsoft Clarity) ja kliki-analüüs.",
+      "probleem": "Ingliskeelse päritoluga termin \"online-meetodid\" on esitatud ilma selgituse või eestikeelse vastendita; samuti \"kliki-analüüs\" võib vajada täpsustust.",
+      "põhjendus": "Lõputöös tuleks võõrkeelsed terminid esmakasutusel selgitada või pakkuda eestikeelne vaste, et terminoloogia oleks ühtne ja arusaadav.",
+      "soovitus": "Lisa esmakasutusel selgitus või eestikeelne vaste (nt \"veebipõhised meetodid\") ja täpsusta termini \"kliki-analüüs\" tähendust.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Online-meetoditena on populaarsed kuumakaardid (Hotjar, Microsoft Clarity) ja kliki-analüüs.",
+      "probleem": "Väide nende meetodite populaarsuse kohta ja konkreetsete tööriistade nimetamine on esitatud ilma viiteta.",
+      "põhjendus": "Väide \"populaarsed\" on hinnanguline üldistus, mis vajab kinnitavat allikat; ka konkreetsete tööriistade mainimisel oleks asjakohane viidata allikatele või tootjale.",
+      "soovitus": "Lisa viide allikale, mis kinnitab nende meetodite levikut, või sõnasta väide ettevaatlikumalt.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Mobiilirakenduste puhul lisanduvad konteksti-eripärad: ekraani suurus, ühe käega kasutamise mugavus ja katkestuste rohkus.",
+      "probleem": "Mobiilirakenduste kasutatavuse eripärade kohta esitatud väide on refereeritav teadmus, kuid ilma viiteta.",
+      "põhjendus": "Tegemist on konkreetse valdkondliku väitega mobiilse kasutatavuse uurimisest, mitte üldteadmisega; selliseid väiteid peaks toetama kirjandusviide.",
+      "soovitus": "Lisa viide mobiilse kasutatavuse uuringutele või õpikutele, mis neid eripärasid käsitlevad.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Nielseni klassikaline soovitus on, et viiest testijast piisab umbes 85% kasutatavusprobleemide tuvastamiseks",
+      "probleem": "Sõna \"klassikaline\" kasutatakse lõigus kaks korda lähestikku ning väljend on hinnanguline.",
+      "põhjendus": "Korduv hinnanguline omadussõna nõrgendab akadeemilist neutraalsust ja tekitab stiililise korduse.",
+      "soovitus": "Kaalu ühe \"klassikalise\" eemaldamist või asendamist neutraalsema sõnastusega.",
+      "kindlus": "madal"
+    }
+  ]
+}

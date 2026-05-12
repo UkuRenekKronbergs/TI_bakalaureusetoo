@@ -1,0 +1,56 @@
+{
+  "katkend_id": "sis-04",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 29175,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Kuna mina arvan, et avatud lähtekoodiga projektide turvalisus on ühiskondlikult oluline",
+      "probleem": "Kasutatud on mina-vormi ja subjektiivset hinnangut.",
+      "põhjendus": "Akadeemilises sissejuhatuses peaks töö vajalikkus tuginema põhjendusele, probleemile või allikatele, mitte autori isiklikule arvamusele.",
+      "soovitus": "Põhjenda töö vajalikkust erialase probleemi või allikatega ning vähenda mina-vormi kasutust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "nelja Eestis levinud avatud lähtekoodiga projekti pealt",
+      "probleem": "Väljend „projekti pealt” on kõnekeelne.",
+      "põhjendus": "Kõnekeelsed väljendid vähendavad lõputöö akadeemilist tooni ja võivad muuta metoodilise kirjelduse ebatäpseks.",
+      "soovitus": "Kasuta ametlikumat väljendust ning täpsusta, kas hinnatakse projektide põhjal, alusel või näitel.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Teises osas on taust. Kolmandas on metoodika. Neljas on tulemused. Viiendas arutelu. Kuuendas kokkuvõte.",
+      "probleem": "Laused on väga lühikesed ja loetelulaadsed, mistõttu stiil jääb katkendlikuks.",
+      "põhjendus": "Sissejuhatuse lõpus on töö ülesehituse kirjeldus sobiv, kuid liiga telegrammstiilis esitus mõjub vähem akadeemiliselt.",
+      "soovitus": "Esita töö struktuur sidusamalt, säilitades autori enda sõnastuse ja lisades vajadusel lühikese sisu selgituse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "Nende süsteemide täpsus ja saagis varieerub.",
+      "probleem": "Termin „saagis” võib olla lugejale ebaselge, kui seda ei määratleta.",
+      "põhjendus": "Kui „saagis” tähistab mõõdikut, näiteks recall’i, tuleb termin esmakasutusel selgitada, et mõiste oleks üheselt mõistetav.",
+      "soovitus": "Lisa termini esmakasutusel lühike selgitus või viita, millist hindamismõõdikut selle all mõeldakse.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "nelja Eestis levinud avatud lähtekoodiga projekti",
+      "probleem": "Väide projektide Eestis levimise kohta vajab põhjendust või viidet.",
+      "põhjendus": "„Levinud” on konkreetne empiiriline väide; ilma allika või valikukriteeriumita ei ole selge, mille põhjal seda hinnatakse.",
+      "soovitus": "Lisa viide, andmepõhine põhjendus või selgita valikukriteeriumit, mille alusel projekte levinuks peetakse.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Nende süsteemide täpsus ja saagis varieerub.",
+      "probleem": "Väide süsteemide jõudluse varieerumise kohta on esitatud ilma toetuseta.",
+      "põhjendus": "Kui väide tugineb varasematele uuringutele või võrdlustele, vajab see viidet; muidu jääb ebaselgeks, kust teadmine pärineb.",
+      "soovitus": "Lisa sobiv allikas või täpsusta, et varieerumist hinnatakse käesolevas töös empiiriliselt.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

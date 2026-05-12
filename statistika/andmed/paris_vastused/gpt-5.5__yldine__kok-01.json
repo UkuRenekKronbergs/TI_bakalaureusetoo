@@ -1,0 +1,72 @@
+{
+  "katkend_id": "kok-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 36810,
+  "leiud": [
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "avatud lähtekoodiga haavatavusi tuvastavad süsteemid (Dependabot, Snyk, Trivy)",
+      "probleem": "Sõnastus on mitmeti tõlgendatav: jääb mulje, et süsteemid ise on avatud lähtekoodiga või et need tuvastavad ainult avatud lähtekoodi haavatavusi.",
+      "põhjendus": "Dependabot, Snyk ja Trivy erinevad litsentsi, ärimudeli ja kasutusviisi poolest; ebatäpne termin võib eksitada lugejat.",
+      "soovitus": "Täpsusta, kas mõeldud on avatud lähtekoodiga projektide sõltuvuste haavatavuste tuvastamist või tööriistade enda litsentsi.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "neljas Eestis levinud projektis",
+      "probleem": "Väide „Eestis levinud“ vajab põhjendust või viidet valikukriteeriumidele.",
+      "põhjendus": "Kokkuvõttes esitatud üldistus mõjutab tulemuste tõlgendamist; lugeja peab mõistma, mille alusel projektid valiti.",
+      "soovitus": "Lisa lühidalt valikukriteerium või viita töös olevale metoodikaosale, kus projektide valik on põhjendatud.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "MUU",
+      "tsitaat": "Snyk tuvastas keskmiselt 87% kõikidest teadaolevatest haavatavustest",
+      "probleem": "Ei selgu, mida tähendab „kõikidest teadaolevatest haavatavustest“ ja kuidas võrdlusbaas määrati.",
+      "põhjendus": "Selline protsent on tugev tulemusväide ning selle usaldusväärsus sõltub otseselt sellest, kuidas teadaolevate CVE-de kogum koostati.",
+      "soovitus": "Täpsusta kokkuvõttes lühidalt, et protsendid arvutati töö metoodikas määratud kontrollkogumi põhjal.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Töö praktiline panus on konkreetne soovitus: Eesti väikeprojektidele on Snyki kasutamine põhjendatud",
+      "probleem": "Soovitus on esitatud liiga üldistavalt, arvestades et analüüs hõlmas vaid nelja projekti.",
+      "põhjendus": "Kokkuvõttes tuleks vältida tulemuste ülekandmist laiemale sihtrühmale, kui uurimuse valim seda kindlalt ei toeta.",
+      "soovitus": "Piira järeldust uuritud tingimustega või lisa, et soovitus kehtib sarnase profiiliga väiksemate projektide korral.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "selle vabavaraline tase katab tüüpilise väikeprojekti vajadused",
+      "probleem": "„Vabavaraline tase“ ei ole siin täpne termin, kui mõeldakse tasuta kasutuspaketti või free tier'i.",
+      "põhjendus": "„Vabavara“ viitab tarkvara levitus- või litsentsimudelile, mitte tingimata teenuse hinnastustasemele.",
+      "soovitus": "Kasuta täpsemat terminit, nt „tasuta kasutustase“ või „tasuta pakett“, kui see vastab Snyki tingimustele.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "suuremate projektide peal",
+      "probleem": "Väljend on kõnekeelne.",
+      "põhjendus": "Akadeemilises kokkuvõttes tuleks eelistada neutraalsemat ja formaalsemat sõnastust.",
+      "soovitus": "Kasuta formaalsemat väljendit, näiteks „suuremates projektides“ või „suuremate projektide korral“.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "false positive'ide määra",
+      "probleem": "Inglise termin on jäetud osaliselt mugandamata.",
+      "põhjendus": "Eestikeelses lõputöös tuleks eelistada eestikeelset terminit või esitada ingliskeelne termin vaid esmakordsel defineerimisel.",
+      "soovitus": "Kasuta terminit „valepositiivsete leidude määr“ ning vajadusel lisa sulgudes ingliskeelne vaste.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Käesoleva bakalaureusetöö raames vaadeldi, kuidas ...",
+      "probleem": "Kokkuvõte esitab tulemused, kuid ei maini lühidalt kasutatud metoodikat ega piiranguid.",
+      "põhjendus": "Hea kokkuvõte peaks andma lugejale tervikpildi: eesmärk, metoodika, peamised tulemused, järeldused ja piirangud.",
+      "soovitus": "Lisa 1–2 lauset uurimismeetodi ja peamiste piirangute kohta, eriti valimi suuruse ja kontrollkogumi koostamise osas.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

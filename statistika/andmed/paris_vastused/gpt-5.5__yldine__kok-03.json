@@ -1,0 +1,56 @@
+{
+  "katkend_id": "kok-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "yldine",
+  "kestus_ms": 31043,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tarkvara hooldamise raamistike võrdluses ilmnesid selged kompromissid.",
+      "probleem": "Kokkuvõte algab üldise järeldusega, kuid ei meenuta töö eesmärki, uurimisküsimust ega kasutatud võrdlusmeetodit.",
+      "põhjendus": "Kokkuvõte peaks lugejale lühidalt näitama, millele töö vastas ja kuidas tulemusteni jõuti.",
+      "soovitus": "Lisa 1–2 lauset töö eesmärgi, uurimisküsimuse ja võrdluse aluse kohta.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "ITIL pakub kõige laiemat hõlmavust, kuid on rakendamiseks kõige ressursimahukam.",
+      "probleem": "Väide on tugev ja võrdlev, kuid pole selge, kas see põhineb töö analüüsil, kirjandusel või autori hinnangul.",
+      "põhjendus": "Kokkuvõttes peaksid järeldused tuginema selgelt eelnevas töös esitatud tulemustele; uusi põhjendamata väiteid tuleks vältida.",
+      "soovitus": "Veendu, et see järeldus on põhiosas tõendatud; vajadusel täpsusta, milliste kriteeriumide alusel hinnang anti.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "DevOps-orienteeritud raamistikud (näiteks Site Reliability Engineering ehk SRE) on kergem alustada",
+      "probleem": "Väljend „on kergem alustada” on keeleliselt kohmakas ja kõnekeelne.",
+      "põhjendus": "Akadeemilises kokkuvõttes peaks sõnastus olema täpne ja formaalne.",
+      "soovitus": "Kasuta formaalsemat väljendust, nt „lihtsam kasutusele võtta” või „madalama kasutuselevõtubarjääriga”.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Eesti keskmise suurusega tarkvaraettevõtete kontekstis on otstarbekam alustada SRE-st",
+      "probleem": "Soovitus on konkreetsele sihtrühmale suunatud, kuid tekstist ei selgu, kas Eesti ettevõtteid on empiiriliselt uuritud.",
+      "põhjendus": "Kui töö ei sisaldanud Eesti keskmise suurusega ettevõtete andmeid, võib järeldus olla liiga ulatuslik.",
+      "soovitus": "Piira järeldust vastavalt töö andmestikule või lisa selge põhjendus, millele Eesti konteksti hinnang tugineb.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "TERMINOLOOGIA",
+      "tsitaat": "AI-tööriistade integreerimine intsidendi-haldamise protsessi",
+      "probleem": "Terminid „AI-tööriistad” ja „intsidendi-haldamise” vajavad ühtlustamist ning viimane on vormistuslikult küsitav.",
+      "põhjendus": "Lõputöös peaks terminoloogia olema järjepidev ja eesti keeles loomulikult kasutatud.",
+      "soovitus": "Kasuta läbivalt sama terminit, nt „tehisintellekti tööriistad” ja „intsidendihalduse protsess”.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "Tulevikutööna oleks väärtuslik uurida hübriidlähenemiste rakendamise edutegureid pikemas ajaraamis",
+      "probleem": "Tulevikutöö on olemas, kuid kokkuvõttes puudub töö piirangute lühike kirjeldus.",
+      "põhjendus": "Piirangute mainimine aitab näidata, kui üldistatavad töö järeldused on ja miks tulevikutöö vajalik on.",
+      "soovitus": "Lisa lühidalt peamine piirang, näiteks andmestiku, meetodi või võrdluskriteeriumide ulatuse kohta.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

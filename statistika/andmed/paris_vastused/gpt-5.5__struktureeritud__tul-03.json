@@ -1,0 +1,40 @@
+{
+  "katkend_id": "tul-03",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 27162,
+  "leiud": [
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Mina mõõtsin veebirakenduse vastuseaegu 50 erineva päringutüübi peal.",
+      "probleem": "Kasutatud on mina-vormi ja kõnekeelset väljendit „peal“.",
+      "põhjendus": "Akadeemilises tulemuste peatükis on tavaliselt neutraalsem esitusviis sobivam; „peal“ mõjub selles kontekstis kõnekeelselt.",
+      "soovitus": "Kaalu umbisikulist või neutraalsemat esitusviisi ning täpsemat käändekasutust.",
+      "kindlus": "keskmine"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Üle 90% kasutajatest leiab, et alla 200 ms on hea kogemus.",
+      "probleem": "Esitatud on konkreetne arvuline väide kasutajate hinnangute kohta ilma viiteta.",
+      "põhjendus": "Selline protsendiline väide eeldab allikat, näiteks kasutajauuringut või varasemat kirjandust.",
+      "soovitus": "Lisa väite juurde sobiv allikas või selgita, kui see pärineb töö enda uuringust.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "keskmine kogemus on siiski okei",
+      "probleem": "Sõna „okei“ on kõnekeelne ja hinnang on ebamäärane.",
+      "põhjendus": "Tulemuste peatükis peaks hinnang põhinema täpsematel mõõdikutel või selgelt määratletud kriteeriumidel.",
+      "soovitus": "Asenda kõnekeelne hinnang mõõdetava või eelnevalt määratletud kriteeriumiga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Vastuseaja jaotus oli paremalt kalduv, mis on tüüpiline veebirakenduste käitumine.",
+      "probleem": "Väide veebirakenduste tüüpilise käitumise kohta on esitatud ilma viiteta.",
+      "põhjendus": "Kui väide põhineb varasematel uuringutel või üldistusel veebirakenduste kohta, vajab see allikat.",
+      "soovitus": "Lisa viide vastavale allikale või piirdu ainult oma mõõtmistulemuse kirjeldamisega.",
+      "kindlus": "keskmine"
+    }
+  ]
+}

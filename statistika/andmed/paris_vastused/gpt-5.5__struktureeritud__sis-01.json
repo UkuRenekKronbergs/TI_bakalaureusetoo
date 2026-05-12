@@ -1,0 +1,32 @@
+{
+  "katkend_id": "sis-01",
+  "mudel": "gpt-5.5",
+  "prompti_tyyp": "struktureeritud",
+  "kestus_ms": 24734,
+  "leiud": [
+    {
+      "kategooria": "STRUKTUUR",
+      "tsitaat": "1. Sissejuhatus\n1.1 Probleem",
+      "probleem": "Peatükk algab kohe alapeatükiga ilma sissejuhatava lõiguta.",
+      "põhjendus": "Sissejuhatuse peatüki alguses võiks enne alapeatükke olla lühike üldine sissejuhatus, mis raamib teema ja juhatab lugeja struktuuri.",
+      "soovitus": "Lisa peatüki algusesse lühike sissejuhatav lõik enne alapealkirja 1.1.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "VIITAMISVAJADUS",
+      "tsitaat": "Tänapäeval kasutab üle 80% Eesti väikeettevõtetest mingisugust pilveteenust andmete säilitamiseks.",
+      "probleem": "Konkreetne arvuline väide on esitatud ilma viiteta.",
+      "põhjendus": "Protsendiline väide Eesti väikeettevõtete pilveteenuste kasutuse kohta vajab allikat, et lugeja saaks kontrollida andmete päritolu ja usaldusväärsust.",
+      "soovitus": "Lisa väite juurde usaldusväärne allikaviide või täpsusta, kui tegemist on autori hinnanguga.",
+      "kindlus": "kõrge"
+    },
+    {
+      "kategooria": "AKADEEMILINE_STIIL",
+      "tsitaat": "Tegelikult on see asi keerulisem, kui esmapilgul tundub",
+      "probleem": "Lauses kasutatakse kõnekeelseid väljendeid „tegelikult” ja „asi”.",
+      "põhjendus": "Kõnekeelsed sõnad vähendavad akadeemilise teksti formaalsust ja täpsust.",
+      "soovitus": "Asenda kõnekeelsed väljendid täpsemate ja formaalsemate terminitega.",
+      "kindlus": "kõrge"
+    }
+  ]
+}
