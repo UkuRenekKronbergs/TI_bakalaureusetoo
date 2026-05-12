@@ -294,6 +294,24 @@ def arvuta_moodikud_csv(tulemused: dict[tuple[str, str], list[dict]]) -> None:
 # ---------------------------------------------------------------------------
 
 
+KATEGOORIA_NIMI = {
+    "STRUKTUUR": "Struktuur",
+    "AKADEEMILINE_STIIL": "Akadeemiline stiil",
+    "TERMINOLOOGIA": "Terminoloogia",
+    "VIITAMISVAJADUS": "Viitamisvajadus",
+}
+
+MUDELI_NIMI = {
+    "claude-opus-4-7": "Claude 4.7 Opus",
+    "gpt-5.5": "GPT-5.5",
+}
+
+PROMPTI_NIMI = {
+    "yldine": "üldine",
+    "struktureeritud": "struktureeritud",
+}
+
+
 def joonista() -> None:
     import matplotlib.pyplot as plt
     import pandas as pd
@@ -324,10 +342,10 @@ def joonista() -> None:
         ax.text(x + laius/2, ys + 0.01, f"{ys:.2f}", ha="center", fontsize=9, fontweight="bold")
         ax.text(x, max(yg, ys) + 0.05, f"+{(ys - yg):.2f}", ha="center", fontsize=9, color="#16a34a")
     ax.set_xticks(asukohad)
-    ax.set_xticklabels(mudelid)
+    ax.set_xticklabels([MUDELI_NIMI.get(m, m) for m in mudelid])
     ax.set_ylim(0, 1)
-    ax.set_ylabel("Macro F₁ (päris)")
-    ax.set_title("Päris empiiriline macro F₁: üldine vs struktureeritud prompt")
+    ax.set_ylabel("Makro F₁ (päris)")
+    ax.set_title("Päris empiiriline makro F₁: üldine vs struktureeritud prompt")
     ax.legend(fontsize=9)
     plt.savefig(JOONISED / "13_paris_macro_F1.png")
     plt.close()
@@ -340,9 +358,10 @@ def joonista() -> None:
     nihked = [-1.5*laius, -0.5*laius, 0.5*laius, 1.5*laius]
     for nihe, (m, p) in zip(nihked, [(m, p) for m in mudelid for p in ["yldine", "struktureeritud"]]):
         v = [df.query("mudel == @m and prompti_tyyp == @p and kategooria == @k")["F1"].iloc[0] for k in KATEGOORIAD]
-        ax.bar([a + nihe for a in asukohad], v, laius, label=f"{m} • {p}")
+        silt = f"{MUDELI_NIMI.get(m, m)} • {PROMPTI_NIMI.get(p, p)}"
+        ax.bar([a + nihe for a in asukohad], v, laius, label=silt)
     ax.set_xticks(asukohad)
-    ax.set_xticklabels(KATEGOORIAD, rotation=10)
+    ax.set_xticklabels([KATEGOORIA_NIMI.get(k, k) for k in KATEGOORIAD], rotation=10)
     ax.set_ylabel("F₁")
     ax.set_ylim(0, 1)
     ax.set_title("Päris empiiriline F₁ kategooria, mudeli ja prompti tüübi kaupa")
