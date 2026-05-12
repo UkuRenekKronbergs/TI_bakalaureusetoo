@@ -1,0 +1,42 @@
+fail,keel,koodiridu,suurus_baitides
+prototuup/frontend/src/index.css,CSS,19,313
+prototuup/frontend/index.html,HTML,12,347
+prototuup/frontend/package.json,JSON,26,615
+prototuup/frontend/tsconfig.json,JSON,23,616
+prototuup/frontend/tailwind.config.js,JavaScript,8,163
+prototuup/frontend/postcss.config.js,JavaScript,6,81
+prototuup/README.md,Markdown,126,7376
+prototuup/backend/.pytest_cache/README.md,Markdown,5,310
+prototuup/backend/demo_andmed.py,Python,261,15717
+prototuup/backend/analyysija.py,Python,133,4813
+prototuup/backend/tests/test_main.py,Python,83,2777
+prototuup/backend/tests/test_analyysija.py,Python,82,3382
+prototuup/backend/main.py,Python,58,1780
+prototuup/backend/models.py,Python,55,1750
+prototuup/backend/tests/test_demo_provider.py,Python,43,1795
+prototuup/backend/tests/test_models.py,Python,37,1210
+prototuup/backend/providers/demo_provider.py,Python,32,1313
+prototuup/backend/providers/anthropic_provider.py,Python,29,1245
+prototuup/backend/tests/test_openai_provider.py,Python,28,1126
+prototuup/backend/providers/openai_provider.py,Python,27,1193
+prototuup/backend/providers/__init__.py,Python,23,1158
+prototuup/backend/tests/test_promptid.py,Python,19,864
+prototuup/backend/providers/base.py,Python,11,311
+prototuup/backend/tests/conftest.py,Python,5,144
+prototuup/backend/tests/__init__.py,Python,0,0
+prototuup/backend/prompts/struktureeritud.txt,Tekst,41,2980
+prototuup/backend/prompts/yldine.txt,Tekst,21,912
+prototuup/backend/requirements.txt,Tekst,11,382
+prototuup/frontend/src/types.ts,TypeScript,63,1676
+prototuup/frontend/src/api/client.ts,TypeScript,35,1086
+prototuup/frontend/src/data/naidisTekstid.ts,TypeScript,27,2229
+prototuup/frontend/vite.config.ts,TypeScript,15,331
+prototuup/frontend/src/vite-env.d.ts,TypeScript,0,38
+prototuup/frontend/src/App.tsx,TypeScript (TSX),181,6778
+prototuup/frontend/src/components/TagasisidePaneel.tsx,TypeScript (TSX),117,3949
+prototuup/frontend/src/components/KonfPaneel.tsx,TypeScript (TSX),78,2558
+prototuup/frontend/src/components/PrivaatsusDialoog.tsx,TypeScript (TSX),52,1794
+prototuup/frontend/src/components/LeiuKaart.tsx,TypeScript (TSX),48,1590
+prototuup/frontend/src/components/TekstSisend.tsx,TypeScript (TSX),27,995
+prototuup/frontend/src/main.tsx,TypeScript (TSX),9,237
+prototuup/docker-compose.yml,YAML,26,1010

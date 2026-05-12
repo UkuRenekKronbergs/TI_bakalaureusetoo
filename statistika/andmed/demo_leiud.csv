@@ -1,0 +1,23 @@
+peatuki_tyyp,kategooria,kindlus,probleem,soovituse_pikkus,tsitaadi_pikkus
+sissejuhatus,STRUKTUUR,kõrge,Peatükk algab kohe alapealkirjaga ilma sissejuhatava lõiguta.,97,71
+sissejuhatus,AKADEEMILINE_STIIL,kõrge,"Kõnekeelsed sõnad „tegelikult”, „asi see, et”.",61,45
+sissejuhatus,AKADEEMILINE_STIIL,kõrge,Mina-vorm ja kõnekeelne hinnang („päris lahe”).,70,39
+sissejuhatus,TERMINOLOOGIA,kõrge,Sama mõiste tähistamiseks kasutatakse kahte erinevat terminit.,63,43
+sissejuhatus,TERMINOLOOGIA,keskmine,Ingliskeelne termin esitatakse ilma esmakasutuse selgituseta.,91,26
+sissejuhatus,VIITAMISVAJADUS,kõrge,Konkreetne arvuline väide ilma viiteta.,81,69
+taust,AKADEEMILINE_STIIL,kõrge,Määramatu üldistus („kõik teavad”).,53,51
+taust,TERMINOLOOGIA,kõrge,Sama mõistet tähistatakse läbisegi mitme terminiga.,103,53
+taust,VIITAMISVAJADUS,kõrge,Konkreetne ajalooline väide ilma viiteta.,67,83
+taust,VIITAMISVAJADUS,kõrge,Konkreetne arvuline väide ilma viiteta.,37,37
+metoodika,STRUKTUUR,kõrge,Peatükk algab kohe alapealkirjaga ilma sissejuhatava lõiguta.,70,74
+metoodika,AKADEEMILINE_STIIL,kõrge,Mina-vorm metoodika kirjelduses.,80,60
+metoodika,AKADEEMILINE_STIIL,keskmine,"Kõnekeelne ja subjektiivne hinnang („päris pikk”, „sain hakkama”).",72,49
+metoodika,AKADEEMILINE_STIIL,kõrge,Määramatu üldistus.,78,39
+tulemused,STRUKTUUR,kõrge,Alampeatükk algab kohe tabeliviitega ilma sissejuhatava lauseta.,88,42
+tulemused,AKADEEMILINE_STIIL,kõrge,Subjektiivne hinnang ilma võrdlusaluseta.,66,25
+tulemused,TERMINOLOOGIA,kõrge,Ingliskeelsed terminid ilma esmakasutuse selgituseta ja kõnekeelne hinnang („okei”).,83,53
+tulemused,VIITAMISVAJADUS,kõrge,Võrdlus inimese sooritusega ilma viite või enda mõõtmiseta.,79,35
+kokkuvote,AKADEEMILINE_STIIL,kõrge,"Kõnekeelsed sõnad „asi”, „päris hästi”.",103,46
+kokkuvote,AKADEEMILINE_STIIL,kõrge,Mina-vorm ja kõnekeelne hinnang isikliku õppimiskogemuse kohta.,62,52
+kokkuvote,AKADEEMILINE_STIIL,kõrge,Ebamäärane tulevikutöö kirjeldus („veel asju”).,74,52
+kokkuvote,VIITAMISVAJADUS,keskmine,Konkreetne arvuline väide ilma viiteta töö hindamise peatükile.,65,50

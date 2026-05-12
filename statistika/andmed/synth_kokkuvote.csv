@@ -1,0 +1,5 @@
+mudel,prompti_tyyp,macro_tapsus,macro_saagis,macro_F1,TP_kokku,FP_kokku,FN_kokku
+claude-opus-4-7,struktureeritud,0.736,0.788,0.746,33,15,9
+claude-opus-4-7,yldine,0.502,0.55,0.518,22,21,20
+gpt-5.5,struktureeritud,0.656,0.72,0.676,29,16,13
+gpt-5.5,yldine,0.385,0.396,0.389,17,24,25
