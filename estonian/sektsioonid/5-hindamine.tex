@@ -141,7 +141,7 @@ Tabelis~\ref{tab:paris-kokku} on esitatud iga (mudel × promptitüüp) kombinats
                 hlines, vlines,
                 row{1} = {font=\bfseries, bg = colorCellHighlight},
             }
-    Mudel & Promptitüüp & Makro T & Makro S & Makro F\textsubscript{1} & TP & FP & FN \\
+    Mudel & Promptitüüp & Makro täpsus & Makro saagis & Makro F\textsubscript{1} & TP & FP & FN \\
     Claude 4.7 Opus & struktureeritud & 0,33 & 0,93 & 0,46 & 39 &  79 & 3 \\
     Claude 4.7 Opus & üldine          & 0,29 & 0,79 & 0,41 & 34 & 100 & 8 \\
     GPT-5.5         & struktureeritud & \textbf{0,47} & \textbf{0,77} & \textbf{0,56} & 34 &  39 & 8 \\
@@ -171,7 +171,7 @@ Empiirilised tulemused annavad kvantitatiivsed vastused töö uurimisküsimustel
 
 \textbf{Struktureeritud prompt parandab F\textsubscript{1}-skoori järjepidevalt.} Mõlema mudeli puhul on struktureeritud prompti makro-F\textsubscript{1} kõrgem kui üldise prompti oma: Claude'il +0,05 (0,46 vs 0,41), GPT-5.5-l +0,19 (0,56 vs 0,38). See toetab töö keskset hüpoteesi (uurimisküsimus~3): \emph{struktureeritud kategooria- ja skeemipõhine promptimine annab eestikeelse akadeemilise teksti tagasisidestamisel süsteemsemat ja kasutuskõlblikumat väljundit}.
 
-\textbf{GPT-5.5 + struktureeritud prompt on parim kombinatsioon.} See vastab uurimisküsimusele~2 ootamatu tulemusega: \emph{tippkvaliteediga LLM-id on testkogu tasemel sarnaselt kasutuskõlblikud, kuid GPT-5.5 saavutab struktureeritud prompti puhul Claude'ist oluliselt parema täpsuse}. Erinevus tuleneb peamiselt valepositiivsete arvust: GPT-5.5 struktureeritud prompt esitab 39 FP-d, samas kui Claude'i struktureeritud prompt 79 FP-d -- kaks korda rohkem. See on tähelepanuväärne tulemus, kuna sünteetilises pipeline-demonstratsioonis (vt eelmised iteratsioonid repositooriumis: \texttt{statistika/synteetiline\_hindamine.py}) postuleeriti Claude'i eelis; päris mõõtmine annab vastupidise tulemuse.
+\textbf{GPT-5.5 + struktureeritud prompt on parim kombinatsioon.} See vastab uurimisküsimusele~2 ootamatu tulemusega: \emph{tippkvaliteediga LLM-id on testkogu tasemel sarnaselt kasutuskõlblikud, kuid GPT-5.5 saavutab struktureeritud prompti puhul Claude'ist oluliselt parema täpsuse}. Erinevus tuleneb peamiselt valepositiivsete arvust: GPT-5.5 struktureeritud prompt esitab 39 FP-d, samas kui Claude'i struktureeritud prompt 79 FP-d -- kaks korda rohkem. See on tähelepanuväärne tulemus, kuna sünteetilises pipeline-demonstratsioonis (vt eelmised iteratsioonid repositooriumis: \texttt{statistika/synteetiline\_hindamine.py}) eeldati Claude'i eelist; päris mõõtmine annab vastupidise tulemuse.
 
 \textbf{Mudelid on kallutatud saagise poole.} Kõikides kombinatsioonides on saagis kõrgem kui täpsus, sageli oluliselt. Eriti silmatorkav on viitamisvajaduse kategooria, kus saagis on $\geq 0{,}90$ kõikides neljas kombinatsioonis (Claude struktureeritud: 1,00 saagisega, 10 TP ja 25 FP). See tähendab, et mudelid leiavad peaaegu alati kõik kuldstandardi probleemid, kuid lisaks signaleerivad palju lauseid, mida autori koostatud kuldstandard probleemiks ei pidanud. Praktikas tähendab see, et süsteem on \emph{kandidaatide-leidja}, mille tagasiside vajab kasutaja kriitilist üle vaatamist -- see on kooskõlas töö disainivalikuga: süsteem on \emph{tagasisidevahend}, mitte autoriteetne hindaja (vt peatükk~\ref{prototuup:eetika}).
 
