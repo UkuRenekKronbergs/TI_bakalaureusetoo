@@ -8,14 +8,14 @@ Akadeemilises kontekstis on LLM-ide kasutamine samas eetiliselt tundlik teema. T
 
 \subsection*{Töö eesmärk ja ulatus}
 
-Käesoleva bakalaureusetöö \textbf{eesmärk} on \emph{kavandada ja realiseerida} LLM-il põhinev prototüüp, mis annab eestikeelsele informaatika lõputöö tekstile automaatset tagasisidet struktuuri, akadeemilise stiili, terminoloogia järjepidevuse ja viitamisvajaduse kohta, ning \emph{pilootida} selle väljundi kvaliteeti väikese valimi peal eesmärgiga iteratiivselt täpsustada prompti disaini.
+Käesoleva bakalaureusetöö \textbf{eesmärk} on \emph{kavandada ja realiseerida} LLM-il põhinev prototüüp, mis annab eestikeelsele informaatika lõputöö tekstile automaatset tagasisidet struktuuri, akadeemilise stiili, terminoloogia järjepidevuse ja viitamisvajaduse kohta, ning \emph{pilootida} selle väljundi kvaliteeti väikesel valimil eesmärgiga iteratiivselt täpsustada prompti disaini.
 
 \textbf{Töö ulatus} jaguneb selgelt kaheks osaks. Käesoleva töö raames \emph{viiakse lõpule}:
 \begin{enumerate}
     \item tagasisidekategooriate operatsionaalne määratlus;
     \item kahe promptimisstrateegia (üldine ja struktureeritud) disain;
     \item veebipõhise prototüübi realiseerimine, sealhulgas demo-režiim, mis võimaldab süsteemi proovida ilma välise LLM-i API juurdepääsuta;
-    \item kvalitatiivne pilootuuring väikese tekstivalimi peal nii prompti disaini iteratsiooniks kui ka mudeli väljundi tüüpiliste mustrite tuvastamiseks;
+    \item kvalitatiivne pilootuuring väikesel tekstivalimil nii prompti disaini iteratsiooniks kui ka mudeli väljundi tüüpiliste mustrite tuvastamiseks;
     \item 20-katkendilise käsitsi annoteeritava testkogu \emph{kavandamine} koos kuldstandardi koostamise protseduuri ja hindamismõõdikute valikuga.
 \end{enumerate}
 
@@ -36,13 +36,13 @@ Pilootuuringu tähelepanekud, mis nendele küsimustele esialgse vastuse annavad,
 
 \subsection*{Praktiline panus ja piirangud}
 
-Töö praktiline tulemus on lokaalselt käivitatav veebiprototüüp, kus kasutaja saab valida lõputöö peatüki tüübi (sissejuhatus, taust, metoodika, tulemused, kokkuvõte), sisestada enda kirjutatud teksti ning saada struktureeritud tagasisidet neljas eelnimetatud kategoorias. Prototüüp on kavandatud nii, et seda saab proovida \emph{demo-režiimis} salvestatud näidisvastustega ilma välise LLM-i API juurdepääsuta, mis muudab töö praktilise tulemuse reprodutseeritavaks minimaalsete eeldustega.
+Töö praktiline tulemus on lokaalselt käivitatav veebiprototüüp, kus kasutaja saab valida lõputöö peatükitüübi (sissejuhatus, taust, metoodika, tulemused, kokkuvõte), sisestada enda kirjutatud teksti ning saada struktureeritud tagasisidet neljas eelnimetatud kategoorias. Prototüüp on kavandatud nii, et seda saab proovida \emph{demo-režiimis} salvestatud näidisvastustega ilma välise LLM-i API juurdepääsuta, mis muudab töö praktilise tulemuse reprodutseeritavaks minimaalsete eeldustega.
 
 \textbf{Töö ei käsitle} LLM-i kasutamist lõputöö \emph{loomiseks}. Süsteem on mõeldud tudengi enda kirjutatud tekstile tagasiside saamiseks ega püüa asendada juhendaja sisulist tagasisidet. Mudeli soovitused on kasutaja jaoks vaid lähtepunkt -- iga soovituse vastuvõtmine, ümbersõnastamine või tagasilükkamine on tudengi enda otsustada.
 
 \subsection*{Töö ülesehitus}
 
-Peatükis~\ref{taust} esitatakse ülevaade suurte keelemudelite arhitektuurist, eestikeelsest LLM-tugist ja akadeemilise teksti automaatsest tagasisidestamisest, samuti kirjeldatakse seotud töid. Peatükk~\ref{metoodika} määratleb tagasisidekategooriad ning kirjeldab prompti disaini põhimõtteid ja kavandatud hindamismetoodikat. Peatükis~\ref{prototuup} kirjeldatakse prototüübi arhitektuuri, tehnoloogilist lahendust ja kasutajaliidese disaini. Peatükk~\ref{hindamine} esitab pilootuuringu kvalitatiivsed tähelepanekud, mis on kogutud prompti disaini iteratsiooni käigus, koos aruteluga ning täismahulise hindamise jätkukava. Peatükis~\ref{kokkuvõte} antakse kokkuvõte töö panusest ning visandatakse võimalused edasiseks uurimiseks. Lisas~I on esitatud kavandatud testkogu disain (kvoot peatüki tüübi järgi ja katkendite valikuprintsiibid), lisas~II struktureeritud prompti täielik tekst, lisas~III lähtekoodi ja andmestiku struktuur ning lisas~IV prototüübi kasutusjuhend (sealhulgas demo-režiimi käivitamine ilma API võtmeta).
+Peatükis~\ref{taust} esitatakse ülevaade suurte keelemudelite arhitektuurist, eestikeelsest LLM-tugist ja akadeemilise teksti automaatsest tagasisidestamisest, samuti kirjeldatakse seotud töid. Peatükk~\ref{metoodika} määratleb tagasisidekategooriad ning kirjeldab prompti disaini põhimõtteid ja kavandatud hindamismetoodikat. Peatükis~\ref{prototuup} kirjeldatakse prototüübi arhitektuuri, tehnoloogilist lahendust ja kasutajaliidese disaini. Peatükk~\ref{hindamine} esitab pilootuuringu kvalitatiivsed tähelepanekud, mis on kogutud prompti disaini iteratsiooni käigus, koos aruteluga ning täismahulise hindamise jätkukava. Peatükis~\ref{kokkuvõte} antakse kokkuvõte töö panusest ning visandatakse võimalused edasiseks uurimiseks. Lisas~I on esitatud kavandatud testkogu disain (kvoot peatükitüübi järgi ja katkendite valikuprintsiibid), lisas~II struktureeritud prompti täielik tekst, lisas~III lähtekoodi ja andmestiku struktuur ning lisas~IV prototüübi kasutusjuhend (sealhulgas demo-režiimi käivitamine ilma API võtmeta).
 
 \subsection*{Generatiivse tehisaru kasutamise deklaratsioon}
 
@@ -50,7 +50,7 @@ Käesoleva töö koostamisel on generatiivset tehisaru (peamiselt Anthropici Cla
 
 \begin{enumerate}
     \item \textbf{Tekstilise abivahendina} -- loetavuse parandamiseks, sõnastuse poleerimiseks ja struktuurinõustamiseks. Kõik sisulised mõtted, töö ulatuse valikud, metoodilised valikud ja järeldused on autori enda otsused. Mudeli ettepanekud on iga kord kriitiliselt üle vaadatud ja vajadusel ümber sõnastatud või kõrvale jäetud.
-    \item \textbf{Sünteetilise illustratsioonimaterjali genereerimiseks} -- alapeatükis~\ref{hindamine:synteetiline} esitatud hindamis-pipeline'i demonstratsiooni jaoks on \emph{kõik} andmeelemendid (20 testkatkendit, 42 kuldstandardi annotatsiooni, simuleeritud mudelivastused, mille põhjal arvutatakse F\textsubscript{1}-skoorid) genereeritud Claude 4.7 Opus mudeli abil. Need andmed on selgesõnaliselt sõnastatud \emph{sünteetiliste illustratsioonidena}, mitte päris LLM-ide tegelike päringute tulemustena, ning vastavate jooniste ja tabelite juures on jalus, mis ütleb otse, et numbrid \emph{ei mõõda} päris mudelite sooritust. Selline kasutus on otseses kooskõlas Tartu Ülikooli generatiivse tehisaru juhendiga~\cite{ut_genAI_2024}, mis lubab generatiivse tehisaru kasutamist õppetöös \emph{tingimusel, et selline kasutus on selgesõnaliselt deklareeritud}.
+    \item \textbf{Sünteetilise illustratsioonimaterjali genereerimiseks} -- alapeatükis~\ref{hindamine:synteetiline} esitatud hindamisprotsessi demonstratsiooni jaoks on \emph{kõik} andmeelemendid (20 testkatkendit, 42 kuldstandardi annotatsiooni, simuleeritud mudelivastused, mille põhjal arvutatakse F\textsubscript{1}-skoorid) genereeritud Claude 4.7 Opus mudeli abil. Need andmed on selgesõnaliselt sõnastatud \emph{sünteetiliste illustratsioonidena}, mitte päris LLM-ide tegelike päringute tulemustena, ning vastavate jooniste ja tabelite juures on märkus, mis ütleb otse, et numbrid \emph{ei mõõda} päris mudelite sooritust. Selline kasutus on otseses kooskõlas Tartu Ülikooli generatiivse tehisaru juhendiga~\cite{ut_genAI_2024}, mis lubab generatiivse tehisaru kasutamist õppetöös \emph{tingimusel, et selline kasutus on selgesõnaliselt deklareeritud}.
 \end{enumerate}
 
 Reprodutseerimiseks vajalikud skriptid ja andmestik on saadaval töö repositooriumis (\url{https://github.com/UkuRenekKronbergs/TI_bakalaureusetoo}) kaustas \texttt{statistika/}. Lugeja saab seal vaadata, kuidas iga sünteetiline number tekib (failid \texttt{andmestik\_synth.py} ja \texttt{synteetiline\_hindamine.py}).

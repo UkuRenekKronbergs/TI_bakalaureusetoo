@@ -10,15 +10,15 @@ Töö protsess on kavandatud koosnema järgmistest etappidest:
 \begin{enumerate}
     \item Tagasisidekategooriate operatsionaalne määratlemine kirjanduse ja TÜ juhendi põhjal.
     \item Üldise ja struktureeritud prompti disain.
-    \item Prototüübi realiseerimine veebirakendusena, mis kutsub välja LLM-i API-d ning toetab demo-režiimi salvestatud vastustega.
-    \item Testkogu disain: 20 eestikeelset informaatika lõputöö katkendit erinevatest peatüki tüüpidest, koos kuldstandardi koostamise protseduuriga.
-    \item Pilootuuring väikese tekstivalimi peal: prototüübi väljundi kvalitatiivne analüüs prompti disaini iteratsiooniks.
-    \item Testkogu täielik annoteerimine kuldstandardiks, sealhulgas teise sõltumatu annoteerija kaasamine ja inter-annoteerija kokkuleppe arvutamine.
+    \item Prototüübi realiseerimine veebirakendusena, mis kutsub välja LLM-i API-d ning toetab salvestatud vastustega demo-režiimi.
+    \item Testkogu disain: 20 eestikeelset informaatika lõputöö katkendit erinevatest peatükitüüpidest, koos kuldstandardi koostamise protseduuriga.
+    \item Pilootuuring väikesel tekstivalimil: prototüübi väljundi kvalitatiivne analüüs prompti disaini iteratsiooniks.
+    \item Testkogu täielik annoteerimine kuldstandardiks, sealhulgas teise sõltumatu annoteerija kaasamine ja annoteerijatevahelise kokkuleppe arvutamine.
     \item Prototüübi täismahuline käivitamine kogu testkogu vastu mõlema prompti versiooniga ja mõlema mudeliga (Claude 4.7 Opus, GPT-5.5); mudeli väljundi võrdlemine kuldstandardiga ja näitajate (täpsus, saagis, F\textsubscript{1}) arvutamine iga kategooria kohta eraldi.
     \item Üldise ja struktureeritud prompti tulemuste kvantitatiivne võrdlus.
 \end{enumerate}
 
-\textbf{Käesoleva töö ulatus.} Sammud 1--5 on \emph{käesoleva töö raames lõpule viidud}. Sammud 6--8 kuuluvad teadlikult väljaspoolele käesoleva töö ulatusest ning on kavandatud jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}). See piiritlemine on tehtud kahel põhjusel. Esiteks võimaldab see käesoleva töö raames keskenduda kvalitatiivselt prototüübi väljundi mustrite ja prompti disaini iteratsiooni põhjalikule analüüsile, mis on edasise kvantitatiivse hindamise jaoks vajalik eeldus. Teiseks ei oleks sõltumatu teise annoteerija kaasamine ning 20-katkendiline annoteerimine kvaliteetselt teostatav käesoleva töö esitamise ajaraamis, ning ebakvaliteetne annoteerimine annaks ebakvaliteetse kvantitatiivse tulemuse, mis kahjustaks tervet uuringut.
+\textbf{Käesoleva töö ulatus.} Sammud 1--5 on \emph{käesoleva töö raames lõpule viidud}. Sammud 6--8 jäävad teadlikult käesoleva töö ulatusest välja ning on kavandatud jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}). See piiritlemine on tehtud kahel põhjusel. Esiteks võimaldab see käesoleva töö raames keskenduda kvalitatiivselt prototüübi väljundi mustrite ja prompti disaini iteratsiooni põhjalikule analüüsile, mis on edasise kvantitatiivse hindamise jaoks vajalik eeldus. Teiseks ei oleks sõltumatu teise annoteerija kaasamine ning 20-katkendiline annoteerimine käesoleva töö esitamise ajaraamis piisava kvaliteediga teostatav, ning ebakvaliteetne annoteerimine annaks ebakvaliteetse kvantitatiivse tulemuse, mis kahjustaks tervet uuringut.
 
 \subsection{Tagasisidekategooriate operatsionaalne määratlus} \label{metoodika:kategooriad}
 
@@ -40,9 +40,9 @@ Töös käsitletakse nelja tagasisidekategooriat. Iga kategooria kohta on tabeli
     \end{tblr}
 \end{table}
 
-Kategooriad on disainitud nii, et nad on \emph{vastastikku eristatavad} -- ühte sõnastust ei tohiks korraga liigitada kahte kategooriasse. Seda eristatavust kontrolliti pilootuuringus mudeli väljundi käsitsi läbivaatamise käigus ning eristatavus osutus piisavaks; täismahulises annoteerimises kontrollitakse seda inter-annoteerija kokkuleppe abil.
+Kategooriad on disainitud nii, et nad on \emph{vastastikku eristatavad} -- ühte sõnastust ei tohiks korraga liigitada kahte kategooriasse. Seda eristatavust kontrolliti pilootuuringus mudeli väljundi käsitsi läbivaatamise käigus ning eristatavus osutus piisavaks; täismahulises annoteerimises kontrollitakse seda annoteerijatevahelise kokkuleppe abil.
 
-\textbf{Pilootuuringust tulenevad määratluste täpsustused.} Pilootuuringus täheldatud paistvad valepositiivsed (vt alapeatükk~\ref{hindamine:kategooriad}) viisid kahe määratluse selgesõnalise täpsustuseni, mida rakendatakse nii prompti vastunäidetes kui ka kuldstandardi annoteerimisreeglites:
+\textbf{Pilootuuringust tulenevad määratluste täpsustused.} Pilootuuringus täheldatud näilised valepositiivsed (vt alapeatükk~\ref{hindamine:kategooriad}) viisid kahe määratluse selgesõnalise täpsustuseni, mida rakendatakse nii prompti vastunäidetes kui ka kuldstandardi annoteerimisreeglites:
 \begin{itemize}
     \item \emph{Viitamisvajadus} ei rakendu üldteadmise tasandi väidetele -- näiteks levinud protokollide või põhimõistete tutvustamisele --, mille puhul viidet ei oleks ka inimese kirjutatud akadeemilises tekstis oodatud.
     \item \emph{Akadeemiline stiil} ei märgi probleemiks mina-vormi kasutust kohtades, kus tudeng kirjeldab selgelt enda originaalset panust või metoodilist valikut, kuna Tartu Ülikooli juhend lubab mina-vormi sellises kontekstis.
@@ -83,7 +83,7 @@ ${tekst}
 
 \subsubsection{Struktureeritud prompt}
 
-Struktureeritud prompt on oluliselt mahukam ja sisaldab nelja olulist erinevust üldisest promptist: (1) süsteemi rolli ja eesmärgi täpne määratlus, (2) iga tagasisidekategooria kohta vähehetk-näited, (3) väljundskeemi nõue (JSON), ja (4) mõtteahel-element, mille käigus mudel peab iga tuvastatud probleemi jaoks põhjendama, miks see probleem on. Prompti täielik tekst on esitatud lisas~II.
+Struktureeritud prompt on oluliselt mahukam ja erineb üldisest promptist neljal olulisel viisil: (1) süsteemi rolli ja eesmärgi täpne määratlus, (2) iga tagasisidekategooria kohta vähehetk-näited, (3) väljundskeemi nõue (JSON), ja (4) mõtteahel-element, mille käigus mudel peab iga tuvastatud probleemi puhul põhjendama, miks see probleem on. Prompti täielik tekst on esitatud lisas~II.
 
 Prompti võtmeosad on järgmised:
 
@@ -124,7 +124,7 @@ kanded vahele. Ära leia probleeme, mida tegelikult pole.
     \item \textbf{Eetiline meelespea}. Prompti algusesse on paigutatud selge piirang, et mudel ei tohi tudengi eest kirjutada. See on kooskõlas TÜ generatiivse tehisaru juhendiga~\cite{ut_genAI_2024} ning vähendab pilootuuringus täheldatult tõenäosust, et mudel pakub tudengile valmis ümbersõnastusi.
     \item \textbf{Tsitaadi nõue}. Iga probleemi puhul peab mudel viitama konkreetsele tekstilõigule. See raskendab \emph{halutsineerimist} ja teeb tagasiside auditeeritavaks; pilootuuringus täheldati, et tsitaadi nõue paneb mudeli oma leide täpsemini lokaliseerima.
     \item \textbf{Kindluse hinnang}. Iga leiu kohta nõutav kindlushinnang võimaldab kasutajaliideses madala kindlusega leide visuaalselt eristada ning hindamise käigus uurida, kas kindlus korreleerub leiu tegeliku õigsusega.
-    \item \textbf{Põhjenduse nõue}. Mõtteahel-elemendiks olev \emph{põhjenduse} väli sunnib mudelit oma järelduse kontrollima ning aitab kasutajal otsustada, kas soovituse vastu võtta.
+    \item \textbf{Põhjenduse nõue}. Mõtteahel-elemendiks olev \emph{põhjenduse} väli sunnib mudelit oma järeldust kontrollima ning aitab kasutajal otsustada, kas soovitus vastu võtta.
 \end{itemize}
 
 \subsection{Kavandatud hindamismetoodika} \label{metoodika:hindamine}
@@ -133,11 +133,11 @@ Käesolev alapeatükk kirjeldab \emph{kavandatud} täismahulise hindamise metood
 
 \subsubsection{Testkogu disain}
 
-Testkogu on kavandatud koosnema 20 eestikeelse informaatika lõputöö katkendist, kus iga katkendi pikkus on 200--400 sõna. Katkendid valitakse nii, et katavad erinevaid peatüki tüüpe (vt tabel~\ref{tab:testkogu}). Allikateks on planeeritud kasutada Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavaid bakalaureuse- ja magistritöid aastatest 2020--2024; katkendid valitakse nii, et need sisaldavad nii probleeme kui ka korrektseid lõike, ning anonüümitakse enne kuldstandardi annoteerimist. Pilootuuringus kasutati orienteeruvalt 3--5 esialgset katkendit peatüki tüübi kohta, et iteratiivselt täpsustada prompti sõnastust; täismahulise testkogu lõplik koostamine ja annoteerimine on jätkukava esimene samm.
+Testkogu on kavandatud koosnema 20 eestikeelse informaatika lõputöö katkendist, kus iga katkendi pikkus on 200--400 sõna. Katkendid valitakse nii, et katavad erinevaid peatükitüüpe (vt tabel~\ref{tab:testkogu}). Allikateks on planeeritud kasutada Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavaid bakalaureuse- ja magistritöid aastatest 2020--2024; katkendid valitakse nii, et need sisaldavad nii probleeme kui ka korrektseid lõike, ning anonüümitakse enne kuldstandardi annoteerimist. Pilootuuringus kasutati orienteeruvalt 3--5 esialgset katkendit peatükitüübi kohta, et iteratiivselt täpsustada prompti sõnastust; täismahulise testkogu lõplik koostamine ja annoteerimine on jätkukava esimene samm.
 
 \begin{table}[htb!]
     \centering
-    \caption{Kavandatud testkogu katkendite jaotus peatüki tüübi järgi.}
+    \caption{Kavandatud testkogu katkendite jaotus peatükitüübi järgi.}
     \label{tab:testkogu}
     \begin{tblr}{
                 colspec = { Q[l] Q[c] Q[c] },
@@ -156,7 +156,7 @@ Testkogu on kavandatud koosnema 20 eestikeelse informaatika lõputöö katkendis
 
 \subsubsection{Kuldstandardi koostamise protseduur}
 
-Täismahulises hindamises annoteeritakse iga katkendi puhul probleemid kahes etapis. Esiteks märgistab autor iseseisvalt iga tuvastatud probleemi: probleemse tekstilõigu, kategooria ning lühikese põhjenduse. Teiseks vaatab teine sõltumatu annoteerija (näiteks teise õppekava tudeng või juhendaja) samad katkendid läbi, ning lahkarvamuste korral lepitakse kokku ühises lahenduses. Inter-annoteerija kokkulepet mõõdetakse iga kategooria kohta eraldi Coheni $\kappa$-ga~\cite{cohen_kappa_1960}, mis on kahe annoteerija ja nominaalsete kategooriate puhul konventsionaalne valik. Krippendorffi $\alpha$~\cite{krippendorff_alpha_2011} on jäetud reservi juhuks, kui hindamiskava laieneb järgmistes versioonides mitme annoteerijaga skeemiks.
+Täismahulises hindamises annoteeritakse iga katkendi puhul probleemid kahes etapis. Esiteks märgistab autor iseseisvalt iga tuvastatud probleemi: probleemse tekstilõigu, kategooria ning lühikese põhjenduse. Teiseks vaatab teine sõltumatu annoteerija (näiteks teise õppekava tudeng või juhendaja) samad katkendid läbi, ning lahkarvamuste korral lepitakse kokku ühises lahenduses. Annoteerijatevahelist kokkulepet mõõdetakse iga kategooria kohta eraldi Coheni $\kappa$-ga~\cite{cohen_kappa_1960}, mis on kahe annoteerija ja nominaalsete kategooriate puhul konventsionaalne valik. Krippendorffi $\alpha$~\cite{krippendorff_alpha_2011} on jäetud reservi juhuks, kui hindamiskava laieneb järgmistes versioonides mitme annoteerijaga skeemiks.
 
 \subsubsection{Mõõdikud}
 
@@ -189,4 +189,4 @@ Sellest järeldatakse järgmised mõõdikud:
 
 \subsubsection{Promptide võrdlus}
 
-Üldist ja struktureeritud prompti võrreldakse, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Kuna üldine prompt ei nõua kategoriseeritud väljundit, viiakse selle väljund kategooriatesse \emph{post hoc} (käsitsi) vastavalt alapeatükis~\ref{metoodika:kategooriad} esitatud kategooria määratlustele. Et see protseduur on omakorda subjektiivsuse allikas, kavandatakse selle subjektiivsuse hindamiseks teha vähemalt osa kategoriseerimisest ka teise annoteerija poolt ning arvutada üldise prompti puhul eraldi inter-annoteerija kokkulepe.
+Üldist ja struktureeritud prompti võrreldakse, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Kuna üldine prompt ei nõua kategoriseeritud väljundit, viiakse selle väljund kategooriatesse \emph{post hoc} (käsitsi) vastavalt alapeatükis~\ref{metoodika:kategooriad} esitatud kategooria määratlustele. Et see protseduur on omakorda subjektiivsuse allikas, kavandatakse selle subjektiivsuse hindamiseks teha vähemalt osa kategoriseerimisest ka teise annoteerija poolt ning arvutada üldise prompti puhul eraldi annoteerijatevaheline kokkulepe.

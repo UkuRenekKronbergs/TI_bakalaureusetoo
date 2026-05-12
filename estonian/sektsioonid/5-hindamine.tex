@@ -1,14 +1,14 @@
 \section{Pilootuuring ja kavandatav täismahuline hindamine} \label{hindamine}
 
-\textbf{Peatüki ulatus.} Käesolev peatükk esitab \emph{kvalitatiivse pilootuuringu} tulemused. Pilootuuring viidi läbi prompti disaini iteratsiooni jooksul väikese tekstivalimi peal eesmärgiga (1) veenduda, et prototüüp toodab valideeritava JSON-struktuuriga tagasiside, (2) tuvastada mudeli väljundis esinevad tüüpilised mustrid ning (3) suunata struktureeritud prompti sõnastust. \emph{Täismahuline empiiriline hindamine} alapeatükis~\ref{metoodika:hindamine} kavandatud testkogu vastu päris LLM-i päringutega on \emph{teadlikult jäetud käesoleva töö ulatusest välja} ning kuulub jätkukavasse, mille üksikasjad on esitatud alapeatükis~\ref{hindamine:edasine}. Käesoleva peatüki põhitulemused (alapeatükid~\ref{hindamine:kategooriad}--\ref{hindamine:piirangud}) on kvalitatiivsed ega esita päris empiirilisi täpsuse, saagise ega F\textsubscript{1}-skoori väärtuseid, kuna pilootvalim on selleks teadlikult liiga väike. Lisaks esitab alapeatükk~\ref{hindamine:synteetiline} \emph{sünteetilise pipeline-demonstratsiooni}, kus nii kuldstandard kui ka mudelivastused on generatiivse tehisaru abil koostatud illustratsioonina; selle alapeatüki numbrid \emph{ei mõõda} päris LLM-ide sooritust, vaid näitavad ainult, et alapeatükis~\ref{metoodika:hindamine} kavandatud hindamis-pipeline on tehniliselt toimiv.
+\textbf{Peatüki ulatus.} Käesolev peatükk esitab \emph{kvalitatiivse pilootuuringu} tulemused. Pilootuuring viidi läbi prompti disaini iteratsiooni jooksul väikesel tekstivalimil eesmärgiga (1) veenduda, et prototüüp toodab valideeritava JSON-struktuuriga tagasiside, (2) tuvastada mudeli väljundis esinevad tüüpilised mustrid ning (3) suunata struktureeritud prompti sõnastust. \emph{Täismahuline empiiriline hindamine} alapeatükis~\ref{metoodika:hindamine} kavandatud testkogu vastu päris LLM-i päringutega on \emph{teadlikult jäetud käesoleva töö ulatusest välja} ning kuulub jätkukavasse, mille üksikasjad on esitatud alapeatükis~\ref{hindamine:edasine}. Käesoleva peatüki põhitulemused (alapeatükid~\ref{hindamine:kategooriad}--\ref{hindamine:piirangud}) on kvalitatiivsed ega esita päris empiirilisi täpsuse, saagise ega F\textsubscript{1}-skoori väärtusi, kuna pilootvalim on selleks teadlikult liiga väike. Lisaks esitab alapeatükk~\ref{hindamine:synteetiline} \emph{sünteetilise hindamisprotsessi demonstratsiooni}, kus nii kuldstandard kui ka mudelivastused on generatiivse tehisaru abil koostatud illustratsioonina; selle alapeatüki numbrid \emph{ei mõõda} päris LLM-ide sooritust, vaid näitavad ainult, et alapeatükis~\ref{metoodika:hindamine} kavandatud hindamisprotsess on tehniliselt toimiv.
 
-Alapeatükis~\ref{hindamine:ulevaade} kirjeldatakse pilootuuringu metoodikat ja valimit. Alapeatükk~\ref{hindamine:kategooriad} esitab kvalitatiivsed tähelepanekud kategooriate kaupa. Alapeatükis~\ref{hindamine:promptid} võrreldakse üldist ja struktureeritud prompti illustreerivate näidete kaudu. Alapeatükk~\ref{hindamine:mudelid} käsitleb mudelite vahelist tundlikkust pilootuuringu täheldatud tasemel. Alapeatükis~\ref{hindamine:kvalitatiivne} esitatakse konkreetsed näidisleiud. Alapeatükk~\ref{hindamine:arutelu} võtab pilootuuringu järeldused kokku ja vastab uurimisküsimustele \emph{pilootuuringu tasemel}. Alapeatükis~\ref{hindamine:piirangud} käsitletakse pilootuuringu piiranguid. Alapeatükk~\ref{hindamine:synteetiline} esitab sünteetilise pipeline-demonstratsiooni eksplitsiitselt LLM-i abil koostatud andmetel. Alapeatükk~\ref{hindamine:edasine} sõnastab täismahulise hindamise jätkukava.
+Alapeatükis~\ref{hindamine:ulevaade} kirjeldatakse pilootuuringu metoodikat ja valimit. Alapeatükk~\ref{hindamine:kategooriad} esitab kvalitatiivsed tähelepanekud kategooriate kaupa. Alapeatükis~\ref{hindamine:promptid} võrreldakse üldist ja struktureeritud prompti illustreerivate näidete kaudu. Alapeatükk~\ref{hindamine:mudelid} käsitleb mudelite vahelist tundlikkust pilootuuringu täheldatud tasemel. Alapeatükis~\ref{hindamine:kvalitatiivne} esitatakse konkreetsed näidisleiud. Alapeatükk~\ref{hindamine:arutelu} võtab pilootuuringu järeldused kokku ja vastab uurimisküsimustele \emph{pilootuuringu tasemel}. Alapeatükis~\ref{hindamine:piirangud} käsitletakse pilootuuringu piiranguid. Alapeatükk~\ref{hindamine:synteetiline} esitab sünteetilise hindamisprotsessi demonstratsiooni selgesõnaliselt LLM-i abil koostatud andmetel. Alapeatükk~\ref{hindamine:edasine} sõnastab täismahulise hindamise jätkukava.
 
 \subsection{Pilootuuringu metoodika ja valim} \label{hindamine:ulevaade}
 
-Pilootuuringu valim koosnes orienteeruvalt 3--5 lühikesest eestikeelsest tekstikatkendist iga viiest peatüki tüübist (sissejuhatus, taust ja seotud tööd, metoodika, tulemused, kokkuvõte). Katkendid olid kokku ligikaudu paari tunni jooksul kogutud ja ettevalmistatud ning sisaldasid nii probleemseid kui ka korrektseid lõike. Pilootvalim oli teadlikult väike: selle eesmärk ei olnud kvantitatiivne mõõtmine, vaid prompti disaini iteratsioon ja mudeli väljundi tüüpiliste mustrite tuvastamine. Suuremas, sõltumatu teise annoteerijaga annoteeritud testkogus toimub kvantitatiivne hindamine alles jätkutöö raames.
+Pilootuuringu valim koosnes orienteeruvalt 3--5 lühikesest eestikeelsest tekstikatkendist iga viie peatükitüübi kohta (sissejuhatus, taust ja seotud tööd, metoodika, tulemused, kokkuvõte). Katkendid olid kokku ligikaudu paari tunni jooksul kogutud ja ette valmistatud ning sisaldasid nii probleemseid kui ka korrektseid lõike. Pilootvalim oli teadlikult väike: selle eesmärk ei olnud kvantitatiivne mõõtmine, vaid prompti disaini iteratsioon ja mudeli väljundi tüüpiliste mustrite tuvastamine. Suuremas, sõltumatu teise annoteerijaga annoteeritud testkogus toimub kvantitatiivne hindamine alles jätkutöö raames.
 
-Iga pilootkatkend analüüsiti prototüübiga mõlema prompti variandiga (üldine ja struktureeritud) ning vähemalt osa katkendeid analüüsiti ka mõlema mudeliga (Claude 4.7 Opus ja GPT-5.5). Saadud väljundid vaadati läbi käsitsi ning märgiti üles järgmised tähelepanekud iga vastuse kohta: (1) kas vastus oli valideeritava JSON-struktuuriga, (2) millised kategooriate alla kuuluvad probleemid mudel tuvastas, (3) millised mudel autori hinnangul tuvastas korrektselt, (4) millised mudel pakkus välja, mis autori hinnangul ei olnud probleemid (\emph{paistvad valepositiivsed}), ja (5) millised autori hinnangul ilmselt olid probleemid, kuid mudel jättis need välja (\emph{paistvad valenegatiivsed}). Sõnu nagu „paistev” kasutatakse teadlikult, sest pilootuuringus oli annoteerijaks autor üksi ning sõltumatut kontrolli ei olnud; need tähelepanekud vajavad seetõttu kvantitatiivset kinnitust täismahulises hindamises.
+Iga pilootkatkend analüüsiti prototüübiga mõlema prompti variandiga (üldine ja struktureeritud) ning vähemalt osa katkendeid analüüsiti ka mõlema mudeliga (Claude 4.7 Opus ja GPT-5.5). Saadud väljundid vaadati läbi käsitsi ning märgiti üles järgmised tähelepanekud iga vastuse kohta: (1) kas vastus oli valideeritava JSON-struktuuriga, (2) milliseid kategooriate alla kuuluvaid probleeme mudel tuvastas, (3) milliseid probleeme mudel autori hinnangul korrektselt tuvastas, (4) milliseid probleeme mudel pakkus välja, kuigi need autori hinnangul probleemid ei olnud (\emph{näilised valepositiivsed}), ja (5) millised autori hinnangul ilmselt olid probleemid, kuid mudel jättis need välja (\emph{näilised valenegatiivsed}). Sõna „näiline” kasutatakse teadlikult, sest pilootuuringus oli annoteerijaks autor üksi ning sõltumatut kontrolli ei olnud; need tähelepanekud vajavad seetõttu kvantitatiivset kinnitust täismahulises hindamises.
 
 Konkreetseid kvantitatiivseid mõõdikuid (täpsus, saagis, F\textsubscript{1}) pilootuuringu raames \emph{ei arvutatud}, kuna valim oli liiga väike statistilise üldistuse jaoks ning konkreetsete numbrite esitamine oleks andnud lugejale eksitava ettekujutuse tulemuste usaldusväärsusest. Alljärgnevad tähelepanekud on seetõttu sõnastatud puhtalt kvalitatiivselt.
 
@@ -16,7 +16,7 @@ Konkreetseid kvantitatiivseid mõõdikuid (täpsus, saagis, F\textsubscript{1}) 
 
 \subsubsection{Viitamisvajadus}
 
-Pilootuuringus oli mudel \emph{viitamisvajaduse} kategoorias kõige usaldusväärsem. Mudel tuvastas selgelt lauseid, mis sisaldavad konkreetseid arvulisi väiteid (\emph{75~\% projektist\dots}), kuid mille juures puudub viide allikale. Mudel tuvastas usaldusväärselt ka olukordi, kus konkreetne metoodika või algoritm on esitatud ilma viiteta selle allikale. Paistvate valepositiivsete hulgas täheldati üksikuid juhtumeid, kus mudel nõudis viidet üldteadmisele (näiteks \emph{HTTP on rakenduskihi protokoll}), mille puhul viide pole tegelikult vajalik. Selle muster on prompti disaini järgmises iteratsioonis adresseeritav vastunäidete täiendamisega, kuid täismahulise hindamise käigus tuleb seda ka kvantitatiivselt mõõta.
+Pilootuuringus oli mudel \emph{viitamisvajaduse} kategoorias kõige usaldusväärsem. Mudel tuvastas selgelt lauseid, mis sisaldavad konkreetseid arvulisi väiteid (\emph{75~\% projektist\dots}), kuid mille juures puudub viide allikale. Mudel tuvastas usaldusväärselt ka olukordi, kus konkreetne metoodika või algoritm on esitatud ilma viiteta selle allikale. Näiliste valepositiivsete hulgas täheldati üksikuid juhtumeid, kus mudel nõudis viidet üldteadmisele (näiteks \emph{HTTP on rakenduskihi protokoll}), mille puhul viide pole tegelikult vajalik. See muster on prompti disaini järgmises iteratsioonis lahendatav vastunäidete täiendamisega, kuid täismahulise hindamise käigus tuleb seda ka kvantitatiivselt mõõta.
 
 \subsubsection{Struktuur}
 
@@ -24,23 +24,23 @@ Pilootuuringus oli mudel \emph{viitamisvajaduse} kategoorias kõige usaldusvää
 
 \subsubsection{Akadeemiline stiil}
 
-\emph{Akadeemilise stiili} kategoorias tuvastas mudel hästi kõnekeelseid väljendeid (\emph{tüüp, asi, tegelikult}), liigselt pikki lauseid ja umbisikulise tegumoe ebakohast kasutamist. Pilootuuringus täheldati ka, et mudel kaldub mina-vormi tõlgendamiseks probleemiks ka olukordades, kus mina-vormi kasutus oli akadeemiliselt vastuvõetav (näiteks selgelt tudengi enda panust kirjeldavates kohtades, kus mina-vormi kasutus on TÜ juhendi kohaselt pigem soovituslik kui keelatud). See on tähelepanu vääriv kallutus, mis sõltub prompti vastunäidete sõnastusest ning mille suurus tuleb täismahulises hindamises kvantitatiivselt mõõta.
+\emph{Akadeemilise stiili} kategoorias tuvastas mudel hästi kõnekeelseid väljendeid (\emph{tüüp, asi, tegelikult}), liigselt pikki lauseid ja umbisikulise tegumoe ebakohast kasutamist. Pilootuuringus täheldati ka, et mudel kaldub mina-vormi probleemiks tõlgendama ka olukordades, kus mina-vormi kasutus oli akadeemiliselt vastuvõetav (näiteks selgelt tudengi enda panust kirjeldavates kohtades, kus mina-vormi kasutus on TÜ juhendi kohaselt pigem soovituslik kui keelatud). See on tähelepanu vääriv kallutus, mis sõltub prompti vastunäidete sõnastusest ning mille suurus tuleb täismahulises hindamises kvantitatiivselt mõõta.
 
 \subsubsection{Terminoloogia}
 
-Mudel oli pilootuuringus paistvalt kõige nõrgem \emph{terminoloogia} järjepidevuse hindamisel. Põhjuseid täheldati vähemalt kaks. Esiteks nõuab terminoloogia järjepidevuse hindamine tervet teksti silmas pidamist -- kui katkend on lühike, ei pruugi sama termini erinevad esinemiskorrad mahtuda samasse katkendisse, mille tõttu mudel ei „näe” vastuolu. Teiseks ei ole mudel täiesti kursis tipptasemel eestikeelsete arvutiteaduse terminitega: pilootuuringus esitas mudel üksikutel juhtudel valepositiivse leiu, kus väitis, et \emph{lõim} olevat inglise keele \emph{thread} ebakorrektne tõlge (kuigi tegelikult on \emph{lõim} just kooskõlas Eesti Keele Instituudi sõnastikuga\footnote{\url{https://termin.eki.ee/}}). See piirang on osa põhjusest, miks jätkukavasse on lisatud kategooriapõhise prompti täiendamine välise terminisõnastiku integreerimisega (vt alapeatükk~\ref{hindamine:edasine}).
+Pilootuuringus näis mudel kõige nõrgem \emph{terminoloogia} järjepidevuse hindamisel. Põhjuseid täheldati vähemalt kaks. Esiteks nõuab terminoloogia järjepidevuse hindamine tervet teksti silmas pidamist -- kui katkend on lühike, ei pruugi sama termini erinevad esinemiskorrad mahtuda samasse katkendisse, mistõttu mudel ei „näe” vastuolu. Teiseks ei ole mudel täiesti kursis tipptasemel eestikeelsete arvutiteaduse terminitega: pilootuuringus esitas mudel üksikutel juhtudel valepositiivse leiu, kus väitis, et \emph{lõim} olevat inglise keele \emph{thread} ebakorrektne tõlge (kuigi tegelikult on \emph{lõim} just kooskõlas Eesti Keele Instituudi sõnastikuga\footnote{\url{https://termin.eki.ee/}}). See piirang on osa põhjusest, miks jätkukavasse on lisatud kategooriapõhise prompti täiendamine välise terminisõnastiku integreerimisega (vt alapeatükk~\ref{hindamine:edasine}).
 
 \subsection{Üldise ja struktureeritud prompti võrdlus} \label{hindamine:promptid}
 
-Pilootuuringus võrreldi üldise ja struktureeritud prompti väljundeid samade katkendite peal. Tulemused eristusid \emph{vormi} ja \emph{sisu} osas, mida on oluline eraldi käsitleda, kuna need on tugevuse poolest erinevad väited.
+Pilootuuringus võrreldi üldise ja struktureeritud prompti väljundeid samadel katkenditel. Tulemused eristusid \emph{vormi} ja \emph{sisu} osas, mida on oluline eraldi käsitleda, kuna need on tugevuse poolest erinevad väited.
 
-\textbf{Vormiline erinevus} tulenes otseselt prompti disainist. Struktureeritud prompt nõuab kategoriseeritud JSON-väljundit, üldine prompt aga vabavormilist teksti. Sellest tulenevalt oli struktureeritud prompti puhul (1) iga leid auditeeritav konkreetse tsitaadi kaudu, (2) väljund kasutajaliideses ühtlaselt esitatav, ning (3) iga kategooria mudeli poolt eraldi kontrollitud. Need on prompti disaini \emph{kavandatud omadused}, mitte iseseisvad empiirilised tähelepanekud -- see, et kategoriseeritud väljundi nõue toob kaasa kategoriseeritud väljundi, on tautoloogia, mitte uudse leiu. Vormiline erinevus toetab struktureeritud prompti kasutamist puhtalt tehnilisel põhjusel: see lihtsustab automaatset järeltöötlust, auditeerimist ja kasutajaliidese kuvamist. Üldise prompti vabavormiline väljund nõudis omakorda käsitsi kategoriseerimist post-hoc, mis on metoodiline kitsaskoht ning käsitletud piirangute juures (alapeatükk~\ref{hindamine:piirangud}).
+\textbf{Vormiline erinevus} tulenes otseselt prompti disainist. Struktureeritud prompt nõuab kategoriseeritud JSON-väljundit, üldine prompt aga vabavormilist teksti. Sellest tulenevalt oli struktureeritud prompti puhul (1) iga leid auditeeritav konkreetse tsitaadi kaudu, (2) väljund kasutajaliideses ühtlaselt esitatav, ning (3) iga kategooria mudeli poolt eraldi kontrollitud. Need on prompti disaini \emph{kavandatud omadused}, mitte iseseisvad empiirilised tähelepanekud -- see, et kategoriseeritud väljundi nõue toob kaasa kategoriseeritud väljundi, on tautoloogia, mitte uudne leid. Vormiline erinevus toetab struktureeritud prompti kasutamist puhtalt tehnilisel põhjusel: see lihtsustab automaatset järeltöötlust, auditeerimist ja kasutajaliidese kuvamist. Üldise prompti vabavormiline väljund nõudis omakorda käsitsi kategoriseerimist \emph{post hoc}, mis on metoodiline kitsaskoht ning käsitletud piirangute juures (alapeatükk~\ref{hindamine:piirangud}).
 
-\textbf{Sisuline erinevus} -- kas struktureeritud prompt aitab mudelil tuvastada rohkem ja täpsemini reaalseid probleeme -- on empiiriliselt sisukam küsimus. Pilootuuringus täheldati selles osas järgmist. Üldise prompti kõige nähtavam puudus näis olevat madal kattuvus: mudel jättis tihti suure osa probleemidest tähele panemata, kontsentreerudes mõnele silmapaistvale stiiliveale. Struktureeritud prompti kasu \emph{kattuvuses} näis kõige silmnähtavam struktuuri kategoorias, kus üldine prompt suutis harvemini konkreetset probleemset lõiku lokaliseerida; väikseim kasu täheldati terminoloogia kategoorias, kus mudeli põhiline piirang -- katkendipõhine kontekst ja eesti keele terminite tundmise lüngad -- ei sõltunud prompti vormist. Pilootuuringu raames neid tähelepanekuid arvuliselt ei kvantifitseeritud ning üldise prompti väljundi käsitsi kategoriseerimine post-hoc on iseseisev subjektiivsuse allikas, mis võis töötada üldise prompti kasuks (vt piirangud). Sisuline empiiriline kinnitus -- konkreetne paranemine täpsuses, saagises ja F\textsubscript{1}-skooris iga kategooria kohta -- saadakse alles täismahulise hindamise käigus, kus mõlema prompti väljundid skooritakse sama kuldstandardi vastu. Pilootuuringu tähelepanekud toetavad struktureeritud prompti hüpoteesi esialgselt ja kvalitatiivselt.
+\textbf{Sisuline erinevus} -- kas struktureeritud prompt aitab mudelil tuvastada rohkem ja täpsemini reaalseid probleeme -- on empiiriliselt sisukam küsimus. Pilootuuringus täheldati selles osas järgmist. Üldise prompti kõige nähtavam puudus näis olevat madal kattuvus: mudel jättis tihti suure osa probleemidest tähele panemata, kontsentreerudes mõnele silmapaistvale stiiliveale. Struktureeritud prompti kasu \emph{kattuvuses} näis kõige silmnähtavam struktuuri kategoorias, kus üldine prompt suutis harvemini konkreetset probleemset lõiku lokaliseerida; väikseim kasu täheldati terminoloogia kategoorias, kus mudeli põhiline piirang -- katkendipõhine kontekst ja eesti keele terminite tundmise lüngad -- ei sõltunud prompti vormist. Pilootuuringu raames neid tähelepanekuid arvuliselt ei kvantifitseeritud ning üldise prompti väljundi käsitsi kategoriseerimine \emph{post hoc} on iseseisev subjektiivsuse allikas, mis võis töötada üldise prompti kasuks (vt piirangud). Sisuline empiiriline kinnitus -- konkreetne paranemine täpsuses, saagises ja F\textsubscript{1}-skooris iga kategooria kohta -- saadakse alles täismahulise hindamise käigus, kus mõlema prompti väljundid skooritakse sama kuldstandardi vastu. Pilootuuringu tähelepanekud toetavad struktureeritud prompti hüpoteesi esialgselt ja kvalitatiivselt.
 
 \subsection{Mudelite tundlikkus pilootuuringu tasemel} \label{hindamine:mudelid}
 
-Pilootuuringu käigus käivitati osa pilootkatkendeid lisaks Claude 4.7 Opusele ka OpenAI \texttt{gpt-5.5} mudeliga, kasutades sama struktureeritud prompti. Mõlemad mudelid näitasid sellel valimi osal sarnast kategoorilist mustrit -- usaldusväärsem viitamisvajaduse ja struktuuri kategoorias, problemaatilisem terminoloogia kategoorias. Lisaks täheldati, et struktureeritud prompti kvalitatiivne eelis üldise ees ilmnes mõlema mudeli puhul samasuguste mustritega. Selle tähelepaneku tugevus on aga väikese valimi osa tõttu piiratud: kas prompti struktuuri kasu üldistub mudelite üle, samuti kas mudelite vahel on süstemaatilisi erinevusi (näiteks Claude 4.7 Opuse võimalik eelis eesti keele oskuse poolest), tuleb kontrollida täismahulise hindamise käigus, kus mõlemad mudelid skooritakse kogu testkogu vastu.
+Pilootuuringu käigus käivitati osa pilootkatkendeid lisaks Claude 4.7 Opusele ka OpenAI \texttt{gpt-5.5} mudeliga, kasutades sama struktureeritud prompti. Mõlemad mudelid näitasid sellel valimiosal sarnast kategoorilist mustrit -- usaldusväärsem viitamisvajaduse ja struktuuri kategoorias, problemaatilisem terminoloogia kategoorias. Lisaks täheldati, et struktureeritud prompti kvalitatiivne eelis üldise ees ilmnes mõlema mudeli puhul samasuguste mustritega. Selle tähelepaneku tugevus on aga valimiosa väiksuse tõttu piiratud: kas prompti struktuuri kasu üldistub mudelite üle, samuti kas mudelite vahel on süstemaatilisi erinevusi (näiteks Claude 4.7 Opuse võimalik eelis eesti keele oskuse poolest), tuleb kontrollida täismahulise hindamise käigus, kus mõlemad mudelid skooritakse kogu testkogu vastu.
 
 \subsection{Kvalitatiivsed näidisleiud} \label{hindamine:kvalitatiivne}
 
@@ -68,19 +68,19 @@ Lisaks tähelepanekutele konkreetsete leidude kohta täheldati pilootuuringus, e
 
 Pilootuuring ei võimalda anda uurimisküsimustele lõplikku vastust ega ühtki kvantitatiivset väidet. Kvalitatiivselt pakub pilootuuring siiski järgmist esialgset suunda kolmele uurimisküsimusele:
 
-\textbf{Uurimisküsimus 1.} Pilootuuringus oli mudeli antud tagasiside iseloom \emph{kasutamiskõlblik}: mudel suutis tuvastada konkreetseid, tsiteeritavaid probleeme nii stiili-, struktuuri- kui ka viitamisvajaduse kategoorias. Tagasiside oli auditeeritav (iga leid sisaldas tsitaati ja põhjendust), eestikeelne ja lokaliseeritud. Pilootuuringu põhjal näib süsteem rakenduskõlblik täiendava tagasisidevahendina, kuid lõpliku kvantitatiivse kasutuskõlblikkuse hinnangu annab täismahuline hindamine.
+\textbf{Uurimisküsimus 1.} Pilootuuringus oli mudeli antud tagasiside iseloom \emph{kasutuskõlblik}: mudel suutis tuvastada konkreetseid, tsiteeritavaid probleeme nii stiili-, struktuuri- kui ka viitamisvajaduse kategoorias. Tagasiside oli auditeeritav (iga leid sisaldas tsitaati ja põhjendust), eestikeelne ja lokaliseeritud. Pilootuuringu põhjal näib süsteem rakenduskõlblik täiendava tagasisidevahendina, kuid lõpliku kvantitatiivse kasutuskõlblikkuse hinnangu annab täismahuline hindamine.
 
-\textbf{Uurimisküsimus 2.} Pilootuuringus näis mudel usaldusväärseim \emph{viitamisvajaduse} ja \emph{struktuuri} kategoorias -- need on kategooriad, kus probleem on tüüpiliselt lokaalne (üks lause või lõik) ja seotud konkreetse tuntava mustriga. Kõige problemaatilisem oli mudel \emph{terminoloogia} kategoorias, kus on vaja kogu teksti silmas pidamist ning eesti keele tehnilist terminisõnastikku. Need esialgsed suunad on kooskõlas hüpoteesidega, mis on prompti disaini aluseks olnud; nende kvantitatiivne kinnitamine kuulub jätkukavasse.
+\textbf{Uurimisküsimus 2.} Pilootuuringus näis mudel usaldusväärseim \emph{viitamisvajaduse} ja \emph{struktuuri} kategoorias -- need on kategooriad, kus probleem on tüüpiliselt lokaalne (üks lause või lõik) ja seotud selgelt äratuntava mustriga. Kõige problemaatilisem oli mudel \emph{terminoloogia} kategoorias, kus on vaja kogu teksti silmas pidamist ning eesti keele tehnilist terminisõnastikku. Need esialgsed suunad on kooskõlas hüpoteesidega, mis on prompti disaini aluseks olnud; nende kvantitatiivne kinnitamine kuulub jätkukavasse.
 
-\textbf{Uurimisküsimus 3.} Pilootuuringu põhjal näib struktureeritud promptimine andvat üldisest promptist süsteemsemat tagasisidet enamikus kategooriates ning mõlemal pilootuuringus testitud mudelil samasuguste mustritega. Suurim paistev paranemine täheldati struktuuri kategoorias, väikseim terminoloogia kategoorias, kus mudeli põhilised piirangud ei sõltunud prompti vormist. Tuleb rõhutada, et osa täheldatud erinevusest on prompti disaini kavandatud vormiline omadus (kategoriseeritud JSON-väljund), mitte iseseisev empiiriline leid; sisulise -- kattuvuse ja täpsuse -- paranemise suurus iga kategooria kohta ootab täismahulist hindamist sama kuldstandardi vastu.
+\textbf{Uurimisküsimus 3.} Pilootuuringu põhjal näib struktureeritud promptimine andvat üldisest promptist süsteemsemat tagasisidet enamikus kategooriates ning mõlemal pilootuuringus testitud mudelil samasuguste mustritega. Suurim näiline paranemine täheldati struktuuri kategoorias, väikseim terminoloogia kategoorias, kus mudeli põhilised piirangud ei sõltunud prompti vormist. Tuleb rõhutada, et osa täheldatud erinevusest on prompti disaini kavandatud vormiline omadus (kategoriseeritud JSON-väljund), mitte iseseisev empiiriline leid; sisulise -- kattuvuse ja täpsuse -- paranemise suurus iga kategooria kohta ootab täismahulist hindamist sama kuldstandardi vastu.
 
 \subsection{Pilootuuringu piirangud} \label{hindamine:piirangud}
 
-Pilootuuringul on mitmeid piiranguid, mille tõttu peatüki tulemusi tuleb tõlgendada esialgsetena ja kvalitatiivselt.
+Pilootuuringul on mitmeid piiranguid, mistõttu peatüki tulemusi tuleb tõlgendada esialgsetena ja kvalitatiivselt.
 
 \textbf{Täismahuline kvantitatiivne hindamine teostamata.} Olulisim piirang on see, et alapeatükis~\ref{metoodika:hindamine} kavandatud täismahuline empiiriline hindamine on käesoleva töö ulatusest teadlikult välja jäetud. See tähendab, et täpsust, saagist ega F\textsubscript{1}-skoori ei esitata; kõik järeldused on kvalitatiivsed (vt alapeatükk~\ref{hindamine:edasine}).
 
-\textbf{Valimi suurus.} Pilootuuringus kasutati orienteeruvalt 3--5 katkendit peatüki tüübi kohta, mistõttu pilootvalim ei kanna statistilist usaldusväärsust. Tüüpilise dispersiooni ja usaldusvahemike hindamiseks on vajalik vähemalt täismahulise testkogu kasutamine ning ideaalis sõltumatu kordamine.
+\textbf{Valimi suurus.} Pilootuuringus kasutati orienteeruvalt 3--5 katkendit peatükitüübi kohta, mistõttu pilootvalim ei võimalda statistiliselt usaldusväärseid järeldusi. Tüüpilise dispersiooni ja usaldusvahemike hindamiseks on vajalik vähemalt täismahulise testkogu kasutamine ning ideaalis sõltumatu kordamine.
 
 \textbf{Üks annoteerija.} Pilootuuringus oli annoteerijaks autor üksi. Sõltumatut teist annoteerijat ei kaasatud. See võib põhjustada süstemaatilise kallutuse: kui autor on kallutatud teatud probleemide tuvastamisel, peegeldub see ka pilootuuringu kvalitatiivsetesse tähelepanekutesse. Coheni $\kappa$~\cite{cohen_kappa_1960} arvutamine kahe sõltumatu annoteerija vahel iga kategooria kohta on täismahulise hindamise üks oluline samm; Krippendorffi $\alpha$~\cite{krippendorff_alpha_2011} on reservis mitme annoteerijaga laienduse jaoks.
 
@@ -94,7 +94,7 @@ Pilootuuringul on mitmeid piiranguid, mille tõttu peatüki tulemusi tuleb tõlg
 
 \textbf{Mudeli väljundi vs kasutajakogemuse hindamine.} Pilootuuringus hinnati ainult mudeli \emph{väljundit} autori vaatest, mitte seda, kuidas süsteem toimib tegelike tudengite kasutusprotsessis (näiteks kasutajaliidese tõhusus, soovituste rakendatavus tegelikus kirjutamisprotsessis, üldine kasutatavus ja kasulikkuse tajumine). Süsteemi praktilise väärtuse hindamine eeldab eraldi kasutatavusuuringut tegelike tudengite osalemisega, mis omakorda nõuab eraldi metoodikat ja eetikakomisjoni nõusolekut; see kuulub seetõttu täiendava jätkukava sammuna käesoleva töö ulatusest välja.
 
-\subsection{Hindamis-pipeline'i demonstratsioon sünteetiliste annoteeringutega} \label{hindamine:synteetiline}
+\subsection{Hindamisprotsessi demonstratsioon sünteetiliste annoteeringutega} \label{hindamine:synteetiline}
 
 \noindent\fbox{\begin{minipage}{0.97\textwidth}\small
 \textbf{HOIATUS: SÜNTEETILISED ANDMED}\\[2pt]
@@ -104,7 +104,7 @@ tehisaru (Claude 4.7 Opus) abil koostatud illustratsioonina, mitte päris
 LLM-ide tegelike päringute tulemused. \textbf{Käesolevad numbrid ei mõõda
 Claude'i ega GPT-5.5 tegelikku sooritust} eestikeelse akadeemilise teksti
 tagasisidestamisel. Käesolev alapeatükk demonstreerib ainult, et
-alapeatükis~\ref{metoodika:hindamine} kirjeldatud hindamis-pipeline on
+alapeatükis~\ref{metoodika:hindamine} kirjeldatud hindamisprotsess on
 tehniliselt toimiv (mõõdikute arvutus on korrektne ning väljundite struktuur
 on selline, nagu täismahuline hindamine vajab). Päris arvuliste tulemuste
 saamine kuulub alapeatükis~\ref{hindamine:edasine} kirjeldatud jätkukavasse.
@@ -116,7 +116,7 @@ ja \texttt{synteetiline\_hindamine.py}.
 \subsubsection{Sünteetilise andmestiku koosseis}
 
 Sünteetiline testkogu koosneb 20 LLM-iga genereeritud katkendist, mille
-jaotus peatüki tüübi järgi vastab lisas~\ref{lisa:testkogu} kavandatud
+jaotus peatükitüübi järgi vastab lisas~\ref{lisa:testkogu} kavandatud
 kvoodile (sissejuhatus 4, taust 5, metoodika 4, tulemused 4, kokkuvõte 3).
 Iga katkendi pikkus on ligikaudu 100--160 sõna. Igale katkendile on
 LLM-i abil koostatud kuldstandard, mis sisaldab kategooriapõhiseid
@@ -127,9 +127,9 @@ kategooriate kaupa on tasakaalustatud (vt repositoorium
 
 \subsubsection{Mudelivastuste simuleerimine}
 
-Päris LLM-i päringute asemel simuleeriti iga (katkend × prompti tüüp ×
+Päris LLM-i päringute asemel simuleeriti iga (katkend × promptitüüp ×
 mudel) kombinatsiooni jaoks mudeli väljundid sõltumatute Bernoulli-tõmmistega
-seeditud juhugeneraatorist (\texttt{seed = 20260512}). Iga kuldstandardi
+fikseeritud seemnega juhugeneraatorist (\texttt{seed = 20260512}). Iga kuldstandardi
 annotatsioon detekteeritakse tõenäosusega, mis on sõnastatud avalikus
 profiilis. Profiilid kajastavad alapeatükkides~\ref{hindamine:kategooriad}
 ja~\ref{hindamine:promptid} esitatud \emph{pilootuuringu kvalitatiivseid
@@ -140,12 +140,12 @@ kategooria) kohta valepositiivseid leide eraldi sõltumatu Bernoulli-tõmmisega.
 
 \subsubsection{Sünteetilised tulemused}
 
-Tabelis~\ref{tab:synth-kokku} on esitatud iga (mudel × prompti tüüp)
-kombinatsiooni macro-keskmised mõõdikud üle nelja kategooria.
+Tabelis~\ref{tab:synth-kokku} on esitatud iga (mudel × promptitüüp)
+kombinatsiooni makrokeskmised mõõdikud üle nelja kategooria.
 
 \begin{table}[htb!]
     \centering
-    \caption{\textbf{Sünteetilised} macro-keskmised mõõdikud iga
+    \caption{\textbf{Sünteetilised} makrokeskmised mõõdikud iga
     kombinatsiooni kohta. Arvutatud sünteetilistest andmetest; ei mõõda
     päris LLM-ide sooritust.}
     \label{tab:synth-kokku}
@@ -154,7 +154,7 @@ kombinatsiooni macro-keskmised mõõdikud üle nelja kategooria.
                 hlines, vlines,
                 row{1} = {font=\bfseries, bg = colorCellHighlight},
             }
-    Mudel & Prompti tüüp & Macro T & Macro S & Macro F\textsubscript{1} & TP & FP & FN \\
+    Mudel & Promptitüüp & Makro T & Makro S & Makro F\textsubscript{1} & TP & FP & FN \\
     Claude 4.7 Opus & struktureeritud & 0,74 & 0,79 & 0,75 & 33 & 15 &  9 \\
     Claude 4.7 Opus & üldine          & 0,50 & 0,55 & 0,52 & 22 & 21 & 20 \\
     GPT-5.5         & struktureeritud & 0,66 & 0,72 & 0,68 & 29 & 16 & 13 \\
@@ -163,16 +163,16 @@ kombinatsiooni macro-keskmised mõõdikud üle nelja kategooria.
 \end{table}
 
 Joonis~\ref{fig:synth-macro} võrdleb sünteetilises andmestikus üldise ja
-struktureeritud prompti macro-F\textsubscript{1} skoore mudelite kaupa.
+struktureeritud prompti makro-F\textsubscript{1} skoore mudelite kaupa.
 Joonis~\ref{fig:synth-kategooria} esitab sama informatsiooni kategooriate
 kaupa.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\textwidth]{joonised/synth-macro-F1.png}
-    \caption{\textbf{Sünteetiline:} macro-F\textsubscript{1} võrdlus üldise ja
+    \caption{\textbf{Sünteetiline:} makro-F\textsubscript{1} võrdlus üldise ja
     struktureeritud prompti vahel kahel mudelil. Numbrid on simuleeritud
-    Bernoulli-tõmmistega seeditud juhugeneraatorist; ei mõõda päris
+    Bernoulli-tõmmistega fikseeritud seemnega juhugeneraatorist; ei mõõda päris
     LLM-ide sooritust.}
     \label{fig:synth-macro}
 \end{figure}
@@ -181,7 +181,7 @@ kaupa.
     \centering
     \includegraphics[width=\textwidth]{joonised/synth-F1-kategooriapohi.png}
     \caption{\textbf{Sünteetiline:} F\textsubscript{1} kategooria, mudeli ja
-    prompti tüübi kaupa. Terminoloogia kategoorias on F\textsubscript{1}
+    promptitüübi kaupa. Terminoloogia kategoorias on F\textsubscript{1}
     süstemaatiliselt madalam, mis vastab autori postuleeritud profiilile
     (vt \texttt{synteetiline\_hindamine.py} muutuja \texttt{RECALL}).}
     \label{fig:synth-kategooria}
@@ -196,23 +196,23 @@ kohta. Seega:
     \item Tabel~\ref{tab:synth-kokku} F\textsubscript{1}-skoorid \emph{ei}
     näita, et Claude 4.7 Opus oleks päriselt parem kui GPT-5.5 — see
     erinevus on autori postulaadi otsene tulemus.
-    \item Sama kehtib prompti tüübi erinevuse kohta: sünteetilises
+    \item Sama kehtib promptitüübi erinevuse kohta: sünteetilises
     andmestikus on struktureeritud prompt parem, kuna profiilid niimoodi
     sätestati. Päris empiiriline erinevus selgub alles
     alapeatükis~\ref{hindamine:edasine} kirjeldatud jätkukava raames.
     \item Sünteetiline andmestik kasutab autori enda kirjutatud katkendeid
     ning üheainsa annoteerija (autor) tehtud annotatsioone; sõltumatu
-    inter-annoteerija kokkuleppe (Coheni $\kappa$) küsimus pole sünteetilises
+    annoteerijatevahelise kokkuleppe (Coheni $\kappa$) küsimus pole sünteetilises
     illustratsioonis kohaldatav.
 \end{itemize}
 
 Mille kohta käesolev alapeatükk \emph{teeb} väite:
 
 \begin{itemize}
-    \item Hindamis-pipeline genereerib oodatud kujul väljundi (kategoriseeritud
+    \item Hindamisprotsess genereerib oodatud kujul väljundi (kategoriseeritud
     leiud, tsitaadid, kindlushinnangud) ning arvutab TP, FP, FN, täpsuse,
     saagise ja F\textsubscript{1} korrektselt.
-    \item Üks (mudel × prompti tüüp × katkend) kombinatsioon töödeldakse
+    \item Üks (mudel × promptitüüp × katkend) kombinatsioon töödeldakse
     keskmiselt umbes 0,01 sekundi jooksul (täiesti lokaalselt, ilma
     võrgupäringuteta), mistõttu täismahuline hindamine tegeliku 20-katkendilise
     testkoguga oleks pärast kuldstandardi annoteerimist arvutuse poolelt
@@ -221,15 +221,15 @@ Mille kohta käesolev alapeatükk \emph{teeb} väite:
 
 \subsection{Täismahulise hindamise jätkukava} \label{hindamine:edasine}
 
-Käesoleva töö \emph{kõige olulisem järgmine samm} on alapeatükis~\ref{metoodika:hindamine} kirjeldatud metoodika rakendamine kogu testkogu (20 katkendit) peale. Jätkukava koosneb järgmistest sammudest, milleks prototüüp on tehniliselt valmis:
+Käesoleva töö \emph{kõige olulisem järgmine samm} on alapeatükis~\ref{metoodika:hindamine} kirjeldatud metoodika rakendamine kogu testkogul (20 katkendit). Jätkukava koosneb järgmistest sammudest, milleks prototüüp on tehniliselt valmis:
 
 \begin{enumerate}
-    \item Kavandatud 20-katkendilise testkogu \emph{koostamine ja anonüümimine} TÜ arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde põhjal aastatest 2020--2024, järgides tabelis~\ref{tab:testkogu} esitatud jaotust peatüki tüübi järgi.
+    \item Kavandatud 20-katkendilise testkogu \emph{koostamine ja anonüümimine} TÜ arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde põhjal aastatest 2020--2024, järgides tabelis~\ref{tab:testkogu} esitatud jaotust peatükitüübi järgi.
     \item \emph{Kuldstandardi annoteerimine} kahes etapis: esimene annoteerimisring autori poolt, teine sõltumatu annoteerija poolt; lahkarvamuste lahendamine ning Coheni $\kappa$ või Krippendorffi $\alpha$ arvutamine iga kategooria kohta.
     \item Prototüübi käivitamine testkogu kõikide 20 katkendi vastu mõlema prompti versiooniga (üldine ja struktureeritud) ja mõlema mudeliga (Claude 4.7 Opus, GPT-5.5). Iga päringu täielik vastus salvestatakse \texttt{tulemused/}-kausta jätkukava reprodutseeritavuse jaoks.
     \item Iga vastuse leidude võrdlemine kuldstandardiga, rakendades alapeatükis~\ref{metoodika:hindamine} kirjeldatud kattuvuse reeglit ($\geq$~50~\% sõnatasemel kattuvus + sama kategooria). Arvutada TP, FP ja FN iga kategooria, prompti ja mudeli kombinatsiooni kohta.
     \item Täpsuse, saagise ja F\textsubscript{1} arvutamine iga kategooria kohta ning kaalutud keskmine kogu testkogu põhjal. Selle põhjal lõplik vastus uurimisküsimustele 1--3, ning nende vastuste avaldatav vorm näiteks magistriõppe töös või akadeemilises artiklis.
-    \item Täiendavad analüüsid: mudeli kindlushinnangu ja tegeliku õigsuse vahelise korrelatsiooni mõõtmine; valepositiivsete ja valenegatiivsete tüüpilise põhjuse temaatiline analüüs.
+    \item Täiendavad analüüsid: mudeli kindlushinnangu ja tegeliku õigsuse vahelise korrelatsiooni mõõtmine; valepositiivsete ja valenegatiivsete tüüpiliste põhjuste temaatiline analüüs.
 \end{enumerate}
 
-Kuna prototüüp ise on tehniliselt valmis ja täielikult automatiseeritud, on selle täismahulise hindamise läbiviimine arvutusliku poole pealt mitte tundide, vaid päevade küsimus -- peamine takistus on inimese annoteeritud kuldstandardi täielik valmimine ja sõltumatu teise annoteerija aja leidmine. See on käesoleva töö ulatusest teadlikult välja jäetud, sest kvaliteetne annoteerimine nõuab aega, mida käesoleva töö esitamise raames ei oleks olnud realistlik kvaliteedis pakkuda.
+Kuna prototüüp ise on tehniliselt valmis ja täielikult automatiseeritud, on selle täismahulise hindamise läbiviimine arvutusliku poole pealt mitte tundide, vaid päevade küsimus -- peamine takistus on inimese annoteeritud kuldstandardi täielik valmimine ja sõltumatu teise annoteerija aja leidmine. See on käesoleva töö ulatusest teadlikult välja jäetud, sest kvaliteetne annoteerimine nõuab aega, mida käesoleva töö esitamise raames ei oleks olnud realistlik piisava kvaliteediga tagada.

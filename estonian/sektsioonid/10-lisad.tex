@@ -3,13 +3,13 @@
 \subsection*{Lisa I: Kavandatud testkogu disain} \label{lisa:testkogu}
 \addcontentsline{toc}{subsection}{Lisa I: Kavandatud testkogu disain}
 
-Käesolev lisa kirjeldab \emph{kavandatud} testkogu disaini täismahulise hindamise jaoks. Testkogu koostamine ja annoteerimine kuulub töö jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}) ning käesoleva töö esitamise hetkel ei ole testkogu konkreetsed katkendid veel anonüümitud ega lõplikult valitud. Käesolevas lisas esitatakse testkogu \emph{kvoot} (jaotus peatüki tüübi järgi ja sihtpikkused), mis on aluseks jätkutöö annoteerimisetapile.
+Käesolev lisa kirjeldab \emph{kavandatud} testkogu disaini täismahulise hindamise jaoks. Testkogu koostamine ja annoteerimine kuulub töö jätkukavasse (vt alapeatükk~\ref{hindamine:edasine}) ning käesoleva töö esitamise hetkel ei ole testkogu konkreetsed katkendid veel anonüümitud ega lõplikult valitud. Käesolevas lisas esitatakse testkogu \emph{kvoot} (jaotus peatükitüübi järgi ja sihtpikkused), mis on aluseks jätkutöö annoteerimisetapile.
 
-Testkogu kavandatakse koosnema 20 tekstikatkendist, mis valitakse Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024. Pilootuuringus on kasutatud orienteeruvalt 3--5 esialgset, autori käsitsi koostatud katkendit peatüki tüübi kohta prompti disaini iteratsiooni jaoks; need pilootkatkendid \emph{ei moodusta} lõplikku testkogu, vaid teenivad ajutise prompti iteratsioonimaterjalina, mis täismahulise hindamise hetkeks asendatakse anonüümitud ja kuldstandardi-annoteeritud testkoguga.
+Testkogu kavandatakse koosnema 20 tekstikatkendist, mis valitakse Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavate bakalaureuse- ja magistritööde hulgast aastatest 2020--2024. Pilootuuringus on kasutatud orienteeruvalt 3--5 esialgset, autori käsitsi koostatud katkendit peatükitüübi kohta prompti disaini iteratsiooni jaoks; need pilootkatkendid \emph{ei moodusta} lõplikku testkogu, vaid teenivad ajutise prompti iteratsioonimaterjalina, mis täismahulise hindamise hetkeks asendatakse anonüümitud ja kuldstandardi-annoteeritud testkoguga.
 
 \begin{table}[htb!]
     \centering
-    \caption{Kavandatud testkogu kvoot peatüki tüübi järgi.}
+    \caption{Kavandatud testkogu kvoot peatükitüübi järgi.}
     \label{tab:testkogu-detail}
     \begin{tblr}{
                 colspec = { Q[l] Q[c] Q[c] },
@@ -32,7 +32,7 @@ Testkogu kavandatakse koosnema 20 tekstikatkendist, mis valitakse Tartu Ülikool
     \item Katkendid sisaldavad nii probleeme kui ka korrektseid lõike, mis välistab kuldstandardi kallutuse ainult probleemide tuvastamise poole.
     \item Originaaltöödest valitakse välja peamine sisuline tekst ilma joonisteta, valemiteta ja koodinäideteta, sest mudel ei käsitle praegusel hetkel pildilist sisu.
     \item Katkendid anonüümitakse enne kuldstandardi annoteerimist (autorite ja konkreetsete tööde nimed eemaldatakse), kuna eesmärk on hinnata mudeli oskust tagasisidet anda, mitte autorit tuvastada.
-    \item Iga katkendi puhul hoitakse eraldi metaandmeid: peatüki tüüp, ligikaudne sõnade arv, kuldstandardi probleemide arv ja jaotus kategooriate kaupa. Need andmed lisatakse repositooriumisse koos täismahulise hindamise tulemustega.
+    \item Iga katkendi puhul hoitakse eraldi metaandmeid: peatükitüüp, ligikaudne sõnade arv, kuldstandardi probleemide arv ja jaotus kategooriate kaupa. Need andmed lisatakse repositooriumisse koos täismahulise hindamise tulemustega.
 \end{itemize}
 
 \subsection*{Lisa II: Struktureeritud prompti täielik tekst} \label{lisa:promptid}
@@ -58,14 +58,14 @@ kategoorias:
 
 3. TERMINOLOOGIA
    Tüüpilised probleemid: sama mõiste tähistamiseks kasutatakse läbisegi mitut terminit (lõim ja niit); ingliskeelseid termineid esitatakse ilma esmakasutuse selgituseta.
-   NÄIDE: Tekst kasutab nii sõna "kompileerimine" kui "tõlkimine" sama tähenduses - vali üks ja kasuta läbivalt.
+   NÄIDE: Tekst kasutab nii sõna "kompileerimine" kui "tõlkimine" samas tähenduses - vali üks ja kasuta läbivalt.
 
 4. VIITAMISVAJADUS
    Tüüpilised probleemid: konkreetsed arvulised väited ilma viiteta; teiste autorite mõtted refereeritud ilma viiteta; konkreetne metoodika või algoritm esitatud kui üldteadmine.
    NÄIDE: "Üle 75% arendajatest kasutab seda raamistikku." VAJAB viidet originaaluuringule.
    VASTUNÄIDE: "HTTP on rakenduskihi protokoll." EI VAJA viidet (üldteadmine).
 
-VASTA JSON-formaadis järgmise skeemi järgi (ja ainult selles kujul):
+VASTA JSON-formaadis järgmise skeemi järgi (ja ainult sellisel kujul):
 {
   "leiud": [
     {
@@ -125,9 +125,9 @@ Prototüübi käivitamiseks on vaja Dockerit (versioon 24 või uuem). API võtit
 
 \begin{enumerate}
     \item Kloonida repositoorium käsuga \texttt{git clone https://github.com/UkuRenekKronbergs/TI\_bakalaureusetoo.git} ja siseneda kausta \texttt{prototuup/}.
-    \item Käivitada käsk \texttt{docker compose up -{}-build} kaustas \texttt{prototuup/}. See ehitab ja käivitab nii backend (port 8000) kui ka frontend (port 5173).
+    \item Käivitada käsk \texttt{docker compose up -{}-build} kaustas \texttt{prototuup/}. See ehitab ja käivitab nii backendi (port 8000) kui ka frontendi (port 5173).
     \item Avada brauseris aadress \url{http://localhost:5173}.
-    \item Valida mudeliks \emph{Demo (salvestatud vastused)} (vaikevalik), valida peatüki tüüp ja prompti tüüp. Soovi korral vajutada nuppu \emph{Lae näidistekst}, mis paigutab tekstikasti valitud peatüki tüübi näidisteksti. Vajutada \emph{Analüüsi}.
+    \item Valida mudeliks \emph{Demo (salvestatud vastused)} (vaikevalik), valida peatükitüüp ja promptitüüp. Soovi korral vajutada nuppu \emph{Lae näidistekst}, mis paigutab tekstikasti valitud peatükitüübi näidisteksti. Vajutada \emph{Analüüsi}.
 \end{enumerate}
 
 Demo-režiimis tagastab backend salvestatud näidisvastuse ilma võrgupäringuta -- sisestatud tekst ei lahku kohalikust masinast.
