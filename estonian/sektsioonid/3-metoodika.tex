@@ -1,20 +1,20 @@
 \section{Metoodika} \label{metoodika}
 
-Käesolev peatükk kirjeldab, kuidas töö eesmärki realiseeritakse. Alapeatükis~\ref{metoodika:protsess} esitatakse uurimisprotsess tervikuna ning eristatakse selgelt, millised sammud on käesoleva töö raames lõpule viidud ja millised on kavandatud jätkukavasse. Alapeatükk~\ref{metoodika:kategooriad} määratleb tagasisidekategooriad operatsionaalselt. Alapeatükis~\ref{metoodika:mudel} põhjendatakse mudeli valikut. Alapeatükk~\ref{metoodika:promptid} esitab kahe võrreldava prompti disaini. Alapeatükis~\ref{metoodika:hindamine} kirjeldatakse hindamismetoodikat ja testkogu disaini, sealhulgas sünteetilisel testkogul tehtud empiirilise hindamise aluseid.
+Käesolev peatükk kirjeldab, kuidas töö eesmärk realiseeriti. Alapeatükis~\ref{metoodika:protsess} esitatakse uurimisprotsess tervikuna ning eristatakse selgelt, millised sammud on käesoleva töö raames lõpule viidud ja millised on kavandatud jätkukavasse. Alapeatükk~\ref{metoodika:kategooriad} määratleb tagasisidekategooriad operatsionaalselt. Alapeatükis~\ref{metoodika:mudel} põhjendatakse mudeli valikut. Alapeatükk~\ref{metoodika:promptid} kirjeldab kahte võrreldavat prompti. Alapeatükis~\ref{metoodika:hindamine} kirjeldatakse hindamismetoodikat ja testkogu disaini, sealhulgas sünteetilisel testkogul tehtud empiirilise hindamise aluseid.
 
 \subsection{Uurimisprotsess} \label{metoodika:protsess}
 
-Uurimine järgib disain\-teaduse (\emph{ingl. design science research}) põhimõtet~\cite{hevner_design_2004}: identifitseeritakse probleem, projekteeritakse artefakt (käesoleval juhul prototüüp), rakendatakse seda ning hinnatakse rangelt. Hindamise põhjal saab teha järeldusi nii artefakti kui ka selle aluseks olevate disainivalikute kohta.
+Uurimine järgib disain\-teaduse (\emph{ingl.\ design science research}) põhimõtet~\cite{hevner_design_2004}: tuvastatakse probleem, projekteeritakse artefakt (käesoleval juhul prototüüp), rakendatakse seda ning hinnatakse süstemaatiliselt. Hindamise põhjal saab teha järeldusi nii artefakti kui ka selle aluseks olevate disainivalikute kohta.
 
 Töö protsess koosnes järgmistest etappidest:
 \begin{enumerate}
     \item Tagasisidekategooriate operatsionaalne määratlemine kirjanduse ja TÜ juhendi põhjal.
     \item Üldise ja struktureeritud prompti disain.
-    \item Prototüübi realiseerimine veebirakendusena, mis kutsub välja LLM-i API-d ning toetab salvestatud vastustega demo-režiimi.
+    \item Prototüübi realiseerimine veebirakendusena, mis kasutab LLM-i API-sid ning toetab salvestatud vastustega demo-režiimi.
     \item Testkogu disain ja 20-katkendilise sünteetilise testkogu koostamine eri peatükitüüpide põhjal.
     \item Pilootuuring väikesel tekstivalimil: prototüübi väljundi kvalitatiivne analüüs prompti disaini iteratsiooniks.
     \item Sünteetilise testkogu annoteerimine autori koostatud kuldstandardiks; sõltumatu teise annoteerija kaasamine jäetakse jätkukavasse.
-    \item Prototüübi käivitamine kogu sünteetilise testkogu vastu mõlema prompti versiooniga ja mõlema mudeliga (Claude 4.7 Opus, GPT-5.5); mudeli väljundi võrdlemine kuldstandardiga ja näitajate (täpsus, saagis, F\textsubscript{1}) arvutamine iga kategooria kohta eraldi.
+    \item Prototüübi käivitamine kogu sünteetilise testkogu vastu mõlema promptiversiooni ja mõlema mudeliga (Claude 4.7 Opus, GPT-5.5); mudeli väljundi võrdlemine kuldstandardiga ja näitajate (täpsus, saagis, F\textsubscript{1}) arvutamine iga kategooria kohta eraldi.
     \item Üldise ja struktureeritud prompti tulemuste kvantitatiivne võrdlus.
 \end{enumerate}
 
@@ -22,7 +22,7 @@ Töö protsess koosnes järgmistest etappidest:
 
 \subsection{Tagasisidekategooriate operatsionaalne määratlus} \label{metoodika:kategooriad}
 
-Töös käsitletakse nelja tagasisidekategooriat. Iga kategooria kohta on tabelis~\ref{tab:kategooriad} esitatud määratlus, näide tüüpilisest probleemist ning probleemi puudumise näide. Need määratlused olid aluseks nii prompti koostamisele kui ka tulevase kuldstandardi annoteerimisreeglitele.
+Töös käsitletakse nelja tagasisidekategooriat. Iga kategooria kohta on tabelis~\ref{tab:kategooriad} esitatud määratlus, näide tüüpilisest probleemist ning probleemi puudumise näide. Need määratlused olid aluseks nii prompti koostamisele kui ka kuldstandardi annoteerimisreeglitele.
 
 \begin{table}[htb!]
     \centering
@@ -40,34 +40,34 @@ Töös käsitletakse nelja tagasisidekategooriat. Iga kategooria kohta on tabeli
     \end{tblr}
 \end{table}
 
-Kategooriad on disainitud nii, et nad on \emph{vastastikku eristatavad} -- ühte sõnastust ei tohiks korraga liigitada kahte kategooriasse. Seda eristatavust kontrolliti pilootuuringus mudeli väljundi käsitsi läbivaatamise käigus ning eristatavus osutus piisavaks; päris testkogu annoteerimises kontrollitakse seda annoteerijatevahelise kokkuleppe abil.
+Kategooriad on disainitud nii, et need oleksid \emph{vastastikku eristatavad} -- ühte tekstikohta ei tohiks korraga liigitada kahte kategooriasse. Seda eristatavust kontrolliti pilootuuringus mudeli väljundi käsitsi läbivaatamise käigus ning eristatavus osutus piisavaks; päris testkogu annoteerimises kontrollitakse seda annoteerijatevahelise kokkuleppe abil.
 
 \textbf{Pilootuuringust tulenevad määratluste täpsustused.} Pilootuuringus täheldatud näilised valepositiivsed (vt alapeatükk~\ref{hindamine:kategooriad}) viisid kahe määratluse selgesõnalise täpsustuseni, mida rakendatakse nii prompti vastunäidetes kui ka kuldstandardi annoteerimisreeglites:
 \begin{itemize}
     \item \emph{Viitamisvajadus} ei rakendu üldteadmise tasandi väidetele -- näiteks levinud protokollide või põhimõistete tutvustamisele --, mille puhul viidet ei oleks ka inimese kirjutatud akadeemilises tekstis oodatud.
-    \item \emph{Akadeemiline stiil} ei märgi probleemiks mina-vormi kasutust kohtades, kus tudeng kirjeldab selgelt enda originaalset panust või metoodilist valikut, kuna Tartu Ülikooli juhend lubab mina-vormi sellises kontekstis.
+    \item \emph{Akadeemiline stiil} ei käsita probleemina mina-vormi kasutust kohtades, kus tudeng kirjeldab selgelt enda originaalset panust või metoodilist valikut, kuna Tartu Ülikooli juhend lubab mina-vormi sellises kontekstis.
 \end{itemize}
 Need täpsustused on pilootuuringu \emph{tulemus} ning on aluseks empiirilise hindamise ja jätkutöö annoteerimisreeglitele.
 
 \subsection{Mudeli valik} \label{metoodika:mudel}
 
-Töös kasutatakse esmase mudelina Anthropici \texttt{claude-opus-4-7} mudelit. Valiku tegemise kriteeriumid olid:
+Töös kasutatakse esmase mudelina Anthropici mudelit \texttt{claude-opus-4-7}. Valiku tegemise kriteeriumid olid:
 \begin{itemize}
-    \item \textbf{Eesti keele tugi}: TartuNLP avaliku eesti keele LLM-võrdlusplatvormi (baromeeter)~\cite{tartunlp_baromeeter_2025} põhjal kuuluvad tipptasemel Claude'i ja GPT mudelid eesti keele kvaliteedi poolest tippmudelite hulka.
+    \item \textbf{Eesti keele tugi}: TartuNLP avaliku eesti keele LLM-võrdlusplatvormi (baromeeter)~\cite{tartunlp_baromeeter_2025} põhjal kuuluvad tipptasemel Claude'i ja GPT-mudelid eesti keele kvaliteedi poolest tippmudelite hulka.
     \item \textbf{Pikk kontekstiaken}: 1\,000\,000 tokenit~\cite{anthropic_models_2026} võimaldab analüüsida kogu lõputöö peatükki korraga ilma sisendi tükeldamiseta.
     \item \textbf{Struktureeritud väljundi tugi}: mudel järgib usaldusväärselt JSON-skeemi kohaseid väljundinõudeid (vt alapeatükk~\ref{prototuup:promptid}).
     \item \textbf{Hind ja kättesaadavus}: API-ligipääs on tudengieelarve piires.
 \end{itemize}
 
-Tulemuste üldistatavuse kontrollimiseks kasutati paralleelselt ka OpenAI \texttt{gpt-5.5} mudelit, mille tugi on prototüübis realiseeritud. Alapeatükis~\ref{hindamine:synteetiline} esitatud empiirilise hindamise raames käivitati prototüüp kõikide 20 sünteetilise testkatkendi vastu mõlema mudeli ja mõlema prompti versiooniga (kokku 80 API-päringut). Mõlema uue põlvkonna mudeli (Claude 4.7 Opus ja GPT-5.5) Messages/Chat Completions API ei aktsepteeri enam \texttt{temperature}-parameetrit, mistõttu pakkujakihid jätavad selle parameetri päringust automaatselt välja ning kasutatakse mudelite vaikeväärtusi~\cite{anthropic_models_2026, openai_gpt5_2026}.
+Tulemuste üldistatavuse kontrollimiseks kasutati paralleelselt ka OpenAI mudelit \texttt{gpt-5.5}, mille tugi on prototüübis realiseeritud. Alapeatükis~\ref{hindamine:synteetiline} esitatud empiirilise hindamise raames käivitati prototüüp kõigi 20 sünteetilise testkatkendi vastu mõlema mudeli ja mõlema promptiversiooniga (kokku 80 API-päringut). Mõlema uue põlvkonna mudeli (Claude 4.7 Opus ja GPT-5.5) Messages/Chat Completions API ei aktsepteeri enam \texttt{temperature}-parameetrit, mistõttu pakkujakihid jätavad selle parameetri päringust automaatselt välja ning kasutatakse mudelite vaikeväärtusi~\cite{anthropic_models_2026, openai_gpt5_2026}.
 
 \subsection{Promptide disain} \label{metoodika:promptid}
 
-Töös võrreldakse kahte prompti varianti: \emph{üldist} ja \emph{struktureeritud}. Mõlemad nõuavad mudelilt sama JSON-skeemiga vastust (et automaatne järeltöötlus oleks võrreldav), kuid erinevad selle poolest, kui palju juhiseid mudelile kategooriate ja oodatava käitumise kohta antakse.
+Töös võrreldakse kahte promptivarianti: \emph{üldist} ja \emph{struktureeritud}. Mõlemad nõuavad mudelilt sama JSON-skeemiga vastust (et automaatne järeltöötlus oleks võrreldav), kuid erinevad selle poolest, kui palju juhiseid mudelile kategooriate ja oodatava käitumise kohta antakse.
 
 \subsubsection{Üldine prompt}
 
-Üldine prompt on lühike: see annab mudelile rolli ja JSON-skeemi (sealhulgas vabavormilise \texttt{MUU}-kategooria), kuid \emph{ei sisalda} ühegi kategooria definitsiooni, näiteid, vastunäiteid ega kindlushinnangu täpsemat juhist. Seega on üldine prompt funktsionaalselt minimaalne baastase, millele struktureeritud prompt lisab kategooriapõhise sisu:
+Üldine prompt on lühike: see annab mudelile rolli ja JSON-skeemi (sealhulgas vabavormilise \texttt{MUU}-kategooria), kuid \emph{ei sisalda} ühegi kategooria definitsiooni, näiteid, vastunäiteid ega kindlushinnangu täpsemaid juhiseid. Seega on üldine prompt funktsionaalselt minimaalne baastase, millele struktureeritud prompt lisab kategooriapõhise sisu:
 
 \begin{minted}[breaklines,fontsize=\small]{text}
 Oled eestikeelse informaatika lõputöö juhendaja abiline. Anna sisestatud
@@ -103,7 +103,7 @@ Vasta ainult JSON-iga, ilma lisaselgituseta.
 
 \subsubsection{Struktureeritud prompt}
 
-Struktureeritud prompt erineb üldisest neljal olulisel viisil: (1) iga tagasisidekategooria täpne määratlus koos vähehetk-näidete ja vastunäidetega, (2) selgesõnaline eetiline meelespea (mudel ei tohi ümber sõnastada), (3) mõtteahel-element (\emph{põhjendus}-väli, mis nõuab mudelilt enda järelduse põhjendamist enne soovitust) ja (4) reeglid, mis suunavad mudelit konservatiivsusele (\emph{parem vähem õigeid kui palju valesid}). Kategooria \texttt{MUU} on jäetud välja, nõudes mudelilt nelja täpselt määratletud kategooria kasutamist. Prompti täielik tekst on esitatud lisas~II.
+Struktureeritud prompt erineb üldisest neljal olulisel viisil: (1) iga tagasisidekategooria täpne määratlus koos näidete ja vastunäidetega, (2) selgesõnaline eetiline meelespea (mudel ei tohi ümber sõnastada), (3) mõtteahela elemendina toimiv \emph{põhjenduse} väli, mis nõuab mudelilt enda järelduse põhjendamist enne soovitust, ja (4) konservatiivsusele suunavad reeglid (\emph{parem vähem õigeid kui palju valesid}). Kategooria \texttt{MUU} on struktureeritud promptist jäetud välja; nii nõutakse mudelilt nelja täpselt määratletud kategooria kasutamist. Prompti täielik tekst on esitatud lisas~II.
 
 Prompti võtmeosad on järgmised:
 
@@ -141,19 +141,19 @@ kanded vahele. Ära leia probleeme, mida tegelikult pole.
 
 \textbf{Põhjendatud disainivalikud.}
 \begin{itemize}
-    \item \textbf{Eetiline meelespea}. Prompti algusesse on paigutatud selge piirang, et mudel ei tohi tudengi eest kirjutada. See on kooskõlas TÜ generatiivse tehisaru juhendiga~\cite{ut_genAI_2024} ning vähendab pilootuuringus täheldatu põhjal tõenäosust, et mudel pakub tudengile valmis ümbersõnastusi.
+    \item \textbf{Eetiline meelespea}. Prompti algusesse on paigutatud selge piirang, et mudel ei tohi tudengi eest kirjutada. See on kooskõlas TÜ generatiivse tehisaru juhendiga~\cite{ut_genAI_2024} ning vähendab pilootuuringus täheldatud mustrite põhjal tõenäosust, et mudel pakub tudengile valmis ümbersõnastusi.
     \item \textbf{Tsitaadi nõue}. Iga probleemi puhul peab mudel viitama konkreetsele tekstilõigule. See raskendab \emph{halutsineerimist} ja teeb tagasiside auditeeritavaks; pilootuuringus täheldati, et tsitaadi nõue paneb mudeli oma leide täpsemini lokaliseerima.
     \item \textbf{Kindluse hinnang}. Iga leiu kohta nõutav kindlushinnang võimaldab kasutajaliideses madala kindlusega leide visuaalselt eristada ning hindamise käigus uurida, kas kindlus korreleerub leiu tegeliku õigsusega.
-    \item \textbf{Põhjenduse nõue}. Mõtteahel-elemendina toimiv \emph{põhjenduse} väli sunnib mudelit oma järeldust kontrollima ning aitab kasutajal otsustada, kas soovitus vastu võtta.
+    \item \textbf{Põhjenduse nõue}. Mõtteahel-elemendina toimiv \emph{põhjenduse} väli suunab mudelit oma järeldust kontrollima ning aitab kasutajal otsustada, kas soovitus vastu võtta.
 \end{itemize}
 
 \subsection{Hindamismetoodika} \label{metoodika:hindamine}
 
-Käesolev alapeatükk kirjeldab metoodikat, mida rakendati sünteetilisel testkogul tehtud empiirilises hindamises ning mille laiendamine päris üliõpilastööde katkenditele on jätkukava osa. Käesolevas töös on metoodika rakendatud autori koostatud sünteetilise testkogu ja kuldstandardi peal; sõltumatu teise annoteerijaga päris testkogu jääb edasiseks tööks.
+Käesolev alapeatükk kirjeldab metoodikat, mida rakendati sünteetilisel testkogul tehtud empiirilises hindamises ning mille laiendamine päris üliõpilastööde katkenditele on jätkukava osa. Käesolevas töös rakendati metoodikat autori koostatud sünteetilise testkogu ja kuldstandardi alusel; sõltumatu teise annoteerijaga päris testkogu jääb edasiseks tööks.
 
 \subsubsection{Testkogu disain}
 
-Päris testkogu on kavandatud koosnema 20 eestikeelse informaatika lõputöö katkendist, kus iga katkendi pikkus on 200--400 sõna. Katkendid valitakse nii, et need katavad erinevaid peatükitüüpe (vt tabel~\ref{tab:testkogu}). Allikateks on planeeritud kasutada Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavaid bakalaureuse- ja magistritöid aastatest 2020--2024; katkendid valitakse nii, et need sisaldavad nii probleeme kui ka korrektseid lõike, ning anonüümitakse enne kuldstandardi annoteerimist. Käesolevas töös rakendati sama peatükitüüpide jaotust lühemal, 20-katkendilisel sünteetilisel testkogul; päris testkogu lõplik koostamine ja annoteerimine on jätkukava esimene samm.
+Päris testkogu on kavandatud koosnema 20 eestikeelse informaatika lõputöö katkendist, kus iga katkendi pikkus on 200--400 sõna. Katkendid valitakse nii, et need katavad erinevaid peatükitüüpe (vt tabel~\ref{tab:testkogu}). Allikatena on kavas kasutada Tartu Ülikooli arvutiteaduse instituudi avalikult kättesaadavaid bakalaureuse- ja magistritöid aastatest 2020--2024; katkendid valitakse nii, et need sisaldavad nii probleeme kui ka korrektseid lõike, ning anonüümitakse enne kuldstandardi annoteerimist. Käesolevas töös rakendati sama peatükitüüpide jaotust lühemal, 20-katkendilisel sünteetilisel testkogul; päris testkogu lõplik koostamine ja annoteerimine on jätkukava esimene samm.
 
 \begin{table}[htb!]
     \centering
@@ -176,7 +176,7 @@ Päris testkogu on kavandatud koosnema 20 eestikeelse informaatika lõputöö ka
 
 \subsubsection{Kuldstandardi koostamise protseduur}
 
-Käesolevas empiirilises hindamises koostas kuldstandardi autor, märkides iga sünteetilise katkendi puhul probleemse tekstilõigu, kategooria ning lühikese põhjenduse. Jätkukavas tuleks sama protseduuri laiendada kahes etapis: esiteks märgistab autor iseseisvalt iga tuvastatud probleemi, teiseks vaatab teine sõltumatu annoteerija (näiteks teise õppekava tudeng või juhendaja) samad katkendid läbi ning lahkarvamuste korral lepitakse kokku ühises lahenduses. Annoteerijatevahelist kokkulepet mõõdetakse iga kategooria kohta eraldi Coheni $\kappa$-ga~\cite{cohen_kappa_1960}, mis on kahe annoteerija ja nominaalsete kategooriate puhul konventsionaalne valik. Krippendorffi $\alpha$~\cite{krippendorff_alpha_2011} on jäetud reservi juhuks, kui hindamiskava laieneb järgmistes versioonides mitme annoteerijaga skeemiks.
+Käesolevas empiirilises hindamises koostas kuldstandardi autor, märkides iga sünteetilise katkendi puhul probleemse tekstilõigu, kategooria ning lühikese põhjenduse. Jätkukavas tuleks sama protseduuri laiendada kahes etapis: esiteks märgistab autor iseseisvalt iga tuvastatud probleemi, teiseks vaatab teine sõltumatu annoteerija (näiteks teise õppekava tudeng või juhendaja) samad katkendid läbi ning lahkarvamuste korral lepitakse kokku ühises lahenduses. Annoteerijatevahelist kokkulepet mõõdetakse iga kategooria kohta eraldi Coheni $\kappa$-ga~\cite{cohen_kappa_1960}, mis on kahe annoteerija ja nominaalsete kategooriate puhul konventsionaalne valik. Krippendorffi $\alpha$~\cite{krippendorff_alpha_2011} on jäetud reservi juhuks, kui hindamiskava laieneb edaspidi mitme annoteerijaga skeemiks.
 
 \subsubsection{Mõõdikud}
 
@@ -205,8 +205,8 @@ Sellest järeldatakse järgmised mõõdikud:
     \label{eq:f1}
 \end{equation}
 
-\textbf{Kattuvuse defineerimine.} Kuna mudel ja annoteerija võivad sama probleemi kirjeldada erinevate sõnadega, ei ole võimalik nõuda eksaktset stringivastet. Kattuvust hinnatakse järgmise reegli järgi: mudeli leid loetakse tõeseks positiivseks, kui (1) tema osutatud tekstilõik kattub kuldstandardi probleemse lõiguga vähemalt 50~\% ulatuses sõnatasemel ning (2) kategooria on sama. 50~\% lävi on valitud kooskõlas span-tasemel hindamise levinud tavadega: poole ulatuses kattuv viidatud lõik tagab, et mudel ja annoteerija osutavad samale probleemile, mitte erinevatele probleemidele samas lauses. Kuna lävi ise on disainivalik, kontrollitakse selle robustsust jätkutöös eraldi tundlikkusanalüüsiga, esitades peamised mõõdikud ka 30~\% ja 70~\% läviga ning jälgides, kas kvalitatiivsed järeldused muutuvad. Kui kategooria erineb, loetakse leid mudeli vaates valepositiivseks ja kuldstandardi vaates valenegatiivseks.
+\textbf{Kattuvuse defineerimine.} Kuna mudel ja annoteerija võivad sama probleemi kirjeldada erinevate sõnadega, ei ole võimalik nõuda täpset sõnevastet. Kattuvust hinnatakse järgmise reegli järgi: mudeli leid loetakse tõeseks positiivseks, kui (1) tema osutatud tekstilõik kattub kuldstandardi probleemse lõiguga vähemalt 50~\% ulatuses sõnatasemel ning (2) kategooria on sama. 50~\% lävi on valitud kooskõlas tekstivahemiku tasemel hindamise levinud tavadega: poole ulatuses kattuv viidatud lõik tagab, et mudel ja annoteerija osutavad samale probleemile, mitte erinevatele probleemidele samas lauses. Kuna lävi ise on disainivalik, kontrollitakse selle tundlikkust jätkutöös eraldi tundlikkusanalüüsiga, esitades peamised mõõdikud ka 30~\% ja 70~\% läviga ning jälgides, kas kvalitatiivsed järeldused muutuvad. Kui kategooria erineb, loetakse leid mudeli vaates valepositiivseks ja kuldstandardi vaates valenegatiivseks.
 
 \subsubsection{Promptide võrdlus}
 
-Üldist ja struktureeritud prompti võrreldi, käivitades mudeli kõikide testkogu katkenditega kummagi prompti versioonis. Mõlemad promptid nõuavad sama JSON-skeemiga väljundit ja kategooriavalikut, mistõttu skoorimine kuldstandardi vastu toimub mõlemal juhul automaatselt, ilma käsitsi vahesammuta. Erinevus, mida hindamine mõõdab, taandub seetõttu sisuliste juhiste mõjule -- kas kategooria definitsioonid, näited ja reeglid parandavad mudeli täpsust ja saagist iga kategooria sees -- mitte väljundvormingu erinevusele. Kategooria \texttt{MUU}, mida üldine prompt lubab, kuid struktureeritud mitte, käsitatakse skoorimises automaatselt valepositiivsena, kuna see ei vasta ühelegi nelja kategooria kuldstandardi annotatsioonile.
+Üldist ja struktureeritud prompti võrreldi, käivitades mudeli kõigi testkogu katkenditega kummagi promptiversiooniga. Mõlemad promptid nõuavad sama JSON-skeemiga väljundit ja kategooriavalikut, mistõttu skoorimine kuldstandardi vastu toimub mõlemal juhul automaatselt, ilma käsitsi vahesammuta. Erinevus, mida hindamine mõõdab, taandub seetõttu sisuliste juhiste mõjule -- kas kategooria definitsioonid, näited ja reeglid parandavad mudeli täpsust ja saagist igas kategoorias -- mitte väljundvormingu erinevusele. Kategooria \texttt{MUU}, mida üldine prompt lubab, kuid struktureeritud mitte, käsitatakse skoorimises automaatselt valepositiivsena, kuna see ei vasta ühelegi nelja kategooria kuldstandardi annotatsioonile.
