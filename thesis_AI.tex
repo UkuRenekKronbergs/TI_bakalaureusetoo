@@ -1,0 +1,18 @@
+% !TEX root = thesis_AI.tex
+
+% Lisaversioon: AI-genereeritud märgisega ("AI generated" vesimärk esilehel).
+% Sisu on identne thesis.tex-iga, lisatud on ainult vesimärgi seadistus.
+
+\RequirePackage{ifthen}
+\documentclass[english,estonian]{unitartucs/thesis}
+
+% AI-vesimärk – nähtav ainult esilehel
+\usepackage{xcolor}
+\definecolor{aiWatermark}{rgb}{0.85, 0.20, 0.20}
+\usepackage[firstpage]{draftwatermark}
+\SetWatermarkText{AI generated}
+\SetWatermarkScale{1}
+\SetWatermarkColor{aiWatermark}
+\SetWatermarkAngle{45}
+
+\input{estonian/põhi.tex}
